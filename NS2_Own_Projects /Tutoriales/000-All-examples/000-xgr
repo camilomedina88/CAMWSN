@@ -1,0 +1,864 @@
+0000-aodv:article2-20noeuds.tcl:      # exec xgraph throughput1.tr throughput2.tr throughput3.tr -geometry 800x400 -t "AODV Throughput" -x "Time" -y "No.of Packets" -bg white &
+0000-aodv:article2-20noeuds.tcl:      # exec ./xgraph packetdrop1.tr packetdrop2.tr packetdrop3.tr -geometry 800x400 -t "AODV Packet Drop" -x "Time" -y "No.of Packets" -bg white &
+0000-aodv:article2-20noeuds.tcl:      # exec ./xgraph delay1.tr delay2.tr delay3.tr -geometry 800x400 -t "AODV Delay Level" -x "Time" -y "No.of Packets" -bg white &
+11b-ibss-long_pre.tcl:    exec xgraph wireless.data -geometry 800x400 &
+11b-ibss-short_pre.tcl:    exec xgraph wireless.data -geometry 800x400 &
+1-zrp_exUDP.tcl:        exec xgraph out02.tr out12.tr out22.tr out32.tr -geometry 800x400 &
+1-zrp_exUDP.tcl:        exec xgraph lost02.tr lost12.tr lost22.tr lost32.tr -geometry 800x400 &
+1-zrp_exUDP.tcl:        exec xgraph delay02.tr delay12.tr delay22.tr delay32.tr -geometry 800x400 &
+1-zrp-malicious.tcl:       # exec xgraph packets_received.tr packets_lost.tr 
+2statemarkovA.tcl:	exec rm -f xgraph_cwnd.tcp
+2statemarkovA.tcl:	set f [open xgraph_cwnd.tcp w]
+2statemarkovA.tcl:	exec rm -f xgraph_seqno.tcp
+2statemarkovA.tcl:	set f [open xgraph_seqno.tcp w]
+2statemarkovA.tcl:    exec xgraph  -nl -m  -x time -y $what xgraph_$a.tcp &
+2statemarkovA.tcl:    exec rm -f xgraph.red_queue
+2statemarkovA.tcl:    set ff [open xgraph.red_queue w]
+2statemarkovA.tcl:    exec xgraph  -P -x time -y queue xgraph.red_queue &
+2statemarkovA.tcl:    exec xgraph -P -x time -y $filename temp.$filename
+2x-DMOCA-code_v1.tcl: exec xgraph dsr1.tr securedsr1.tr sink1.tr   -geometry 800x400 -t "For Packet Delivery Ratio" -x "Time" -y "No.of Packets" -bg white &
+2x-DMOCA-code_v1.tcl: exec xgraph sink2.tr  securedsr2.tr dsr2.tr -geometry 800x400 -t "For Packet Loss" -x "Time" -y "No.of Packets" -bg white &
+2x-DMOCA-code_v1.tcl:exec xgraph  dsr3.tr sink3.tr  securedsr3.tr -geometry 800x400 -t "Throughput" -x "Time" -y "No.of Packets" -bg white &
+2x-DMOCA-code_v1.tcl:	exec xgraph dsr_routing_1.tr  -x "Successfull Response" -y "Trust Value" -t "Performance Level single-path vs successfull response " -geometry 800x400 -bg white &
+2x-DMOCA-code_v1.tcl:	exec xgraph dsr_routing_3.tr  -x "Failure Rate" -y "Trust Value" -t "Performance Level single-path vs Failture rate" -geometry 800x400 -bg white &
+2x-DMOCA-code_v1.tcl:	exec xgraph dsr_routing_2.tr  -x "Mobility m/s" -y "Trust Value" -t "Performance Level multi-path routing vs Mobility" -geometry 800x400 -bg white &
+2x-DMOCA-code_v1.tcl:	exec xgraph dsr_routing_4.tr  -x "Trust Value" -y "Node battery power" -t "Performance Level multi-path routing vs Battery power" -geometry 800x400 -bg white &
+2x-DMOCA-code_v1.tcl:	exec xgraph dsr_routing_5.tr  -x "Trust Value" -y "Band width m/s" -t "Performance Level Trust value vs Bandwidth" -geometry 800x400 -bg white &
+2x-DMOCA-code_v1.tcl:	exec xgraph dsr_routing_6.tr  -x "Trust Value" -y "recommendation value" -t "Performance Level Trust value vs Recommendation" -geometry 800x400 -bg white &
+2x-DMOCA-code_v1.tcl:	exec xgraph dsr_routing_7.tr  -x "Trust Value" -y "Availablity power" -t "Performance Level Trust value vs Availablity power" -geometry 800x400 -bg white &
+2x-DMOCA-code_v1.tcl:exec xgraph througput.tr packtdropped.tr delivryratio.tr n4-delay1.tr n5-delay2.tr -geometry  800x400 -t " routing performance" -x "no of nodes" -y "transmission range" &
+2-zrp-joseph4-13.tcl:exec xgraph co_packet_received.data co_packet_lost.data co_expected_packet.data &
+2-zrp-joseph4-13.tcl:exec xgraph receivingTime.data actual_Time.data -geometry 500x300 & 
+2-zrp-joseph4-13.tcl:exec xgraph byte.data co_sumband.data -geometry 400x300 &
+2-zrp-joseph4-13.tcl:exec xgraph co_cbr6np.data co_cbr6nl.data co_cbr6ex.data &
+2-zrp-joseph4-13.tcl:exec xgraph cbr6re.data -geometry 500x300 & 
+2-zrp-joseph4-13.tcl:exec xgraph byte.data co_sumband.data cbr6by.data co_sumcbr6.data -geometry 400x300 &
+3-zrp-joseph4.tcl:exec xgraph co_packet_received.data co_packet_lost.data co_expected_packet.data &
+3-zrp-joseph4.tcl:exec xgraph receivingTime.data actual_Time.data -geometry 500x300 & 
+3-zrp-joseph4.tcl:exec xgraph byte.data co_sumband.data -geometry 400x300 &
+3-zrp-joseph4.tcl:exec xgraph co_cbr6np.data co_cbr6nl.data co_cbr6ex.data &
+3-zrp-joseph4.tcl:exec xgraph cbr6re.data -geometry 500x300 & 
+3-zrp-joseph4.tcl:exec xgraph byte.data co_sumband.data cbr6by.data co_sumcbr6.data -geometry 400x300 &
+4node.tcl:        #exec xgraph proj_out0.tr proj_out1.tr proj_out2.tr proj_out3.tr 
+4-zrp-wireless3-udp-Aska123.tcl:# 6    http://www.linuxquestions.org/questions/linux-software-2/no-output-in-xgraph-file-4175497572/#6
+4-zrp-wireless3-udp-Aska123.tcl:        exec xgraph out03.tr  -geometry 800x400 &
+4-zrp-wireless3-udp-Aska123.tcl:        exec xgraph lost03.tr  -geometry 800x400 &
+4-zrp-wireless3-udp-Aska123.tcl:        exec xgraph delay03.tr  -geometry 800x400 &
+ampMeasures1.tcl:	exec xgraph data02.tr data12.tr -t "Data Recieved in Bytes" -geometry 800x400 &
+ampMeasures1.tcl:        exec xgraph out02.tr out12.tr -t "Bit Rate" -geometry 800x400 &
+ampMeasures1.tcl:        exec xgraph lost02.tr lost12.tr -t "Packet Loss Rate" -geometry 800x400 &
+ampMeasures1.tcl:        exec xgraph delay02.tr delay12.tr -t "Packet Delay" -geometry 800x400 &       
+ampMeasures2.tcl:	exec xgraph data1.tr data2.tr data3.tr data4.tr data5.tr data6.tr data7.tr -t "Data Recieved in Bytes" -geometry 800x400 &
+ampMeasures2.tcl:        exec xgraph out1.tr out2.tr out3.tr out4.tr out5.tr out6.tr out7.tr -t "Bit Rate" -geometry 800x400 &
+ampMeasures2.tcl:        exec xgraph lost1.tr lost2.tr lost3.tr lost4.tr lost5.tr lost6.tr lost7.tr -t "Packet Loss Rate" -geometry 800x400 &
+ampMeasures2.tcl:        exec xgraph delay1.tr delay2.tr delay3.tr delay4.tr delay5.tr delay6.tr delay7.tr -t "Packet Delay" -geometry 800x400 &       
+ampMeasuresFinal3.tcl:	#exec xgraph data1.tr data2.tr data3.tr data4.tr data5.tr data6.tr data7.tr -t "Data Recieved in Bytes" -geometry 800x400 &
+ampMeasuresFinal3.tcl:        #exec xgraph out1.tr out2.tr out3.tr out4.tr out5.tr out6.tr out7.tr -t "Bit Rate" -geometry 800x400 &
+ampMeasuresFinal3.tcl:        #exec xgraph lost1.tr lost2.tr lost3.tr lost4.tr lost5.tr lost6.tr lost7.tr -t "Packet Loss Rate" -geometry 800x400 &
+ampMeasuresFinal3.tcl:        #exec xgraph delay1.tr delay2.tr delay3.tr delay4.tr delay5.tr delay6.tr delay7.tr -t "Packet Delay" -geometry 800x400 &       
+ampMeasuresFinal4.tcl:	#exec xgraph data1.tr data2.tr data3.tr data4.tr data5.tr data6.tr data7.tr -t "Data Recieved in Bytes" -geometry 800x400 &
+ampMeasuresFinal4.tcl:        #exec xgraph out1.tr out2.tr out3.tr out4.tr out5.tr out6.tr out7.tr -t "Bit Rate" -geometry 800x400 &
+ampMeasuresFinal4.tcl:        #exec xgraph lost1.tr lost2.tr lost3.tr lost4.tr lost5.tr lost6.tr lost7.tr -t "Packet Loss Rate" -geometry 800x400 &
+ampMeasuresFinal4.tcl:        #exec xgraph delay1.tr delay2.tr delay3.tr delay4.tr delay5.tr delay6.tr delay7.tr -t "Packet Delay" -geometry 800x400 &       
+ampMeasuresFinal5.tcl:	#exec xgraph data1.tr data2.tr data3.tr data4.tr data5.tr data6.tr data7.tr -t "Data Recieved in Bytes" -geometry 800x400 &
+ampMeasuresFinal5.tcl:        #exec xgraph out1.tr out2.tr out3.tr out4.tr out5.tr out6.tr out7.tr -t "Bit Rate" -geometry 800x400 &
+ampMeasuresFinal5.tcl:        #exec xgraph lost1.tr lost2.tr lost3.tr lost4.tr lost5.tr lost6.tr lost7.tr -t "Packet Loss Rate" -geometry 800x400 &
+ampMeasuresFinal5.tcl:        #exec xgraph delay1.tr delay2.tr delay3.tr delay4.tr delay5.tr delay6.tr delay7.tr -t "Packet Delay" -geometry 800x400 &       
+ampMeasuresFinal6.tcl:	#exec xgraph data1.tr data2.tr data3.tr data4.tr data5.tr data6.tr data7.tr -t "Data Recieved in Bytes" -geometry 800x400 &
+ampMeasuresFinal6.tcl:        #exec xgraph out1.tr out2.tr out3.tr out4.tr out5.tr out6.tr out7.tr -t "Bit Rate" -geometry 800x400 &
+ampMeasuresFinal6.tcl:        #exec xgraph lost1.tr lost2.tr lost3.tr lost4.tr lost5.tr lost6.tr lost7.tr -t "Packet Loss Rate" -geometry 800x400 &
+ampMeasuresFinal6.tcl:        #exec xgraph delay1.tr delay2.tr delay3.tr delay4.tr delay5.tr delay6.tr delay7.tr -t "Packet Delay" -geometry 800x400 &       
+ampMeasures.tcl:	exec xgraph data02.tr data12.tr -t "Data Recieved in Bytes" -geometry 800x400 &
+ampMeasures.tcl:        exec xgraph out02.tr out12.tr -t "Bit Rate" -geometry 800x400 &
+ampMeasures.tcl:        exec xgraph lost02.tr lost12.tr -t "Packet Loss Rate" -geometry 800x400 &
+ampMeasures.tcl:        exec xgraph delay02.tr delay12.tr -t "Packet Delay" -geometry 800x400 &       
+ansarsatti.tcl:#exec xgraph cwnd_tcp1.tr
+ansarsatti.tcl:#exec xgraph pkt_received_at_node1.tr
+aodv-ipsit.tcl:        exec xgraph packets_received.tr packets_lost.tr 
+aodv-m.tcl:       # exec xgraph packets_received.tr packets_lost.tr 
+aodv-rah12345.tcl:       # exec xgraph packets_received.tr packets_lost.tr 
+aodv-Xgr_blackhole.tcl:exec xgraph a1.tr a2.tr a3.tr &
+aodv-X.tcl:exec xgraph a1.tr a2.tr a3.tr &
+article2-20noeuds.tcl:      # exec xgraph throughput1.tr throughput2.tr throughput3.tr -geometry 800x400 -t "AODV Throughput" -x "Time" -y "No.of Packets" -bg white &
+article2-20noeuds.tcl:      # exec ./xgraph packetdrop1.tr packetdrop2.tr packetdrop3.tr -geometry 800x400 -t "AODV Packet Drop" -x "Time" -y "No.of Packets" -bg white &
+article2-20noeuds.tcl:      # exec ./xgraph delay1.tr delay2.tr delay3.tr -geometry 800x400 -t "AODV Delay Level" -x "Time" -y "No.of Packets" -bg white &
+article2-20noeuds.tcl:        exec xgraph throughput1.tr throughput2.tr throughput3.tr -geometry 800x400  &
+article2-20noeuds.tcl:        exec xgraph packetdrop1.tr packetdrop2.tr packetdrop3.tr -geometry 800x400   &
+article2-20noeuds.tcl:         exec xgraph delay1.tr delay2.tr delay3.tr -geometry 800x400    &
+Aska123-f-tcl2.tcl:#   http://www.linuxquestions.org/questions/linux-software-2/no-output-in-xgraph-file-4175497572/
+Aska123-f-tcl2.tcl:        exec xgraph out02.tr out12.tr out22.tr out32.tr -geometry 800x400 &
+Aska123-f-tcl2.tcl:        exec xgraph lost02.tr lost12.tr lost22.tr lost32.tr -geometry 800x400 &
+Aska123-f-tcl2.tcl:        exec xgraph delay02.tr delay12.tr delay22.tr delay32.tr -geometry 800x400 &
+bdflow_h.tcl:# Set xgraph to 1 to use xgraph, and to 0 to use S.
+bdflow_h.tcl:# Set xgraph to 2 to make S-graphs later
+bdflow_h.tcl:set xgraph 1
+bdflow_h.tcl:	# often we have only one drop and xgraph won't print marks
+bdflow_h.tcl:	exec xgraph -bb -tk -nl -m -x time -y packet temp.rands &
+bdflow_h.tcl:	puts "running xgraph for queue plot..."
+bdflow_h.tcl:	exec xgraph -bb -tk -x time -y queue temp.queue &
+bdflow_h.tcl:	global xgraph
+bdflow_h.tcl:	puts "running xgraph for queue plot..."
+bdflow_h.tcl:	if { $xgraph == 1 } {
+bdflow_h.tcl:	  exec xgraph -bb -tk -x time -y queue temp.queue &
+bdflow_h.tcl:	if { $xgraph == 0 } {
+bdflow_h.tcl:    # this next part is xgraph specific
+bdflow_h.tcl:    puts "writing flow xgraph data to $graphfile..."
+bdflow_h.tcl:    catch {exec xgraph -t "seconds" -bb -tk -m -x "time" -y "seconds since last report" fairflow.rpt.sec &} result
+bdflow_h.tcl:    catch {exec xgraph -t "drops" -bb -tk -m -x "time" -y "drops since last report" fairflow.rpt.drop &} result
+bdflow_h.tcl:	global flowgraphfile xgraph awkprocedure
+bdflow_h.tcl:	puts "running xgraph for comparing drops and arrivals..."
+bdflow_h.tcl:	if { $xgraph == 1 } {
+bdflow_h.tcl:	    exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards" $flowgraphfile &
+bdflow_h.tcl:	if { $xgraph == 0 } {
+bdflow_h.tcl:    global xgraph queuetype
+bdflow_h.tcl:    puts "running xgraph for comparing drops and arrivals..."
+bdflow_h.tcl:    if { $xgraph == 1 } {
+bdflow_h.tcl:	exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards (in packets).  Queue in $queuetype" $flowgraphfile &
+bdflow_h.tcl:    if { $xgraph == 0 } {
+bdflow_h.tcl:	global xgraph queuetype
+bdflow_h.tcl:	puts "running xgraph for comparing drops and arrivals..."
+bdflow_h.tcl:	if { $xgraph == 1 } {
+bdflow_h.tcl:	    exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards (in packets).  Queue in $queuetype" $flowgraphfile &
+bdflow_h.tcl:	if { $xgraph == 0 } {
+bdflow_h.tcl:    global xgraph queuetype
+bdflow_h.tcl:    puts "running xgraph for comparing drops and arrivals..."
+bdflow_h.tcl:    if { $xgraph == 1 } {
+bdflow_h.tcl:	exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards (in bytes) Queue in $queuetype" $flowgraphfile &
+bdflow_h.tcl:    if { $xgraph == 0 } {
+bdflow_h.tcl:    global xgraph 
+bdflow_h.tcl:    puts "running xgraph for comparing drops and arrivals..."
+bdflow_h.tcl:    if { $xgraph == 1 } {
+bdflow_h.tcl:	exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards (combined metric)" $flowgraphfile &
+bdflow_h.tcl:    if { $xgraph == 0 } {
+bdflow_h.tcl:        # this next part is xgraph specific
+bdflow_h.tcl:        puts "writing flow xgraph data to $graphfile..."
+bdflow_h.tcl:	global timegraphfile xgraph
+bdflow_h.tcl:	puts "running time xgraph for plotting arrivals..."
+bdflow_h.tcl:	if { $xgraph == 1 } {
+bdflow_h.tcl:	  exec xgraph -bb -tk -m -ly 0,100 -x "time" -y "Bandwidth(%)" $timegraphfile &
+bdflow_h.tcl:	if { $xgraph == 0 } {
+bdflow_h.tcl:        # this next part is xgraph specific
+bdflow_h.tcl:        puts "writing flow xgraph data to $graphfile..."
+bdflow_h.tcl:	global xgraph
+bdflow_h.tcl:	puts "running xgraph for plotting per-flow bytes..."
+bdflow_h.tcl:	if { $xgraph == 1 } {
+bdflow_h.tcl:	  exec xgraph -bb -tk -m -ly 0,100 -x "time" -y "Bandwidth(%)" $outfile &
+bdflow_h.tcl:	if { $xgraph == 0 } {
+bdflow_h.tcl:        # this next part is xgraph specific
+bdflow_h.tcl:        puts "writing flow xgraph data to $graphfile..."
+bdflow_h.tcl:	global flowgraphfile fracgraphfile xgraph awkprocedure
+bdflow_h.tcl:	puts "running time xgraph for plotting drop ratios..."
+bdflow_h.tcl:	if { $xgraph == 1 } {
+bdflow_h.tcl:	  exec xgraph -bb -tk -m -x "time" -y "Drop_Fraction(%)" $fracgraphfile &
+bdflow_h.tcl:	if { $xgraph == 0 } {
+bdflow_h.tcl:        # this next part is xgraph specific
+bdflow_h.tcl:        puts "writing friendly xgraph data to $graphfile..."
+bdflow_h.tcl:	global friendlygraphfile xgraph ratiofile
+bdflow_h.tcl:	puts "beginning time xgraph for tcp-friendly bandwidth..."
+bdflow_h.tcl:	puts "running time xgraph for tcp-friendly bandwidth..."
+bdflow_h.tcl:	if { $xgraph == 1 } {
+bdflow_h.tcl:	  exec xgraph -bb -tk -m -ly 0,200 -x "time" -y "Bandwidth(%)" $friendlygraphfile &
+bdflow_h.tcl:	if { $xgraph == 0 } {
+CBR-UDP-UWB_sample.tcl:        #exec xgraph data1.tr data2.tr data3.tr data4.tr data5.tr data6.tr data7.tr -t "Data Recieved in Bytes" -geometry 800x400 &
+CBR-UDP-UWB_sample.tcl:        #exec xgraph out1.tr out2.tr out3.tr out4.tr out5.tr out6.tr out7.tr -t "Bit Rate" -geometry 800x400 &
+CBR-UDP-UWB_sample.tcl:        #exec xgraph lost1.tr lost2.tr lost3.tr lost4.tr lost5.tr lost6.tr lost7.tr -t "Packet Loss Rate" -geometry 800x400 &
+CBR-UDP-UWB_sample.tcl:        #exec xgraph delay1.tr delay2.tr delay3.tr delay4.tr delay5.tr delay6.tr delay7.tr -t "Packet Delay" -geometry 800x400 &      
+Clustering-moc_v1.tcl: exec xgraph dsr1.tr securedsr1.tr sink1.tr   -geometry 800x400 -t "For Packet Delivery Ratio" -x "Time" -y "No.of Packets" -bg white &
+Clustering-moc_v1.tcl: exec xgraph sink2.tr  securedsr2.tr dsr2.tr -geometry 800x400 -t "For Packet Loss" -x "Time" -y "No.of Packets" -bg white &
+Clustering-moc_v1.tcl:exec xgraph  dsr3.tr sink3.tr  securedsr3.tr -geometry 800x400 -t "Throughput" -x "Time" -y "No.of Packets" -bg white &
+Clustering-moc_v1.tcl:	exec xgraph dsr_routing_1.tr  -x "Successfull Response" -y "Trust Value" -t "Performance Level single-path vs successfull response " -geometry 800x400 -bg white &
+Clustering-moc_v1.tcl:	exec xgraph dsr_routing_3.tr  -x "Failure Rate" -y "Trust Value" -t "Performance Level single-path vs Failture rate" -geometry 800x400 -bg white &
+Clustering-moc_v1.tcl:	exec xgraph dsr_routing_2.tr  -x "Mobility m/s" -y "Trust Value" -t "Performance Level multi-path routing vs Mobility" -geometry 800x400 -bg white &
+Clustering-moc_v1.tcl:	exec xgraph dsr_routing_4.tr  -x "Trust Value" -y "Node battery power" -t "Performance Level multi-path routing vs Battery power" -geometry 800x400 -bg white &
+Clustering-moc_v1.tcl:	exec xgraph dsr_routing_5.tr  -x "Trust Value" -y "Band width m/s" -t "Performance Level Trust value vs Bandwidth" -geometry 800x400 -bg white &
+Clustering-moc_v1.tcl:	exec xgraph dsr_routing_6.tr  -x "Trust Value" -y "recommendation value" -t "Performance Level Trust value vs Recommendation" -geometry 800x400 -bg white &
+Clustering-moc_v1.tcl:	exec xgraph dsr_routing_7.tr  -x "Trust Value" -y "Availablity power" -t "Performance Level Trust value vs Availablity power" -geometry 800x400 -bg white &
+Clustering-moc_v1.tcl:exec xgraph througput.tr packtdropped.tr delivryratio.tr n4-delay1.tr n5-delay2.tr -geometry  800x400 -t " routing performance" -x "no of nodes" -y "transmission range" &
+code.tcl:	#Call xgraph to display the results
+code.tcl:	exec xgraph -x time -y throughput(mbps) out.tr -geometry 800x400 &
+code.tcl:    exec xgraph -bb -tk -x time -y queue temp.queue &
+concat_TFRC_RED_ECN_v0.91.tcl:## awk -f e2e-delay-udp.awk out.tr | xgraph -nl -p &     ##
+concat_TFRC_RED_ECN_v0.91.tcl:## awk -f qmon.awk outqm.tr | xgraph & to plot queues    ##
+concat_TFRC_RED_ECN_v0.91.tcl:#Open the output files for xgraph
+concat_TFRC_RED_ECN_v0.91.tcl:## from these are numbers in two columns, it can be put into xgraph by simple
+concat_TFRC_RED_ECN_v0.91.tcl:## perl script.pl | xgraph (I think).
+concat_TFRC_RED_ECN_v0.91.tcl:	    # in a form suitable for plotting with xgraph.
+concat_TFRC_RED_ECN_v0.91.tcl:    exec xgraph -bb -tk -x time -y queue -nl -m temp.queue -ly 0,1.1 & 
+concat_TFRC_RED_ECN_v0.91.tcl:    exec xgraph -bb -x time -y queue  temp.queue & 
+concat_TFRC_RED_ECN_v0.91.tcl:    #exec xgraph -t "TCP Congestion window" cwnd_res.tr &   
+concat_TFRC_RED_ECN_v0.91.tcl:    #exec awk -f tcp-throughput.awk st=1.00 dn=3 sn=2 out.tr | xgraph -t "TCP0 throughput" &
+concat_TFRC_RED_ECN_v0.91.tcl:#### The following will make a xgraph showing the aggregate packet throughput and drops at first bottleneck link
+concat_TFRC_RED_ECN_v0.91.tcl:#    exec xgraph -bb -tk -nl -m -x time -y packets temp2.rands &
+concat_TFRC_RED_ECN_v0.91.tcl:    exec xgraph -t "Mbit/s received over UDP0" out0.tr -geometry 800x400 & ;# Displays the instantaneous Mbit/s received sampled each 2ms by Poisson receiver
+concat_TFRC_RED_ECN_v0.92.tcl:#Open the output files for xgraph
+concat_TFRC_RED_ECN_v0.92.tcl:## from these are numbers in two columns, it can be put into xgraph by simple
+concat_TFRC_RED_ECN_v0.92.tcl:## perl script.pl | xgraph (I think).
+concat_TFRC_RED_ECN_v0.92.tcl:	    # in a form suitable for plotting with xgraph.
+concat_TFRC_RED_ECN_v0.92.tcl:    exec xgraph -bb -tk -x time -y queue -nl -m temp.queue -ly 0,1.1 & 
+concat_TFRC_RED_ECN_v0.92.tcl:    exec xgraph -bb -x time -y queue  temp.queue & 
+concat_TFRC_RED_ECN_v0.92.tcl:    #exec xgraph -t "TCP Congestion window" cwnd_res.tr &   
+concat_TFRC_RED_ECN_v0.92.tcl:    #exec awk -f tcp-throughput.awk st=1.00 dn=3 sn=2 out.tr | xgraph -t "TCP0 throughput" &
+concat_TFRC_RED_ECN_v0.92.tcl:#### The following will make a xgraph showing the aggregate packet throughput and drops at first bottleneck link
+concat_TFRC_RED_ECN_v0.92.tcl:#    exec xgraph -bb -tk -nl -m -x time -y packets temp2.rands &
+concat_TFRC_RED_ECN_v0.92.tcl:    exec xgraph -t "Mbit/s received over UDP0" out0.tr -geometry 800x400 & ;# Displays the instantaneous Mbit/s received sampled each 2ms by Poisson receiver
+concat_TFRC_RED_ECN_v0.93.tcl:#Open the output files for xgraph
+concat_TFRC_RED_ECN_v0.93.tcl:	    # in a form suitable for plotting with xgraph.
+concat_TFRC_RED_ECN_v0.93.tcl:    exec xgraph -bb -tk -x time -y queue -nl -m temp.queue -ly 0,1.1 & 
+concat_TFRC_RED_ECN_v0.93.tcl:    exec xgraph -bb -x time -y queue  temp.queue & 
+concat_TFRC_RED_ECN_v0.93.tcl:    #exec xgraph -t "TCP Congestion window" cwnd_res.tr &   
+concat_TFRC_RED_ECN_v0.93.tcl:    #exec awk -f tcp-throughput.awk st=1.00 dn=3 sn=2 out.tr | xgraph -t "TCP0 throughput" &
+concat_TFRC_RED_ECN_v0.93.tcl:#### The following will make a xgraph showing the aggregate packet throughput and drops at first bottleneck link
+concat_TFRC_RED_ECN_v0.93.tcl:#    exec xgraph -bb -tk -nl -m -x time -y packets temp2.rands &
+configure.tcl:set pair [configure-app $fp "xgraph" "xgraph"]
+configure.tcl:  puts "  xgraph found."
+configure.tcl:  set found_xgraph 1
+configure.tcl:  puts "  xgraph not found.  Cannot use xgraph plot device."
+configure.tcl:  set found_xgraph 0
+configure.tcl:if { !$found_xgraph && !$found_gnuplot } {
+configure.tcl:  Neither xgraph or gnuplot could be found in the PATH.  
+configure.tcl:if { !$found_xgraph ||
+cplot.tcl:# "package".  for now, package is either xgraph or gnuplot
+cplot.tcl:set labelproc(xgraph) xgraph_label
+cplot.tcl:set headerproc(xgraph) xgraph_header
+cplot.tcl:set filext(xgraph) xgr
+cplot.tcl:# xgraph-specific stuff
+cplot.tcl:proc xgraph_header { tmpchan title } {
+cplot.tcl:proc xgraph_label { tmpchan label fname } {
+DiffServ.tcl:       exec xgraph queuelen-$i_.tr average-$i_.tr -geometry 600x450 &
+DSR-50nodes-2013.tcl:    # exec xgraph proj_out0.tr proj_out1.tr 
+DSR-50nodes.tcl:    # exec xgraph proj_out0.tr proj_out1.tr 
+dsr---aodv-m.tcl:       # exec xgraph packets_received.tr packets_lost.tr 
+DSR.tcl:        exec xgraph packets_received.tr packets_lost.tr 
+ex1.tcl:    #Call xgraph to display the results
+ex1.tcl:    exec xgraph out0.tr out1.tr out2.tr out3.tr out4.tr out5.tr -geometry 800x400 &
+ex2.tcl:# line to use xgraph assuming xgraph is installed on your computer.
+ex2.tcl:#Graph/set plot_device_ [new xgraph]
+ex4.tcl:# If gnuplot and xgraph are not installed on your computer then this example
+ex4.tcl:  set xgraph_plotter [new xgraph]
+ex4.tcl:  $xgraph_plotter plot $util_graph
+ex4.tcl:  $xgraph_plotter close
+ex5.tcl:# line to use xgraph assuming xgraph is installed on your computer.
+ex9.tcl:# For example you can use xgraph if xgraph is installed.
+ex9.tcl:#Graph set plot_device_ [new xgraph]
+example4.tcl:        #Call xgraph to display the results
+example4.tcl:        exec xgraph out0.tr out1.tr out2.tr -geometry 800x400 &
+example-VBR.tcl:#Call xgraph to display the results
+example-VBR.tcl:exec xgraph CBR_MB.tr VBR_MB.tr -geometry 800x400 &
+example-VBR.tcl:exec xgraph out3.tr -geometry 800x400 &
+ex_bsfq2.tcl:    #Call xgraph to display the results
+ex_bsfq2.tcl:    exec xgraph out0.tr out1.tr out2.tr out3.tr out4.tr out5.tr -geometry 800x400 &
+ex_bsfq.tcl:    #Call xgraph to display the results
+ex_bsfq.tcl:    exec xgraph out0.tr out1.tr out2.tr out3.tr out4.tr out5.tr -geometry 800x400 &
+ex_bsfq_v2.tcl:    #Call xgraph to display the results
+ex_bsfq_v2.tcl:    exec xgraph out0.tr out1.tr out2.tr out3.tr out4.tr out5.tr -geometry 800x400 &
+ex_bsfq_v3.tcl:    #Call xgraph to display the results
+ex_bsfq_v3.tcl:    exec xgraph out0.tr out1.tr out2.tr out3.tr out4.tr out5.tr -geometry 800x400 &
+ex_dwrr.tcl:    #Call xgraph to display the results
+ex_dwrr.tcl:    exec xgraph out0.tr out1.tr out2.tr out3.tr out4.tr out5.tr -geometry 800x400 &
+ex_dwrr_v3.tcl:    #Call xgraph to display the results
+ex_dwrr_v3.tcl:    exec xgraph out0.tr out1.tr out2.tr out3.tr out4.tr out5.tr -geometry 800x400 &
+exponential-burst.tcl:        exec xgraph out0.tr out1.tr out2.tr -geometry 800x400 -P -bg white &
+exUDP.tcl:        exec xgraph out02.tr out12.tr out22.tr out32.tr -geometry 800x400 &
+exUDP.tcl:        exec xgraph lost02.tr lost12.tr lost22.tr lost32.tr -geometry 800x400 &
+exUDP.tcl:        exec xgraph delay02.tr delay12.tr delay22.tr delay32.tr -geometry 800x400 &
+ex_wfd.tcl:    #Call xgraph to display the results
+ex_wfd.tcl:    exec xgraph out0.tr out1.tr out2.tr out3.tr out4.tr out5.tr -geometry 800x400 &
+Fairnessall1.v2.tcl:    puts "Calling xgraph..."
+Fairnessall1.v2.tcl:    exec xgraph -bb -tk -m -x UdpArrivals -y GoodputKbps temp.rands &
+FlowsA.v2.tcl:# Set xgraph to 1 to use xgraph, and to 0 to use S.
+FlowsA.v2.tcl:# Set xgraph to 2 to make S-graphs later
+FlowsA.v2.tcl:# Set xgraph to 3 to not make graphs at all.
+FlowsA.v2.tcl:###set xgraph 1
+FlowsA.v2.tcl:###set xgraph 2
+FlowsA.v2.tcl:set xgraph 1
+FlowsA.v2.tcl:	# often we have only one drop and xgraph won't print marks
+FlowsA.v2.tcl:	if { $xgraph == 1 } {
+FlowsA.v2.tcl:	  exec xgraph -bb -tk -nl -m -x time -y packet temp.rands &
+FlowsA.v2.tcl:	if { $xgraph == 1 } {
+FlowsA.v2.tcl:	  puts "running xgraph for queue plot..."
+FlowsA.v2.tcl:	  exec xgraph -bb -tk -x time -y queue temp.queue &
+FlowsA.v2.tcl:	global xgraph
+FlowsA.v2.tcl:	if { $xgraph == 1 } {
+FlowsA.v2.tcl:	  puts "running xgraph for queue plot..."
+FlowsA.v2.tcl:	  exec xgraph -bb -tk -x time -y queue temp.queue &
+FlowsA.v2.tcl:	if { $xgraph == 0 } {
+FlowsA.v2.tcl:    global flowfile report_sec report_drop report_forced xgraph
+FlowsA.v2.tcl:    # this next part is xgraph specific
+FlowsA.v2.tcl:    puts "writing flow xgraph data to $graphfile..."
+FlowsA.v2.tcl:    if { $xgraph == 1 } {
+FlowsA.v2.tcl:      catch {exec xgraph -t "seconds" -bb -tk -m -x "time" -y "seconds since last report" fairflow.rpt.sec &} result
+FlowsA.v2.tcl:      catch {exec xgraph -t "drops" -bb -tk -m -x "time" -y "drops since last report" fairflow.rpt.drop &} result
+FlowsA.v2.tcl:      catch {exec xgraph -t "forced_drops" -bb -tk -m -x "time" -y "forced drops" fairflow.rpt.forced &} result
+FlowsA.v2.tcl:    # this next part is xgraph specific
+FlowsA.v2.tcl:	global flowgraphfile xgraph awkprocedure
+FlowsA.v2.tcl:	puts "running xgraph for comparing drops and arrivals..."
+FlowsA.v2.tcl:	if { $xgraph == 1 } {
+FlowsA.v2.tcl:	    exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards" $flowgraphfile &
+FlowsA.v2.tcl:	if { $xgraph == 0 } {
+FlowsA.v2.tcl:    global xgraph queuetype
+FlowsA.v2.tcl:    puts "running xgraph for comparing drops and arrivals..."
+FlowsA.v2.tcl:    if { $xgraph == 1 } {
+FlowsA.v2.tcl:	exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards (in packets).  Queue in $queuetype" $flowgraphfile &
+FlowsA.v2.tcl:    if { $xgraph == 0 } {
+FlowsA.v2.tcl:	global xgraph queuetype
+FlowsA.v2.tcl:	puts "running xgraph for comparing drops and arrivals..."
+FlowsA.v2.tcl:	if { $xgraph == 1 } {
+FlowsA.v2.tcl:	    exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards (in packets).  Queue in $queuetype" $flowgraphfile &
+FlowsA.v2.tcl:	if { $xgraph == 0 } {
+FlowsA.v2.tcl:    global xgraph queuetype
+FlowsA.v2.tcl:    puts "running xgraph for comparing drops and arrivals..."
+FlowsA.v2.tcl:    if { $xgraph == 1 } {
+FlowsA.v2.tcl:	exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards (in bytes) Queue in $queuetype" $flowgraphfile &
+FlowsA.v2.tcl:    if { $xgraph == 0 } {
+FlowsA.v2.tcl:    global xgraph
+FlowsA.v2.tcl:    if { $xgraph == 1 } {
+FlowsA.v2.tcl:	exec xgraph -bb -tk -m -x "time" -y "ratio" $flowgraphfile.4 &
+FlowsA.v2.tcl:	exec xgraph -bb -tk -m -x "time" -y "arrivals" $flowgraphfile.5 &
+FlowsA.v2.tcl:    global xgraph 
+FlowsA.v2.tcl:    puts "running xgraph for comparing drops and arrivals..."
+FlowsA.v2.tcl:    if { $xgraph == 1 } {
+FlowsA.v2.tcl:	exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards (combined metric)" $flowgraphfile &
+FlowsA.v2.tcl:    if { $xgraph == 0 } {
+FlowsA.v2.tcl:        # this next part is xgraph specific
+FlowsA.v2.tcl:        puts "writing flow xgraph data to $graphfile..."
+FlowsA.v2.tcl:	global timegraphfile xgraph
+FlowsA.v2.tcl:	puts "running time xgraph for plotting arrivals..."
+FlowsA.v2.tcl:	if { $xgraph == 1 } {
+FlowsA.v2.tcl:	  exec xgraph -bb -tk -m -ly 0,100 -x "time" -y "Bandwidth(%)" $timegraphfile &
+FlowsA.v2.tcl:	if { $xgraph == 0 } {
+FlowsA.v2.tcl:        # this next part is xgraph specific
+FlowsA.v2.tcl:        puts "writing flow xgraph data to $graphfile..."
+FlowsA.v2.tcl:	global xgraph
+FlowsA.v2.tcl:	puts "running xgraph for plotting per-flow bytes..."
+FlowsA.v2.tcl:	if { $xgraph == 1 } {
+FlowsA.v2.tcl:	  exec xgraph -bb -tk -m -ly 0,100 -x "time" -y "Bandwidth(%)" $outfile &
+FlowsA.v2.tcl:	if { $xgraph == 0 } {
+FlowsA.v2.tcl:        # this next part is xgraph specific
+FlowsA.v2.tcl:        puts "writing flow xgraph data to $graphfile..."
+FlowsA.v2.tcl:	global flowgraphfile fracgraphfile xgraph awkprocedure
+FlowsA.v2.tcl:	puts "running time xgraph for plotting drop ratios..."
+FlowsA.v2.tcl:	if { $xgraph == 1 } {
+FlowsA.v2.tcl:	  exec xgraph -bb -tk -m -x "time" -y "Drop_Fraction(%)" $fracgraphfile &
+FlowsA.v2.tcl:	if { $xgraph == 0 } {
+FlowsA.v2.tcl:        # this next part is xgraph specific
+FlowsA.v2.tcl:        puts "writing friendly xgraph data to $graphfile..."
+FlowsA.v2.tcl:	global friendlygraphfile xgraph ratiofile
+FlowsA.v2.tcl:	puts "beginning time xgraph for tcp-friendly bandwidth..."
+FlowsA.v2.tcl:	puts "running time xgraph for tcp-friendly bandwidth..."
+FlowsA.v2.tcl:	if { $xgraph == 1 } {
+FlowsA.v2.tcl:	  exec xgraph -bb -tk -m -ly 0,200 -x "time" -y "Bandwidth(%)" $friendlygraphfile &
+FlowsA.v2.tcl:	if { $xgraph == 0 } {
+Flows.v2.tcl:# Set xgraph to 1 to use xgraph, and to 0 to use S.
+Flows.v2.tcl:# Set xgraph to 2 to make S-graphs later
+Flows.v2.tcl:set xgraph 1
+Flows.v2.tcl:	# often we have only one drop and xgraph won't print marks
+Flows.v2.tcl:	exec xgraph -bb -tk -nl -m -x time -y packet temp.rands &
+Flows.v2.tcl:	puts "running xgraph for queue plot..."
+Flows.v2.tcl:	exec xgraph -bb -tk -x time -y queue temp.queue &
+Flows.v2.tcl:	global xgraph
+Flows.v2.tcl:	puts "running xgraph for queue plot..."
+Flows.v2.tcl:	if { $xgraph == 1 } {
+Flows.v2.tcl:	  exec xgraph -bb -tk -x time -y queue temp.queue &
+Flows.v2.tcl:	if { $xgraph == 0 } {
+Flows.v2.tcl:    # this next part is xgraph specific
+Flows.v2.tcl:    puts "writing flow xgraph data to $graphfile..."
+Flows.v2.tcl:	global flowgraphfile xgraph awkprocedure
+Flows.v2.tcl:	puts "running xgraph for comparing drops and arrivals..."
+Flows.v2.tcl:	if { $xgraph == 1 } {
+Flows.v2.tcl:	    exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards" $flowgraphfile &
+Flows.v2.tcl:	if { $xgraph == 0 } {
+Flows.v2.tcl:    global xgraph queuetype
+Flows.v2.tcl:    puts "running xgraph for comparing drops and arrivals..."
+Flows.v2.tcl:    if { $xgraph == 1 } {
+Flows.v2.tcl:	exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards (in packets).  Queue in $queuetype" $flowgraphfile &
+Flows.v2.tcl:    if { $xgraph == 0 } {
+Flows.v2.tcl:	global xgraph queuetype
+Flows.v2.tcl:	puts "running xgraph for comparing drops and arrivals..."
+Flows.v2.tcl:	if { $xgraph == 1 } {
+Flows.v2.tcl:	    exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards (in packets).  Queue in $queuetype" $flowgraphfile &
+Flows.v2.tcl:	if { $xgraph == 0 } {
+Flows.v2.tcl:    global xgraph queuetype
+Flows.v2.tcl:    puts "running xgraph for comparing drops and arrivals..."
+Flows.v2.tcl:    if { $xgraph == 1 } {
+Flows.v2.tcl:	exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards (in bytes) Queue in $queuetype" $flowgraphfile &
+Flows.v2.tcl:    if { $xgraph == 0 } {
+Flows.v2.tcl:    global xgraph 
+Flows.v2.tcl:    puts "running xgraph for comparing drops and arrivals..."
+Flows.v2.tcl:    if { $xgraph == 1 } {
+Flows.v2.tcl:	exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards (combined metric)" $flowgraphfile &
+Flows.v2.tcl:    if { $xgraph == 0 } {
+Flows.v2.tcl:        # this next part is xgraph specific
+Flows.v2.tcl:        puts "writing flow xgraph data to $graphfile..."
+Flows.v2.tcl:	global timegraphfile xgraph
+Flows.v2.tcl:	puts "running time xgraph for plotting arrivals..."
+Flows.v2.tcl:	if { $xgraph == 1 } {
+Flows.v2.tcl:	  exec xgraph -bb -tk -m -ly 0,100 -x "time" -y "Bandwidth(%)" $timegraphfile &
+Flows.v2.tcl:	if { $xgraph == 0 } {
+Flows.v2.tcl:        # this next part is xgraph specific
+Flows.v2.tcl:        puts "writing flow xgraph data to $graphfile..."
+Flows.v2.tcl:	global xgraph
+Flows.v2.tcl:	puts "running xgraph for plotting per-flow bytes..."
+Flows.v2.tcl:	if { $xgraph == 1 } {
+Flows.v2.tcl:	  exec xgraph -bb -tk -m -ly 0,100 -x "time" -y "Bandwidth(%)" $outfile &
+Flows.v2.tcl:	if { $xgraph == 0 } {
+Flows.v2.tcl:        # this next part is xgraph specific
+Flows.v2.tcl:        puts "writing flow xgraph data to $graphfile..."
+Flows.v2.tcl:	global flowgraphfile fracgraphfile xgraph awkprocedure
+Flows.v2.tcl:	puts "running time xgraph for plotting drop ratios..."
+Flows.v2.tcl:	if { $xgraph == 1 } {
+Flows.v2.tcl:	  exec xgraph -bb -tk -m -x "time" -y "Drop_Fraction(%)" $fracgraphfile &
+Flows.v2.tcl:	if { $xgraph == 0 } {
+Flows.v2.tcl:        # this next part is xgraph specific
+Flows.v2.tcl:        puts "writing friendly xgraph data to $graphfile..."
+Flows.v2.tcl:	global friendlygraphfile xgraph ratiofile
+Flows.v2.tcl:	puts "beginning time xgraph for tcp-friendly bandwidth..."
+Flows.v2.tcl:	puts "running time xgraph for tcp-friendly bandwidth..."
+Flows.v2.tcl:	if { $xgraph == 1 } {
+Flows.v2.tcl:	  exec xgraph -bb -tk -m -ly 0,200 -x "time" -y "Bandwidth(%)" $friendlygraphfile &
+Flows.v2.tcl:	if { $xgraph == 0 } {
+fq.tcl:	# often we have only one drop and xgraph won't print marks
+fq.tcl:	exec xgraph -bb -tk -nl -m -x time -y packet temp.rands &
+graph3.tcl:exec xgraph -M -bb -geometry 700X800 graph.tr graph1.tr graph2.tr
+graph.tcl:#     set xg [new xgraph]
+graph.tcl:# xgraph. "[new xgraph]" creates a TCL object that acts as the interface
+graph.tcl:# to xgraph application. All such interfaces inherit from the PlotDevice class
+graph.tcl:#   Graph set plot_device_ [new xgraph]
+graph.tcl:#   Graph set plot_device_ [new xgraph]
+graph.tcl:#  xgraph                 output to X window using xgraph
+graph.tcl:# support this function. For example: xgraph doesn't support
+graph.tcl:# the plot has completed displaying. With xgraph this means waiting until
+graph.tcl:# xgraph is closed before continuing. By default this just prepares
+graph.tcl:Class xgraph -superclass PlotDevice
+graph.tcl:xgraph instproc init {} {
+graph.tcl:  global xgraph_app_path_
+graph.tcl:  if { ![info exists xgraph_app_path_] || $xgraph_app_path_ == "" } {
+graph.tcl:ERROR! You have instantiated the xgraph plot device but we do not know where 
+graph.tcl:the xgraph executable resides in your filesystem.  If xgraph or an
+graph.tcl:When prompted, enter the path to xgraph or the equivalent application.
+graph.tcl:xgraph instproc output-filename { graph } {
+graph.tcl:  error "The xgraph PlotDevice generates no output file."
+graph.tcl:xgraph instproc command-filename { graph } {
+graph.tcl:  return "[$graph set command_filename_]_plot[set plot_cnt_].xgraph"
+graph.tcl:xgraph instproc protected-plot { graph } {
+graph.tcl:  global xgraph_app_path_
+graph.tcl:  exec $xgraph_app_path_ [$self command-filename $graph] &
+graph.tcl:xgraph instproc protected-plot-and-wait { graph } {
+graph.tcl:  global xgraph_app_path_
+graph.tcl:  exec $xgraph_app_path_ [$self command-filename $graph]
+graph.tcl:xgraph instproc clean { graph } {
+graph.tcl:# xgraph-specfic method. (To maintain genericity, you should not call 
+graph.tcl:# this except from subclasses of xgraph).
+graph.tcl:xgraph instproc protected-output-command-file { graph } {
+graph.tcl:    puts stderr "xgraph: no data sets for graph with title \"$title_\"."
+graph.tcl:  Graph set plot_device_ \[new xgraph\]
+graph.tcl:  Graph set plot_device_ \[new xgraph\]
+graph.tcl:  Graph set plot_device_ \[new xgraph\]
+graph-test.tcl:if { $xgraph_app_path_ == "" && $gnuplot_app_path_ == ""  } {
+graph-test.tcl:  puts "\nFAIL!! Aborting tests.  Neither xgraph nor gnuplot could be found\
+graph-test.tcl:if { $xgraph_app_path_ == "" } {
+graph-test.tcl:  Because xgraph was not found, the graph package
+graph-test.tcl:  cannot use the xgraph plot device.  Skipping xgraph tests."
+graph-test.tcl:if { $xgraph_app_path_ == "" ||
+graph-test.tcl:      xgraph               &  12.1  \\
+graph-test.tcl:        xgraph               &  12.1 (from ns-allinone-2.27) \\
+graph-test.tcl:        xgraph               &  12.1 (from ns-allinone-2.28) \\
+graph-test.tcl:  global xgraph_app_path_ gnuplot_app_path_ latex_app_path_ ghostview_app_path_
+graph-test.tcl:  global xgraph_app_ gnuplot_app_ latex_app_ ghostview_app_
+graph-test.tcl:  if { $xgraph_app_path_ != "" } {
+graph-test.tcl:Hit return to display utilization versus time using the xgraph plot device,
+graph-test.tcl:  $xgraph_app_path_"
+graph-test.tcl:      set xgraph_plotter [new xgraph]
+graph-test.tcl:      $xgraph_plotter plot $util_graph
+http-ex.tcl:		catch "exec xgraph -nl -M -display $env(DISPLAY) \
+http-single.tcl:    # often we have only one drop and xgraph won't print marks
+http-single.tcl:    exec xgraph -bb -tk -nl -m -x time -y packet temp.rands &
+input.tcl:exec ./xgraph band1.tr band2.tr band3.tr  -geometry 800x400 -t "-bandwidth-efficient" -x "TIME" -y "bandwidth" & 
+input.tcl:exec ./xgraph lost1.tr lost2.tr lost3.tr  -geometry 800x400 -t "-bandwidth-efficient" -x "TIME" -y "packet loss" & 
+input.tcl:exec ./xgraph delay1.tr delay2.tr delay3.tr  -geometry 800x400 -t "-bandwidth-efficient" -x "TIME" -y "routing delay" & 
+input.tcl:exec ./xgraph pkts1.tr pkts2.tr pkts3.tr  -geometry 800x400 -t "-bandwidth-efficient" -x "TIME" -y "packets-received" & 
+input.tcl:exec ./xgraph pdr1.tr pdr2.tr pdr3.tr  -geometry 800x400 -t "-bandwidth-efficient" -x "TIME" -y "packet-delivery-ratio" & 
+input.tcl:exec ./xgraph energy1.tr energy2.tr energy3.tr  -geometry 800x400 -t "-bandwidth-efficient" -x "TIME" -y "energy-consumed" & 
+jayashri-ahire_tora.tcl:# exec xgraph proj_out0.tr proj_out1.tr
+JoeNaoum-Sawaya.tcl:        exec xgraph out02.tr out12.tr out22.tr out32.tr -geometry 800x400 -P -bg white &
+JoeNaoum-Sawaya.tcl:        exec xgraph lost02.tr lost12.tr lost22.tr lost32.tr -geometry 800x400 -P -bg white &
+JoeNaoum-Sawaya.tcl:        exec xgraph delay02.tr delay12.tr delay22.tr delay32.tr -geometry 800x400 -P -bg white &
+joseph4-13.tcl:exec xgraph co_packet_received.data co_packet_lost.data co_expected_packet.data &
+joseph4-13.tcl:exec xgraph receivingTime.data actual_Time.data -geometry 500x300 & 
+joseph4-13.tcl:exec xgraph byte.data co_sumband.data -geometry 400x300 &
+joseph4-13.tcl:exec xgraph co_cbr6np.data co_cbr6nl.data co_cbr6ex.data &
+joseph4-13.tcl:exec xgraph cbr6re.data -geometry 500x300 & 
+joseph4-13.tcl:exec xgraph byte.data co_sumband.data cbr6by.data co_sumcbr6.data -geometry 400x300 &
+joseph4.tcl:exec xgraph co_packet_received.data co_packet_lost.data co_expected_packet.data &
+joseph4.tcl:exec xgraph receivingTime.data actual_Time.data -geometry 500x300 & 
+joseph4.tcl:exec xgraph byte.data co_sumband.data -geometry 400x300 &
+joseph4.tcl:exec xgraph co_cbr6np.data co_cbr6nl.data co_cbr6ex.data &
+joseph4.tcl:exec xgraph cbr6re.data -geometry 500x300 & 
+joseph4.tcl:exec xgraph byte.data co_sumband.data cbr6by.data co_sumcbr6.data -geometry 400x300 &
+kartiksd-leach.tcl:exec xgraph alivenodes_leach.tr  -geometry 800x400 -t "alivenodes vs time" -x "time" -y "alivenodes" &
+kartiksd-leach.tcl:exec xgraph frames_leach.tr -geometry 800x400 -t "frames vs round number" -x "rounds" -y "frames" &
+kartiksd-leach.tcl:exec xgraph bitsfromcluster_leach.tr -geometry 800x400 -t "bits from cluster vs time" -x "time" -y "bits from cluster" &       
+kartiksd.tcl:exec xgraph alivenodes_leach.tr  -geometry 800x400 -t "alivenodes vs time" -x "time" -y "alivenodes" -bg white -P &
+kartiksd.tcl:exec xgraph frames_leach.tr -geometry 800x400 -t "frames vs round number" -x "rounds" -y "frames" -bg white -P &
+kartiksd.tcl:exec xgraph bitsfromcluster_leach.tr -geometry 800x400 -t "bits from cluster vs time" -x "time" -y "bits from cluster" -bg white -P &       
+mac-test.tcl:		catch "exec xgraph -nl -M -display $env(DISPLAY) \
+malikkk.tcl:#   http://www.linuxquestions.org/questions/linux-software-2/xgraph-problm-urgent-please-4175506024/#3
+malikkk.tcl:exec xgraph out02.tr -geometry 800x400 &
+malikkk.tcl:exec xgraph lost02.tr -geometry 800x400 &
+malikkk.tcl:exec xgraph delay02.tr -geometry 800x400 &
+many_tcp.tcl:				exec xgraph -t $title  < $trace_filename_.xg &
+many_tcp.tcl:				exec xgraph -tk -nl -m -bb -t $title < $trace_filename_.xg &
+many_tcp.tcl:	#	exec raw2xg -a < out.tr | xgraph -t "$opts(server-tcp-method)" &
+m-aodv-chenil.tcl:        exec xgraph packets_received.tr packets_lost.tr 
+m-aodv_saa-6611.tcl:exec xgraph a1.tr a2.tr a3.tr &
+m-aodv.tcl:        exec xgraph packets_received.tr packets_lost.tr &
+m-aodvtcl.tcl:        exec xgraph packets_received.tr packets_lost.tr 
+mesh_hwmp_example.tcl:#    exec xgraph speed.tr -geometry 800x400 &
+mezyana-30-OLSR.tcl:	exec xgraph packets_received.tr packets_lost.tr proj_out2.tr proj_out3.tr proj_out4.tr proj_out5.tr
+mezyana-30.tcl:	exec xgraph packets_received.tr packets_lost.tr proj_out2.tr proj_out3.tr proj_out4.tr proj_out5.tr
+mezyana-30-WCETT.tcl:	exec xgraph packets_received.tr packets_lost.tr proj_out2.tr proj_out3.tr proj_out4.tr proj_out5.tr
+mipsimulation2.tcl:    #Call xgraph to display the results
+mipsimulation2.tcl:    exec xgraph -x time -y throughput(mbps) mipsimulation-outgraph.tr -geometry 800x400 &
+misc_simple.tcl:                exec xgraph -bb -tk -x time -y cwnd cwnd.xgr &
+mptcp-sample.tcl:    exec xgraph -M -m -nl mptcp normal-tcp1 normal-tcp2 
+mtp.tcl:                exec xgraph -bb -tk -nl -m -x time -y packets plot.xgr &
+m-zrp.tcl:        exec xgraph packets_received.tr packets_lost.tr &
+ns-trafficgen.tcl:				exec xgraph -t $title  < $trace_filename_.xg &
+ns-trafficgen.tcl:				exec xgraph -tk -nl -m -bb -t $title < $trace_filename_.xg &
+ns-trafficgen.tcl:	#	exec raw2xg -a < out.tr | xgraph -t "$opts_(server-tcp-method)" &
+optimized.tcl:exec xgraph -m fully_local-bw.tr -geometry 800x400 &
+options.tcl:set xgraph_app_path_ "/usr/bin/xgraph"
+options.tcl:set xgraph_app_ "xgraph"
+orig-ansarsatti.tcl:#exec xgraph cwnd_tcp1.tr
+orig-ansarsatti.tcl:#exec xgraph pkt_received_at_node1.tr
+parking_lot_topo.tcl:    exec rm -f  xgraph.tcp
+parking_lot_topo.tcl:    set f [open xgraph.tcp w]
+parking_lot_topo.tcl:    exec xgraph  -nl -m  -x time -y $what xgraph.tcp &
+parking_lot_topo.tcl:    exec rm -f xgraph.red_queue
+parking_lot_topo.tcl:    set ff [open xgraph.red_queue w]
+parking_lot_topo.tcl:    exec xgraph  -P -x time -y queue xgraph.red_queue &
+pdf____.tcl:#exec xgraph cwnd_tcp1.tr
+pdf____.tcl:#exec xgraph pkt_received_at_node1.tr
+plot.tcl:	set format_ "xgraph"	; # default
+plot.tcl:	puts "running xgraph for queue dynamics ...."
+plot.tcl:	if { $format_ == "xgraph" } {
+plot.tcl:		exec xgraph -bb -tk -x time -y queue $graphFile &
+plot.tcl:        # this next part is xgraph specific
+plot.tcl:	puts "running xgraph for comparing drops and arrivals..."
+plot.tcl:	if { $format_ == "xgraph" } {
+plot.tcl:	    exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards" $linkgraphfile_ &
+plot.tcl:    puts "running xgraph for comparing drops and arrivals..."
+plot.tcl:    if { $format_ == "xgraph" } {
+plot.tcl:	exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards (in packets).  Queue in SETME" $linkgraphfile_ &
+plot.tcl:    puts "running xgraph for comparing drops and arrivals..."
+plot.tcl:    if { $format_ == "xgraph" } {
+plot.tcl:	exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards (in packets).  Queue in SETME" $linkgraphfile_ &
+plot.tcl:    puts "running xgraph for comparing drops and arrivals..."
+plot.tcl:    if { $format_ == "xgraph" } {
+plot.tcl:	exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards (in packets).  Queue in SETME" $linkgraphfile_ &
+plot.tcl:    puts "running xgraph for comparing drops and arrivals..."
+plot.tcl:    if { $format_ == "xgraph" } {
+plot.tcl:	exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards (in packets).  Queue in SETME" $linkgraphfile_ &
+plot.tcl:        # this next part is xgraph specific
+plot.tcl:        puts "writing flow xgraph data to $graphfile..."
+plot.tcl:	puts "running time xgraph for plotting arrivals..."
+plot.tcl:	if { $format_ == "xgraph" } {
+plot.tcl:	  exec xgraph -bb -tk -m -ly 0,100 -x "time" -y "Bandwidth(%)" $timegraphfile &
+plot.tcl:        # this next part is xgraph specific
+plot.tcl:	if { $format_ == "xgraph" } {
+plot.tcl:		exec xgraph -bb -tk -m -ly 0,100 -x "time" -y "Bandwidth(%)" $linkgraphfile_ &
+plot.tcl:        # this next part is xgraph specific
+plot.tcl:        puts "writing flow xgraph data to $graphfile..."
+plot.tcl:	puts "running time xgraph for plotting drop ratios..."
+plot.tcl:	if { $format_ == "xgraph" } {
+plot.tcl:	  exec xgraph -bb -tk -m -x "time" -y "Drop_Fraction(%)" $fracgraphfile &
+plot.tcl:        # this next part is xgraph specific
+plot.tcl:        puts "writing friendly xgraph data to $graphfile..."
+plot.tcl:	puts "beginning time xgraph for tcp-friendly bandwidth..."
+plot.tcl:	puts "running time xgraph for tcp-friendly bandwidth..."
+plot.tcl:	if { $format_ == "xgraph" } {
+plot.tcl:	  exec xgraph -bb -tk -m -ly 0,200 -x "time" -y "Bandwidth(%)" $friendlygraphfile &
+plot.tcl:	if { $format_ == "xgraph" } {
+plot.tcl:		exec xgraph -bb -tk -bar -brw 0.5 -nl -x "flowID" -y "Bytes Sent" $outfile &
+plot.tcl:	if { $format_ == "xgraph" } {
+plot.tcl:		exec xgraph -bb -tk -bar -brw 0.5 -nl -x "flowID" -y "Rate" $file &
+project-code_input.tcl:exec ./xgraph band1.tr band2.tr band3.tr  -geometry 800x400 -t "-bandwidth-efficient" -x "TIME" -y "bandwidth" & 
+project-code_input.tcl:exec ./xgraph lost1.tr lost2.tr lost3.tr  -geometry 800x400 -t "-bandwidth-efficient" -x "TIME" -y "packet loss" & 
+project-code_input.tcl:exec ./xgraph delay1.tr delay2.tr delay3.tr  -geometry 800x400 -t "-bandwidth-efficient" -x "TIME" -y "routing delay" & 
+project-code_input.tcl:exec ./xgraph pkts1.tr pkts2.tr pkts3.tr  -geometry 800x400 -t "-bandwidth-efficient" -x "TIME" -y "packets-received" & 
+project-code_input.tcl:exec ./xgraph pdr1.tr pdr2.tr pdr3.tr  -geometry 800x400 -t "-bandwidth-efficient" -x "TIME" -y "packet-delivery-ratio" & 
+project-code_input.tcl:exec ./xgraph energy1.tr energy2.tr energy3.tr  -geometry 800x400 -t "-bandwidth-efficient" -x "TIME" -y "energy-consumed" & 
+rbp_demo.tcl:	exec raw2xg -a -m $opts(web-page-size) -q < out.tr | xgraph -t "$opts(server-tcp-method)" &
+rbp_demo.tcl:#	exec raw2xg -a < out.tr | xgraph -t "$opts(server-tcp-method)" &
+rede-hierarquica-nam.tcl:  # Call xgraph to display the results 
+rede-hierarquica-nam.tcl:       # exec xgraph mannasim-rede-hierarquica.tr -geometry 800x400 & 
+redlight.tcl:    exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+red-pd.tcl:    $post_ set format_ "xgraph"
+red.tcl:    exec xgraph -x -bb -tk time -y queue temp.queue &
+reno.tcl:	exec xgraph reno.tr reno1.tr reno2.tr  -geometry 800x400+X+Y &
+reno.tcl:	#exec xgraph reno1.tr -geometry 800 x 400 &
+reno.tcl:	#exec xgraph reno2.tr -geometry 800 x 400 &
+rtm_plot.tcl:	set format_ "xgraph"	; # default
+rtm_plot.tcl:        # this next part is xgraph specific
+rtm_plot.tcl:	puts "running xgraph for comparing drops and arrivals..."
+rtm_plot.tcl:	if { $format_ == "xgraph" } {
+rtm_plot.tcl:	    exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards" $linkgraphfile_ &
+rtm_plot.tcl:    puts "running xgraph for comparing drops and arrivals..."
+rtm_plot.tcl:    if { $format_ == "xgraph" } {
+rtm_plot.tcl:	exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards (in packets).  Queue in SETME" $linkgraphfile_ &
+rtm_plot.tcl:    puts "running xgraph for comparing drops and arrivals..."
+rtm_plot.tcl:    if { $format_ == "xgraph" } {
+rtm_plot.tcl:	exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards (in packets).  Queue in SETME" $linkgraphfile_ &
+rtm_plot.tcl:    puts "running xgraph for comparing drops and arrivals..."
+rtm_plot.tcl:    if { $format_ == "xgraph" } {
+rtm_plot.tcl:	exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards (in packets).  Queue in SETME" $linkgraphfile_ &
+rtm_plot.tcl:    puts "running xgraph for comparing drops and arrivals..."
+rtm_plot.tcl:    if { $format_ == "xgraph" } {
+rtm_plot.tcl:	exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards (in packets).  Queue in SETME" $linkgraphfile_ &
+rtm_plot.tcl:        # this next part is xgraph specific
+rtm_plot.tcl:        puts "writing flow xgraph data to $graphfile..."
+rtm_plot.tcl:	puts "running time xgraph for plotting arrivals..."
+rtm_plot.tcl:	if { $format_ == "xgraph" } {
+rtm_plot.tcl:	  exec xgraph -bb -tk -m -ly 0,100 -x "time" -y "Bandwidth(%)" $timegraphfile &
+rtm_plot.tcl:        # this next part is xgraph specific
+rtm_plot.tcl:	if { $format_ == "xgraph" } {
+rtm_plot.tcl:		exec xgraph -bb -tk -m -ly 0,100 -x "time" -y "Bandwidth(%)" $linkgraphfile_ &
+rtm_plot.tcl:        # this next part is xgraph specific
+rtm_plot.tcl:        puts "writing flow xgraph data to $graphfile..."
+rtm_plot.tcl:	puts "running time xgraph for plotting drop ratios..."
+rtm_plot.tcl:	if { $format_ == "xgraph" } {
+rtm_plot.tcl:	  exec xgraph -bb -tk -m -x "time" -y "Drop_Fraction(%)" $fracgraphfile &
+rtm_plot.tcl:        # this next part is xgraph specific
+rtm_plot.tcl:        puts "writing friendly xgraph data to $graphfile..."
+rtm_plot.tcl:	puts "beginning time xgraph for tcp-friendly bandwidth..."
+rtm_plot.tcl:	puts "running time xgraph for tcp-friendly bandwidth..."
+rtm_plot.tcl:	if { $format_ == "xgraph" } {
+rtm_plot.tcl:	  exec xgraph -bb -tk -m -ly 0,200 -x "time" -y "Bandwidth(%)" $friendlygraphfile &
+rtm_reclass.tcl:	$post_ set format_ "xgraph"
+rtp_scenario-1.tcl:	#Call xgraph to display the results
+rtp_scenario-1.tcl:	#exec xgraph rtp-bw.tr -geometry 800x400  &
+rtp_scenario.tcl:	#Call xgraph to display the results
+rtp_scenario.tcl:    	#exec /usr/local/ns-allinone-2.34/xgraph rtp-bw.tr -geometry 800x400  &
+sack.tcl:	# often we have only one drop and xgraph won't print marks
+sack.tcl:	puts stdout "Calling xgraph."
+sack.tcl:	exec xgraph -bb -tk -nl -m -ly 0,$mod -x time -y packet temp.rands &
+sack.tcl:#	exec xgraph -bb -tk -nl -m -x time -y packet temp.rands &
+sack-v1.tcl:	# often we have only one drop and xgraph won't print marks
+sack-v1.tcl:	puts stdout "Calling xgraph."
+sack-v1.tcl:	exec xgraph -bb -tk -nl -m -ly 0,$mod -x time -y packet temp.rands &
+sack-v1.tcl:#	exec xgraph -bb -tk -nl -m -x time -y packet temp.rands &
+sctp_cmt.tcl:    #set XGRAPH "$NSHOME/bin/xgraph"
+sctp-multihoming.tcl:exec /home/ns229/ns-allinone-2.29/bin/xgraph /home/ns229/te/cwnd1.dat
+simple-mobile.tcl:    exec xgraph simple-wireless.out -geometry 800x400 &
+sip-9112.tcl:	exec xgraph out_sip_test2.tr -geometry 800x400 &
+snoop.tcl:		eval exec xgraph -nl -M -display $env(DISPLAY) \
+Binary file test_a2mp.tcl matches
+test-blue.tcl:    #    exec xgraph *.tr -geometry 800x400 &
+test-rcvr.tcl:	exec xgraph -display $env(DISPLAY) -bb -tk -nl -m -x simtime -y delay temp.rands &
+test-sfb.tcl:    #    exec xgraph *.tr -geometry 800x400 &
+test-suite-adaptive-red.tcl:        	exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-adaptive-red.tcl:		exec xgraph -bb -tk -x time -y queue temp.queue &
+test-suite-aimd.tcl:                exec xgraph -bb -tk -nl -m -x time -y packets temp1.rands &
+test-suite-broken.tcl:		exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-broken.tcl:#        	exec xgraph -bb -tk -nl -m -x time -y packets temp.rands \
+test-suite-broken.tcl:		exec xgraph -bb -tk -x time -y queue temp.queue &
+test-suite-cbq.tcl:		exec xgraph -bb -tk -x time -y bandwidth $graphfile &
+test-suite-cbq.tcl:                exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-cbq-v1a.tcl:        # often we have only one drop and xgraph won't print marks
+test-suite-cbq-v1a.tcl:        	exec xgraph -bb -tk -nl -m -x time -y packet temp.rands &
+test-suite-cbq-v1a.tcl:		exec xgraph -bb -tk -x time -y bandwidth temp.rands &
+test-suite-cbq-v1a.tcl:		exec xgraph -bb -tk -x time -y bandwidth temp.rands &
+test-suite-cbq-v1.tcl:        # often we have only one drop and xgraph won't print marks
+test-suite-cbq-v1.tcl:        exec xgraph -bb -tk -nl -m -x time -y packet temp.rands &
+test-suite-cbq-v1.tcl:	exec xgraph -bb -tk -x time -y bandwidth temp.rands &
+test-suite-cbq-v1.tcl:	exec xgraph -bb -tk -x time -y bandwidth temp.rands &
+test-suite-ecn-ack.tcl:        	exec xgraph -bb -tk -nl -m -x time -y packets temp.rands \
+test-suite-ecn-full.tcl:		exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-ecn-full.tcl:#        	exec xgraph -bb -tk -nl -m -x time -y packets temp.rands \
+test-suite-ecn-full.tcl:		exec xgraph -bb -tk -x time -y queue temp.queue &
+test-suite-ecn.tcl:		exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-ecn.tcl:#        	exec xgraph -bb -tk -nl -m -x time -y packets temp.rands \
+test-suite-ecn.tcl:		exec xgraph -bb -tk -x time -y queue temp.queue &
+test-suite-friendly.tcl:                exec xgraph -bb -tk -nl -m -x time -y packets temp1.rands &
+test-suite-friendly.tcl:                exec xgraph -bb -tk -x time -y packets temp2.rands &
+test-suite-frto.tcl:		exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-full.tcl:                        set outtype xgraph
+test-suite-gk.tcl:        	exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-gk.tcl:		exec xgraph -bb -tk -x time -y queue temp.queue &
+test-suite-gk.tcl:        # this next part is xgraph specific
+test-suite-gk.tcl:        	puts "writing flow xgraph data to $graphfile..."
+test-suite-gk.tcl:		puts "running xgraph..."
+test-suite-gk.tcl:		exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards" $flowgraphfile &
+test-suite-greis.tcl:    #Call xgraph to display the results
+test-suite-greis.tcl:        exec xgraph -bb -tk temp.rands &
+test-suite-intserv.tcl:#at the end of the simulation. In addition, xgraph plots a snap shot
+test-suite-intserv.tcl:#        exec xgraph -bb -tk -m -x time -y bandwidth -ly [expr $bandwidth/2.0],$bandwidth -lx [expr 2/3.0*$simtime],[expr 2/3.0*$simtime+100.0] temp.rands &
+test-suite-intserv.tcl:        exec xgraph -bb -tk -m -x time -y bandwidth -lx [expr 2/3.0*$simtime],[expr 2/3.0*$simtime+100.0] temp.rands &
+test-suite-LimTransmit.tcl:		exec xgraph -bb -tk -nl -m -x time -y packets temp.rands \
+test-suite-links.tcl:		exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-manual-routing.tcl:# expected to pop up xgraph output (unless QUIET)
+test-suite-newreno.tcl:		exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-oddBehaviors.tcl:		exec xgraph -bb -tk -nl -m -x time -y packets temp.rands \
+test-suite-pi.tcl:        	exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-pi.tcl:		exec xgraph -bb -tk -x time -y queue temp.queue &
+test-suite-pi.tcl:        # this next part is xgraph specific
+test-suite-pi.tcl:        	puts "writing flow xgraph data to $graphfile..."
+test-suite-pi.tcl:		puts "running xgraph..."
+test-suite-pi.tcl:		exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards" $flowgraphfile &
+test-suite-pktExample.tcl:                exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-pushback.tcl:        #	exec xgraph -bb -tk -nl -m -x time -y packets temp2.rands &
+test-suite-pushback.tcl:                exec xgraph -bb -tk -ly 0,1 -x time -y bandwidth $graphfile &
+test-suite-quickstart.tcl:                exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-quiescent.tcl:                exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-rap.tcl:		exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-rbp.tcl:# expected to pop up xgraph output (unless QUIET)
+test-suite-rbp.tcl:	exec xgraph -t "$title" <temp.rands &
+test-suite-rbp.tcl:#	exec raw2xg -a < out.tr | xgraph -t "$opts(server-tcp-method)" &
+test-suite-red-pd.tcl:        	exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-red-pd.tcl:		exec xgraph -bb -tk -x time -y queue temp.queue &
+test-suite-red.tcl:        	exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-red.tcl:		exec xgraph -bb -tk -x time -y queue temp.queue &
+test-suite-red.tcl:        # this next part is xgraph specific
+test-suite-red.tcl:        	puts "writing flow xgraph data to $graphfile..."
+test-suite-red.tcl:		puts "running xgraph..."
+test-suite-red.tcl:		exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards" $flowgraphfile &
+test-suite-red-v1a.tcl:	# often we have only one drop and xgraph won't print marks
+test-suite-red-v1a.tcl:		exec xgraph -bb -tk -nl -m -x time -y packet temp.rands &
+test-suite-red-v1a.tcl:		exec xgraph -bb -tk -x time -y queue temp.queue &
+test-suite-red-v1a.tcl:        # this next part is xgraph specific
+test-suite-red-v1a.tcl:        puts "writing flow xgraph data to $graphfile..."
+test-suite-red-v1a.tcl:	puts "running xgraph..."
+test-suite-red-v1a.tcl:	exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards" $flowgraphfile &
+test-suite-red-v1.tcl:	# often we have only one drop and xgraph won't print marks
+test-suite-red-v1.tcl:	exec xgraph -bb -tk -nl -m -x time -y packet temp.rands &
+test-suite-red-v1.tcl:	exec xgraph -bb -tk -x time -y queue temp.queue &
+test-suite-red-v1.tcl:        # this next part is xgraph specific
+test-suite-red-v1.tcl:        puts "writing flow xgraph data to $graphfile..."
+test-suite-red-v1.tcl:	puts "running xgraph..."
+test-suite-red-v1.tcl:	exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards" $flowgraphfile &
+test-suite-rem.tcl:        	exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-rem.tcl:		exec xgraph -bb -tk -x time -y queue temp.queue &
+test-suite-rem.tcl:        # this next part is xgraph specific
+test-suite-rem.tcl:        	puts "writing flow xgraph data to $graphfile..."
+test-suite-rem.tcl:		puts "running xgraph..."
+test-suite-rem.tcl:		exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards" $flowgraphfile &
+test-suite-rfc2001.tcl:		exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-rfc2581.tcl:		exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-rfc793edu.tcl:	    exec xgraph -x time -y "rtt,rto values"  rtt.tr rto.tr &
+test-suite-rfc793edu.tcl:	    exec xgraph  -x time -y "Estimated RTT"  srtt.tr &
+test-suite-rfc793edu.tcl:	    exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-rfc793edu.tcl:        	exec xgraph -P out.seq & 
+test-suite-rh.tcl:#		exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-rh.tcl:#        	exec xgraph -bb -tk -nl -m -x time -y packets temp.rands \
+test-suite-rh.tcl:		exec xgraph -bb -tk -nl -m -x time -y packets -lx $xlimits_ temp_fig.rands &
+test-suite-rh.tcl:		exec xgraph -bb -tk -x time -y queue temp.queue &
+test-suite-rh.tcl:                exec xgraph -M -bb -tk -x time -y cwnd cwnd.xgr &
+test-suite-rio.tcl:        	exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-rio.tcl:		exec xgraph -bb -tk -x time -y queue temp.queue &
+test-suite-sack-full.tcl:		set outtype "xgraph"
+test-suite-sack-full.tcl:			# tcpf2xgr runs xgraph for us
+test-suite-sack-full.tcl:			# exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-sack-full.tcl:			exec xgraph -bb -tk -nl -m -x time -y packets temp.rands temp1.rands &
+test-suite-sack.tcl:                exec xgraph -bb -tk -nl -m -x time -y packets temp.rands \
+test-suite-sack.tcl:                exec xgraph -bb -tk -nl -m -x time -y packets temp.rands \
+test-suite-sack-v1a.tcl:	# often we have only one drop and xgraph won't print marks
+test-suite-sack-v1a.tcl:		exec xgraph -bb -tk -nl -m -x time -y packet temp.rands &
+test-suite-sack-v1.tcl:	# often we have only one drop and xgraph won't print marks
+test-suite-sack-v1.tcl:	exec xgraph -bb -tk -nl -m -x time -y packet temp.rands &
+test-suite-schedule.tcl:		exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-sctp.tcl:        set XGRAPH "../../../bin/xgraph"
+test-suite-simple-full.tcl:			# often we have only one drop and xgraph won't print
+test-suite-simple-full.tcl:			exec xgraph -display $env(DISPLAY) -bb -tk -nl -m -x time -y packet temp.rands &
+test-suite-simple.tcl:			# often we have only one drop and xgraph won't print
+test-suite-simple.tcl:	    exec xgraph -display $env(DISPLAY) -bb -tk -nl -m -x time -y packet temp.rands &
+test-suite-simple.tcl:        ## xgraph -bb -tk -x rtt -y frac_of_pkts data &
+test-suite-simple.tcl:        ## xgraph -bb -tk -x seqno_bin -y frac_of_pkts data &
+test-suite-source-routing.tcl:# expected to pop up xgraph output (unless QUIET)
+test-suite.tcl:	# often we have only one drop and xgraph won't print marks
+test-suite.tcl:	exec xgraph -bb -tk -nl -m -x time -y packet temp.rands &
+test-suite-tcp-init-win-full.tcl:		   exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-tcp-init-win-full.tcl:		   exec xgraph -bb -tk -nl -m -x time -y packets temp.rands \
+test-suite-tcp-init-win.tcl:		   exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-tcp-init-win.tcl:		   exec xgraph -bb -tk -nl -m -x time -y packets temp.rands \
+test-suite-tcpOptions.tcl:		exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-tcpReset.tcl:		exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-tcp.tcl:		exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-tcpVariants.tcl:		exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-testReno-bayfull.tcl:	exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-testReno-full.tcl:	exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-testReno.tcl:	exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-v1a.tcl:	# often we have only one drop and xgraph won't print marks
+test-suite-v1a.tcl:		exec xgraph -bb -tk -nl -m -x time -y packet temp.rands &
+test-suite-v1.tcl:	# often we have only one drop and xgraph won't print marks
+test-suite-v1.tcl:	exec xgraph -bb -tk -nl -m -x time -y packet temp.rands &
+test-suite-vegas-v1.tcl:	# often we have only one drop and xgraph won't print marks
+test-suite-vegas-v1.tcl:	puts stdout "Calling xgraph."
+test-suite-vegas-v1.tcl:		exec xgraph -bb -tk -nl -m -ly 0,$mod -x time -y packet temp.rands &
+test-suite-vegas-v1.tcl:#	exec xgraph -bb -tk -nl -m -x time -y packet temp.rands &
+test-suite-vq.tcl:        	exec xgraph -bb -tk -nl -m -x time -y packets temp.rands &
+test-suite-vq.tcl:		exec xgraph -bb -tk -x time -y queue temp.queue &
+test-suite-vq.tcl:        # this next part is xgraph specific
+test-suite-vq.tcl:        	puts "writing flow xgraph data to $graphfile..."
+test-suite-vq.tcl:		puts "running xgraph..."
+test-suite-vq.tcl:		exec xgraph -bb -tk -nl -m -lx 0,100 -ly 0,100 -x "% of data bytes" -y "% of discards" $flowgraphfile &
+test-suite-xcp.tcl:		exec xgraph -m -x "link ID" -y $name temp.rands &
+test-suite-xcp.tcl:		exec xgraph -nl -m -x time -y $what temp.rands &
+tg.tcl:        exec xgraph -bb -tk -nl -m -x time -y "source node" temp.rands &
+tora0_venkatadri.tcl:       # exec xgraph proj_out0.tr proj_out1.tr 
+tora2.tcl:       # exec xgraph proj_out0.tr proj_out1.tr 
+tora2_venkatadri.tcl:# exec xgraph proj_out0.tr proj_out1.tr
+tora-ipsit.tcl:       # exec xgraph proj_out0.tr proj_out1.tr 
+tora-manet.tcl:# exec xgraph proj_out0.tr proj_out1.tr
+totti-roma_file2.tcl:     exec xgraph out5.tr -geometry 800x400 &
+util.tcl:			exec xgraph -display $env(DISPLAY) -bb -tk -m -x time -y seqno $seqfile $ackfile &
+util.tcl:			exec xgraph -display $env(DISPLAY) -bb -tk -m -x time -y window $cwndfile &
+util.tcl:			exec xgraph -display $env(DISPLAY) -bb -tk -m -x time -y "# packets" $i &
+Vanet-RBC__vntest.tcl:    exec xgraph -x "time (sec)" -y "bw usage (bits/s)" $opt(outdir)tx.xgr \
+vntest-2015.tcl:    ##exec xgraph -x "time (sec)" -y "bw usage (bits/s)" $opt(outdir)tx.xgr \
+vntest.tcl:    ##exec xgraph -x "time (sec)" -y "bw usage (bits/s)" $opt(outdir)tx.xgr \
+wcett__exUDP.tcl:        exec xgraph out02.tr out12.tr out22.tr out32.tr -geometry 800x400 &
+wcett__exUDP.tcl:        exec xgraph lost02.tr lost12.tr lost22.tr lost32.tr -geometry 800x400 &
+wcett__exUDP.tcl:        exec xgraph delay02.tr delay12.tr delay22.tr delay32.tr -geometry 800x400 &
+WCETT-wireless3-udp-Aska123.tcl:# 6    http://www.linuxquestions.org/questions/linux-software-2/no-output-in-xgraph-file-4175497572/#6
+WCETT-wireless3-udp-Aska123.tcl:        exec xgraph out03.tr  -geometry 800x400 &
+WCETT-wireless3-udp-Aska123.tcl:        exec xgraph lost03.tr  -geometry 800x400 &
+WCETT-wireless3-udp-Aska123.tcl:        exec xgraph delay03.tr  -geometry 800x400 &
+wireless3-udp-Aska123.tcl:# 6    http://www.linuxquestions.org/questions/linux-software-2/no-output-in-xgraph-file-4175497572/#6
+wireless3-udp-Aska123.tcl:        exec xgraph out03.tr  -geometry 800x400 &
+wireless3-udp-Aska123.tcl:        exec xgraph lost03.tr  -geometry 800x400 &
+wireless3-udp-Aska123.tcl:        exec xgraph delay03.tr  -geometry 800x400 &
+wireless-udp-1__Joe_Naoum-Sawaya.tcl:        exec xgraph out02.tr out12.tr out22.tr out32.tr -geometry 800x400 &
+wireless-udp-1__Joe_Naoum-Sawaya.tcl:        exec xgraph lost02.tr lost12.tr lost22.tr lost32.tr -geometry 800x400 &
+wireless-udp-1__Joe_Naoum-Sawaya.tcl:        exec xgraph delay02.tr delay12.tr delay22.tr delay32.tr -geometry 800x400 &
+wireless-udp-1.tcl:#       http://www.linuxquestions.org/questions/linux-software-2/no-output-in-xgraph-file-4175497572/#1
+wireless-udp-1.tcl:        exec xgraph out02.tr out12.tr out22.tr out32.tr -geometry 800x400 &
+wireless-udp-1.tcl:        exec xgraph lost02.tr lost12.tr lost22.tr lost32.tr -geometry 800x400 &
+wireless-udp-1.tcl:        exec xgraph delay02.tr delay12.tr delay22.tr delay32.tr -geometry 800x400 &
+xcp-tcp.tcl:	exec rm -f xgraph_cwnd.tcp
+xcp-tcp.tcl:	set f [open xgraph_cwnd.tcp w]
+xcp-tcp.tcl:	exec rm -f xgraph_seqno.tcp
+xcp-tcp.tcl:	set f [open xgraph_seqno.tcp w]
+xcp-tcp.tcl:    exec xgraph  -nl -m  -x time -y $what xgraph_$a.tcp &
+xcp-tcp.tcl:    exec rm -f xgraph.xcp_queue
+xcp-tcp.tcl:    set ff [open xgraph.xcp_queue w]
+xcp-tcp.tcl:    exec xgraph  -P -x time -y queue xgraph.xcp_queue &
+xcp-tcp.tcl:    exec rm -f xgraph.red_queue
+xcp-tcp.tcl:    set ff [open xgraph.red_queue w]
+xcp-tcp.tcl:    exec xgraph  -P -x time -y queue xgraph.red_queue &
+xcp-tcp.tcl:    exec xgraph -P -x time -y $filename temp.$filename
+xcp_test.tcl:	exec rm -f xgraph_cwnd.tcp
+xcp_test.tcl:	set f [open xgraph_cwnd.tcp w]
+xcp_test.tcl:	exec rm -f xgraph_seqno.tcp
+xcp_test.tcl:	set f [open xgraph_seqno.tcp w]
+xcp_test.tcl:    exec xgraph  -nl -m  -x time -y $what xgraph_$a.tcp &
+xcp_test.tcl:    exec rm -f xgraph.red_queue
+xcp_test.tcl:    set ff [open xgraph.red_queue w]
+xcp_test.tcl:    exec xgraph  -P -x time -y queue xgraph.red_queue &
+xcp_test.tcl:    exec xgraph -P -x time -y $filename temp.$filename
+xgraph1.tcl:######################## http://computingforbeginners.blogspot.dk/2013/08/ns2-xgraph-utility-example.html
+xgraph1.tcl:	exec xgraph out0.tr out1.tr out2.tr -geometry 800x400 &
+xg-zrp-Demo1.tcl:        exec xgraph out02.tr out12.tr out22.tr out32.tr -geometry 800x400 &
+xg-zrp-Demo1.tcl:        exec xgraph lost02.tr lost12.tr lost22.tr lost32.tr -geometry 800x400 &
+xg-zrp-Demo1.tcl:        exec xgraph delay02.tr delay12.tr delay22.tr delay32.tr -geometry 800x400 &
+yuanchuang.tcl:## 创建一个finish过程，关闭这些文件。同时，调用xgraph显示结果。并设置窗口大小(800x400)。
+yuanchuang.tcl:        #Call xgraph to display the results
+yuanchuang.tcl:        exec xgraph out0.tr out1.tr out2.tr -geometry 800x400 &

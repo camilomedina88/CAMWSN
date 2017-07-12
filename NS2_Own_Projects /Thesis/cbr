@@ -1,0 +1,322 @@
+
+proc cbrval {datastart datastop} {
+
+global ns
+
+global ns val node_
+
+for {set i 0} {$i < $val(nn) } { incr i } {
+
+set tcp [new Agent/TCP]
+
+$tcp set class_ 1
+
+set sink [new Agent/TCPSink]
+
+$ns attach-agent $node_(10) $tcp
+
+set ipo [expr $i+1]
+
+#set dupacks_ 10
+
+if [expr $ipo < $val(nn)] {
+if {$ipo == 10} {
+$ns attach-agent $node_(5) $sink
+} else {
+$ns attach-agent $node_($ipo) $sink
+}
+} else {
+$ns attach-agent $node_(5) $sink
+}
+
+$ns connect $tcp $sink
+
+set ftp [new Application/FTP]
+
+$ftp attach-agent $tcp
+
+
+if { $val(Congestion) == "FUSION" } {
+$ns at 0.3 "$node_(3) color black"
+$ns at 0.3 "$node_(3) add-mark m1 black circle"
+
+$ns at 0.3 "$node_(6) color pink"
+$ns at 0.3 "$node_(6) add-mark m1 pink circle"
+
+
+
+
+
+$ns at 0.3 "$node_(35) color black"
+$ns at 0.3 "$node_(35) add-mark m1 black circle"
+
+$ns at 0.3 "$node_(48) color black"
+$ns at 0.3 "$node_(48) add-mark m1 black circle"
+
+$ns at 0.3 "$node_(8) color black"
+$ns at 0.3 "$node_(8) add-mark m1 black circle"
+
+
+$ns at 0.3 "$node_(47) color black"
+$ns at 0.3 "$node_(47) add-mark m1 black circle"
+
+$ns at 0.3 "$node_(60) color black"
+$ns at 0.3 "$node_(60) add-mark m1 black circle"
+
+$ns at 0.3 "$node_(72) color black"
+$ns at 0.3 "$node_(72) add-mark m1 black circle"
+
+$ns at 0.3 "$node_(87) color black"
+$ns at 0.3 "$node_(87) add-mark m1 black circle"
+
+$ns at 0.3 "$node_(27) color black"
+$ns at 0.3 "$node_(27) add-mark m1 black circle"
+
+$ns at 0.3 "$node_(73) color black"
+$ns at 0.3 "$node_(73) add-mark m1 black circle"
+
+$ns at 0.3 "$node_(36) color black"
+$ns at 0.3 "$node_(36) add-mark m1 black circle"
+
+
+$ns at 0.3 "$node_(88) color black"
+$ns at 0.3 "$node_(88) add-mark m1 black circle"
+
+#-----------
+$ns at 0.3 "$node_(33) color yellow"
+$ns at 0.3 "$node_(33) add-mark m1 black yellow"
+
+$ns at 0.3 "$node_(7) color yellow"
+$ns at 0.3 "$node_(7) add-mark m1 black yellow"
+
+$ns at 0.3 "$node_(46) color yellow"
+$ns at 0.3 "$node_(46) add-mark m1 black yellow"
+
+$ns at 0.3 "$node_(86) color yellow"
+$ns at 0.3 "$node_(86) add-mark m1 black yellow"
+
+$ns at 0.3 "$node_(59) color yellow"
+$ns at 0.3 "$node_(59) add-mark m1 black yellow"
+
+$ns at 0.3 "$node_(20) color yellow"
+$ns at 0.3 "$node_(20) add-mark m1 black yellow"
+
+$ns at 0.3 "$node_(71) color yellow"
+$ns at 0.3 "$node_(71) add-mark m1 black yellow"
+
+$ns at 0.3 "$node_(85) color yellow"
+$ns at 0.3 "$node_(85) add-mark m1 black yellow"
+
+$ns at 0.3 "$node_(0) color yellow"
+$ns at 0.3 "$node_(0) add-mark m1 black yellow"
+
+$ns at 0.3 "$node_(45) color yellow"
+$ns at 0.3 "$node_(45) add-mark m1 black yellow"
+
+#========================================
+
+$ns at 0.3 "$node_(40) color pink"
+$ns at 0.3 "$node_(40) add-mark m1 black pink"
+
+$ns at 0.3 "$node_(11) color pink"
+$ns at 0.3 "$node_(11) add-mark m1 black pink"
+
+$ns at 0.3 "$node_(67) color yellow"
+$ns at 0.3 "$node_(67) add-mark m1 black pink"
+
+
+$ns at 0.3 "$node_(24) color pink"
+$ns at 0.3 "$node_(80) add-mark m1 black pink"
+
+$ns at 0.3 "$node_(31) color pink"
+$ns at 0.3 "$node_(31) add-mark m1 black pink"
+
+$ns at 0.3 "$node_(96) color pink"
+$ns at 0.3 "$node_(96) add-mark m1 black pink"
+
+$ns at 0.3 "$node_(95) color pink"
+$ns at 0.3 "$node_(95) add-mark m1 black pink"
+
+$ns at 0.3 "$node_(54) color pink"
+$ns at 0.3 "$node_(54) add-mark m1 black pink"
+
+
+$ns at 0.3 "$node_(67) color pink"
+$ns at 0.3 "$node_(67) add-mark m1 black pink"
+
+$ns at 0.3 "$node_(80) color pink"
+$ns at 0.3 "$node_(80) add-mark m1 black pink"
+} elseif { $val(Congestion) == "ECODA" } {
+
+$ns at 0.3 "$node_(3) color pink"
+$ns at 0.3 "$node_(3) add-mark m1 black pink"
+
+$ns at 0.3 "$node_(4) color pink"
+$ns at 0.3 "$node_(4) add-mark m1 black pink"
+
+$ns at 0.3 "$node_(41) color pink"
+$ns at 0.3 "$node_(41) add-mark m1 black pink"
+
+$ns at 0.3 "$node_(42) color pink"
+$ns at 0.3 "$node_(42) add-mark m1 black pink"
+
+$ns at 0.3 "$node_(35) color pink"
+$ns at 0.3 "$node_(35) add-mark m1 black pink"
+
+
+$ns at 0.3 "$node_(36) color pink"
+$ns at 0.3 "$node_(36) add-mark m1 black pink"
+
+
+
+$ns at 0.3 "$node_(6) color pink"
+$ns at 0.3 "$node_(6) add-mark m1 black pink"
+
+
+$ns at 0.3 "$node_(39) color pink"
+$ns at 0.3 "$node_(39) add-mark m1 black pink"
+
+
+
+$ns at 0.3 "$node_(39) color pink"
+$ns at 0.3 "$node_(49) add-mark m1 black pink"
+
+$ns at 0.3 "$node_(40) color pink"
+$ns at 0.3 "$node_(40) add-mark m1 black pink"
+
+
+
+
+
+$ns at 0.3 "$node_(47) color pink"
+$ns at 0.3 "$node_(47) add-mark m1 pink circle"
+
+$ns at 0.3 "$node_(60) color pink"
+$ns at 0.3 "$node_(60) add-mark m1 pink circle"
+
+$ns at 0.3 "$node_(72) color pink"
+$ns at 0.3 "$node_(72) add-mark m1 pink circle"
+
+$ns at 0.3 "$node_(87) color pink"
+$ns at 0.3 "$node_(87) add-mark m1 pink circle"
+
+$ns at 0.3 "$node_(27) color pink"
+$ns at 0.3 "$node_(27) add-mark m1 pink circle"
+
+$ns at 0.3 "$node_(73) color pink"
+$ns at 0.3 "$node_(73) add-mark m1 pink circle"
+
+$ns at 0.3 "$node_(36) color pink"
+$ns at 0.3 "$node_(36) add-mark m1 black circle"
+
+
+$ns at 0.3 "$node_(88) color pink"
+$ns at 0.3 "$node_(88) add-mark m1 pink circle"
+
+#---
+
+$ns at 0.3 "$node_(12) color pink"
+$ns at 0.3 "$node_(12) add-mark m1 pink circle"
+
+$ns at 0.3 "$node_(55) color pink"
+$ns at 0.3 "$node_(55) add-mark m1 pink circle"
+
+$ns at 0.3 "$node_(56) color pink"
+$ns at 0.3 "$node_(56) add-mark m1 pink circle"
+#---------
+
+$ns at 0.3 "$node_(96) color pink"
+$ns at 0.3 "$node_(96) add-mark m1 black pink"
+
+$ns at 0.3 "$node_(95) color pink"
+$ns at 0.3 "$node_(95) add-mark m1 black pink"
+
+$ns at 0.3 "$node_(54) color pink"
+$ns at 0.3 "$node_(54) add-mark m1 black pink"
+
+
+$ns at 0.3 "$node_(67) color pink"
+$ns at 0.3 "$node_(67) add-mark m1 black pink"
+
+
+
+$ns at 0.3 "$node_(8) color pink"
+$ns at 0.3 "$node_(8) add-mark m1 black pink"
+
+
+$ns at 0.3 "$node_(14) color pink"
+$ns at 0.3 "$node_(14) add-mark m1 black pink"
+
+
+$ns at 0.3 "$node_(81) color pink"
+$ns at 0.3 "$node_(81) add-mark m1 black pink"
+
+
+$ns at 0.3 "$node_(11) color pink"
+$ns at 0.3 "$node_(11) add-mark m1 black pink"
+
+
+$ns at 0.3 "$node_(48) color pink"
+$ns at 0.3 "$node_(48) add-mark m1 black pink"
+} else {
+
+
+$ns at 0.3 "$node_(3) color red"
+$ns at 0.3 "$node_(3) add-mark m1 red "
+
+$ns at 0.3 "$node_(4) color pink"
+$ns at 0.3 "$node_(4) add-mark m1 red "
+
+$ns at 0.3 "$node_(5) color pink"
+$ns at 0.3 "$node_(5) add-mark m1 red "
+
+
+#---33 ,8,9,10,11,12,13
+
+$ns at 0.3 "$node_(33) color red"
+$ns at 0.3 "$node_(8) color red"
+$ns at 0.3 "$node_(9) color red"
+$ns at 0.3 "$node_(10) color red"
+$ns at 0.3 "$node_(11) color red"
+$ns at 0.3 "$node_(12) color red"
+$ns at 0.3 "$node_(13) color red"
+
+
+$ns at 0.3 "$node_(45) color red"
+$ns at 0.3 "$node_(14) color red"
+$ns at 0.3 "$node_(15) color red"
+$ns at 0.3 "$node_(16) color red"
+$ns at 0.3 "$node_(17) color red"
+$ns at 0.3 "$node_(18) color red"
+
+
+
+$ns at 0.3 "$node_(36) color red"
+$ns at 0.3 "$node_(21) color red"
+$ns at 0.3 "$node_(22) color red"
+$ns at 0.3 "$node_(23) color red"
+$ns at 0.3 "$node_(24) color red"
+$ns at 0.3 "$node_(25) color red"
+$ns at 0.3 "$node_(26) color red"
+
+
+$ns at 0.3 "$node_(0) color red"
+$ns at 0.3 "$node_(27) color red"
+$ns at 0.3 "$node_(28) color red"
+$ns at 0.3 "$node_(29) color red"
+$ns at 0.3 "$node_(30) color red"
+$ns at 0.3 "$node_(31) color red"
+$ns at 0.3 "$node_(32) color red"
+
+
+}
+
+$ns at $datastart "$ftp start"
+$ns at $datastop "$ftp stop"
+
+}
+
+
+
+}
+
