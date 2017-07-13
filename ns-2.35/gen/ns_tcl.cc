@@ -18839,7 +18839,7 @@ TTLChecker set debug_ false\n\
 \n\
 \n\
 \n\
-Agent/Ping set packetSize_ 64\n\
+MyObjectCAMM set my_otcl_val_ 555\n\
 \n\
 \n\
 Trace set src_ -1\n\

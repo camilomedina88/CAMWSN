@@ -61,7 +61,8 @@ TTLChecker set debug_ false
 
 ## AGREGADO
 
-Agent/Ping set packetSize_ 64
+##Agent/Ping set packetSize_ 64
+MyObjectCAMM set my_otcl_val_ 555
 
 ## END AGREGADO
 
