@@ -91,6 +91,7 @@ PriQueue::recv(Packet *p, Handler *h)
                 case PT_TORA:
                 case PT_AODV:
 		case PT_AOMDV:
+    case PT_WFRP: //// WFRP patch Agregado
 		case PT_MDART:
 			recvHighPriority(p, h);
                         break;

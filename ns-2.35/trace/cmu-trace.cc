@@ -49,6 +49,7 @@
 #include <smac.h>
 #include <address.h>
 #include <tora/tora_packet.h> //TORA
+#include <wfrp/wfrp_packet.h>  // WFRP 
 #include <imep/imep_spec.h>         // IMEP
 #include <aodv/aodv_packet.h> //AODV
 #include <aomdv/aomdv_packet.h>
@@ -64,6 +65,7 @@
 //</zheng: add for 802.15.4>
 
 #include "diffusion/diff_header.h" // DIFFUSION -- Chalermek
+
 
 
 PacketTracer::PacketTracer() : next_(0)
@@ -1069,6 +1071,84 @@ CMUTrace::format_aomdv(Packet *p, int offset)
 #endif
 			abort();
 	}
+}
+
+// WFRP patch
+
+void
+CMUTrace::format_wfrp(Packet *p, int offset)
+{
+    struct hdr_wfrp *wh = HDR_WFRP(p);
+    struct hdr_wfrp_beacon *wb = HDR_WFRP_BEACON(p);
+    struct hdr_wfrp_error  *we = HDR_WFRP_ERROR(p);
+
+    //u_int8_t packeteAnalizado= wh->pkt_type;
+ 
+    switch(wh->pkt_type) {
+   
+        case WFRP_BEACON:
+
+        	if(pt_->tagged()){
+        		sprintf(pt_->buffer()+offset,
+        			"wfrp:t %x -wfrp:h %d -wfrp:d %d -wfrp:s %d"
+        			"wfrp:px %d -wfrp:py %d -wfrp:ts %f"
+        			"-wfrp:c BEACON",
+        			wb->pkt_type,
+        			wb->beacon_hops,
+        			wb->beacon_id,
+        			wb->beacon_src,
+        			wb->beacon_posx,
+        			wb->beacon_posy,
+        			wb->timestamp);
+
+
+        	}
+        	else if (newtrace_)
+        	{
+        		sprintf(pt_->buffer()+offset,
+        			"-P wfrp -pt 0x%x -Ph %d -Pb %d -Ps %d -Ppx %d -Ppy %d -Pts %f -Pc BEACON",
+        			wb->pkt_type,
+        			wb->beacon_hops,
+        			wb->beacon_id,
+        			wb->beacon_src,
+        			wb->beacon_posx,
+        			wb->beacon_posy,
+        			wb->timestamp);
+        	} else {
+ 
+                sprintf(pt_->buffer() + offset,
+                          "[0x%x %d %d [%d %d] [%d %f]] (BEACON)",
+                          wb->pkt_type,
+                          wb->beacon_hops,
+                          wb->beacon_id,
+                          wb->beacon_src,
+                          wb->beacon_posx,
+                          wb->beacon_posy,
+                          wb->timestamp);
+            }
+            
+            break;
+ 
+        case WFRP_ERROR:
+            // TODO: need to add code
+            break;
+ 
+        default:
+
+
+
+#ifdef WIN32
+            fprintf(stderr,
+                      "CMUTrace::format_wfrp: invalid WFRP packet typen");
+#else
+            fprintf(stderr,
+                      "%s: invalid WFRP packet typen", __FUNCTION__);
+#endif
+            abort();
+            
+    }
+
+    
 }
 
 void

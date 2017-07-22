@@ -171,6 +171,9 @@ set protolist {
 	LL 	# network wireless stack
         LRWPAN  # zheng, wpan/p802_15_4mac.cc
 	Mac 	# network wireless stack
+	
+	WFRP 	# WFRP patch
+
 # Mobility, Ad-Hoc Networks, Sensor Nets:
 	AODV 	# routing protocol for ad-hoc networks
 	Diffusion 	# diffusion/diffusion.cc

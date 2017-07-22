@@ -49,6 +49,7 @@
 #include "rap/rap.h"
 
 
+
 //const double Trace::PRECISION = 1.0e+6; 
 
 class TraceClass : public TclClass {

@@ -200,10 +200,10 @@ static const packet_t PT_DCCP_RESET = 71;
 static const packet_t PT_MDART = 72;
 	
         // insert new packet types here
-//static const packet_t PT_NEWPING=73
 
+static const packet_t PT_WFRP = 73;
 
-static packet_t       PT_NTYPE = 73; // This MUST be the LAST one
+static packet_t       PT_NTYPE = 74; // This MUST be the LAST one
 
 enum packetClass
 {
@@ -270,6 +270,7 @@ public:
 		    type == PT_TORA ||
 		    type == PT_PUMA ||
 		    type == PT_AODV ||
+		    type == PT_WFRP ||
 		    type == PT_MDART)
 			return ROUTING;		
 		if (type == PT_TCP || 
@@ -402,6 +403,9 @@ public:
 
 		// Bell Labs (PackMime OL)
 		name_[PT_BLTRACE]="BellLabsTrace";
+
+		// WFRP patch
+		name_[PT_WFRP] = "WFRP";
 		
 		// AOMDV patch
 		name_[PT_AOMDV]= "AOMDV";

@@ -334,6 +334,7 @@ OBJ_CC = \
 	wpan/p802_15_4trace.o wpan/p802_15_4transac.o \
 	apps/pbc.o \
 	MyObject/MyObjectCAMM.o \
+	wfrp/wfrp.o \
 	$(OBJ_STL)
 
 

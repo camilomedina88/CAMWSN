@@ -1151,6 +1151,13 @@ if {$aodvonly != -1 } {\n\
 $agent if-queue [$self set ifq_(0)]   ;# ifq between LL and MAC\n\
 }\n\
 \n\
+set wfrponly [string first \"WFRP\" [$agent info class]]\n\
+if {$wfrponly != -1 } {\n\
+$agent if-queue [$self set ifq_(0)]   ;# ifq between LL and MAC\n\
+}\n\
+\n\
+\n\
+\n\
 \n\
 if { $port == [Node set rtagent_port_] } {			\n\
 $self add-target-rtagent $agent $port\n\
@@ -3437,6 +3444,9 @@ GAF 	# Geographic Adaptive Delity, for ad-hoc networks\n\
 LL 	# network wireless stack\n\
 LRWPAN  # zheng, wpan/p802_15_4mac.cc\n\
 Mac 	# network wireless stack\n\
+\n\
+WFRP 	# WFRP patch\n\
+\n\
 AODV 	# routing protocol for ad-hoc networks\n\
 Diffusion 	# diffusion/diffusion.cc\n\
 IMEP 	# Internet MANET Encapsulation Protocol, for ad-hoc networks\n\
@@ -4289,6 +4299,13 @@ Agent/AOMDV set sport_   0\n\
 Agent/AOMDV set dport_   0\n\
 Agent/AOMDV set aomdv_prim_alt_path_len_diff_ 1\n\
 Agent/AOMDV set aomdv_max_paths_ 3\n\
+\n\
+Agent/WFRP instproc init args {\n\
+$self next $args\n\
+}\n\
+\n\
+Agent/WFRP set sport_   0\n\
+Agent/WFRP set dport_   0\n\
 \n\
 RouteLogic instproc register {proto args} {\n\
 $self instvar rtprotos_ node_rtprotos_ default_node_rtprotos_\n\
@@ -21153,6 +21170,11 @@ $self at 0.0 \"$node start-dsr\"\n\
 AODV {\n\
 set ragent [$self create-aodv-agent $node]\n\
 }\n\
+\n\
+WFRP {\n\
+set ragent [$self create-wfrp-agent $node]\n\
+}\n\
+\n\
 AOMDV {\n\
 set ragent [$self create-aomdv-agent $node]\n\
 }\n\
@@ -21354,6 +21376,14 @@ $self at 0.0 \"$ragent start\"     ;# start BEACON/HELLO Messages\n\
 $node set ragent_ $ragent\n\
 return $ragent\n\
 }\n\
+\n\
+Simulator instproc create-wfrp-agent { node } {\n\
+set ragent [new Agent/WFRP [$node node-addr]]\n\
+$self at 0.0 \"$ragent start\"\n\
+$node set ragent_ $ragent\n\
+return $ragent\n\
+}\n\
+\n\
 \n\
 Simulator instproc create-aomdv-agent { node } {\n\
 set ragent [new Agent/AOMDV [$node node-addr]]\n\
