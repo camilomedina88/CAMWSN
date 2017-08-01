@@ -25,8 +25,8 @@ set val(initialEnergy)	50
 set val(rxPower)		0.75
 set vak(txPower)		0.25
 set val(sensePower)		0.10
-set val(nam)		wpan_demo1.nam
-set val(traffic)	ftp                        ;# cbr/poisson/ftp
+set val(nam)			output/wpan_demo1.nam
+set val(traffic)		ftp                        ;# cbr/poisson/ftp
 
 
 
@@ -41,9 +41,9 @@ set stopTime            100	;# in seconds
 
 
 set ns_		[new Simulator]
-set tracefd     [open ./wpan_demo1.tr w]
+set tracefd     [open ./output/wpan_demo1.tr w]
 $ns_ trace-all $tracefd
-if { "$val(nam)" == "wpan_demo1.nam" } {
+if { "$val(nam)" == "output/wpan_demo1.nam" } {
         set namtrace     [open ./$val(nam) w]
         $ns_ namtrace-all-wireless $namtrace $val(x) $val(y)
 }
@@ -110,7 +110,7 @@ for {set i 0} {$i < $val(nn) } {incr i} {
 	$node_($i) random-motion 0		;# disable random motion
 }
 
-source ./Scenario/malla.scn
+source ./Scenario/arbol.scn
 
 # defines the node size in nam
 
@@ -121,6 +121,9 @@ for {set i 0} {$i < $val(nn)} {incr i} {
 #===================================
 #        Applications Definition        
 #===================================
+
+
+
 
 
 
@@ -151,8 +154,8 @@ proc stop {} {
                 set hasDISPLAY 1
         }
     }
-    if { ("$val(nam)" == "wpan_demo1.nam") && ("$hasDISPLAY" == "1") } {
-	    exec nam wpan_demo1.nam &
+    if { ("$val(nam)" == "output/wpan_demo1.nam") && ("$hasDISPLAY" == "1") } {
+	    exec nam output/wpan_demo1.nam &
     }
 }
 

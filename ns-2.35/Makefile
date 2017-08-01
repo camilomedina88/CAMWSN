@@ -335,6 +335,7 @@ OBJ_CC = \
 	apps/pbc.o \
 	MyObject/MyObjectCAMM.o \
 	wfrp/wfrp.o \
+	Arq/arq.o\
 	$(OBJ_STL)
 
 

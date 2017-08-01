@@ -576,4 +576,23 @@ SimpleLink instproc insert-linkloss args {
 	$em drop-target $drophead_
 }
 
+#/
+#SimpleLink instproc link-arq{ limit } {
+
+#	$self instvar link_ link_errmodule_ queue_ drophead_
+#	$self instvar tARQ_ acker_ nacker_
+#	set tARQ_ [new ARQTx]
+#	set acker_ [new ARQAcker]
+#	set nacker_ [new ARQNacker]
+#	$tARQ_ set retry_limit_ $limit
+#	$acker_ attach-ARQTx $tARQ_
+#	$nacker_ attach-ARQTx $tARQ_
+#	$queue_ target $tARQ_
+#	$tARQ_ target $link_errmodule_
+#	$link_errmodule_ target $acker_
+#	$acker_ target $link_
+#	$tARQ_ drop-target %drophead_
+#	$link_errmodule_ drop-target $nacker_
+#}
+##
 

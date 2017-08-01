@@ -10,7 +10,7 @@ set val(ll)            LL                           ;# link layer type
 set val(ant)           Antenna/OmniAntenna          ;# antenna model
 set val(ifqlen)        100	         	    ;# max packet in ifq
 set val(nn)            100			    ;# number of mobilenodes
-set val(rp)            AODV		    ;# protocol tye
+set val(rp)            WFRP		    ;# protocol tye
 set val(x)             120			    ;# X dimension of topography
 set val(y)             120			    ;# Y dimension of topography
 set val(stop)          500			    ;# simulation period 
@@ -106,6 +106,7 @@ $mnode_(0) label "Sink"
 
 #start sending beacon message
 
+# Este es el mensaje que daña AODV
 $ns at 1.0 "[$mnode_(0) set ragent_] sink"
 
 

@@ -2306,4 +2306,11 @@ Simulator instproc prepare-to-stop {} {
 		$i stop
 	}
 }
+
+##Simulator instproc link-arq {limit from to} {
+
+##	set link [$self link $from $to]
+##	$link link-arq $limit
+##}
+
     

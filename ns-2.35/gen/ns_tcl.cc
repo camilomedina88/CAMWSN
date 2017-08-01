@@ -2294,6 +2294,7 @@ $em drop-target $drophead_\n\
 \n\
 \n\
 \n\
+\n\
 Class Application/FTP -superclass Application\n\
 \n\
 Application/FTP instproc init {} {\n\
@@ -20158,6 +20159,9 @@ Agent/PBC set modulationScheme 0\n\
 \n\
 Agent/MDART set macFailed_ true\n\
 Agent/MDART set etxMetric_ true\n\
+\n\
+\n\
+ARQTx set retry_limit_ 3\n\
 if [TclObject is-class Network/Pcap/Live] {\n\
 Network/Pcap/Live set snaplen_ 4096;# bpf snap len\n\
 Network/Pcap/Live set promisc_ false;\n\
@@ -22613,6 +22617,9 @@ foreach i $lagent {\n\
 $i stop\n\
 }\n\
 }\n\
+\n\
+\n\
+\n\
 \n\
 \n\
 Simulator instproc attach-diffapp { node diffapp } {\n\

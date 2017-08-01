@@ -552,7 +552,6 @@ Packet *p;
 /*
   Packet Reception Routines
 */
-
 void
 AODV::recv(Packet *p, Handler*) {
 struct hdr_cmn *ch = HDR_CMN(p);
@@ -567,8 +566,6 @@ struct hdr_ip *ih = HDR_IP(p);
    recvAODV(p);
    return;
  }
-
-
  /*
   *  Must be a packet I'm originating...
   */
@@ -684,9 +681,6 @@ aodv_rt_entry *rt;
   * Cache the broadcast ID
   */
  id_insert(rq->rq_src, rq->rq_bcast_id);
-
-
-
  /* 
   * We are either going to forward the REQUEST or generate a
   * REPLY. Before we do anything, we make sure that the REVERSE
@@ -760,7 +754,7 @@ rt_update(rt0, rq->rq_src_seqno, rq->rq_hop_count, ih->saddr(),
 
    sendReply(rq->rq_src,           // IP Destination
              1,                    // Hop Count
-             index,                // Dest IP Address
+             index,                // Origin IP Address
              seqno,                // Dest Sequence Num
              MY_ROUTE_TIMEOUT,     // Lifetime
              rq->rq_timestamp);    // timestamp
