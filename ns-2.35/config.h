@@ -79,6 +79,7 @@ typedef int32_t nsmask_t;
 /* 32-bit addressing support */
 struct ns_addr_t {
 	int32_t addr_;
+	//int addr_;
 	int32_t port_;
 #ifdef __cplusplus
 	bool isEqual (ns_addr_t const &o) {

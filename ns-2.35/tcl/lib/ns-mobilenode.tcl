@@ -381,7 +381,21 @@ Node/MobileNode instproc add-interface { channel pmodel lltype mactype qtype qle
 
 	set netif_($t)	[new $iftype]		;# interface
 	set mac_($t)	[new $mactype]		;# mac layer
-	set ifq_($t)	[new $qtype]		;# interface queue
+
+	
+	if {$qtype == "Queue/Ecoda"} {
+
+		#puts "SE CREO LA COLA ECODA"
+		set ifq_($t) [new $qtype [$self id]]
+
+	} else {
+		set ifq_($t)	[new $qtype]		;# interface queue
+	}
+
+	
+	
+
+
 	set ll_($t)	[new $lltype]		;# link layer
         set ant_($t)    [new $anttype]
 

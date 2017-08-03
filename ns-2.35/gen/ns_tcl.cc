@@ -1284,7 +1284,20 @@ incr nifs_\n\
 \n\
 set netif_($t)	[new $iftype]		;# interface\n\
 set mac_($t)	[new $mactype]		;# mac layer\n\
+\n\
+\n\
+if {$qtype == \"Queue/Ecoda\"} {\n\
+\n\
+set ifq_($t) [new $qtype [$self id]]\n\
+\n\
+} else {\n\
 set ifq_($t)	[new $qtype]		;# interface queue\n\
+}\n\
+\n\
+\n\
+\n\
+\n\
+\n\
 set ll_($t)	[new $lltype]		;# link layer\n\
 set ant_($t)    [new $anttype]\n\
 \n\

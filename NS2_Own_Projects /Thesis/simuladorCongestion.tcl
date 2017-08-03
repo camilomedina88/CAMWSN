@@ -12,7 +12,8 @@ set val(chan)           Channel/WirelessChannel    	;# Channel Type
 set val(prop)           Propagation/Shadowing    	;# radio-propagation model
 set val(netif)          Phy/WirelessPhy/802_15_4
 set val(mac)            Mac/802_15_4
-set val(ifq)            Queue/DropTail/PriQueue    	;# interface queue type
+#set val(ifq)            Queue/DropTail/PriQueue    	;# interface queue type
+set val(ifq) 			Queue/Ecoda
 set val(ll)             LL                         ;# link layer type
 set val(ant)            Antenna/OmniAntenna        ;# antenna model
 set val(ifqlen)         50                         ;# max packet in ifq
@@ -37,7 +38,7 @@ set val(traffic)		ftp                        ;# cbr/poisson/ftp
 set appTime1            0.0	;# in seconds 
 set appTime2            0.3	;# in seconds 
 set appTime3            0.7	;# in seconds 
-set stopTime            100	;# in seconds 
+set stopTime            25.0	;# in seconds 
 
 
 set ns_		[new Simulator]
@@ -110,7 +111,7 @@ for {set i 0} {$i < $val(nn) } {incr i} {
 	$node_($i) random-motion 0		;# disable random motion
 }
 
-source ./Scenario/arbol.scn
+source ./Scenario/malla.scn
 
 # defines the node size in nam
 
@@ -123,7 +124,33 @@ for {set i 0} {$i < $val(nn)} {incr i} {
 #===================================
 
 
+#Create a UDP agent and attach it to node n0
+#set udp0 [new Agent/UDP]
+#$ns_ attach-agent $node_(2) $udp0
+# Create a CBR traffic source and attach it to udp0
+#set cbr0 [new Application/Traffic/CBR]
+#$cbr0 set packetSize_ 500
+#$cbr0 set interval_ 0.005
+#$cbr0 attach-agent $udp0
+#set null0 [new Agent/Null] 
+#$ns_ attach-agent $node_(76) $null0
+#$ns_ connect $udp0 $null0
 
+
+
+set tcp [new Agent/TCP]
+$tcp set class_ 2
+set sink [new Agent/TCPSink]
+$ns_ attach-agent $node_(76) $tcp
+$ns_ attach-agent $node_(14) $sink
+$ns_ connect $tcp $sink
+set ftp [new Application/FTP]
+$ftp attach-agent $tcp
+$ns_ at 10.0 "$ftp start" 
+
+
+#ns_ at 5.0 "$cbr0 start"
+#$ns_ at 9.9 "$cbr0 stop"
 
 
 

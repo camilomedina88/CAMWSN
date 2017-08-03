@@ -614,6 +614,7 @@ else if(ih->saddr() == index) {
 void
 AODV::recvAODV(Packet *p) {
  struct hdr_aodv *ah = HDR_AODV(p);
+ hdr_ip* iph = hdr_ip::access(p);
 
  assert(HDR_IP (p)->sport() == RT_PORT);
  assert(HDR_IP (p)->dport() == RT_PORT);
@@ -624,10 +625,13 @@ AODV::recvAODV(Packet *p) {
  switch(ah->ah_type) {
 
  case AODVTYPE_RREQ:
+    //printf("AODV: Recibe Request\n");
+    //printf("Request desde %i en nodo %i \n", iph->saddr(),index);
    recvRequest(p);
    break;
 
  case AODVTYPE_RREP:
+  //printf("AODV: Recibe Reply\n");
    recvReply(p);
    break;
 
@@ -636,6 +640,7 @@ AODV::recvAODV(Packet *p) {
    break;
 
  case AODVTYPE_HELLO:
+  //printf("AODV: Recibe Hello\n");
    recvHello(p);
    break;
         

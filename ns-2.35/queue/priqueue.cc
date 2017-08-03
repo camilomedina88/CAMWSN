@@ -86,15 +86,16 @@ PriQueue::recv(Packet *p, Handler *h)
         if(Prefer_Routing_Protocols) {
 
                 switch(ch->ptype()) {
-		case PT_DSR:
-		case PT_MESSAGE:
-                case PT_TORA:
-                case PT_AODV:
-		case PT_AOMDV:
-    case PT_WFRP: //// WFRP patch Agregado
-		case PT_MDART:
-			recvHighPriority(p, h);
-                        break;
+		              case PT_DSR:
+		              case PT_MESSAGE:
+                  case PT_TORA:
+                  case PT_AODV:
+                	case PT_AOMDV:
+                  case PT_WFRP: //// WFRP patch Agregado
+                	case PT_MDART:
+                      //printf("Paquetes alta prioridad COLA");
+                			recvHighPriority(p, h);
+                    break;
 
                 default:
                         Queue::recv(p, h);
