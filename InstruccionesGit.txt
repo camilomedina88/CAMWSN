@@ -1,3 +1,4 @@
+Borrar .tr y nam
 git add .
 git commit -m "First commit"
 git push origin master
