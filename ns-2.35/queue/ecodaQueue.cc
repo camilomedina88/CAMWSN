@@ -40,7 +40,7 @@ void EcodaQueue::enque(Packet* p)
   //printf("LO QUE ESTA ACA: %s\n", iph->saddr());
   
   if(iph->saddr() == index){
-    printf("Queue: Nodo: %i Encolado en Q1 Origen: %i Destino %i \n",index,iph->saddr(), iph->daddr());
+    //printf("Queue: Nodo: %i Encolado en Q1 Origen: %i Destino %i \n",index,iph->saddr(), iph->daddr());
     q1_->enque(p);
     if ((q1_->length() + q2_->length()) > qlim_) {
       q1_->remove(p);

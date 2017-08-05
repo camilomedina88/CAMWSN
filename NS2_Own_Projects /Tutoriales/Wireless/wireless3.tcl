@@ -44,7 +44,7 @@ set opt(ll)     LL                             ;# link layer type
 set opt(ant)    Antenna/OmniAntenna            ;# antenna model
 set opt(ifqlen)         50                     ;# max packet in ifq
 set opt(nn)             1                      ;# number of mobilenodes
-set opt(adhocRouting)   DSDV                   ;# routing protocol
+set opt(adhocRouting)   AODV                   ;# routing protocol
 
 set opt(cp)     ""                             ;# cp file not used
 set opt(sc)     ""                             ;# node movement file. 

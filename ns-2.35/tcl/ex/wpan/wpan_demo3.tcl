@@ -14,7 +14,7 @@ set val(chan)           Channel/WirelessChannel    ;# Channel Type
 set val(prop)           Propagation/TwoRayGround   ;# radio-propagation model
 set val(netif)          Phy/WirelessPhy/802_15_4
 set val(mac)            Mac/802_15_4
-set val(ifq)            Queue/DropTail/PriQueue    ;# interface queue type
+set val(ifq)            Queue/Ecoda             ;# interface queue type
 set val(ll)             LL                         ;# link layer type
 set val(ant)            Antenna/OmniAntenna        ;# antenna model
 set val(ifqlen)         50                         ;# max packet in ifq

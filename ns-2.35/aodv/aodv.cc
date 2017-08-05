@@ -558,6 +558,16 @@ struct hdr_cmn *ch = HDR_CMN(p);
 struct hdr_ip *ih = HDR_IP(p);
 
  assert(initialized());
+
+
+/*
+ if (index == 6){
+
+  printf("Paquete en Nodo 6 desde %i  hacia %i Direccion: %i Tipo: %i \n", ih->saddr(), ih->daddr(), ch->direction_, ch->ptype_);
+
+
+ }
+*/
  //assert(p->incoming == 0);
  // XXXXX NOTE: use of incoming flag has been depracated; In order to track direction of pkt flow, direction_ in hdr_cmn is used instead. see packet.h for details.
 
@@ -565,7 +575,13 @@ struct hdr_ip *ih = HDR_IP(p);
    ih->ttl_ -= 1;
    recvAODV(p);
    return;
+ }  
+/*
+ else{
+
+  printf("No es paquete AODV... Tipo Paquete %i\n", ch->ptype() );
  }
+*/
  /*
   *  Must be a packet I'm originating...
   */
@@ -607,6 +623,7 @@ else if(ih->saddr() == index) {
  if ( (u_int32_t)ih->daddr() != IP_BROADCAST)
    rt_resolve(p);
  else
+    //printf("Entro a Forward \n");
    forward((aodv_rt_entry*) 0, p, NO_DELAY);
 }
 
@@ -626,11 +643,12 @@ AODV::recvAODV(Packet *p) {
 
  case AODVTYPE_RREQ:
     //printf("AODV: Recibe Request\n");
-    //printf("Request desde %i en nodo %i \n", iph->saddr(),index);
+    //printf("Recibe Request desde %i en nodo %i \n", iph->saddr(),index);
    recvRequest(p);
    break;
 
  case AODVTYPE_RREP:
+ //printf("Recibe Replay desde %i en nodo %i \n", iph->saddr(),index);
   //printf("AODV: Recibe Reply\n");
    recvReply(p);
    break;
@@ -645,7 +663,7 @@ AODV::recvAODV(Packet *p) {
    break;
         
  default:
-   fprintf(stderr, "Invalid AODV type (%x)\n", ah->ah_type);
+   //fprintf(stderr, "Invalid AODV type (%x)\n", ah->ah_type);
    exit(1);
  }
 
@@ -665,6 +683,7 @@ aodv_rt_entry *rt;
    */
 
   if(rq->rq_src == index) {
+    //printf("Recibe el mismo request\n");
 #ifdef DEBUG
     fprintf(stderr, "%s: got my own REQUEST\n", __FUNCTION__);
 #endif // DEBUG
@@ -674,6 +693,7 @@ aodv_rt_entry *rt;
 
  if (id_lookup(rq->rq_src, rq->rq_bcast_id)) {
 
+   // printf("Se descarta Request \n");
 #ifdef DEBUG
    fprintf(stderr, "%s: discarding request\n", __FUNCTION__);
 #endif // DEBUG
@@ -746,6 +766,7 @@ rt_update(rt0, rq->rq_src_seqno, rq->rq_hop_count, ih->saddr(),
 
  if(rq->rq_dst == index) {
 
+    //printf("Se va a enviar el REPLAY desde %i \n", index);
 #ifdef DEBUG
    fprintf(stderr, "%d - %s: destination sending reply\n",
                    index, __FUNCTION__);
@@ -1221,6 +1242,8 @@ fprintf(stderr, "sending Reply from %d at %.2f\n", index, Scheduler::instance().
  ih->ttl_ = NETWORK_DIAMETER;
 
  Scheduler::instance().schedule(target_, p, 0.);
+
+ //printf("EFECTIVAMENTE SE ENVIO EL REPLY DESDE %i  hacia %i \n",index, ipdst );
 
 }
 
