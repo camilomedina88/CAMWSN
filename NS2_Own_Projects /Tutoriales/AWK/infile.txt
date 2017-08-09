@@ -1,0 +1,12 @@
+Rcv 0.162 FromNode 2 ToNode 3 cbr PktSize= 500  UID= 3
+EnQ 0.164 FromNode 1 ToNode 2 cbr PktSize= 1000 UID= 8
+DeQ 0.164 FromNode 1 ToNode 2 cbr PktSize= 1000 UID= 8
+Rcv 0.170 FromNode 1 ToNode 2 cbr PktSize= 1000 UID= 7
+EnQ 0.170 FromNode 2 ToNode 3 cbr PktSize= 1000 UID= 7
+DeQ 0.170 FromNode 2 ToNode 3 cbr PktSize= 1000 UID= 7
+Rcv 0.171 FromNode 2 ToNode 3 cbr PktSize= 1000 UID= 4
+EnQ 0.172 FromNode 1 ToNode 2 cbr PktSize= 1000 UID= 9
+DeQ 0.172 FromNode 1 ToNode 2 cbr PktSize= 1000 UID= 9
+Rcv 0.178 FromNode 1 ToNode 2 cbr PktSize= 1000 UID= 8
+EnQ 0.178 FromNode 2 ToNode 3 cbr PktSize= 1000 UID= 8
+DeQ 0.178 FromNode 2 ToNode 3 cbr PktSize= 1000 UID= 8
