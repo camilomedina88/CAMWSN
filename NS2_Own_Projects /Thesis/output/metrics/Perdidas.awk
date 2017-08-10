@@ -54,8 +54,8 @@ END{
 	porcentajePerdidos=(perdidos/enviado)*100;
 
 
-	printf "Enviados: %i \n", enviado;
-	printf "Recibidos: %i \n", recibidos;
+	#printf "Enviados: %i \n", enviado;
+	#printf "Recibidos: %i \n", recibidos;
 	#printf "Drop: %i \n", drop;
 	printf  "Porcentaje Perdidos: %f \n", porcentajePerdidos;
 

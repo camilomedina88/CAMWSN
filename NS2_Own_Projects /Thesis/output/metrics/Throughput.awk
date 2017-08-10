@@ -66,9 +66,9 @@ BEGIN {
    
   END {
 
-      printf "StopTime %0.2f \n", stopTime
-      printf "StartTime %0.2f \n", startTime
-      printf "Total Recividos %0.2f \n", totalRecv
+      #printf "StopTime %0.2f \n", stopTime
+      #printf "StartTime %0.2f \n", startTime
+      #printf "Total Recividos %0.2f \n", totalRecv
 
       Throghput=totalRecv/(stopTime - startTime)*(8/1000);
       printf "Average Throughput[kbps]: %0.2f \n", Throghput;

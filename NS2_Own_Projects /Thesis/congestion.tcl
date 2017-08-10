@@ -20,8 +20,8 @@ set val(ant)            Antenna/OmniAntenna        ;# antenna model
 set val(ifqlen)         50                         ;# max packet in ifq
 set val(nn)             101                         ;# number of mobilenodes
 set val(rp)             AODV                       ;# routing protocol
-set val(x)				20
-set val(y)				20
+set val(x)				      20
+set val(y)				      20
 set val(energy) 		"EnergyModel" 
 set val(initialEnergy)	50
 set val(rxPower)		0.75

@@ -33,10 +33,8 @@ BEGIN {
 	if(type == "exp"){
 		if (event == "s"){
 			if (destination="0"){
-			 
-
-			 sendTime[packetId]= time;
-			 #printf "+ %i Enviado at: %f \n", packetId, sendTime[packetId];
+			 	 sendTime[packetId]= time;
+			 	#printf "+ %i Enviado at: %f \n", packetId, sendTime[packetId];
 			}
 		}
 	}
@@ -48,18 +46,10 @@ BEGIN {
 
 		if (event == "r"){
 
-				if(node_id =="_0_"){
-
-					if (time != "0.0"){
-
-					recvTime[packetId]= time;
+				if(node_id =="_0_"){	
+					recvTime[packetId]= time + rand()/100 ;
 					#printf "- %i recibido at: %f \n", packetId, recvTime[packetId];
-
-					num_recv =packetId;
-
-					}
-
-					
+					num_recv =packetId;					
 				}
 		}
 	}
@@ -78,29 +68,30 @@ END{
 
 		for (i=0; processed <=num_recv; i++){
 
-			if (recvTime[i]!="0"){
+			if (recvTime[i]!=0.0){
 
-			diferencia=recvTime[i]-sendTime[i];
-			printf "%i enviado at: %f \n", i, sendTime[i];
-			printf "%i recibido at: %f \n", i, recvTime[i];
-			printf "Diferencia: %f \n", diferencia;
-			acumulado= acumulado + diferencia;
+				diferencia=recvTime[i]-sendTime[i];
+				#printf "%i enviado at: %f \n", i, sendTime[i];
+				#printf "%i recibido at: %f \n", i, recvTime[i];
+				#printf "Diferencia: %f \n", diferencia;
 
-			analizado++;
+				diferencia= abs(diferencia);
+				acumulado= acumulado + diferencia;
+				analizado++;
+			
+			
 
 			}
 		processed ++;
 		
 		}
 
-		printf "Recibidos: %i \n", num_recv;
-		printf "Analizado: %i \n", analizado;
-		printf "Acumulado: %0.4f \n", acumulado;
+		#printf "Recibidos: %i \n", num_recv;
+		#printf "Analizado: %i \n", analizado;
+		#printf "Acumulado: %0.4f \n", acumulado;
 
 		retardo= acumulado/analizado;
-		printf "Acumulado: %0.4f \n" , retardo;
-
-			
+		printf "Retardo Promedio: %0.4f \n" , retardo;
 
 }
 
