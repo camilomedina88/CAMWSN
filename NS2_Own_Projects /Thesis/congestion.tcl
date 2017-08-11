@@ -12,21 +12,21 @@ set val(chan)           Channel/WirelessChannel    ;# Channel Type
 set val(prop)           Propagation/TwoRayGround   ;# radio-propagation model
 set val(netif)          Phy/WirelessPhy/802_15_4
 set val(mac)            Mac/802_15_4
-set val(ifq)            Queue/DropTail/PriQueue    	;# interface queue type
-#set val(ifq)            Queue/DropTail
+#set val(ifq)            Queue/DropTail/PriQueue    	;# interface queue type
+set val(ifq)            Queue/DropTail
 #set val(ifq)            Queue/Ecoda             ;# interface queue type
 set val(ll)             LL                         ;# link layer type
 set val(ant)            Antenna/OmniAntenna        ;# antenna model
 set val(ifqlen)         50                         ;# max packet in ifq
 set val(nn)             101                         ;# number of mobilenodes
 set val(rp)             AODV                       ;# routing protocol
-set val(x)				      20
-set val(y)				      20
-set val(energy) 		"EnergyModel" 
-set val(initialEnergy)	50
-set val(rxPower)		0.75
-set vak(txPower)		0.25
-set val(sensePower)		0.10
+set val(x)				      30
+set val(y)				      30
+set val(energy) 		    "EnergyModel" 
+set val(initialEnergy)	3.9                        ;#Calculado para pila AA
+set val(rxPower)		    0.020
+set vak(txPower)		    0.010
+set val(sensePower)		  0.035
 #set val(nam)			output//output/congestion.nam
 set val(nam)			/output/congestion.nam
 set val(traffic)		poisson                        ;# cbr/poisson/ftp
@@ -73,7 +73,6 @@ $ns_ puts-nam-traceall {# nam4wpan #}		;# inform nam that this is a trace file f
 Mac/802_15_4 wpanNam namStatus on		;# default = off (should be turned on before other 'wpanNam' commands can work)
 #Mac/802_15_4 wpanNam ColFlashClr gold		;# default = gold
 
-# For model 'TwoRayGround'
 set dist(5m)  7.69113e-06
 set dist(9m)  2.37381e-06
 set dist(10m) 1.92278e-06
@@ -88,8 +87,15 @@ set dist(25m) 3.07645e-07
 set dist(30m) 2.13643e-07
 set dist(35m) 1.56962e-07
 set dist(40m) 1.20174e-07
-Phy/WirelessPhy set CSThresh_ $dist(15m)
-Phy/WirelessPhy set RXThresh_ $dist(15m)
+set dist(50m) 3.98107e-10
+
+#Potencia de transmisión 10 dBm segun Sky Mote
+Phy/WirelessPhy set Pt_ 0.001 
+#Carrier sense threshold (W) SkyMote: Receiver sensitivity -94 dBm
+Phy/WirelessPhy set CSThresh_ $dist(50m)
+#receive power threshold (W) SkyMote: Receiver sensitivity -94 dBm
+Phy/WirelessPhy set RXThresh_ $dist(50m)
+
 
 # set up topography object
 set topo       [new Topography]

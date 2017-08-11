@@ -101,19 +101,19 @@ BEGIN {
   END {
 
 
-      promedioA=(AcumuladoA/contadorA)*100/50;
-      promedioB=(AcumuladoB/contadorB)*100/50;
-      promedioC=(AcumuladoC/contadorC)*100/50;
-      promedioD=(AcumuladoD/contadorD)*100/50;
-      promedioE=(AcumuladoE/contadorE)*100/50;
-      promedioF=(AcumuladoF/contadorF)*100/50;
+      promedioA=(AcumuladoA/contadorA)*100/3.9;
+      promedioB=(AcumuladoB/contadorB)*100/3.9;
+      promedioC=(AcumuladoC/contadorC)*100/3.9;
+      promedioD=(AcumuladoD/contadorD)*100/3.9;
+      promedioE=(AcumuladoE/contadorE)*100/3.9;
+      promedioF=(AcumuladoF/contadorF)*100/3.9;
 
-      printf "Energia en 30  seg: %0.1f%% \n", promedioA;
-      printf "Energia en 60  seg: %0.1f%% \n", promedioB;
-      printf "Energia en 90  seg: %0.1f%% \n", promedioC;
-      printf "Energia en 120 seg: %0.1f%% \n", promedioD;
-      printf "Energia en 150 seg: %0.1f%% \n", promedioE;
-      printf "Energia en 190 seg: %0.1f%% \n", promedioF;
+      printf "Energia en 30  seg:       %0.2f%% \n", promedioA;
+      printf "Energia en 60  seg:       %0.2f%% \n", promedioB;
+      printf "Energia en 90  seg:       %0.2f%% \n", promedioC;
+      printf "Energia en 120 seg:       %0.2f%% \n", promedioD;
+      printf "Energia en 150 seg:       %0.2f%% \n", promedioE;
+      printf "Energia en 190 seg:       %0.2f%% \n", promedioF;
 
 
       #printf "Contador 30:  %i \n", contadorA;

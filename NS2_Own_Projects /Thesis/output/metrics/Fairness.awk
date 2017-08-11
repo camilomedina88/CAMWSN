@@ -89,7 +89,7 @@ BEGIN {
       #printf "Denominador: %0.2f \n", denominador
       #printf "Procesados: %0.2f \n", sumarThroughput
 
-      printf "Fairness: %0.3f \n", fairnessIndex
+      printf "Indice Fairness:           %0.3f \n", fairnessIndex
 
   }
 
