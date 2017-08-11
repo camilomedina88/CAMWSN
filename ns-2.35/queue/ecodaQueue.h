@@ -20,6 +20,7 @@ class EcodaQueue : public Queue {
 		pq_ = q1_;
 		deq_turn_ = 1;
 		index = id;
+		estadoBuffer=0;
 		//printf("Nodo: %i - \n", index);
 	}
 		 //void    recv(Packet *p, Handler *h);
@@ -34,4 +35,5 @@ class EcodaQueue : public Queue {
 	 PacketQueue *q2_;   // Second FIFO queue
 	 int deq_turn_;      // 1 for First queue 2 for Second
 	 int index;
+	 int estadoBuffer; //0 -> Accept State, 1 -> Filter State, 2 ->Reject State
 };

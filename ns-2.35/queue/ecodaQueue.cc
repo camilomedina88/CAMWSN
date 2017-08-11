@@ -37,49 +37,39 @@ void EcodaQueue::enque(Packet* p)
   hdr_ip* iph = hdr_ip::access(p);
   hdr_cmn *ch = HDR_CMN(p);
 
-  //printf("LO QUE ESTA ACA: %s\n", iph->saddr());
+  int tamanioActual=(q1_->length() + q2_->length());
+
+  if(tamanioActual > qlim_*2/3){
+          //printf("Estado Reject\n");
+          estadoBuffer=2;
+   }
+
+   if(tamanioActual < qlim_*1/3){
+          //printf("Estado Accept\n");
+          estadoBuffer=0;
+   }
+
+   if(tamanioActual >= qlim_*1/3 && tamanioActual <= qlim_*2/3){
+          //printf("Estado Filter\n");
+          estadoBuffer=1;
+   }
   
-  if(iph->saddr() == index){
-    //printf("Queue: Nodo: %i Encolado en Q1 Origen: %i Destino %i \n",index,iph->saddr(), iph->daddr());
+  if(iph->saddr() == index){ //Origen el Nodo...    
     q1_->enque(p);
-    if ((q1_->length() + q2_->length()) > qlim_) {
+    if (estadoBuffer==2) {
+      //printf("Drop en Q1 \n");
       q1_->remove(p);
       drop(p);
-    }
-    
-  }  else {
-    printf("Queue: Nodo: %i Encolado en Q2 Origen: %i Destino %i \n",index,iph->saddr(), iph->daddr());
+    }    
+  }  else { //Origen Distinto
     q2_->enque(p);
-    if ((q1_->length() + q2_->length()) > qlim_) {
+    if (estadoBuffer==2) {
+      //printf("Drop en Q2 \n");
       q2_->remove(p);
       drop(p);
     }
   }
 
-
-  //iph->src_;
-    //printf("Queue: Encolado\n");
-    //printf("Paquete generado en nodo: %i, con destino: %i \n",iph->src(),iph->daddr());
-  
-
-    // if IPv6 priority = 15 enqueue to queue1
-  /*
-  if (iph->prio_ == 15) {
-    printf("Queue: Encolado en Q1\n");
-    q1_->enque(p);
-    if ((q1_->length() + q2_->length()) > qlim_) {
-      q1_->remove(p);
-      drop(p);
-    }
-  }
-  else {
-    //printf("Queue: Encolado en Q2\n");
-    q2_->enque(p);
-    if ((q1_->length() + q2_->length()) > qlim_) {
-      q2_->remove(p);
-      drop(p);
-    }
-  }*/
 }
 
 
@@ -87,13 +77,9 @@ Packet* EcodaQueue::deque()
 {
   Packet *p;
   
-  //printf("Queue: DEcolado\n");
-  //printf("Saliendo de la cola.. Transmitiendo\n");
 
-  if (deq_turn_ == 1) {
-    
-    p =  q1_->deque();
-    
+  if (deq_turn_ == 1) {    
+    p =  q1_->deque();    
     
     if (p == 0) {
       p = q2_->deque();
@@ -104,11 +90,8 @@ Packet* EcodaQueue::deque()
       //printf("DEQueue: Nodo: %i DEEncolado en Q1 \n",index);
     }
   }
-  else {
-    
-    p =  q2_->deque();
-    
-    
+  else {    
+    p =  q2_->deque();    
     if (p == 0) {
       p = q1_->deque();
       deq_turn_ = 2;
@@ -118,7 +101,6 @@ Packet* EcodaQueue::deque()
       //printf("DEQueue: Nodo: %i DEEncolado en Q2 \n",index);
     }
   }
-  
   return (p);
 }
 
