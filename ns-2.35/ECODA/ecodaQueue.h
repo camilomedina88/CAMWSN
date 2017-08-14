@@ -10,6 +10,8 @@
 #include <string.h>
 #include "queue.h"
 #include "address.h"
+//#include "packet.h"
+//#include "ecodaPacket.h"
 
 
 class EcodaQueue : public Queue {
@@ -21,6 +23,9 @@ class EcodaQueue : public Queue {
 		deq_turn_ = 1;
 		index = id;
 		estadoBuffer=0;
+		alpha=0.5;
+		beta=0.02;
+
 		//printf("Nodo: %i - \n", index);
 	}
 		 //void    recv(Packet *p, Handler *h);
@@ -36,4 +41,6 @@ class EcodaQueue : public Queue {
 	 int deq_turn_;      // 1 for First queue 2 for Second
 	 int index;
 	 int estadoBuffer; //0 -> Accept State, 1 -> Filter State, 2 ->Reject State
+	 float alpha;
+	 float beta;
 };

@@ -39,7 +39,9 @@
 
 #include "connector.h"
 #include "packet.h"
+//#include "ECODA/ecodaPacket.h"
 #include "ip.h"
+
 class Packet;
 
 class PacketQueue : public TclObject {

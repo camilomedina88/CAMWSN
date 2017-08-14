@@ -46,6 +46,7 @@
 #include "lib/bsd-list.h"
 #include "packet-stamp.h"
 #include "ns-process.h"
+//#include "ECODA/ecodaPacket.h"
 
 // Used by wireless routing code to attach routing agent
 #define RT_PORT		255	/* port that all route msgs are sent to */
@@ -69,6 +70,7 @@
 #define HDR_CDIFF(p)    (hdr_cdiff::access(p))  /* chalermak's diffusion*/
 //#define HDR_DIFF(p)     (hdr_diff::access(p))  /* SCADD's diffusion ported into ns */
 #define HDR_LMS(p)		(hdr_lms::access(p))
+
 
 /* --------------------------------------------------------------------*/
 
@@ -202,8 +204,10 @@ static const packet_t PT_MDART = 72;
         // insert new packet types here
 
 static const packet_t PT_WFRP = 73;
+static const packet_t PT_ECODA = 74;
+static const packet_t PT_MYHEADER = 75;
 
-static packet_t       PT_NTYPE = 74; // This MUST be the LAST one
+static packet_t       PT_NTYPE = 76; // This MUST be the LAST one
 
 enum packetClass
 {
@@ -413,6 +417,10 @@ public:
 		// PUMA
 		name_[PT_PUMA]="PUMA";
 
+		//ECODA
+
+		
+
 		// DCCP
 		name_[PT_DCCP]="DCCP";
 		name_[PT_DCCP_REQ]="DCCP_Request";
@@ -424,6 +432,11 @@ public:
 		name_[PT_DCCP_CLOSEREQ]="DCCP_CloseReq";
 		name_[PT_DCCP_RESET]="DCCP_Reset";
 
+
+
+		name_[PT_ECODA]="Ecoda";
+
+		name_[PT_MYHEADER] = "MyHeader";
 		name_[PT_NTYPE]= "undefined";
 	}
 	static int addPacket(char *name);

@@ -150,6 +150,10 @@ set ptype(mdart) 72\n\
 set pvals(72) MDART\n\
 set ptype(wfrp) 73\n\
 set pvals(73) WFRP\n\
+set ptype(ecoda) 74\n\
+set pvals(74) Ecoda\n\
+set ptype(myheader) 75\n\
+set pvals(75) MyHeader\n\
 proc ptype2val {str} {\n\
 global ptype\n\
 set str [string tolower $str]\n\

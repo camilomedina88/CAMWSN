@@ -336,7 +336,7 @@ OBJ_CC = \
 	MyObject/MyObjectCAMM.o \
 	wfrp/wfrp.o \
 	Arq/arq.o\
-	queue/ecodaQueue.o\
+	ECODA/ecodaQueue.o\
 	$(OBJ_STL)
 
 

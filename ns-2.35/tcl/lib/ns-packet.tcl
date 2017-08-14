@@ -184,6 +184,7 @@ set protolist {
 	MDART 	# routing protocol for ad-hoc networks
 	# AOMDV patch
 	AOMDV
+	ECODA 	#ECODA
 # Other:
 	Encap 	# common/encap.cc
         IPinIP 	# IP encapsulation 

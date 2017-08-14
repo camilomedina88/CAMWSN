@@ -3469,6 +3469,7 @@ Smac 	# Sensor-MAC\n\
 TORA 	# routing protocol for ad-hoc networks\n\
 MDART 	# routing protocol for ad-hoc networks\n\
 AOMDV\n\
+ECODA 	#ECODA\n\
 Encap 	# common/encap.cc\n\
 IPinIP 	# IP encapsulation \n\
 HDLC 	# High Level Data Link Control\n\

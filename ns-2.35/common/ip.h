@@ -60,7 +60,8 @@ struct hdr_ip {
 	ns_addr_t	src_;
 	ns_addr_t	dst_;
 	int		ttl_;
-
+	int  staticPriority; //Agregado para ECODA
+	float dynamicPriority; //Agregado para ECODA
 	/* Monarch extn */
 // 	u_int16_t	sport_;
 // 	u_int16_t	dport_;
@@ -84,6 +85,10 @@ struct hdr_ip {
 	nsaddr_t& daddr() { return (dst_.addr_); }
         int32_t& dport() { return dst_.port_;}
 	int& ttl() { return (ttl_); }
+
+
+	int& getStaticPriority() { return (staticPriority); } //Agregado para ECODA
+	float& getDynamicPriority() { return (dynamicPriority); } //Agregado para ECODA
 	/* ipv6 fields */
 	int& flowid() { return (fid_); }
 	int& prio() { return (prio_); }

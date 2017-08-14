@@ -34,8 +34,30 @@ public:
 
 void EcodaQueue::enque(Packet* p)
 {
+
   hdr_ip* iph = hdr_ip::access(p);
+  
+  //hdr_aodv * aoh= hdr_aodv::access(p);
+  //hdr_ecoda *ecoh = hdr_ecoda::access(p);
+  //hdr_myHeader *p_myHeader = hdr_myHeader::access(p);
   hdr_cmn *ch = HDR_CMN(p);
+
+
+  iph->staticPriority=10;
+
+
+
+
+
+
+  if (iph->getStaticPriority ()==10){
+
+    printf("Entro, eres un duro 666 CAMI\n");
+  }
+
+
+
+
 
   int tamanioActual=(q1_->length() + q2_->length());
 
@@ -56,6 +78,7 @@ void EcodaQueue::enque(Packet* p)
   
   if(iph->saddr() == index){ //Origen el Nodo...    
     q1_->enque(p);
+    
     if (estadoBuffer==2) {
       //printf("Drop en Q1 \n");
       q1_->remove(p);
