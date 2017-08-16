@@ -39,8 +39,8 @@ BEGIN {
       if($1="N"){
 
 
-        if($3 <31){
-          if($3>30){
+        if($3 <61){
+          if($3>60){
 
             EnergiaA[contadorA]=$7;
             AcumuladoA=AcumuladoA + EnergiaA[contadorA];
@@ -48,40 +48,40 @@ BEGIN {
           }        
         }
 
-        if($3 <61){
-          if($3>60){
+        if($3 <121){
+          if($3>120){
             EnergiaB[contadorB]=$7;
             AcumuladoB=AcumuladoB + EnergiaB[contadorB];
             contadorB++;
           }        
         }
 
-      if($3 <91){
-          if($3>90){
+      if($3 <181){
+          if($3>180){
           EnergiaC[contadorC]=$7;
           AcumuladoC=AcumuladoC + EnergiaC[contadorC];
             contadorC++;
           }        
         }
 
-      if($3 <121){
-          if($3>120){
+      if($3 <241){
+          if($3>240){
           EnergiaD[contadorD]=$7;
           AcumuladoD=AcumuladoD + EnergiaD[contadorD];
             contadorD++;
           }        
         }
 
-        if($3 <151){
-          if($3>150){
+        if($3 <301){
+          if($3>300){
           EnergiaE[contadorE]=$7;
           AcumuladoE=AcumuladoE + EnergiaE[contadorE];
             contadorE++;
           }        
         }
 
-        if($3 <191){
-          if($3>190){
+        if($3 <361){
+          if($3>360){
           EnergiaF[contadorF]=$7;
           AcumuladoF=AcumuladoF + EnergiaF[contadorF];
             contadorF++;
@@ -108,12 +108,12 @@ BEGIN {
       promedioE=(AcumuladoE/contadorE)*100/3.9;
       promedioF=(AcumuladoF/contadorF)*100/3.9;
 
-      printf "Energia en 30  seg:       %0.2f%% \n", promedioA;
-      printf "Energia en 60  seg:       %0.2f%% \n", promedioB;
-      printf "Energia en 90  seg:       %0.2f%% \n", promedioC;
-      printf "Energia en 120 seg:       %0.2f%% \n", promedioD;
-      printf "Energia en 150 seg:       %0.2f%% \n", promedioE;
-      printf "Energia en 190 seg:       %0.2f%% \n", promedioF;
+      printf "Energia en 60  seg:       %0.2f%% \n", promedioA;
+      printf "Energia en 120 seg:       %0.2f%% \n", promedioB;
+      printf "Energia en 180 seg:       %0.2f%% \n", promedioC;
+      printf "Energia en 240 seg:       %0.2f%% \n", promedioD;
+      printf "Energia en 300 seg:       %0.2f%% \n", promedioE;
+      printf "Energia en 360 seg:       %0.2f%% \n", promedioF;
 
 
       #printf "Contador 30:  %i \n", contadorA;

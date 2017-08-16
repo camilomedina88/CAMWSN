@@ -1,0 +1,484 @@
+$node_(0) set X_ 135
+$node_(0) set Y_ 463
+$node_(0) set Z_ 0.0
+$node_(1) set X_ 157
+$node_(1) set Y_ 480
+$node_(1) set Z_ 0.0
+$node_(2) set X_ 140
+$node_(2) set Y_ 382
+$node_(2) set Z_ 0.0
+$node_(3) set X_ 114
+$node_(3) set Y_ 404
+$node_(3) set Z_ 0.0
+$node_(4) set X_ 218
+$node_(4) set Y_ 446
+$node_(4) set Z_ 0.0
+$node_(5) set X_ 136
+$node_(5) set Y_ 385
+$node_(5) set Z_ 0.0
+$node_(6) set X_ 115
+$node_(6) set Y_ 430
+$node_(6) set Z_ 0.0
+$node_(7) set X_ 106
+$node_(7) set Y_ 491
+$node_(7) set Z_ 0.0
+$node_(8) set X_ 130
+$node_(8) set Y_ 387
+$node_(8) set Z_ 0.0
+$node_(9) set X_ 208
+$node_(9) set Y_ 395
+$node_(9) set Z_ 0.0
+
+$node_(10) set X_ 161
+$node_(10) set Y_ 389
+$node_(10) set Z_ 0.0
+
+
+$node_(11) set X_ 80
+$node_(11) set Y_ 522
+$node_(11) set Z_ 0.0
+
+
+$node_(12) set X_ 147
+$node_(12) set Y_ 474
+$node_(12) set Z_ 0.0
+
+
+$node_(13) set X_ 102
+$node_(13) set Y_ 434
+$node_(13) set Z_ 0.0
+
+
+$node_(14) set X_ 160
+$node_(14) set Y_ 431
+$node_(14) set Z_ 0.0
+
+
+$node_(15) set X_ 126
+$node_(15) set Y_ 493
+$node_(15) set Z_ 0.0
+
+
+$node_(16) set X_ 102
+$node_(16) set Y_ 511
+$node_(16) set Z_ 0.0
+
+
+$node_(17) set X_ 218
+$node_(17) set Y_ 387
+$node_(17) set Z_ 0.0
+
+
+$node_(18) set X_ 179
+$node_(18) set Y_ 444
+$node_(18) set Z_ 0.0
+
+
+$node_(19) set X_ 97
+$node_(19) set Y_ 516
+$node_(19) set Z_ 0.0
+
+
+$node_(20) set X_ 104
+$node_(20) set Y_ 399
+$node_(20) set Z_ 0.0
+
+
+$node_(21) set X_ 146
+$node_(21) set Y_ 440
+$node_(21) set Z_ 0.0
+
+
+$node_(22) set X_ 167
+$node_(22) set Y_ 438
+$node_(22) set Z_ 0.0
+
+
+$node_(23) set X_ 223
+$node_(23) set Y_ 400
+$node_(23) set Z_ 0.0
+
+
+$node_(24) set X_ 210
+$node_(24) set Y_ 377
+$node_(24) set Z_ 0.0
+
+
+$node_(25) set X_ 220
+$node_(25) set Y_ 469
+$node_(25) set Z_ 0.0
+
+
+$node_(26) set X_ 207
+$node_(26) set Y_ 444
+$node_(26) set Z_ 0.0
+
+
+$node_(27) set X_ 186
+$node_(27) set Y_ 433
+$node_(27) set Z_ 0.0
+
+
+$node_(28) set X_ 130
+$node_(28) set Y_ 450
+$node_(28) set Z_ 0.0
+
+
+$node_(29) set X_ 209
+$node_(29) set Y_ 470
+$node_(29) set Z_ 0.0
+
+
+$node_(30) set X_ 121
+$node_(30) set Y_ 423
+$node_(30) set Z_ 0.0
+
+
+$node_(31) set X_ 122
+$node_(31) set Y_ 457
+$node_(31) set Z_ 0.0
+
+
+$node_(32) set X_ 125
+$node_(32) set Y_ 457
+$node_(32) set Z_ 0.0
+
+
+$node_(33) set X_ 223
+$node_(33) set Y_ 402
+$node_(33) set Z_ 0.0
+
+
+$node_(34) set X_ 107
+$node_(34) set Y_ 387
+$node_(34) set Z_ 0.0
+
+
+$node_(35) set X_ 195
+$node_(35) set Y_ 465
+$node_(35) set Z_ 0.0
+
+
+$node_(36) set X_ 207
+$node_(36) set Y_ 461
+$node_(36) set Z_ 0.0
+
+
+$node_(37) set X_ 113
+$node_(37) set Y_ 455
+$node_(37) set Z_ 0.0
+
+
+$node_(38) set X_ 81
+$node_(38) set Y_ 424
+$node_(38) set Z_ 0.0
+
+
+$node_(39) set X_ 211
+$node_(39) set Y_ 495
+$node_(39) set Z_ 0.0
+
+
+$node_(40) set X_ 206
+$node_(40) set Y_ 444
+$node_(40) set Z_ 0.0
+
+
+$node_(41) set X_ 110
+$node_(41) set Y_ 492
+$node_(41) set Z_ 0.0
+
+
+$node_(42) set X_ 75
+$node_(42) set Y_ 442
+$node_(42) set Z_ 0.0
+
+
+$node_(43) set X_ 157
+$node_(43) set Y_ 409
+$node_(43) set Z_ 0.0
+
+
+$node_(44) set X_ 165
+$node_(44) set Y_ 384
+$node_(44) set Z_ 0.0
+
+
+$node_(45) set X_ 121
+$node_(45) set Y_ 497
+$node_(45) set Z_ 0.0
+
+
+$node_(46) set X_ 191
+$node_(46) set Y_ 467
+$node_(46) set Z_ 0.0
+
+
+$node_(47) set X_ 223
+$node_(47) set Y_ 420
+$node_(47) set Z_ 0.0
+
+
+$node_(48) set X_ 79
+$node_(48) set Y_ 403
+$node_(48) set Z_ 0.0
+
+
+$node_(49) set X_ 198
+$node_(49) set Y_ 406
+$node_(49) set Z_ 0.0
+
+
+$node_(50) set X_ 131
+$node_(50) set Y_ 478
+$node_(50) set Z_ 0.0
+
+
+$node_(51) set X_ 77
+$node_(51) set Y_ 484
+$node_(51) set Z_ 0.0
+
+
+$node_(52) set X_ 177
+$node_(52) set Y_ 474
+$node_(52) set Z_ 0.0
+
+
+$node_(53) set X_ 108
+$node_(53) set Y_ 489
+$node_(53) set Z_ 0.0
+
+
+$node_(54) set X_ 186
+$node_(54) set Y_ 522
+$node_(54) set Z_ 0.0
+
+
+$node_(55) set X_ 210
+$node_(55) set Y_ 374
+$node_(55) set Z_ 0.0
+
+
+$node_(56) set X_ 89
+$node_(56) set Y_ 497
+$node_(56) set Z_ 0.0
+
+
+$node_(57) set X_ 162
+$node_(57) set Y_ 412
+$node_(57) set Z_ 0.0
+
+
+$node_(58) set X_ 175
+$node_(58) set Y_ 494
+$node_(58) set Z_ 0.0
+
+
+$node_(59) set X_ 102
+$node_(59) set Y_ 450
+$node_(59) set Z_ 0.0
+
+
+$node_(60) set X_ 113
+$node_(60) set Y_ 468
+$node_(60) set Z_ 0.0
+
+
+$node_(61) set X_ 110
+$node_(61) set Y_ 489
+$node_(61) set Z_ 0.0
+
+
+$node_(62) set X_ 95
+$node_(62) set Y_ 392
+$node_(62) set Z_ 0.0
+
+
+$node_(63) set X_ 154
+$node_(63) set Y_ 507
+$node_(63) set Z_ 0.0
+
+
+$node_(64) set X_ 157
+$node_(64) set Y_ 419
+$node_(64) set Z_ 0.0
+
+
+$node_(65) set X_ 115
+$node_(65) set Y_ 482
+$node_(65) set Z_ 0.0
+
+
+$node_(66) set X_ 90
+$node_(66) set Y_ 494
+$node_(66) set Z_ 0.0
+
+
+$node_(67) set X_ 110
+$node_(67) set Y_ 386
+$node_(67) set Z_ 0.0
+
+
+$node_(68) set X_ 90
+$node_(68) set Y_ 379
+$node_(68) set Z_ 0.0
+
+
+$node_(69) set X_ 97
+$node_(69) set Y_ 413
+$node_(69) set Z_ 0.0
+
+
+$node_(70) set X_ 135
+$node_(70) set Y_ 399
+$node_(70) set Z_ 0.0
+
+
+$node_(71) set X_ 84
+$node_(71) set Y_ 421
+$node_(71) set Z_ 0.0
+
+
+$node_(72) set X_ 161
+$node_(72) set Y_ 412
+$node_(72) set Z_ 0.0
+
+
+$node_(73) set X_ 199
+$node_(73) set Y_ 488
+$node_(73) set Z_ 0.0
+
+
+$node_(74) set X_ 113
+$node_(74) set Y_ 515
+$node_(74) set Z_ 0.0
+
+
+$node_(75) set X_ 147
+$node_(75) set Y_ 510
+$node_(75) set Z_ 0.0
+
+
+$node_(76) set X_ 183
+$node_(76) set Y_ 444
+$node_(76) set Z_ 0.0
+
+
+$node_(77) set X_ 218
+$node_(77) set Y_ 475
+$node_(77) set Z_ 0.0
+
+
+$node_(78) set X_ 155
+$node_(78) set Y_ 500
+$node_(78) set Z_ 0.0
+
+
+$node_(79) set X_ 168
+$node_(79) set Y_ 473
+$node_(79) set Z_ 0.0
+
+
+$node_(80) set X_ 123
+$node_(80) set Y_ 489
+$node_(80) set Z_ 0.0
+
+
+$node_(81) set X_ 94
+$node_(81) set Y_ 494
+$node_(81) set Z_ 0.0
+
+
+$node_(82) set X_ 202
+$node_(82) set Y_ 409
+$node_(82) set Z_ 0.0
+
+
+$node_(83) set X_ 123
+$node_(83) set Y_ 412
+$node_(83) set Z_ 0.0
+
+
+$node_(84) set X_ 123
+$node_(84) set Y_ 427
+$node_(84) set Z_ 0.0
+
+
+$node_(85) set X_ 117
+$node_(85) set Y_ 501
+$node_(85) set Z_ 0.0
+
+
+$node_(86) set X_ 220
+$node_(86) set Y_ 492
+$node_(86) set Z_ 0.0
+
+
+$node_(87) set X_ 110
+$node_(87) set Y_ 499
+$node_(87) set Z_ 0.0
+
+
+$node_(88) set X_ 112
+$node_(88) set Y_ 489
+$node_(88) set Z_ 0.0
+
+
+$node_(89) set X_ 174
+$node_(89) set Y_ 492
+$node_(89) set Z_ 0.0
+
+
+$node_(90) set X_ 124
+$node_(90) set Y_ 512
+$node_(90) set Z_ 0.0
+
+
+$node_(91) set X_ 201
+$node_(91) set Y_ 488
+$node_(91) set Z_ 0.0
+
+
+$node_(92) set X_ 109
+$node_(92) set Y_ 477
+$node_(92) set Z_ 0.0
+
+
+$node_(93) set X_ 77
+$node_(93) set Y_ 437
+$node_(93) set Z_ 0.0
+
+
+$node_(94) set X_ 147
+$node_(94) set Y_ 458
+$node_(94) set Z_ 0.0
+
+
+$node_(95) set X_ 181
+$node_(95) set Y_ 403
+$node_(95) set Z_ 0.0
+
+
+$node_(96) set X_ 110
+$node_(96) set Y_ 436
+$node_(96) set Z_ 0.0
+
+
+$node_(97) set X_ 194
+$node_(97) set Y_ 394
+$node_(97) set Z_ 0.0
+
+
+$node_(98) set X_ 189
+$node_(98) set Y_ 436
+$node_(98) set Z_ 0.0
+
+
+$node_(99) set X_ 160
+$node_(99) set Y_ 376
+$node_(99) set Z_ 0.0
+
+
+$node_(100) set X_ 116
+$node_(100) set Y_ 449
+$node_(100) set Z_ 0.0

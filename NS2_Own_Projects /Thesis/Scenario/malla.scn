@@ -51,8 +51,8 @@ array set n {
 }
 
 set DIMENSION 15 
-set lft 5.0
-set top 75.0
+set lft 30.0
+set top -500.0
 for {set j 0} {$j < $DIMENSION} {incr j} {
 for {set i 0} {$i < $DIMENSION} {incr i} {
 	eval set n_idx \$n(${j}_$i)
@@ -61,8 +61,8 @@ for {set i 0} {$i < $DIMENSION} {incr i} {
 			set n_idx [string range $n_idx 1 end]
 			#eval \$node_($n_idx) RNType 0
 		}
-		eval \$node_($n_idx) set X_ [expr $lft+$i*5.0]
-		eval \$node_($n_idx) set Y_ [expr $top-$j*5.0]
+		eval \$node_($n_idx) set X_ [expr $lft+$i*15.0]
+		eval \$node_($n_idx) set Y_ [expr $top-$j*15.0]
 		eval \$node_($n_idx) set Z_ 0.0
 	}
 }

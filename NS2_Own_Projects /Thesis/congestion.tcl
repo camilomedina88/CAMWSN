@@ -20,8 +20,8 @@ set val(ant)            Antenna/OmniAntenna        ;# antenna model
 set val(ifqlen)         20                         ;# max packet in ifq
 set val(nn)             101                         ;# number of mobilenodes
 set val(rp)             AODV                       ;# routing protocol
-set val(x)				      80
-set val(y)				      80
+set val(x)				      150                         ;#Casi 4 canchas de futbol
+set val(y)				      150
 set val(energy) 		    "EnergyModel" 
 set val(initialEnergy)	3.9                        ;#Calculado para pila AA
 set val(rxPower)		    0.020
@@ -56,7 +56,7 @@ set appTime1         	30.1	;# in seconds
 set appTime2         	100.1	;# in seconds 
 #set appTime3         	25.0;# in seconds 
 set appTime3         	150.0;# in seconds 
-set stopTime            200	;# in seconds 
+set stopTime            410	;# in seconds APROX 7 Minutos
 
 # Initialize Global Variables
 set ns_		[new Simulator]
@@ -89,11 +89,11 @@ set dist(35m) 1.56962e-07
 set dist(40m) 1.20174e-07
 set dist(50m) 3.98107e-10
 
-#Potencia de transmisión 10 dBm segun Sky Mote
+#Potencia de transmisión 1 dBm segun Sky Mote
 Phy/WirelessPhy set Pt_ 0.001 
-#Carrier sense threshold (W) SkyMote: Receiver sensitivity -94 dBm
+#Carrier sense threshold (W) SkyMote: Receiver sensitivity -64 dBm
 Phy/WirelessPhy set CSThresh_ $dist(50m)
-#receive power threshold (W) SkyMote: Receiver sensitivity -94 dBm
+#receive power threshold (W) SkyMote: Receiver sensitivity -64 dBm
 Phy/WirelessPhy set RXThresh_ $dist(50m)
 
 
@@ -148,7 +148,7 @@ for {set i 0} {$i < $val(nn) } {incr i} {
 ## LOADING SCENARIO
 
 
-source ./Scenario/malla.scn
+source ./Scenario/malla4.scn
 source ./Scenario/NodesInit
 
 
@@ -158,11 +158,11 @@ source ./Scenario/NodesInit
 Mac/802_15_4 wpanNam PlaybackRate 3ms
 
 
-$ns_ at $appTime1 "puts \"\nTransmitting data ...\n\""
+#$ns_ at $appTime1 "puts \"\nTransmitting data ...\n\""
 
 # defines the node size in nam
 for {set i 0} {$i < $val(nn)} {incr i} {
-	$ns_ initial_node_pos $node_($i) 2
+	$ns_ initial_node_pos $node_($i) 3
 }
 
 
@@ -210,35 +210,35 @@ if { ("$val(traffic)" == "cbr") || ("$val(traffic)" == "poisson") } {
    puts "\nTraffic: $val(traffic)"
    #Mac/802_15_4 wpanCmd ack4data on
    puts [format "Acknowledgement for data: %s" [Mac/802_15_4 wpanCmd ack4data]]
-   $ns_ at $appTime1 "Mac/802_15_4 wpanNam PlaybackRate 0.50ms"
+   $ns_ at $appTime1 "Mac/802_15_4 wpanNam PlaybackRate 1.00ms"
    $ns_ at [expr $appTime1 + 0.5] "Mac/802_15_4 wpanNam PlaybackRate 1.5ms"
    #$val(traffic)traffic 1 6 0.2 $appTime1
    #$val(traffic)traffic 4 10 0.2 $appTime2
    $val(traffic)traffic 79 0 0.2 30
-   $val(traffic)traffic 55 0 0.2 35
-   $val(traffic)traffic 9 0 0.2 40
-   $val(traffic)traffic 13 0 0.2 45
-   $val(traffic)traffic 26 0 0.2 50
-   $val(traffic)traffic 31 0 0.2 52
-   $val(traffic)traffic 35 0 0.2 55
-   $val(traffic)traffic 37 0 0.2 57
-   $val(traffic)traffic 40 0 0.2 60
-   $val(traffic)traffic 45 0 0.2 65
-   $val(traffic)traffic 59 0 0.2 70
-   $val(traffic)traffic 67 0 0.2 30
-   $val(traffic)traffic 93 0 0.2 35
-   $val(traffic)traffic 99 0 0.2 40
-   $val(traffic)traffic 83 0 0.2 50
-   $val(traffic)traffic 10 0 0.2 55
-   $val(traffic)traffic 12 0 0.2 60
-   $val(traffic)traffic 46 0 0.2 65
-   $val(traffic)traffic 50 0 0.2 70
-   $val(traffic)traffic 75 10 0.2 70
-   $val(traffic)traffic 28 0 0.2 75
-   $val(traffic)traffic 55 0 0.2 85
-   $val(traffic)traffic 73 0 0.2 90
-   $val(traffic)traffic 84 0 0.2 90
-   $val(traffic)traffic 61 0 0.2 90
+   $val(traffic)traffic 55 0 0.2 45
+   $val(traffic)traffic 9 0 0.2 60
+   $val(traffic)traffic 13 0 0.2 75
+   $val(traffic)traffic 26 0 0.2 90
+   $val(traffic)traffic 31 0 0.2 105
+   $val(traffic)traffic 35 0 0.2 120
+   $val(traffic)traffic 37 0 0.2 135
+   $val(traffic)traffic 40 0 0.2 150
+   $val(traffic)traffic 45 0 0.2 165
+   $val(traffic)traffic 59 0 0.2 180
+   $val(traffic)traffic 67 0 0.2 195
+   $val(traffic)traffic 93 0 0.2 210
+   $val(traffic)traffic 99 0 0.2 225
+   $val(traffic)traffic 83 0 0.2 240
+   $val(traffic)traffic 10 0 0.2 255
+   $val(traffic)traffic 12 0 0.2 270
+   $val(traffic)traffic 46 0 0.2 285
+   $val(traffic)traffic 50 0 0.2 300
+   $val(traffic)traffic 75 10 0.2 315
+   $val(traffic)traffic 28 0 0.2 330
+   $val(traffic)traffic 55 0 0.2 345
+   $val(traffic)traffic 73 0 0.2 360
+   $val(traffic)traffic 84 0 0.2 375
+   $val(traffic)traffic 61 0 0.2 390
 
 
    $ns_ at $appTime1 "$node_(0) add-mark m1 blue circle"
