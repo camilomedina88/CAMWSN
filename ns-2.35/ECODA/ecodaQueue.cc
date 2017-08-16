@@ -7,7 +7,9 @@
 
 */
 #include "ecodaQueue.h"
+#include <cmath> 
 
+#define CURRENT_TIME    Scheduler::instance().clock()
 /*
 static class AODVclass : public TclClass {
 public:
@@ -36,71 +38,115 @@ void EcodaQueue::enque(Packet* p)
 {
 
   hdr_ip* iph = hdr_ip::access(p);
-  
-  //hdr_aodv * aoh= hdr_aodv::access(p);
-  //hdr_ecoda *ecoh = hdr_ecoda::access(p);
-  //hdr_myHeader *p_myHeader = hdr_myHeader::access(p);
   hdr_cmn *ch = HDR_CMN(p);
-
-
-  iph->staticPriority=10;
-
-
-
-
-
-
-  if (iph->getStaticPriority ()==10){
-
-    printf("Entro, eres un duro 666 CAMI\n");
-  }
-
-
-
-
-
   int tamanioActual=(q1_->length() + q2_->length());
-
-  if(tamanioActual > qlim_*2/3){
-          //printf("Estado Reject\n");
-          estadoBuffer=2;
-   }
-
-   if(tamanioActual < qlim_*1/3){
-          //printf("Estado Accept\n");
-          estadoBuffer=0;
-   }
-
-   if(tamanioActual >= qlim_*1/3 && tamanioActual <= qlim_*2/3){
-          //printf("Estado Filter\n");
-          estadoBuffer=1;
-   }
+//ESTADO REJECT
+  if(tamanioActual > qlim_*2/3) estadoBuffer=2;
+//ESTADO ACEPT
+  if(tamanioActual < qlim_*1/3) estadoBuffer=0;
+//ESTADO FILTER
+  if(tamanioActual >= qlim_*1/3 && tamanioActual <= qlim_*2/3)     estadoBuffer=1;   
   
-  if(iph->saddr() == index){ //Origen el Nodo...    
-    q1_->enque(p);
-    
-    if (estadoBuffer==2) {
-      //printf("Drop en Q1 \n");
-      q1_->remove(p);
-      drop(p);
-    }    
-  }  else { //Origen Distinto
-    q2_->enque(p);
-    if (estadoBuffer==2) {
-      //printf("Drop en Q2 \n");
-      q2_->remove(p);
-      drop(p);
+  if(iph->saddr() == index){ //Origen el Nodo...       
+
+    if (ch->ptype() == PT_AODV){
+      //printf("Prioridad estatica 3 \n");
+      iph->staticPriority=3;
+    } else if(ch->ptype() == PT_EXP){
+      //printf("Prioridad estatica 2 \n");
+      iph->staticPriority=2;
+      } else{
+        //printf("Prioridad estatica 1 \n");
+        iph->staticPriority=1;
+      }
+
+    //Calcular prioridad dinamica....
+      int hops= ch->num_forwards();
+      double delay= hops*0.005;
+      double stacCalculation= (alpha*1+iph->getStaticPriority())/(1+beta*delay);
+      if (stacCalculation>5) stacCalculation=5;
+    // Agregar prioridad dinamica....
+      iph->dynamicPriority = stacCalculation;
+    //Revisar el estado de la cola y realizar politica de admision
+
+
+    if(stacCalculation>3.5){
+      q1_->enqueHead(p);
+
+
+    }else{
+      q1_->enque(p);
     }
+    
+    if(estadoBuffer==1){
+      //Estado Filter
+      if(stacCalculation<2){
+        //printf("Drop en Q1 Estado Filter\n");
+        q1_->remove(p);
+        drop(p);
+      }
+    }
+
+    if (estadoBuffer==2) {
+      //Estado reject
+        if(stacCalculation<=3 || tamanioActual>=(qlim_-1)){
+          //printf("Drop en Q1 Estado Reject\n");
+        q1_->remove(p);
+        drop(p);
+      }
+    }    
+  }  
+  else { //Origen Distinto *****************
+
+    //Revisar prioridad dinamica.
+     int hops= ch->num_forwards();
+     double delay= hops*0.005;
+
+    float prioActual= (alpha*hops+iph->getStaticPriority())/(1+beta*delay);
+    if (prioActual>5) prioActual=5;
+    iph->dynamicPriority=prioActual;
+
+
+    //Revisar el estado de la cola, y realizar politica de admision
+
+
+    if(prioActual>3.5){
+      q2_->enqueHead(p);
+    }else{
+      q2_->enque(p);
+    }
+
+    
+
+  if(estadoBuffer==1){
+       //Estado Filter
+       if(prioActual<2){
+         q2_->remove(p);
+         //printf("Drop en Q2 Estado Filter\n");
+         drop(p);
+       }
+    }
+    if (estadoBuffer==2) {
+      //Estado reject
+        if(prioActual<=3 || tamanioActual>=(qlim_-1)){
+        q2_->remove(p);
+        //printf("Drop en Q2 Estado Reject\n");
+        drop(p);
+      }
+
   }
 
+  }
 }
 
 
 Packet* EcodaQueue::deque()
 {
   Packet *p;
-  
 
+  //sortQueue(q1_);
+  
+  //Buscar la forma de ordenarlo por flujos y paquetes...
   if (deq_turn_ == 1) {    
     p =  q1_->deque();    
     
@@ -127,4 +173,36 @@ Packet* EcodaQueue::deque()
   return (p);
 }
 
+
+
+
+
+void EcodaQueue::sortQueue(PacketQueue* queueActual){
+
+int lenghtQueue=queueActual->length();
+//printf("Tamaño: %i\n",lenghtQueue );
+
+Packet* ordenada[lenghtQueue];
+Packet* paqueteActual=queueActual->head(); //Cabeza de la cola
+ordenada[0]=paqueteActual;
+
+for(int i=1;i<lenghtQueue-2;i++){
+Packet* paqueteActual=paqueteActual->next_;
+ordenada[i]=paqueteActual;
+}
+
+/*
+printf("En el nodo: %i se tienen los paquetes:\n", index);
+
+for(int i=0;i<lenghtQueue;i++){
+
+  printf("%i packete: \n",i,ordenada[i]->hdrlen_);
+
+
+}
+*/
+
+
+
+}
 

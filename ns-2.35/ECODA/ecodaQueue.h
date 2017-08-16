@@ -32,6 +32,7 @@ class EcodaQueue : public Queue {
 
  protected:
      void enque(Packet*);
+     void sortQueue(PacketQueue*);
 	 Packet* deque();
 	 //void enqueA(Packet* p);
 	 //void enqueB(Packet* p);

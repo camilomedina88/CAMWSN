@@ -13,15 +13,15 @@ set val(prop)           Propagation/TwoRayGround   ;# radio-propagation model
 set val(netif)          Phy/WirelessPhy/802_15_4
 set val(mac)            Mac/802_15_4
 #set val(ifq)            Queue/DropTail/PriQueue    	;# interface queue type
-#set val(ifq)            Queue/DropTail
-set val(ifq)            Queue/Ecoda             ;# interface queue type
+set val(ifq)            Queue/DropTail
+#set val(ifq)            Queue/Ecoda                ;# interface queue type
 set val(ll)             LL                         ;# link layer type
 set val(ant)            Antenna/OmniAntenna        ;# antenna model
 set val(ifqlen)         20                         ;# max packet in ifq
 set val(nn)             101                         ;# number of mobilenodes
 set val(rp)             AODV                       ;# routing protocol
-set val(x)				      30
-set val(y)				      30
+set val(x)				      80
+set val(y)				      80
 set val(energy) 		    "EnergyModel" 
 set val(initialEnergy)	3.9                        ;#Calculado para pila AA
 set val(rxPower)		    0.020
