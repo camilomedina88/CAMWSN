@@ -8,6 +8,8 @@
 */
 #include "ecodaQueue.h"
 #include <cmath> 
+#include <iostream>
+#include <algorithm>
 
 #define CURRENT_TIME    Scheduler::instance().clock()
 /*
@@ -144,7 +146,8 @@ Packet* EcodaQueue::deque()
 {
   Packet *p;
 
-  //sortQueue(q1_);
+  sortQueue(q1_);
+  sortQueue(q2_);
   
   //Buscar la forma de ordenarlo por flujos y paquetes...
   if (deq_turn_ == 1) {    
@@ -180,28 +183,70 @@ Packet* EcodaQueue::deque()
 void EcodaQueue::sortQueue(PacketQueue* queueActual){
 
 int lenghtQueue=queueActual->length();
-//printf("Tamaño: %i\n",lenghtQueue );
+Packet* colaOrdenada[lenghtQueue];
 
-Packet* ordenada[lenghtQueue];
+//Extraer todos los paquetes de la cola
+if (lenghtQueue>1)
+{
 Packet* paqueteActual=queueActual->head(); //Cabeza de la cola
-ordenada[0]=paqueteActual;
+colaOrdenada[0] = paqueteActual;
+    for (int i=1;i<lenghtQueue;i++){
+      if(i==lenghtQueue-1){
+          colaOrdenada[i]=paqueteActual->next_;
+        break;
+      } else{
+          colaOrdenada[i]=paqueteActual->next_;
+          paqueteActual=paqueteActual->next_;
+        }
+    }
 
-for(int i=1;i<lenghtQueue-2;i++){
-Packet* paqueteActual=paqueteActual->next_;
-ordenada[i]=paqueteActual;
+  for (int i = 1; i < lenghtQueue; ++i)
+        for (int j = i; j > 0 &&  (hdr_ip::access(colaOrdenada[j]))->getDynamicPriority() >  (hdr_ip::access(colaOrdenada[j-1]))->getDynamicPriority(); --j)
+            std::swap(colaOrdenada[j], colaOrdenada[j-1]);
+
+    //printf("\n \n \n COLA: %i\n", lenghtQueue);
+
+    //printf("      ANTES:\n");
+    Packet* paqueteUno=queueActual->head();
+    //printf("   %f\n",(hdr_ip::access(paqueteUno))->getDynamicPriority());
+    for (int i=1;i<lenghtQueue;i++){
+      if(i==lenghtQueue-1){
+          //printf("   %f\n",(hdr_ip::access(paqueteUno->next_))->getDynamicPriority());
+          
+        break;
+      } else{
+          //printf("   %f\n",(hdr_ip::access(paqueteUno->next_))->getDynamicPriority());
+          paqueteUno=paqueteUno->next_;
+        }
+    }
+
+    for (int i = 0; i < lenghtQueue; ++i){
+      queueActual->remove(colaOrdenada[i]);
+      //printf("Se removio %i\n", i);
+    }
+        
+    for (int i = 0; i < lenghtQueue; ++i)
+    {
+        queueActual->enque(colaOrdenada[i]);
+   
+      //printf("Se Encolo %i\n", i);
+    }
+
+    //printf("      DESPUES:\n");
+    Packet* paqueteDos=queueActual->head();
+    //printf("   %f\n",(hdr_ip::access(paqueteDos))->getDynamicPriority());
+    for (int i=1;i<lenghtQueue;i++){
+      if(i==lenghtQueue-1){
+          //printf("   %f\n",(hdr_ip::access(paqueteDos->next_))->getDynamicPriority());
+          
+        break;
+      } else{
+          //printf("   %f\n",(hdr_ip::access(paqueteDos->next_))->getDynamicPriority());
+          paqueteDos=paqueteDos->next_;
+        }
+    }
+
 }
-
-/*
-printf("En el nodo: %i se tienen los paquetes:\n", index);
-
-for(int i=0;i<lenghtQueue;i++){
-
-  printf("%i packete: \n",i,ordenada[i]->hdrlen_);
-
-
-}
-*/
-
 
 
 }

@@ -81,7 +81,7 @@ public:
 	virtual void remove(Packet*);
 	/* Remove a packet, located after a given packet. Either could be 0. */
 	void remove(Packet *, Packet *);
-        Packet* head() { return head_; }
+    Packet* head() { return head_; }
 	Packet* tail() { return tail_; }
 	// MONARCH EXTNS
 	virtual inline void enqueHead(Packet* p) {
