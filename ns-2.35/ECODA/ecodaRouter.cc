@@ -274,6 +274,7 @@ ECODA::recv(Packet *p, Handler*) {
 struct hdr_cmn *ch = HDR_CMN(p);
 struct hdr_ip *ih = HDR_IP(p);
 
+
 	// if the packet is routing protocol control packet, give the packet to agent
 	if(ch->ptype() == PT_ECODA) {
 		ih->ttl_ -= 1;
@@ -339,6 +340,11 @@ ECODA::recv_data(Packet *p) {
 
 	// if the route is not failed forward it;
 	else if (rt->rt_state != ROUTE_FAILED) {
+
+
+		// AQUI VA EL CALCULO DEL DELAY
+
+
 		forward(p, rt->rt_nexthop, 0.0);
 	}
 	
@@ -386,9 +392,14 @@ ECODA::recv_ecoda(Packet *p) {
 void 
 ECODA::recv_beacon(Packet *p) {
 
-	//printf("Intentando recibir beacon\n");
+
 	struct hdr_ip *ih = HDR_IP(p);
 	struct hdr_ecoda_beacon *bcn = HDR_ECODA_BEACON(p);
+	double retardoActual=CURRENT_TIME-bcn->timestamp;
+
+
+	//printf("Retardo del Beacon %f\n", retardoActual);
+
 	
 	// I have originated the packet, just drop it
 	if (bcn->beacon_src == index)  {
@@ -406,7 +417,7 @@ ECODA::recv_beacon(Packet *p) {
 	
 	// if there is no route toward this destination, insert the route and forward
  	if (rt == NULL)  {
-		rt_insert(bcn->beacon_src,bcn->beacon_id, ih->saddr(), bcn->beacon_posx, bcn->beacon_posy, bcn->beacon_hops);
+		rt_insert(bcn->beacon_src,bcn->beacon_id, ih->saddr(), bcn->beacon_posx, bcn->beacon_posy, bcn->beacon_hops,retardoActual);
 
 		ih->saddr() = index;		
 		bcn->beacon_hops +=1; // increase hop count
@@ -429,6 +440,7 @@ ECODA::recv_beacon(Packet *p) {
 		rt->rt_state = ROUTE_FRESH;
 		rt->rt_hopcount = bcn->beacon_hops;
 		rt->rt_expire = CURRENT_TIME + DEFAULT_ROUTE_EXPIRE;
+		rt->retardo=retardoActual;
 		
 		ih->saddr() = index;
 		bcn->beacon_hops +=1; // increase hop count
@@ -441,8 +453,8 @@ ECODA::recv_beacon(Packet *p) {
 		forward(p, IP_BROADCAST, delay);
 	}
 	// if the route is shorter than I have, update it
-	else if ((bcn->beacon_id == rt->rt_seqno) && (bcn->beacon_hops < rt->rt_hopcount )) {
-
+	//else if ((bcn->beacon_id == rt->rt_seqno) && (bcn->beacon_hops < rt->rt_hopcount )) {
+	else if ((bcn->beacon_id == rt->rt_seqno) && (retardoActual < rt->retardo )) {
 		rt->rt_seqno = bcn->beacon_id;
 		rt->rt_nexthop = ih->saddr();
 		rt->rt_xpos = bcn->beacon_posx;
@@ -450,6 +462,7 @@ ECODA::recv_beacon(Packet *p) {
 		rt->rt_state = ROUTE_FRESH;
 		rt->rt_hopcount = bcn->beacon_hops;
 		rt->rt_expire = CURRENT_TIME + DEFAULT_ROUTE_EXPIRE;
+		rt->retardo=retardoActual;
 	}
 
 	// TODO : initiate dequeue() routine to send queued packets;
@@ -477,7 +490,7 @@ ECODA::rt_failed_callback(Packet *p, void *arg) {
 }*/
 
 void
-ECODA::rt_insert(nsaddr_t src, u_int32_t id, nsaddr_t nexthop, u_int32_t xpos, u_int32_t ypos, u_int8_t hopcount) {
+ECODA::rt_insert(nsaddr_t src, u_int32_t id, nsaddr_t nexthop, u_int32_t xpos, u_int32_t ypos, u_int8_t hopcount, double retardo) {
 	RouteCache	*rt = new RouteCache(src, id);
 
 	rt->rt_nexthop = nexthop;
@@ -486,6 +499,7 @@ ECODA::rt_insert(nsaddr_t src, u_int32_t id, nsaddr_t nexthop, u_int32_t xpos, u
 	rt->rt_state = ROUTE_FRESH;
 	rt->rt_hopcount = hopcount;
 	rt->rt_expire = CURRENT_TIME + DEFAULT_ROUTE_EXPIRE;
+	rt->retardo=retardo;
 
 	LIST_INSERT_HEAD(&rthead, rt, rt_link);
 }

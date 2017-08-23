@@ -82,6 +82,7 @@ class RouteCache {
 	u_int32_t	rt_ypos;	// y position of destination;
 	u_int8_t	rt_state;	// state of the route: FRESH, EXPIRED, FAILED (BROKEN)
 	u_int8_t	rt_hopcount;    // number of hops up to the destination (sink)
+	double  	retardo;
     double          rt_expire; 	// when route expires : Now + DEFAULT_ROUTE_EXPIRE
 
 };
@@ -110,7 +111,7 @@ class ECODA : public Agent {
 	uint32_t	posy;       // position y;
 		
 	// Routing Table Management
-	void		rt_insert(nsaddr_t src, u_int32_t id, nsaddr_t nexthop, u_int32_t xpos, u_int32_t ypos, u_int8_t hopcount);
+	void		rt_insert(nsaddr_t src, u_int32_t id, nsaddr_t nexthop, u_int32_t xpos, u_int32_t ypos, u_int8_t hopcount, double retardo);
 	void		rt_remove(RouteCache *rt);
 	void		rt_purge();
 	RouteCache*	rt_lookup(nsaddr_t dst);
