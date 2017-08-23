@@ -173,6 +173,7 @@ set protolist {
 	Mac 	# network wireless stack
 	
 	WFRP 	# WFRP patch
+	ECODA 	# ECODA patch
 
 # Mobility, Ad-Hoc Networks, Sensor Nets:
 	AODV 	# routing protocol for ad-hoc networks

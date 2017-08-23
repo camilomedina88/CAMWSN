@@ -5,7 +5,8 @@ set val(chan)          Channel/WirelessChannel      ;# channel type
 set val(prop)          Propagation/TwoRayGround     ;# radio-propagation model
 set val(netif)         Phy/WirelessPhy/802_15_4     ;# network interface type
 set val(mac)           Mac/802_15_4                 ;# MAC type
-set val(ifq)           Queue/DropTail/PriQueue      ;# interface queue type
+#set val(ifq)           Queue/DropTail/PriQueue      ;# interface queue type
+set val(ifq)           Queue/Ecoda      ;# interface queue type
 set val(ll)            LL                           ;# link layer type
 set val(ant)           Antenna/OmniAntenna          ;# antenna model
 set val(ifqlen)        100	         	    ;# max packet in ifq
@@ -13,7 +14,7 @@ set val(nn)            100			    ;# number of mobilenodes
 set val(rp)            WFRP		    ;# protocol tye
 set val(x)             120			    ;# X dimension of topography
 set val(y)             120			    ;# Y dimension of topography
-set val(stop)          500			    ;# simulation period 
+set val(stop)          250			    ;# simulation period 
 set val(energymodel)   EnergyModel		    ;# Energy Model
 set val(initialenergy) 100			    ;# value
 

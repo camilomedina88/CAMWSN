@@ -50,6 +50,7 @@
 #include <address.h>
 #include <tora/tora_packet.h> //TORA
 #include <wfrp/wfrp_packet.h>  // WFRP 
+#include <ECODA/ecoda_packet.h>  // ECODA 
 #include <imep/imep_spec.h>         // IMEP
 #include <aodv/aodv_packet.h> //AODV
 #include <aomdv/aomdv_packet.h>
@@ -1150,6 +1151,87 @@ CMUTrace::format_wfrp(Packet *p, int offset)
 
     
 }
+
+
+
+// ECODA patch
+
+void
+CMUTrace::format_ecoda(Packet *p, int offset)
+{
+    struct hdr_ecoda *wh = HDR_ECODA(p);
+    struct hdr_ecoda_beacon *wb = HDR_ECODA_BEACON(p);
+    struct hdr_ecoda_error  *we = HDR_ECODA_ERROR(p);
+
+    //u_int8_t packeteAnalizado= wh->pkt_type;
+ 
+    switch(wh->pkt_type) {
+   
+        case ECODA_BEACON:
+
+        	if(pt_->tagged()){
+        		sprintf(pt_->buffer()+offset,
+        			"ecoda:t %x -ecoda:h %d -ecoda:d %d -ecoda:s %d"
+        			"ecoda:px %d -ecoda:py %d -ecoda:ts %f"
+        			"-ecoda:c BEACON",
+        			wb->pkt_type,
+        			wb->beacon_hops,
+        			wb->beacon_id,
+        			wb->beacon_src,
+        			wb->beacon_posx,
+        			wb->beacon_posy,
+        			wb->timestamp);
+
+
+        	}
+        	else if (newtrace_)
+        	{
+        		sprintf(pt_->buffer()+offset,
+        			"-P ecoda -pt 0x%x -Ph %d -Pb %d -Ps %d -Ppx %d -Ppy %d -Pts %f -Pc BEACON",
+        			wb->pkt_type,
+        			wb->beacon_hops,
+        			wb->beacon_id,
+        			wb->beacon_src,
+        			wb->beacon_posx,
+        			wb->beacon_posy,
+        			wb->timestamp);
+        	} else {
+ 
+                sprintf(pt_->buffer() + offset,
+                          "[0x%x %d %d [%d %d] [%d %f]] (BEACON)",
+                          wb->pkt_type,
+                          wb->beacon_hops,
+                          wb->beacon_id,
+                          wb->beacon_src,
+                          wb->beacon_posx,
+                          wb->beacon_posy,
+                          wb->timestamp);
+            }
+            
+            break;
+ 
+        case ECODA_ERROR:
+            // TODO: need to add code
+            break;
+ 
+        default:
+
+
+
+#ifdef WIN32
+            fprintf(stderr,
+                      "CMUTrace::format_ecoda: invalid ECODA packet typen");
+#else
+            fprintf(stderr,
+                      "%s: invalid ECODA packet typen", __FUNCTION__);
+#endif
+            abort();
+            
+    }
+
+    
+}
+
 
 void
 CMUTrace::format_mdart(Packet *p, int offset)

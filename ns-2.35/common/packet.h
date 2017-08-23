@@ -46,7 +46,6 @@
 #include "lib/bsd-list.h"
 #include "packet-stamp.h"
 #include "ns-process.h"
-//#include "ECODA/ecodaPacket.h"
 
 // Used by wireless routing code to attach routing agent
 #define RT_PORT		255	/* port that all route msgs are sent to */
@@ -275,6 +274,7 @@ public:
 		    type == PT_PUMA ||
 		    type == PT_AODV ||
 		    type == PT_WFRP ||
+		    type == PT_ECODA ||
 		    type == PT_MDART)
 			return ROUTING;		
 		if (type == PT_TCP || 
@@ -410,6 +410,9 @@ public:
 
 		// WFRP patch
 		name_[PT_WFRP] = "WFRP";
+
+		// ECODA patch
+		name_[PT_ECODA] = "ECODA";
 		
 		// AOMDV patch
 		name_[PT_AOMDV]= "AOMDV";
@@ -417,8 +420,7 @@ public:
 		// PUMA
 		name_[PT_PUMA]="PUMA";
 
-		//ECODA
-
+		
 		
 
 		// DCCP
@@ -434,7 +436,7 @@ public:
 
 
 
-		name_[PT_ECODA]="Ecoda";
+		
 
 		name_[PT_MYHEADER] = "MyHeader";
 		name_[PT_NTYPE]= "undefined";

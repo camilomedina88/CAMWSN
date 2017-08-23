@@ -10,6 +10,7 @@
 #include <cmath> 
 #include <iostream>
 #include <algorithm>
+//#include <unistd.h>
 
 #define CURRENT_TIME    Scheduler::instance().clock()
 /*
@@ -141,11 +142,23 @@ void EcodaQueue::enque(Packet* p)
   }
 }
 
+/////////////////////////////////////////////////////////////////
 
 Packet* EcodaQueue::deque()
 {
-  Packet *p;
 
+  Packet *p = sendEcoda();
+  return (p);
+}
+
+
+////////////////////////////////////////////////////////////
+
+
+Packet* EcodaQueue::sendEcoda(){
+
+
+  Packet *p;
   sortQueue(q1_);
   sortQueue(q2_);
   
@@ -174,9 +187,11 @@ Packet* EcodaQueue::deque()
     }
   }
   return (p);
+
 }
 
 
+////////////////////////////////////////////////////////////////
 
 
 
@@ -248,6 +263,14 @@ colaOrdenada[0] = paqueteActual;
 
 }
 
-
 }
 
+///////////////////////////////////
+
+
+void EcodaTimer::expire(Event*){
+
+//printf("Entro al Timer\n");
+  ecoda_->sendEcoda();
+
+};

@@ -168,6 +168,13 @@ wfrpBeaconTimer::handle(Event*) {
 // ======================================================================
 void
 WFRP::send_beacon() {
+
+	printf("\n \n \n \n \n \n \n \n \n \n **********************Se esta enviando un Beacon de WFRP\n");
+	printf("\n \n \n \n \n \n \n \n \n \n **********************Se esta enviando un Beacon de WFRP\n");
+	printf("\n \n \n \n \n \n \n \n \n \n **********************Se esta enviando un Beacon de WFRP\n");
+	printf("\n \n \n \n \n \n \n \n \n \n **********************Se esta enviando un Beacon de WFRP\n");
+	printf("\n \n \n \n \n \n \n \n \n \n **********************Se esta enviando un Beacon de WFRP\n");
+	printf("\n \n \n \n \n \n \n \n \n \n **********************Se esta enviando un Beacon de WFRP\n");
 	Packet *p = Packet::alloc();
 	struct hdr_cmn *ch = HDR_CMN(p);
 	struct hdr_ip *ih = HDR_IP(p);
@@ -247,6 +254,7 @@ WFRP::forward(Packet *p, nsaddr_t nexthop, double delay) {
 	}
 	
 	Scheduler::instance().schedule(target_, p, delay);
+	//printf("FORWARD EN WFRP\n");
 
 }
 

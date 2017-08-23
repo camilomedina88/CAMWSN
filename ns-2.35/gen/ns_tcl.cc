@@ -1157,6 +1157,11 @@ $agent if-queue [$self set ifq_(0)]   ;# ifq between LL and MAC\n\
 }\n\
 \n\
 \n\
+set ecodaonly [string first \"ECODA\" [$agent info class]]\n\
+if {$ecodaonly != -1 } {\n\
+$agent if-queue [$self set ifq_(0)]   ;# ifq between LL and MAC\n\
+}\n\
+\n\
 \n\
 \n\
 if { $port == [Node set rtagent_port_] } {			\n\
@@ -3460,6 +3465,7 @@ LRWPAN  # zheng, wpan/p802_15_4mac.cc\n\
 Mac 	# network wireless stack\n\
 \n\
 WFRP 	# WFRP patch\n\
+ECODA 	# ECODA patch\n\
 \n\
 AODV 	# routing protocol for ad-hoc networks\n\
 Diffusion 	# diffusion/diffusion.cc\n\
@@ -4321,6 +4327,16 @@ $self next $args\n\
 \n\
 Agent/WFRP set sport_   0\n\
 Agent/WFRP set dport_   0\n\
+\n\
+\n\
+\n\
+\n\
+Agent/ECODA instproc init args {\n\
+$self next $args\n\
+}\n\
+\n\
+Agent/ECODA set sport_   0\n\
+Agent/ECODA set dport_   0\n\
 \n\
 RouteLogic instproc register {proto args} {\n\
 $self instvar rtprotos_ node_rtprotos_ default_node_rtprotos_\n\
@@ -21193,6 +21209,11 @@ WFRP {\n\
 set ragent [$self create-wfrp-agent $node]\n\
 }\n\
 \n\
+\n\
+ECODA {\n\
+set ragent [$self create-ecoda-agent $node]\n\
+}\n\
+\n\
 AOMDV {\n\
 set ragent [$self create-aomdv-agent $node]\n\
 }\n\
@@ -21401,6 +21422,21 @@ $self at 0.0 \"$ragent start\"\n\
 $node set ragent_ $ragent\n\
 return $ragent\n\
 }\n\
+\n\
+\n\
+\n\
+\n\
+Simulator instproc create-ecoda-agent { node } {\n\
+set ragent [new Agent/ECODA [$node node-addr]]\n\
+puts \"creando el agente 1\"\n\
+$self at 0.0 \"$ragent start\"\n\
+puts \"creando el agente 2\"\n\
+$node set ragent_ $ragent\n\
+puts \"creando el agente 3\"\n\
+return $ragent\n\
+}\n\
+\n\
+\n\
 \n\
 \n\
 Simulator instproc create-aomdv-agent { node } {\n\

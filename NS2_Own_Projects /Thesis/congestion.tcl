@@ -19,7 +19,8 @@ set val(ll)             LL                         ;# link layer type
 set val(ant)            Antenna/OmniAntenna        ;# antenna model
 set val(ifqlen)         20                         ;# max packet in ifq
 set val(nn)             101                         ;# number of mobilenodes
-set val(rp)             AODV                       ;# routing protocol
+#set val(rp)             AODV                      ;# routing protocol
+set val(rp)             ECODA                      ;# routing protocol
 set val(x)				      150                         ;#Casi 4 canchas de futbol
 set val(y)				      150
 set val(energy) 		    "EnergyModel" 
@@ -151,7 +152,7 @@ for {set i 0} {$i < $val(nn) } {incr i} {
 source ./Scenario/malla4.scn
 source ./Scenario/NodesInit
 
-
+$ns_ at 1.0 "[$node_(0) set ragent_] sink"
 
 
 

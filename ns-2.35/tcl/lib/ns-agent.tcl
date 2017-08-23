@@ -204,3 +204,13 @@ Agent/WFRP instproc init args {
  
 Agent/WFRP set sport_   0
 Agent/WFRP set dport_   0
+
+
+
+
+Agent/ECODA instproc init args {
+  $self next $args
+}
+ 
+Agent/ECODA set sport_   0
+Agent/ECODA set dport_   0

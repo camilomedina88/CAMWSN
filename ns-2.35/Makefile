@@ -337,6 +337,7 @@ OBJ_CC = \
 	wfrp/wfrp.o \
 	Arq/arq.o\
 	ECODA/ecodaQueue.o\
+	ECODA/ecodaRouter.o\
 	$(OBJ_STL)
 
 

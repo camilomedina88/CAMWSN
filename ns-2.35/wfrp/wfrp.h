@@ -99,8 +99,7 @@ class WFRP : public Agent {
 	WFRP(nsaddr_t id);
 
 	void		recv(Packet *p, Handler *);
-
-        int             command(int, const char *const *);
+	int         command(int, const char *const *);
 
 	// Agent Attributes
 	nsaddr_t	index;     // node address (identifier)
@@ -110,7 +109,6 @@ class WFRP : public Agent {
 	uint32_t	posx;       // position x;
 	uint32_t	posy;       // position y;
 		
-
 	// Routing Table Management
 	void		rt_insert(nsaddr_t src, u_int32_t id, nsaddr_t nexthop, u_int32_t xpos, u_int32_t ypos, u_int8_t hopcount);
 	void		rt_remove(RouteCache *rt);
@@ -122,8 +120,7 @@ class WFRP : public Agent {
 	wfrpRouteCacheTimer	rtcTimer;
 	
 	// Caching Head
-	wfrp_rtcache	rthead;
-	
+	wfrp_rtcache	rthead;	
 	// Send Routines
 	void		send_beacon();
 	void		send_error(nsaddr_t unreachable_destination);
@@ -139,11 +136,11 @@ class WFRP : public Agent {
 	void		update_position();
 
 
-        //  A mechanism for logging the contents of the routing table.
-        Trace		*logtarget;
+    //  A mechanism for logging the contents of the routing table.
+    Trace		*logtarget;
 
-        // A pointer to the network interface queue that sits between the "classifier" and the "link layer"
-        PriQueue	*ifqueue;
+    // A pointer to the network interface queue that sits between the "classifier" and the "link layer"
+    PriQueue	*ifqueue;
 
 	// Port classifier for passing packets up to agents
 	PortClassifier	*dmux_;

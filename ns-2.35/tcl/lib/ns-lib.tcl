@@ -635,6 +635,11 @@ Simulator instproc create-wireless-node args {
   				set ragent [$self create-wfrp-agent $node]
 			}
 
+
+			ECODA {
+  				set ragent [$self create-ecoda-agent $node]
+			}
+
 		    AOMDV {
 			    set ragent [$self create-aomdv-agent $node]
 		    }
@@ -871,6 +876,22 @@ Simulator instproc create-wfrp-agent { node } {
    $node set ragent_ $ragent
    return $ragent
 }
+
+
+
+
+ #  Create ECODA routing agent
+Simulator instproc create-ecoda-agent { node } {
+   set ragent [new Agent/ECODA [$node node-addr]]
+   puts "creando el agente 1"
+   $self at 0.0 "$ragent start"
+   puts "creando el agente 2"
+   $node set ragent_ $ragent
+   puts "creando el agente 3"
+   return $ragent
+}
+
+
 
 
 # AOMDV patch

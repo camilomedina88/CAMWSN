@@ -205,6 +205,12 @@ Node/MobileNode instproc add-target { agent port } {
 	}
 
 
+	# Special processing for ECODA
+	set ecodaonly [string first "ECODA" [$agent info class]]
+	if {$ecodaonly != -1 } {
+  	$agent if-queue [$self set ifq_(0)]   ;# ifq between LL and MAC
+	}
+
 	
 	#<zheng: add>
 	# Special processing for ZBR
