@@ -883,11 +883,8 @@ Simulator instproc create-wfrp-agent { node } {
  #  Create ECODA routing agent
 Simulator instproc create-ecoda-agent { node } {
    set ragent [new Agent/ECODA [$node node-addr]]
-   puts "creando el agente 1"
    $self at 0.0 "$ragent start"
-   puts "creando el agente 2"
    $node set ragent_ $ragent
-   puts "creando el agente 3"
    return $ragent
 }
 

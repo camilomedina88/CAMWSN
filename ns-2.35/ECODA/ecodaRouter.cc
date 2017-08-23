@@ -1,26 +1,9 @@
 /* 
- * Copyright (c) 2010, Elmurod A. Talipov, Yonsei University
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * 1. Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the following disclaimer.
- * 2. Redistributions in binary form must reproduce the above copyright notice,
- * this list of conditions and the following disclaimer in the documentation
- * and/or other materials provided with the distribution.
- * 3. The name of the author may not be used to endorse or promote products
- * derived from this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
- * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
- * IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
- * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
- * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
- * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
- * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
- * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+###################################################
+#        	Congestion Control WSN                #
+#     Camilo ALejandro Medina Mondragón           #
+#		medina.camilo@javeriana.edu.co            #
+###################################################
  *
  */
 
@@ -33,7 +16,7 @@
 #define max(a,b)        ( (a) > (b) ? (a) : (b) )
 #define CURRENT_TIME    Scheduler::instance().clock()
 
-#define DEBUG
+//#define DEBUG
 
 // ======================================================================
 //  TCL Hooking Classes
@@ -150,6 +133,8 @@ ECODA::ECODA(nsaddr_t id) : Agent(PT_ECODA), bcnTimer(this), rtcTimer(this) {
 
 	logtarget = 0;
 	ifqueue = 0;
+	tasaEnvio=250000;
+	primerBeacon=true;
 
 }
 
@@ -237,14 +222,23 @@ ECODA::send_error(nsaddr_t unreachable_destination) {
 
 void 
 ECODA::forward(Packet *p, nsaddr_t nexthop, double delay) {
+
+
+
+	delay = delay + (Random::uniform()/10);
+	//printf("El Delay es: %1f\n", delay);
 	struct hdr_cmn *ch = HDR_CMN(p);
 	struct hdr_ip *ih = HDR_IP(p);
+	//printf("Saco las esctructuras \n");
 
 	if (ih->ttl_ == 0) {
+
+		//printf("Drop por TTL \n");
 		drop(p, DROP_RTR_TTL);
 	}
 	
 	if (nexthop != (nsaddr_t) IP_BROADCAST) {
+		//printf("Siguiente Salto Broadcast \n");
 		ch->next_hop_ = nexthop;
 		ch->prev_hop_ = index;
 		ch->addr_type() = NS_AF_INET;
@@ -252,12 +246,14 @@ ECODA::forward(Packet *p, nsaddr_t nexthop, double delay) {
 	}
 	else {
 		assert(ih->daddr() == (nsaddr_t) IP_BROADCAST);
+		//printf("Paquete enrutado a otro destino \n");
 		ch->prev_hop_ = index;
 		ch->addr_type() = NS_AF_NONE;
 		ch->direction() = hdr_cmn::DOWN; 
 	}
 	
 	Scheduler::instance().schedule(target_, p, delay);
+	
 	
 
 }
@@ -340,12 +336,12 @@ ECODA::recv_data(Packet *p) {
 
 	// if the route is not failed forward it;
 	else if (rt->rt_state != ROUTE_FAILED) {
+		//printf("Tasa Envio %f\n", tasaEnvio);
 
+		double retardoAIMD=1/tasaEnvio;
+		//printf("Retardo AIMD %f\n",retardoAIMD);
 
-		// AQUI VA EL CALCULO DEL DELAY
-
-
-		forward(p, rt->rt_nexthop, 0.0);
+		forward(p, rt->rt_nexthop, retardoAIMD);
 	}
 	
 	// if the route has failed, wait to be updated;
@@ -395,7 +391,32 @@ ECODA::recv_beacon(Packet *p) {
 
 	struct hdr_ip *ih = HDR_IP(p);
 	struct hdr_ecoda_beacon *bcn = HDR_ECODA_BEACON(p);
+
+
 	double retardoActual=CURRENT_TIME-bcn->timestamp;
+
+
+	if(primerBeacon){
+		retardoPrev=100;
+		tasaEnvio=1/retardoActual;
+		primerBeacon=FALSE;
+	}else{
+		//Implementacion AIMD
+		if(retardoActual < 1.1*retardoPrev){
+			//Sumar Sending Rate
+			//printf("++Se aummento el sending Rate\n");
+			//printf("\n \n +++++++++++++++++++++  Se Aumento el sending Rate\n");
+			tasaEnvio=tasaEnvio+0.5;			
+		} else {
+			//Dividir el sending rate
+			//printf("\n \n -------Se Disminuyo el sending Rate\n");
+			tasaEnvio=tasaEnvio/2;
+		}
+		retardoPrev=retardoActual;
+	}
+
+
+		
 
 
 	//printf("Retardo del Beacon %f\n", retardoActual);
@@ -421,6 +442,7 @@ ECODA::recv_beacon(Packet *p) {
 
 		ih->saddr() = index;		
 		bcn->beacon_hops +=1; // increase hop count
+		tasaEnvio=1/retardoActual;
 
 		double delay = 0.1 + Random::uniform();
 
@@ -440,16 +462,13 @@ ECODA::recv_beacon(Packet *p) {
 		rt->rt_state = ROUTE_FRESH;
 		rt->rt_hopcount = bcn->beacon_hops;
 		rt->rt_expire = CURRENT_TIME + DEFAULT_ROUTE_EXPIRE;
-		rt->retardo=retardoActual;
-		
+		rt->retardo=retardoActual;		
 		ih->saddr() = index;
 		bcn->beacon_hops +=1; // increase hop count
-
 		double delay = 0.1 + Random::uniform();
-
-#ifdef DEBUG
+		#ifdef DEBUG
 		printf("F (%.6f): UPDATE ROUTE, forward beacon by %d \n", CURRENT_TIME, index);
-#endif 
+		#endif 
 		forward(p, IP_BROADCAST, delay);
 	}
 	// if the route is shorter than I have, update it
@@ -463,6 +482,7 @@ ECODA::recv_beacon(Packet *p) {
 		rt->rt_hopcount = bcn->beacon_hops;
 		rt->rt_expire = CURRENT_TIME + DEFAULT_ROUTE_EXPIRE;
 		rt->retardo=retardoActual;
+		
 	}
 
 	// TODO : initiate dequeue() routine to send queued packets;

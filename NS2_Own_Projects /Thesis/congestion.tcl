@@ -152,7 +152,22 @@ for {set i 0} {$i < $val(nn) } {incr i} {
 source ./Scenario/malla4.scn
 source ./Scenario/NodesInit
 
-$ns_ at 1.0 "[$node_(0) set ragent_] sink"
+#if {
+#    $vbl == 1
+#    || $vbl == 2
+#    || $vbl == 3
+#} then {
+#    puts "vbl is one, two or three"
+#}
+
+
+if {$val(rp) == "ECODA"} {
+  $ns_ at 1.0 "[$node_(0) set ragent_] sink"
+  
+}
+
+
+
 
 
 

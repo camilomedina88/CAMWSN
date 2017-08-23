@@ -21428,11 +21428,8 @@ return $ragent\n\
 \n\
 Simulator instproc create-ecoda-agent { node } {\n\
 set ragent [new Agent/ECODA [$node node-addr]]\n\
-puts \"creando el agente 1\"\n\
 $self at 0.0 \"$ragent start\"\n\
-puts \"creando el agente 2\"\n\
 $node set ragent_ $ragent\n\
-puts \"creando el agente 3\"\n\
 return $ragent\n\
 }\n\
 \n\
