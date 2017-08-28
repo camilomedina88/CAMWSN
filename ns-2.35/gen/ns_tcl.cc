@@ -1163,6 +1163,12 @@ $agent if-queue [$self set ifq_(0)]   ;# ifq between LL and MAC\n\
 }\n\
 \n\
 \n\
+set daipasonly [string first \"DAIPAS\" [$agent info class]]\n\
+if {$daipasonly != -1 } {\n\
+$agent if-queue [$self set ifq_(0)]   ;# ifq between LL and MAC\n\
+}\n\
+\n\
+\n\
 \n\
 if { $port == [Node set rtagent_port_] } {			\n\
 $self add-target-rtagent $agent $port\n\
@@ -3466,6 +3472,7 @@ Mac 	# network wireless stack\n\
 \n\
 WFRP 	# WFRP patch\n\
 ECODA 	# ECODA patch\n\
+DAIPAS 	# DAIPAS patch\n\
 \n\
 AODV 	# routing protocol for ad-hoc networks\n\
 Diffusion 	# diffusion/diffusion.cc\n\
@@ -3476,6 +3483,7 @@ TORA 	# routing protocol for ad-hoc networks\n\
 MDART 	# routing protocol for ad-hoc networks\n\
 AOMDV\n\
 ECODA 	#ECODA\n\
+DAIPAS 	#DAIPAS\n\
 Encap 	# common/encap.cc\n\
 IPinIP 	# IP encapsulation \n\
 HDLC 	# High Level Data Link Control\n\
@@ -4337,6 +4345,14 @@ $self next $args\n\
 \n\
 Agent/ECODA set sport_   0\n\
 Agent/ECODA set dport_   0\n\
+\n\
+\n\
+Agent/DAIPAS instproc init args {\n\
+$self next $args\n\
+}\n\
+\n\
+Agent/DAIPAS set sport_   0\n\
+Agent/DAIPAS set dport_   0\n\
 \n\
 RouteLogic instproc register {proto args} {\n\
 $self instvar rtprotos_ node_rtprotos_ default_node_rtprotos_\n\
@@ -21214,6 +21230,10 @@ ECODA {\n\
 set ragent [$self create-ecoda-agent $node]\n\
 }\n\
 \n\
+DAIPAS {\n\
+set ragent [$self create-daipas-agent $node]\n\
+}\n\
+\n\
 AOMDV {\n\
 set ragent [$self create-aomdv-agent $node]\n\
 }\n\
@@ -21428,6 +21448,14 @@ return $ragent\n\
 \n\
 Simulator instproc create-ecoda-agent { node } {\n\
 set ragent [new Agent/ECODA [$node node-addr]]\n\
+$self at 0.0 \"$ragent start\"\n\
+$node set ragent_ $ragent\n\
+return $ragent\n\
+}\n\
+\n\
+\n\
+Simulator instproc create-daipas-agent { node } {\n\
+set ragent [new Agent/DAIPAS [$node node-addr]]\n\
 $self at 0.0 \"$ragent start\"\n\
 $node set ragent_ $ragent\n\
 return $ragent\n\

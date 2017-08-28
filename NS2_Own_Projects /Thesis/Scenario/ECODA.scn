@@ -1,0 +1,181 @@
+$node_(0) set X_ 699
+$node_(0) set Y_ 463
+$node_(0) set Z_ 0.0
+$node_(1) set X_ 674
+$node_(1) set Y_ 446
+$node_(1) set Z_ 0.0
+$node_(2) set X_ 724
+$node_(2) set Y_ 446
+$node_(2) set Z_ 0.0
+$node_(3) set X_ 651
+$node_(3) set Y_ 426
+$node_(3) set Z_ 0.0
+$node_(4) set X_ 693
+$node_(4) set Y_ 421
+$node_(4) set Z_ 0.0
+$node_(5) set X_ 745
+$node_(5) set Y_ 425
+$node_(5) set Z_ 0.0
+$node_(6) set X_ 625
+$node_(6) set Y_ 404
+$node_(6) set Z_ 0.0
+$node_(7) set X_ 675
+$node_(7) set Y_ 399
+$node_(7) set Z_ 0.0
+$node_(8) set X_ 718
+$node_(8) set Y_ 398
+$node_(8) set Z_ 0.0
+$node_(9) set X_ 764
+$node_(9) set Y_ 403
+$node_(9) set Z_ 0.0
+
+$node_(10) set X_ 796
+$node_(10) set Y_ 400
+$node_(10) set Z_ 0.0
+
+
+$node_(11) set X_ 599
+$node_(11) set Y_ 382
+$node_(11) set Z_ 0.0
+
+
+$node_(12) set X_ 630
+$node_(12) set Y_ 377
+$node_(12) set Z_ 0.0
+
+
+$node_(13) set X_ 658
+$node_(13) set Y_ 377
+$node_(13) set Z_ 0.0
+
+
+$node_(14) set X_ 685
+$node_(14) set Y_ 375
+$node_(14) set Z_ 0.0
+
+
+$node_(15) set X_ 724
+$node_(15) set Y_ 375
+$node_(15) set Z_ 0.0
+
+
+$node_(16) set X_ 748
+$node_(16) set Y_ 372
+$node_(16) set Z_ 0.0
+
+
+$node_(17) set X_ 778
+$node_(17) set Y_ 370
+$node_(17) set Z_ 0.0
+
+
+$node_(18) set X_ 827
+$node_(18) set Y_ 374
+$node_(18) set Z_ 0.0
+
+
+$node_(19) set X_ 579
+$node_(19) set Y_ 352
+$node_(19) set Z_ 0.0
+
+
+$node_(20) set X_ 608
+$node_(20) set Y_ 353
+$node_(20) set Z_ 0.0
+
+
+$node_(21) set X_ 633
+$node_(21) set Y_ 351
+$node_(21) set Z_ 0.0
+
+
+$node_(22) set X_ 656
+$node_(22) set Y_ 349
+$node_(22) set Z_ 0.0
+
+
+$node_(23) set X_ 676
+$node_(23) set Y_ 352
+$node_(23) set Z_ 0.0
+
+
+$node_(24) set X_ 699
+$node_(24) set Y_ 350
+$node_(24) set Z_ 0.0
+
+
+$node_(25) set X_ 721
+$node_(25) set Y_ 348
+$node_(25) set Z_ 0.0
+
+
+$node_(26) set X_ 740
+$node_(26) set Y_ 349
+$node_(26) set Z_ 0.0
+
+
+$node_(27) set X_ 762
+$node_(27) set Y_ 348
+$node_(27) set Z_ 0.0
+
+
+$node_(28) set X_ 784
+$node_(28) set Y_ 348
+$node_(28) set Z_ 0.0
+
+
+$node_(29) set X_ 805
+$node_(29) set Y_ 348
+$node_(29) set Z_ 0.0
+
+
+$node_(30) set X_ 824
+$node_(30) set Y_ 347
+$node_(30) set Z_ 0.0
+
+
+$node_(31) set X_ 844
+$node_(31) set Y_ 348
+$node_(31) set Z_ 0.0
+
+
+$node_(32) set X_ 864
+$node_(32) set Y_ 348
+$node_(32) set Z_ 0.0
+
+
+
+$ns_ at 0.0	"$node_(0) NodeLabel PAN Coor"
+$ns_ at 0.0	"$node_(0) sscs startPANCoord 1"		
+$ns_ at 0.5	"$node_(1) sscs startDevice 1 1 1" 		
+$ns_ at 1.5	"$node_(2) sscs startDevice 1 1 1"
+$ns_ at 2.5	"$node_(3) sscs startDevice 1 1 1"
+$ns_ at 3.5	"$node_(4) sscs startDevice 1 1 1"
+$ns_ at 4.5	"$node_(5) sscs startDevice 1 1 1"
+$ns_ at 5.5	"$node_(6) sscs startDevice 1 1 1"
+$ns_ at 5.8	"$node_(7) sscs startDevice 1 1 1"
+$ns_ at 6.5	"$node_(8) sscs startDevice 1 1 1"
+$ns_ at 6.8	"$node_(9) sscs startDevice 0"
+$ns_ at 7.0	"$node_(10) sscs startDevice 0"
+$ns_ at 7.1	"$node_(11) sscs startDevice 0"
+$ns_ at 7.2	"$node_(12) sscs startDevice 0"
+$ns_ at 7.3	"$node_(13) sscs startDevice 0"
+$ns_ at 7.4	"$node_(14) sscs startDevice 1 1 1"
+$ns_ at 7.5	"$node_(15) sscs startDevice 1 1 1"
+$ns_ at 7.6	"$node_(16) sscs startDevice 1 1 1"
+$ns_ at 7.7	"$node_(17) sscs startDevice 1 1 1"
+$ns_ at 7.8	"$node_(18) sscs startDevice 1 1 1"
+$ns_ at 7.9	"$node_(19) sscs startDevice 1 1 1"
+$ns_ at 8.0	"$node_(20) sscs startDevice 1 1 1"
+$ns_ at 8.1	"$node_(21) sscs startDevice 1 1 1"
+$ns_ at 8.2	"$node_(22) sscs startDevice 1 1 1"
+$ns_ at 8.3	"$node_(23) sscs startDevice 1 1 1"
+$ns_ at 8.4	"$node_(24) sscs startDevice 1 1 1"
+$ns_ at 8.5	"$node_(25) sscs startDevice 1 1 1"
+$ns_ at 8.6	"$node_(26) sscs startDevice 0"
+$ns_ at 8.7	"$node_(27) sscs startDevice 0"
+$ns_ at 8.8	"$node_(28) sscs startDevice 0"
+$ns_ at 8.9	"$node_(29) sscs startDevice 1 1 1"
+$ns_ at 9.0	"$node_(30) sscs startDevice 1 1 1"
+$ns_ at 9.1	"$node_(31) sscs startDevice 0"
+$ns_ at 9.2	"$node_(32) sscs startDevice 1 1 1"

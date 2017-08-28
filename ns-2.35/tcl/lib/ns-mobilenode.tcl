@@ -211,6 +211,13 @@ Node/MobileNode instproc add-target { agent port } {
   	$agent if-queue [$self set ifq_(0)]   ;# ifq between LL and MAC
 	}
 
+
+	# Special processing for DAIPAS
+	set daipasonly [string first "DAIPAS" [$agent info class]]
+	if {$daipasonly != -1 } {
+  	$agent if-queue [$self set ifq_(0)]   ;# ifq between LL and MAC
+	}
+
 	
 	#<zheng: add>
 	# Special processing for ZBR

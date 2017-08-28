@@ -51,6 +51,7 @@
 #include <tora/tora_packet.h> //TORA
 #include <wfrp/wfrp_packet.h>  // WFRP 
 #include <ECODA/ecoda_packet.h>  // ECODA 
+#include <DAIPAS/daipas_packet.h>  // DAIPAS 
 #include <imep/imep_spec.h>         // IMEP
 #include <aodv/aodv_packet.h> //AODV
 #include <aomdv/aomdv_packet.h>
@@ -1231,6 +1232,102 @@ CMUTrace::format_ecoda(Packet *p, int offset)
 
     
 }
+
+
+
+
+// DAIPAS patch
+
+void
+CMUTrace::format_daipas(Packet *p, int offset)
+{
+    struct hdr_daipas *wh = HDR_DAIPAS(p);
+    struct hdr_daipas_beacon *wb = HDR_DAIPAS_BEACON(p);
+    struct hdr_daipas_error  *we = HDR_DAIPAS_ERROR(p);
+
+    //u_int8_t packeteAnalizado= wh->pkt_type;
+ 
+    switch(wh->pkt_type) {
+   
+        case DAIPAS_BEACON:
+
+        	if(pt_->tagged()){
+        		sprintf(pt_->buffer()+offset,
+        			"daipas:t %x -daipas:h %d -daipas:d %d -daipas:s %d"
+        			"daipas:px %d -daipas:py %d -daipas:ts %f"
+        			"-daipas:c BEACON",
+        			wb->pkt_type,
+        			wb->beacon_hops,
+        			wb->beacon_id,
+        			wb->beacon_src,
+        			wb->beacon_posx,
+        			wb->beacon_posy,
+        			wb->timestamp);
+
+
+        	}
+        	else if (newtrace_)
+        	{
+        		sprintf(pt_->buffer()+offset,
+        			"-P daipas-pt 0x%x -Ph %d -Pb %d -Ps %d -Ppx %d -Ppy %d -Pts %f -Pc BEACON",
+        			wb->pkt_type,
+        			wb->beacon_hops,
+        			wb->beacon_id,
+        			wb->beacon_src,
+        			wb->beacon_posx,
+        			wb->beacon_posy,
+        			wb->timestamp);
+        	} else {
+ 
+                sprintf(pt_->buffer() + offset,
+                          "[0x%x %d %d [%d %d] [%d %f]] (BEACON)",
+                          wb->pkt_type,
+                          wb->beacon_hops,
+                          wb->beacon_id,
+                          wb->beacon_src,
+                          wb->beacon_posx,
+                          wb->beacon_posy,
+                          wb->timestamp);
+            }
+            
+            break;
+ 
+        case DAIPAS_ERROR:
+            // TODO: need to add code
+            break;
+ 
+        default:
+
+
+
+#ifdef WIN32
+            fprintf(stderr,
+                      "CMUTrace::format_daipas: invalid DAIPAS packet typen");
+#else
+            fprintf(stderr,
+                      "%s: invalid DAIPAS packet typen", __FUNCTION__);
+#endif
+            abort();
+            
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 void

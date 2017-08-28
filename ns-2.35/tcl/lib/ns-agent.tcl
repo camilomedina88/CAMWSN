@@ -214,3 +214,11 @@ Agent/ECODA instproc init args {
  
 Agent/ECODA set sport_   0
 Agent/ECODA set dport_   0
+
+
+Agent/DAIPAS instproc init args {
+  $self next $args
+}
+ 
+Agent/DAIPAS set sport_   0
+Agent/DAIPAS set dport_   0

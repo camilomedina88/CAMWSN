@@ -12,15 +12,16 @@ set val(chan)           Channel/WirelessChannel    ;# Channel Type
 set val(prop)           Propagation/TwoRayGround   ;# radio-propagation model
 set val(netif)          Phy/WirelessPhy/802_15_4
 set val(mac)            Mac/802_15_4
-#set val(ifq)            Queue/DropTail/PriQueue    	;# interface queue type
-#set val(ifq)            Queue/DropTail
-set val(ifq)            Queue/Ecoda                ;# interface queue type
+set val(ifq)            Queue/DropTail
+#set val(ifq)            Queue/Ecoda                ;# interface queue type
 set val(ll)             LL                         ;# link layer type
 set val(ant)            Antenna/OmniAntenna        ;# antenna model
 set val(ifqlen)         20                         ;# max packet in ifq
 set val(nn)             101                         ;# number of mobilenodes
 #set val(rp)             AODV                      ;# routing protocol
-set val(rp)             ECODA                      ;# routing protocol
+#set val(rp)             ECODA                      ;# routing protocol
+set val(rp)             DAIPAS                      ;# routing protocol
+
 set val(x)				      150                         ;#Casi 4 canchas de futbol
 set val(y)				      150
 set val(energy) 		    "EnergyModel" 
@@ -163,16 +164,14 @@ source ./Scenario/NodesInit
 
 if {$val(rp) == "ECODA"} {
   $ns_ at 1.0 "[$node_(0) set ragent_] sink"
-  
+}
+
+if {$val(rp) == "DAIPAS"} {
+  $ns_ at 1.0 "[$node_(0) set ragent_] sink"
 }
 
 
-
-
-
-
 Mac/802_15_4 wpanNam PlaybackRate 3ms
-
 
 #$ns_ at $appTime1 "puts \"\nTransmitting data ...\n\""
 
@@ -185,7 +184,6 @@ for {set i 0} {$i < $val(nn)} {incr i} {
 #===================================================================================================
 #        Applications Definition        
 #===================================================================================================
-
 
 
 # Setup traffic flow between nodes
@@ -228,10 +226,10 @@ if { ("$val(traffic)" == "cbr") || ("$val(traffic)" == "poisson") } {
    puts [format "Acknowledgement for data: %s" [Mac/802_15_4 wpanCmd ack4data]]
    $ns_ at $appTime1 "Mac/802_15_4 wpanNam PlaybackRate 1.00ms"
    $ns_ at [expr $appTime1 + 0.5] "Mac/802_15_4 wpanNam PlaybackRate 1.5ms"
-   #$val(traffic)traffic 1 6 0.2 $appTime1
-   #$val(traffic)traffic 4 10 0.2 $appTime2
-   $val(traffic)traffic 79 0 0.2 30
-   $val(traffic)traffic 55 0 0.2 45
+   
+
+   #$val(traffic)traffic 79 0 0.2 30
+   #$val(traffic)traffic 55 0 0.2 45
    $val(traffic)traffic 9 0 0.2 60
    $val(traffic)traffic 13 0 0.2 75
    $val(traffic)traffic 26 0 0.2 90
@@ -257,6 +255,12 @@ if { ("$val(traffic)" == "cbr") || ("$val(traffic)" == "poisson") } {
    $val(traffic)traffic 61 0 0.2 390
 
 
+ 
+   
+
+
+
+
    $ns_ at $appTime1 "$node_(0) add-mark m1 blue circle"
    #$ns_ at $appTime1 "$node_(6) add-mark m2 blue circle"
    #$ns_ at $appTime1 "$ns_ trace-annotate \"(at $appTime1) $val(traffic) traffic from node 1 to node 6\""
@@ -271,21 +275,7 @@ if { ("$val(traffic)" == "cbr") || ("$val(traffic)" == "poisson") } {
    } else {
    	set pktType exp
    }
-   #Mac/802_15_4 wpanNam FlowClr -p $pktType -s 1 -d 6 -c blue
-   #Mac/802_15_4 wpanNam FlowClr -p $pktType -s 4 -d 10 -c green4
-
-   #Mac/802_15_4 wpanNam FlowClr -p $pktType -s 1 -d 0 -c blue
-   #Mac/802_15_4 wpanNam FlowClr -p $pktType -s 2 -d 0 -c green4
-   #Mac/802_15_4 wpanNam FlowClr -p $pktType -s 3 -d 0 -c red
-   #Mac/802_15_4 wpanNam FlowClr -p $pktType -s 4 -d 0 -c blue
-   #Mac/802_15_4 wpanNam FlowClr -p $pktType -s 5 -d 0 -c green4
-   #Mac/802_15_4 wpanNam FlowClr -p $pktType -s 6 -d 0 -c red
-   #Mac/802_15_4 wpanNam FlowClr -p $pktType -s 7 -d 0 -c blue
-   #Mac/802_15_4 wpanNam FlowClr -p $pktType -s 8 -d 0 -c green4
-   #Mac/802_15_4 wpanNam FlowClr -p $pktType -s 9 -d 0 -c red
-   #Mac/802_15_4 wpanNam FlowClr -p $pktType -s 10 -d 0 -c blue
-   #Mac/802_15_4 wpanNam FlowClr -p $pktType -s 11 -d 0 -c green4
-   #Mac/802_15_4 wpanNam FlowClr -p $pktType -s 12 -d 0 -c red
+ 
  
 
 }

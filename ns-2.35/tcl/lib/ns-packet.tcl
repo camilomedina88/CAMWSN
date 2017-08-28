@@ -174,6 +174,7 @@ set protolist {
 	
 	WFRP 	# WFRP patch
 	ECODA 	# ECODA patch
+	DAIPAS 	# DAIPAS patch
 
 # Mobility, Ad-Hoc Networks, Sensor Nets:
 	AODV 	# routing protocol for ad-hoc networks
@@ -186,6 +187,7 @@ set protolist {
 	# AOMDV patch
 	AOMDV
 	ECODA 	#ECODA
+	DAIPAS 	#DAIPAS
 # Other:
 	Encap 	# common/encap.cc
         IPinIP 	# IP encapsulation 

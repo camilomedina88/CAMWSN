@@ -93,6 +93,7 @@ PriQueue::recv(Packet *p, Handler *h)
                 	case PT_AOMDV:
                   case PT_WFRP: //// WFRP patch Agregado
                   case PT_ECODA: ////ECODA patch Agregado
+                  case PT_DAIPAS:
                 	case PT_MDART:
                       //printf("Paquetes alta prioridad COLA");
                 			recvHighPriority(p, h);
