@@ -35,6 +35,8 @@
  
 #define DAIPAS_BEACON	0x01
 #define DAIPAS_ERROR	0x02
+#define DAIPAS_ACK		0x03
+#define DAIPAS_CONNECT	0x04
 
 
 // ======================================================================
@@ -44,6 +46,8 @@
 #define HDR_DAIPAS(p)		((struct hdr_daipas*)hdr_daipas::access(p))
 #define HDR_DAIPAS_BEACON(p)	((struct hdr_daipas_beacon*)hdr_daipas::access(p))
 #define HDR_DAIPAS_ERROR(p)	((struct hdr_daipas_error*)hdr_daipas::access(p))
+#define HDR_DAIPAS_ACK(p)	((struct hdr_daipas_ack*)hdr_daipas::access(p))
+#define HDR_DAIPAS_CONNECT(p)	((struct hdr_daipas_connect*)hdr_daipas::access(p))
 
 
 // ======================================================================
@@ -75,6 +79,7 @@ struct hdr_daipas_beacon {
 	nsaddr_t	beacon_src;  // source address of beacon, this is sink address
 	u_int32_t	beacon_posx; // x position of beacon source, if available
 	u_int32_t	beacon_posy; // y position of beacon source, if available
+	int level;
 
 
 	/*
@@ -94,6 +99,44 @@ struct hdr_daipas_beacon {
 		return sz;
 	}
 };
+
+
+
+struct hdr_daipas_ack {
+	
+	u_int8_t	pkt_type;  // type of packet : Beacon or Error
+	double		timestamp; // emission time 
+
+	inline int size() {
+		int sz = 0;
+		sz = sizeof(struct hdr_daipas_ack);
+		assert(sz>=0);
+		return sz;
+	}
+};
+
+
+struct hdr_daipas_connect {
+
+	u_int8_t	pkt_type;  // type of packet : Beacon or Error
+	double		timestamp; // emission time
+	nsaddr_t	beacon_src;
+	float 		bufferOccupancy; 
+	float 		remainingPower;
+	int 		level;
+	bool 		flag;
+
+
+
+	inline int size() {
+		int sz = 0;
+		sz = sizeof(struct hdr_daipas_connect);
+		assert(sz>=0);
+		return sz;
+	}
+};
+
+
 
 // =====================================================================
 // Error Packet Format

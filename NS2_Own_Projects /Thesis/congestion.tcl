@@ -170,6 +170,10 @@ if {$val(rp) == "DAIPAS"} {
   $ns_ at 1.0 "[$node_(0) set ragent_] sink"
 }
 
+if {$val(rp) == "WFRP"} {
+  $ns_ at 1.0 "[$node_(0) set ragent_] sink"
+}
+
 
 Mac/802_15_4 wpanNam PlaybackRate 3ms
 

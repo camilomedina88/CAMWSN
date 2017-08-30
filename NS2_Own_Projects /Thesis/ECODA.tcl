@@ -25,7 +25,7 @@ set val(initialEnergy)	100                        ;#Calculado para pila AA
 set val(rxPower)		    0.395
 set vak(txPower)		    0.660
 set val(sensePower)		  0.035
-#set val(nam)			output//output/congestion.nam
+
 set val(nam)			/output/congestion.nam
 set val(traffic)		poisson                        ;# cbr/poisson/ftp
 
@@ -49,6 +49,11 @@ set stopTime            250	;# in seconds APROX 7 Minutos
 # Initialize Global Variables
 set ns_		[new Simulator]
 set tracefd     [open ./output/congestionResults.tr w]
+
+set f0 [open out0.tr w]
+
+
+
 $ns_ trace-all $tracefd
 if { "$val(nam)" == "/output/congestion.nam" } {
         set namtrace     [open ./$val(nam) w]
@@ -128,7 +133,10 @@ $ns_ node-config -adhocRouting $val(rp) \
 #===================================================================================================
 
 
-for {set i 0} {$i < $val(nn) } {incr i} {
+  set sink [$ns_ node] 
+  $sink random-motion 0    ;# disable random motion
+
+for {set i 1} {$i < $val(nn) } {incr i} {
 	set node_($i) [$ns_ node]	
 	$node_($i) random-motion 0		;# disable random motion
 }
@@ -149,7 +157,7 @@ source ./Scenario/ECODA.scn
 
 
 if {$val(rp) == "ECODA"} {
-  $ns_ at 1.0 "[$node_(0) set ragent_] sink"
+  $ns_ at 1.0 "[$sink set ragent_] sink"
   
 }
 
@@ -159,8 +167,10 @@ Mac/802_15_4 wpanNam PlaybackRate 3ms
 
 #$ns_ at $appTime1 "puts \"\nTransmitting data ...\n\""
 
+
+$ns_ initial_node_pos $sink 3 
 # defines the node size in nam
-for {set i 0} {$i < $val(nn)} {incr i} {
+for {set i 1} {$i < $val(nn)} {incr i} {
 	$ns_ initial_node_pos $node_($i) 3
 }
 
@@ -187,11 +197,11 @@ proc cbrtraffic { src dst interval starttime } {
 }
 
 proc poissontraffic { src dst interval starttime } {
-   global ns_ node_
+   global ns_ node_ sink
    set udp($src) [new Agent/UDP]
    eval $ns_ attach-agent \$node_($src) \$udp($src)
    set null($dst) [new Agent/Null]
-   eval $ns_ attach-agent \$node_($dst) \$null($dst)
+   eval $ns_ attach-agent \$sink \$null($dst)
    set expl($src) [new Application/Traffic/Exponential]
    eval \$expl($src) set packetSize_ 70
    eval \$expl($src) set burst_time_ 0
@@ -229,7 +239,7 @@ if { ("$val(traffic)" == "cbr") || ("$val(traffic)" == "poisson") } {
 
 
 
-   $ns_ at $appTime1 "$node_(0) add-mark m1 blue circle"
+   $ns_ at $appTime1 "$sink add-mark m1 blue circle"
    #$ns_ at $appTime1 "$node_(6) add-mark m2 blue circle"
    #$ns_ at $appTime1 "$ns_ trace-annotate \"(at $appTime1) $val(traffic) traffic from node 1 to node 6\""
    #$ns_ at $appTime2 "$node_(4) add-mark m3 green4 circle"
@@ -310,8 +320,8 @@ if { "$val(traffic)" == "ftp" } {
    ftptraffic 40 0 230
 
 
-   $ns_ at $appTime1 "$node_(0) add-mark m1 blue circle"
-   $ns_ at $stopTime "$node_(0) delete-mark m1"
+   $ns_ at $appTime1 "$sink add-mark m1 blue circle"
+   $ns_ at $stopTime "$sink delete-mark m1"
 
    Mac/802_15_4 wpanNam FlowClr -p AODV -c tomato
    Mac/802_15_4 wpanNam FlowClr -p ARP -c green
@@ -327,10 +337,45 @@ if { "$val(traffic)" == "ftp" } {
 #        Termination        
 #===================================================================================================
 
+proc record {} {
+        global sink f0
+  #Get an instance of the simulator
+  set ns [Simulator instance]
+  #Set the time after which the procedure should be called again
+        set time 0.5
+  #How many bytes have been received by the traffic sinks?
+        set bw0 [$sink set bytes_]
+
+  #Get the current time
+        set now [$ns now]
+  #Calculate the bandwidth (in MBit/s) and write it to the files
+        puts $f0 "$now [expr $bw0/$time*8/1000000]"
+        puts $f1 "$now [expr $bw1/$time*8/1000000]"
+        puts $f2 "$now [expr $bw2/$time*8/1000000]"
+  #Reset the bytes_ values on the traffic sinks
+        $sink set bytes_ 0
+
+  #Re-schedule the procedure
+        $ns at [expr $now+$time] "record"
+}
+
+
+
+
+
+
+
+
+$ns_ at 0.0 "record"
+
+
+
+
+$ns_ at $stopTime "$sink reset";
 
 
 # Tell nodes when the simulation ends
-for {set i 0} {$i < $val(nn) } {incr i} {
+for {set i 1} {$i < $val(nn) } {incr i} {
     $ns_ at $stopTime "$node_($i) reset";
 }
 
@@ -339,10 +384,13 @@ $ns_ at $stopTime "puts \"\nNS EXITING...\n\""
 $ns_ at $stopTime "$ns_ halt"
 
 proc stop {} {
+    global f0 
     global ns_ tracefd appTime val env
+    close $f0
     $ns_ flush-trace
     close $tracefd
     set hasDISPLAY 0
+    exec xgraph out0.tr -geometry 800x400 &
     foreach index [array names env] {
         #puts "$index: $env($index)"
         if { ("$index" == "DISPLAY") && ("$env($index)" != "") } {

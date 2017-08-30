@@ -32,6 +32,7 @@
 #include <classifier/classifier-port.h>
 
 #define NETWORK_DIAMETER		64
+//#define DEFAULT_BEACON_INTERVAL		10 // seconds;
 #define DEFAULT_BEACON_INTERVAL		10 // seconds;
 #define DEFAULT_ROUTE_EXPIRE 		2*DEFAULT_BEACON_INTERVAL // seconds;
 #define ROUTE_PURGE_FREQUENCY		2 // seconds
@@ -72,17 +73,23 @@ private:
 class RouteCache {
 	friend class DAIPAS;
  public:
-	RouteCache(nsaddr_t bsrc, u_int32_t bid) { rt_dst = bsrc; rt_seqno = bid;  }
+	RouteCache(nsaddr_t bsrc) { rt_vecino = bsrc; }
  protected:
 	LIST_ENTRY(RouteCache) rt_link;
-	u_int32_t       rt_seqno;	// route sequence number
-	nsaddr_t        rt_dst;		// route destination
-    nsaddr_t	rt_nexthop;	// next hop node towards the destionation
-	u_int32_t	rt_xpos;	// x position of destination;
-	u_int32_t	rt_ypos;	// y position of destination;
-	u_int8_t	rt_state;	// state of the route: FRESH, EXPIRED, FAILED (BROKEN)
-	u_int8_t	rt_hopcount;    // number of hops up to the destination (sink)
-    double          rt_expire; 	// when route expires : Now + DEFAULT_ROUTE_EXPIRE
+	
+	//nsaddr_t        rt_dst;		// route destination
+    
+	//u_int32_t		rt_xpos;	// x position of destination;
+	//u_int32_t		rt_ypos;	// y position of destination;
+	//u_int8_t		rt_state;	// state of the route: FRESH, EXPIRED, FAILED (BROKEN)
+	//u_int8_t		rt_hopcount;    // number of hops up to the destination (sink)
+    //double          rt_expire; 	// when route expires : Now + DEFAULT_ROUTE_EXPIRE
+    u_int32_t       rt_seqno;	// route sequence number
+    nsaddr_t		rt_vecino;	// next hop node towards the destionation
+    float 		rt_bufferOccupancy; 
+	float 		rt_remainingPower;
+	int 		rr_level;
+	bool 		rt_flag;
 
 };
 LIST_HEAD(daipas_rtcache, RouteCache);
@@ -104,13 +111,14 @@ class DAIPAS : public Agent {
 	// Agent Attributes
 	nsaddr_t	index;     // node address (identifier)
 	nsaddr_t	seqno;     // beacon sequence number (used only when agent is sink)
+	int nivel;
 
 	// Node Location
 	uint32_t	posx;       // position x;
 	uint32_t	posy;       // position y;
 		
 	// Routing Table Management
-	void		rt_insert(nsaddr_t src, u_int32_t id, nsaddr_t nexthop, u_int32_t xpos, u_int32_t ypos, u_int8_t hopcount);
+	void		rt_insert(nsaddr_t vecino, float buffer, float energia, int nivel, bool bandera );
 	void		rt_remove(RouteCache *rt);
 	void		rt_purge();
 	RouteCache*	rt_lookup(nsaddr_t dst);
@@ -123,6 +131,8 @@ class DAIPAS : public Agent {
 	daipas_rtcache	rthead;	
 	// Send Routines
 	void		send_beacon();
+	void		send_ACK(nsaddr_t sink);
+	void		send_connect(nsaddr_t destinoConnect);
 	void		send_error(nsaddr_t unreachable_destination);
 	void		forward(Packet *p, nsaddr_t nexthop, double delay);
 	
@@ -131,6 +141,8 @@ class DAIPAS : public Agent {
 	void		recv_daipas(Packet *p);
 	void 		recv_beacon(Packet *p);
 	void		recv_error(Packet *p);
+	void        recv_ack(Packet *p);
+	void        recv_connect(Packet *p);
 	
 	// Position Management
 	void		update_position();
