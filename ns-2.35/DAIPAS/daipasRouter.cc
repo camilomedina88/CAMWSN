@@ -199,9 +199,7 @@ DAIPAS::send_beacon() { //SEND HELLO
 	bcn->beacon_src = index;
 	
 
-	nivel=bcn->beacon_hops -1;
-
-	printf("\n ENVIANDO BEACON CON ORIGEN: %i\n", ih->saddr());
+	printf("ENVIANDO BEACON CON ORIGEN: %i\n", ih->saddr());
 	
 	// update the node position before putting it in the packet
 	update_position();
@@ -447,10 +445,6 @@ DAIPAS::send_ACK(nsaddr_t sink){
 	seqno += 1;
 
 	Scheduler::instance().schedule(target_, p, 0.0);
-
-
-
-
 }
 
 void        
@@ -461,30 +455,23 @@ DAIPAS::recv_ack(Packet *p){
 struct hdr_ip *ih = HDR_IP(p);
 struct hdr_daipas_ack *ack = HDR_DAIPAS_ACK(p);
 
-
 // I have originated the packet, just drop it
-	if (ih->saddr()== index && index!=0)  {
+	if (ih->saddr()== index)  {
 		Packet::free(p);
 		return;
 	}
 
-
-
-printf("ESTOY EN EL NODO %i RECIBIENDO ACK de %i \n",index,ih->saddr() );
-
-send_connect(ih->saddr());
+	if(ih->daddr()== index ){
+		printf("ESTOY EN EL NODO %i RECIBIENDO ACK de %i \n",index,ih->saddr() );
+		send_connect(ih->saddr());
+	}
+	//ACA TENGO QUE PONER la condicion para enviar el connect o de rechazar el paquete
 }
 
 void
 DAIPAS::send_connect(nsaddr_t destinoConnect){
 
-
-
-	if (index == 0){
-
 	printf("###### SE VA A ENVIAR EL CONNECT A: %i\n",destinoConnect );
-
-
 	Packet *p = Packet::alloc();
 	struct hdr_cmn *ch = HDR_CMN(p);
 	struct hdr_ip *ih = HDR_IP(p);
@@ -512,14 +499,9 @@ DAIPAS::send_connect(nsaddr_t destinoConnect){
 	conn->level=nivel;
 	conn->flag=true;
 
-
 	// increase sequence number for next beacon
 	seqno += 1;
-
-	Scheduler::instance().schedule(target_, p, 0.0);
-	}
-
-	
+	Scheduler::instance().schedule(target_, p, 0.0);	
 
 }
 
@@ -527,7 +509,6 @@ DAIPAS::send_connect(nsaddr_t destinoConnect){
 void        
 
 DAIPAS::recv_connect(Packet *p){
-
 
 struct hdr_ip *ih = HDR_IP(p);
 struct hdr_daipas_connect *conn = HDR_DAIPAS_CONNECT(p);
@@ -537,11 +518,13 @@ struct hdr_daipas_connect *conn = HDR_DAIPAS_CONNECT(p);
 		return;
 	}
 
+
+
+	//Agregar condicion de que el paquete fuera para el nodo..
+
+
+	
 	nivel=conn->level+1;
-
-
-	printf("\n \n \n NODO %i Nivel: %i \n\n",index,nivel);
-
 
 
 	u_int8_t	pkt_type;  // type of packet : Beacon or Error
@@ -554,12 +537,28 @@ struct hdr_daipas_connect *conn = HDR_DAIPAS_CONNECT(p);
 	
 	//Llenar tabla de enrutamiento al sink
 	rt_insert(conn->beacon_src, conn->bufferOccupancy, conn->remainingPower, conn->level ,conn-> flag);
+	
+
+	int routeLevel=300;
+	// Forma de actualizar el nivel.
+	
+	RouteCache *r = rthead.lh_first;
+
+  	for( ; r; r = r->rt_link.le_next) {
+  		if (r->rt_level < routeLevel)
+  		{
+  			routeLevel=r->rt_level;
+  		}  	
+ 	}
+
+ 	routeLevel=routeLevel-1;
+ 	printf("\n \n \n NODO %i Nivel: %i \n\n",index,routeLevel);
 
 	
 
 	// Generar HELLO
 
-	// Forma de actualizar el nivel.
+	send_beacon();
 
 
 
@@ -671,7 +670,7 @@ DAIPAS::rt_insert(nsaddr_t vecino, float buffer, float energia, int nivel, bool 
    	rt->rt_vecino=vecino;	// next hop node towards the destionation
     rt->rt_bufferOccupancy=buffer; 
 	rt->rt_remainingPower=energia;
-	rt->rr_level=nivel;
+	rt->rt_level=nivel;
 	rt->rt_flag=bandera;
 
 

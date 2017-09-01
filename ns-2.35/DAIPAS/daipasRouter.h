@@ -88,7 +88,7 @@ class RouteCache {
     nsaddr_t		rt_vecino;	// next hop node towards the destionation
     float 		rt_bufferOccupancy; 
 	float 		rt_remainingPower;
-	int 		rr_level;
+	int 		rt_level;
 	bool 		rt_flag;
 
 };
