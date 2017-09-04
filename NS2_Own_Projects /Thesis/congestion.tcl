@@ -163,11 +163,11 @@ source ./Scenario/NodesInit
 
 
 if {$val(rp) == "ECODA"} {
-  $ns_ at 1.0 "[$node_(0) set ragent_] sink"
+  $ns_ at 10.0 "[$node_(0) set ragent_] sink"
 }
 
 if {$val(rp) == "DAIPAS"} {
-  $ns_ at 1.0 "[$node_(0) set ragent_] sink"
+  $ns_ at 12.0 "[$node_(0) set ragent_] sink"
 }
 
 if {$val(rp) == "WFRP"} {

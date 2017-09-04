@@ -895,6 +895,7 @@ Simulator instproc create-ecoda-agent { node } {
 
  #  Create DAIPAS routing agent
 Simulator instproc create-daipas-agent { node } {
+   #set ragent [new Agent/DAIPAS [$node ifq_]]
    set ragent [new Agent/DAIPAS [$node node-addr]]
    $self at 0.0 "$ragent start"
    $node set ragent_ $ragent

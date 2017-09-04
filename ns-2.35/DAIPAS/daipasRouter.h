@@ -30,6 +30,7 @@
 #include <cmu-trace.h>
 #include <priqueue.h>
 #include <classifier/classifier-port.h>
+#include <mobilenode.h> 
 
 #define NETWORK_DIAMETER		64
 //#define DEFAULT_BEACON_INTERVAL		10 // seconds;
@@ -39,7 +40,7 @@
 
 
 
-#define ROUTE_FRESH		0x01
+#define ROUTE_FRESH			0x01
 #define ROUTE_EXPIRED		0x02
 #define ROUTE_FAILED		0x03
 
@@ -86,8 +87,8 @@ class RouteCache {
     //double          rt_expire; 	// when route expires : Now + DEFAULT_ROUTE_EXPIRE
     u_int32_t       rt_seqno;	// route sequence number
     nsaddr_t		rt_vecino;	// next hop node towards the destionation
-    float 		rt_bufferOccupancy; 
-	float 		rt_remainingPower;
+    double 		rt_bufferOccupancy; 
+	double		rt_remainingPower;
 	int 		rt_level;
 	bool 		rt_flag;
 
@@ -114,14 +115,19 @@ class DAIPAS : public Agent {
 	int nivel;
 
 	// Node Location
-	uint32_t	posx;       // position x;
-	uint32_t	posy;       // position y;
+	//uint32_t	posx;       // position x;
+	//uint32_t	posy;       // position y;
 		
 	// Routing Table Management
 	void		rt_insert(nsaddr_t vecino, float buffer, float energia, int nivel, bool bandera );
 	void		rt_remove(RouteCache *rt);
 	void		rt_purge();
 	RouteCache*	rt_lookup(nsaddr_t dst);
+	bool primeraVez;
+
+	double iEnergy;
+	MobileNode *iNode;
+	Node *nodoNormi;
 
 	// Timers
 	daipasBeaconTimer		bcnTimer;
@@ -135,11 +141,13 @@ class DAIPAS : public Agent {
 	void		send_connect(nsaddr_t destinoConnect);
 	void		send_error(nsaddr_t unreachable_destination);
 	void		forward(Packet *p, nsaddr_t nexthop, double delay);
+	void 		send_hello();
 	
 	// Recv Routines
 	void		recv_data(Packet *p);
 	void		recv_daipas(Packet *p);
 	void 		recv_beacon(Packet *p);
+	void 		recv_hello(Packet *p);
 	void		recv_error(Packet *p);
 	void        recv_ack(Packet *p);
 	void        recv_connect(Packet *p);

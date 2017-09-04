@@ -29,6 +29,7 @@
 #include <random.h>
 #include <cmu-trace.h>
 #include <energy-model.h>
+#include <unistd.h>
 
 #define max(a,b)        ( (a) > (b) ? (a) : (b) )
 #define CURRENT_TIME    Scheduler::instance().clock()
@@ -103,8 +104,7 @@ DAIPAS::command(int argc, const char*const* argv) {
 		}
 
 		else if(strcmp(argv[1], "if-queue") == 0) {
-			ifqueue = (PriQueue*) TclObject::lookup(argv[2]);
-      
+			ifqueue = (PriQueue*) TclObject::lookup(argv[2]);    
 			if(ifqueue == 0)
 				return TCL_ERROR;
 			return TCL_OK;
@@ -137,14 +137,16 @@ DAIPAS::DAIPAS(nsaddr_t id) : Agent(PT_DAIPAS), bcnTimer(this), rtcTimer(this) {
 	index = id;
 	seqno = 1;
 	nivel=300; //Se inicializa con un nivel muy alto
+	 MobileNode *iNode;
+	 iEnergy=0.0;
 
 	LIST_INIT(&rthead);
-	posx = 0;
-	posy = 0;
+	//posx = 0;
+	//posy = 0;
 
 	logtarget = 0;
 	ifqueue = 0;
-
+	primeraVez=true;
 }
 
 // ======================================================================
@@ -154,7 +156,7 @@ DAIPAS::DAIPAS(nsaddr_t id) : Agent(PT_DAIPAS), bcnTimer(this), rtcTimer(this) {
 void
 daipasRouteCacheTimer::handle(Event*) {
 	agent->rt_purge();
-	Scheduler::instance().schedule(this, &intr, ROUTE_PURGE_FREQUENCY);
+	//Scheduler::instance().schedule(this, &intr, ROUTE_PURGE_FREQUENCY);
 }
 
 void
@@ -173,7 +175,18 @@ DAIPAS::send_beacon() { //SEND HELLO
 
 	if(index==0)	nivel=0;
 
+	 iNode=(MobileNode *)(Node::get_node_by_address(index));
+	 iEnergy=iNode->energy_model()->energy();
+	 double ocupacion=ifqueue->length();
+	 //nodoNormi=Node::get_node_by_address(index);
+	 //nodoNormi->queue();
 
+	 //printf("at Time (%.6f), Updated Energy for Node %d is Energy %.4f \n",CURRENT_TIME,index,iEnergy);
+	 //printf("at Time (%.6f), Updated QUEUE  for Node %d is Energy %.4f \n",CURRENT_TIME,index,);
+
+
+	if(primeraVez){
+	primeraVez=false;
 	Packet *p = Packet::alloc();
 	struct hdr_cmn *ch = HDR_CMN(p);
 	struct hdr_ip *ih = HDR_IP(p);
@@ -194,28 +207,19 @@ DAIPAS::send_beacon() { //SEND HELLO
 
 	// Write Beacon Header
 	bcn->pkt_type = DAIPAS_BEACON;
-	bcn->beacon_hops = 1;
-	bcn->beacon_id = seqno;
+	bcn-> level = nivel;
 	bcn->beacon_src = index;
-	
-
-	printf("ENVIANDO BEACON CON ORIGEN: %i\n", ih->saddr());
-	
-	// update the node position before putting it in the packet
-	update_position();
-
-	bcn->beacon_posx = posx;
-	bcn->beacon_posy = posy;
-
 	bcn->timestamp = CURRENT_TIME;
+	bcn->bufferOccupancy=ocupacion*100/20;
+	bcn->remainingPower=100-(iEnergy*100/3.9);
+	bcn->flag=true;
 
-	// increase sequence number for next beacon
-	seqno += 1;
 
-#ifdef DEBUG
 	printf("S (%.6f): send beacon by %d  \n", CURRENT_TIME, index);
-#endif 
+
+	//double delay = 0.1 + Random::uniform();
 	Scheduler::instance().schedule(target_, p, 0.0);
+	}
 
 }
 
@@ -255,7 +259,7 @@ DAIPAS::forward(Packet *p, nsaddr_t nexthop, double delay) {
 		ch->direction() = hdr_cmn::DOWN; 
 	}
 	
-	Scheduler::instance().schedule(target_, p, delay);
+	//Scheduler::instance().schedule(target_, p, delay);
 
 
 }
@@ -381,6 +385,12 @@ DAIPAS::recv_daipas(Packet *p) {
 			
 			break;
 
+
+		case DAIPAS_HELLO:
+			recv_hello(p);
+			break;
+
+
 		case DAIPAS_ERROR:
 			recv_error(p);
 			break;
@@ -390,68 +400,79 @@ DAIPAS::recv_daipas(Packet *p) {
 			exit(1);
 	}
 }
-
-
 // ======================================================================
 //  Recv Beacon Packet
 // ======================================================================
-
-
 void 
 DAIPAS::recv_beacon(Packet *p) {
-
 	struct hdr_ip *ih = HDR_IP(p);
-	struct hdr_daipas_beacon *bcn = HDR_DAIPAS_BEACON(p);
-
-	//printf("\n \n Se recibio HELLO en nodo %i \n \n \n", index);
-
-
+	struct hdr_daipas_beacon *bcn = HDR_DAIPAS_BEACON(p);	
 	// I have originated the packet, just drop it
 	if (bcn->beacon_src == index)  {
 		Packet::free(p);
 		return;
+		}
+	//printf("R (%.6f): recv beacon by %d, src:%d, seqno:%d, hop: %d \n", 
+	//CURRENT_TIME, index, bcn->beacon_src, bcn->beacon_id, bcn->beacon_hops);
+
+	//printf("Se recibio beacon en %i con origen %i \n",index, bcn->beacon_src);
+	RouteCache	*rt = rt_lookup(bcn->beacon_src);
+
+	if (rt == NULL)  {
+		rt_insert(bcn->beacon_src, bcn->bufferOccupancy, bcn->remainingPower, bcn-> level, bcn->flag);
 	}
 
-	send_ACK(bcn->beacon_src);
+	int routeLevel=300;	
+	RouteCache *r = rthead.lh_first;
+	printf("\nTabla de Vecinos del nodo %i: \n",index);
+  	for( ; r; r = r->rt_link.le_next) {
+  		printf("Vecino: %i Nivel: %i Buffer: %0.2f Power: %0.2f \n", r->rt_vecino, r->rt_level, r->rt_bufferOccupancy, r->rt_remainingPower);
+  		if (r->rt_level < routeLevel)
+  		{
+  			routeLevel=r->rt_level;
+  		}  	
+ 	}
+ 	nivel=routeLevel +1;
+ 	printf("NODO %i Nivel: %i \n",index,nivel);	
+
+ 	send_beacon();
+
 
 }
 
 void
 DAIPAS::send_ACK(nsaddr_t sink){
 
+	/*
 	Packet *p = Packet::alloc();
 	struct hdr_cmn *ch = HDR_CMN(p);
 	struct hdr_ip *ih = HDR_IP(p);
 	struct hdr_daipas_ack *ack = HDR_DAIPAS_ACK(p);
-
 	// Write Channel Header
 	ch->ptype() = PT_DAIPAS;
 	ch->size() = IP_HDR_LEN + ack->size();
 	ch->addr_type() = NS_AF_NONE;
 	ch->prev_hop_ = index;
-
 	// Write IP Header
 	ih->saddr() = index;
 	ih->daddr() = sink;
 	ih->sport() = RT_PORT;
 	ih->dport() = RT_PORT;
 	ih->ttl_ = NETWORK_DIAMETER;
-
 	// Write Beacon Header
 	ack->pkt_type = DAIPAS_ACK;
 	ack->timestamp = CURRENT_TIME;
-
 	// increase sequence number for next beacon
 	seqno += 1;
-
-	Scheduler::instance().schedule(target_, p, 0.0);
+	double delay = 0.1 + Random::uniform();
+	Scheduler::instance().schedule(target_, p, delay);
+	printf("El nodo: %i envia un ACK \n", index);*/
 }
 
 void        
 DAIPAS::recv_ack(Packet *p){
-
-//printf("********* UJUUUUU SE RECIBIÖ ACK en SINK *******\n");
-
+	/*
+printf("********* UJUUUUU SE RECIBIO ACK *******\n");
 struct hdr_ip *ih = HDR_IP(p);
 struct hdr_daipas_ack *ack = HDR_DAIPAS_ACK(p);
 
@@ -464,32 +485,32 @@ struct hdr_daipas_ack *ack = HDR_DAIPAS_ACK(p);
 	if(ih->daddr()== index ){
 		printf("ESTOY EN EL NODO %i RECIBIENDO ACK de %i \n",index,ih->saddr() );
 		send_connect(ih->saddr());
+	}else{
+		Packet::free(p);
+		return;
 	}
-	//ACA TENGO QUE PONER la condicion para enviar el connect o de rechazar el paquete
+	//ACA TENGO QUE PONER la condicion para enviar el connect o de rechazar el paquete*/
 }
 
 void
 DAIPAS::send_connect(nsaddr_t destinoConnect){
-
+	/*
 	printf("###### SE VA A ENVIAR EL CONNECT A: %i\n",destinoConnect );
 	Packet *p = Packet::alloc();
 	struct hdr_cmn *ch = HDR_CMN(p);
 	struct hdr_ip *ih = HDR_IP(p);
 	struct hdr_daipas_connect *conn = HDR_DAIPAS_CONNECT(p);
-
 	// Write Channel Header
 	ch->ptype() = PT_DAIPAS;
 	ch->size() = IP_HDR_LEN + conn->size();
 	ch->addr_type() = NS_AF_NONE;
 	ch->prev_hop_ = index;
-
 	// Write IP Header
 	ih->saddr() = index;
 	ih->daddr() = destinoConnect;
 	ih->sport() = RT_PORT;
 	ih->dport() = RT_PORT;
 	ih->ttl_ = NETWORK_DIAMETER;
-
 	// Write Beacon Header
 	conn->pkt_type = DAIPAS_CONNECT;
 	conn->timestamp = CURRENT_TIME;
@@ -498,18 +519,16 @@ DAIPAS::send_connect(nsaddr_t destinoConnect){
 	conn->remainingPower=0.91;
 	conn->level=nivel;
 	conn->flag=true;
-
 	// increase sequence number for next beacon
 	seqno += 1;
-	Scheduler::instance().schedule(target_, p, 0.0);	
-
+	//double delay = 0.1 + Random::uniform();
+	Scheduler::instance().schedule(target_, p, 0.0);	*/
 }
 
 
-void        
-
+void 
 DAIPAS::recv_connect(Packet *p){
-
+/*
 struct hdr_ip *ih = HDR_IP(p);
 struct hdr_daipas_connect *conn = HDR_DAIPAS_CONNECT(p);
 // I have originated the packet, just drop it
@@ -517,57 +536,94 @@ struct hdr_daipas_connect *conn = HDR_DAIPAS_CONNECT(p);
 		Packet::free(p);
 		return;
 	}
+	if(ih->daddr()!=index){
+		Packet::free(p);
+		return;
+	}
 
-
-
-	//Agregar condicion de que el paquete fuera para el nodo..
-
-
-	
-	nivel=conn->level+1;
-
-
-	u_int8_t	pkt_type;  // type of packet : Beacon or Error
-	double		timestamp; // emission time
-	nsaddr_t	beacon_src;
-	float 		bufferOccupancy; 
-	float 		remainingPower;
-	int 		level;
-	bool 		flag;
-	
-	//Llenar tabla de enrutamiento al sink
 	rt_insert(conn->beacon_src, conn->bufferOccupancy, conn->remainingPower, conn->level ,conn-> flag);
 	
-
 	int routeLevel=300;
-	// Forma de actualizar el nivel.
-	
+	// Forma de actualizar el nivel.	
 	RouteCache *r = rthead.lh_first;
-
   	for( ; r; r = r->rt_link.le_next) {
   		if (r->rt_level < routeLevel)
   		{
+  			printf("Tabla de Vecinos del nodo %i: \n",index);
+  			printf("Vecino: %i\n", r->rt_vecino);
+  			printf("Nivel: %i\n", r->rt_level);
   			routeLevel=r->rt_level;
   		}  	
  	}
-
  	routeLevel=routeLevel-1;
- 	printf("\n \n \n NODO %i Nivel: %i \n\n",index,routeLevel);
-
-	
-
+ 	if (routeLevel==0)
+ 	{
+ 		routeLevel=1;
+ 	}
+ 	printf("\n NODO %i Nivel: %i \n",index,routeLevel);	
 	// Generar HELLO
+	if (primeraVez)
+	{	
+		primeraVez=false;
+		send_hello();
+	}
+	*/
+}
 
-	send_beacon();
+
+void
+DAIPAS::send_hello(){
+
+	/*
+	Packet *p = Packet::alloc();
+	struct hdr_cmn *ch = HDR_CMN(p);
+	struct hdr_ip *ih = HDR_IP(p);
+	struct hdr_daipas_hello *bcn = HDR_DAIPAS_HELLO(p);
+	// Write Channel Header
+	ch->ptype() = PT_DAIPAS;
+	ch->size() = IP_HDR_LEN + bcn->size();
+	ch->addr_type() = NS_AF_NONE;
+	ch->prev_hop_ = index;
+	// Write IP Header
+	ih->saddr() = index;
+	ih->daddr() = IP_BROADCAST;
+	ih->sport() = RT_PORT;
+	ih->dport() = RT_PORT;
+	ih->ttl_ = NETWORK_DIAMETER;
+	// Write Beacon Header
+	bcn->pkt_type = DAIPAS_HELLO;
+	bcn->beacon_hops = 1;
+	bcn->beacon_src = index;
+	printf("ENVIANDO HELLO CON ORIGEN: %i\n", ih->saddr());
+	bcn->timestamp = CURRENT_TIME;
+	// increase sequence number for next beacon
+	//double delay = 0.1 + Random::uniform();
+	Scheduler::instance().schedule(target_, p, 0.0);
+	*/
+
+}
 
 
-
+void 		
+DAIPAS::recv_hello(Packet *p){
+	/*
+	struct hdr_ip *ih = HDR_IP(p);
+	struct hdr_daipas_hello *bcn = HDR_DAIPAS_HELLO(p);
+	//printf("\n \n Se recibio HELLO en nodo %i \n \n \n", index);
+	// I have originated the packet, just drop it
+	if (bcn->beacon_src == index)  {
+		Packet::free(p);
+		return;
+	}
+	printf("SE RECIBIO UN HELLO en nodo %i proveniente del nodo %i \n", index, bcn->beacon_src );
+	//sleep(2);
+	send_ACK(bcn->beacon_src);
+	*/
 }
 
 
 
 /*
-
 void 
 DAIPAS::recv_beacon(Packet *p) {
 	struct hdr_ip *ih = HDR_IP(p);
@@ -639,8 +695,8 @@ DAIPAS::recv_beacon(Packet *p) {
 
 	// TODO : initiate dequeue() routine to send queued packets;
 
-}*/
-
+}
+*/
 
 // ======================================================================
 //  Recv Error Packet
@@ -665,32 +721,30 @@ void
 DAIPAS::rt_insert(nsaddr_t vecino, float buffer, float energia, int nivel, bool bandera ) {
 	RouteCache	*rt = new RouteCache(vecino);
 
-
-
    	rt->rt_vecino=vecino;	// next hop node towards the destionation
     rt->rt_bufferOccupancy=buffer; 
 	rt->rt_remainingPower=energia;
 	rt->rt_level=nivel;
 	rt->rt_flag=bandera;
 
-
 	LIST_INSERT_HEAD(&rthead, rt, rt_link);
+
+	//printf("Se agregó la ruta en el nodo %i.... Vecino: %i \n", index, vecino);
 }
 
 
 
 RouteCache*	
 DAIPAS::rt_lookup(nsaddr_t dst) {
-
-	/*
+	
 	RouteCache *r = rthead.lh_first;
 
   	for( ; r; r = r->rt_link.le_next) {
-		if (r->rt_dst == dst)
+		if (r->rt_vecino == dst)
 			return r;
  	}
 	
-	return NULL;*/
+	return NULL;
 }
 
 void
