@@ -137,16 +137,13 @@ DAIPAS::DAIPAS(nsaddr_t id) : Agent(PT_DAIPAS), bcnTimer(this), rtcTimer(this) {
 	index = id;
 	seqno = 1;
 	nivel=300; //Se inicializa con un nivel muy alto
-	 MobileNode *iNode;
-	 iEnergy=0.0;
-
+	MobileNode *iNode;
+	iEnergy=0.0;
 	LIST_INIT(&rthead);
-	//posx = 0;
-	//posy = 0;
-
 	logtarget = 0;
 	ifqueue = 0;
 	primeraVez=true;
+	turnoVecino=1;
 }
 
 // ======================================================================
@@ -211,7 +208,7 @@ DAIPAS::send_beacon() { //SEND HELLO
 	bcn->beacon_src = index;
 	bcn->timestamp = CURRENT_TIME;
 	bcn->bufferOccupancy=ocupacion*100/20;
-	bcn->remainingPower=100-(iEnergy*100/3.9);
+	bcn->remainingPower=iEnergy*100/3.9;
 	bcn->flag=true;
 
 
@@ -259,7 +256,7 @@ DAIPAS::forward(Packet *p, nsaddr_t nexthop, double delay) {
 		ch->direction() = hdr_cmn::DOWN; 
 	}
 	
-	//Scheduler::instance().schedule(target_, p, delay);
+	Scheduler::instance().schedule(target_, p, delay);
 
 
 }
@@ -280,25 +277,20 @@ struct hdr_ip *ih = HDR_IP(p);
 		recv_daipas(p);
 		return;
 	}
-
 	//  Must be a packet I'm originating
 	if((ih->saddr() == index) && (ch->num_forwards() == 0)) {
- 	
-		// Add the IP Header. TCP adds the IP header too, so to avoid setting it twice, 
+ 			// Add the IP Header. TCP adds the IP header too, so to avoid setting it twice, 
 		// we check if  this packet is not a TCP or ACK segment.
-
 		if (ch->ptype() != PT_TCP && ch->ptype() != PT_ACK) {
 			ch->size() += IP_HDR_LEN;
 		}
 
 	}
-
 	// I received a packet that I sent.  Probably routing loop.
 	else if(ih->saddr() == index) {
    		drop(p, DROP_RTR_ROUTE_LOOP);
 		return;
 	}
-
 	//  Packet I'm forwarding...
 	else {
 		if(--ih->ttl_ == 0) {
@@ -325,11 +317,17 @@ DAIPAS::recv_data(Packet *p) {
 	//ch->xmit_failure_ = rt_failed_callback;
 	//ch->xmit_failure_data_ = (void*) this;
 
-#ifdef DEBUG
-	printf("R (%.6f): recv data by %d  \n", CURRENT_TIME, index);
-#endif 
 
-	rt = rt_lookup(ih->daddr());
+	//printf("R (%.6f): recv data by %d  \n", CURRENT_TIME, index);
+
+
+	//Revisar el nivel del nodo.
+	// Buscar el vecino con nivel más bajo.
+	// enviarle el paquete al nodo vecino con nivel más bajo.
+
+
+	rt=rt_buscarVecino();
+	//rt = rt_lookup(ih->daddr());
 
 	// There is no route for the destination
 	if (rt == NULL) {
@@ -344,10 +342,12 @@ DAIPAS::recv_data(Packet *p) {
 	// OJO ACA CAMILO.. ACTUALIZAR LA FUNCION FORWARD:
 	// ***************************************************************************************************
 	// ***************************************************************************************************
-	/*
-	else if (rt->rt_state != ROUTE_FAILED) {
-		forward(p, rt->rt_nexthop, 0.0);
-	}*/
+	
+	else if (rt->rt_flag) {
+
+		//printf("En el nodo %i se realizo forward a %i\n",index, rt->rt_vecino);
+		forward(p, rt->rt_vecino, 0.0);
+	}
 	
 	// if the route has failed, wait to be updated;
 	else {
@@ -436,8 +436,6 @@ DAIPAS::recv_beacon(Packet *p) {
  	printf("NODO %i Nivel: %i \n",index,nivel);	
 
  	send_beacon();
-
-
 }
 
 void
@@ -733,6 +731,66 @@ DAIPAS::rt_insert(nsaddr_t vecino, float buffer, float energia, int nivel, bool 
 }
 
 
+RouteCache* 
+DAIPAS::rt_buscarVecino(){
+
+	RouteCache *r = rthead.lh_first;
+	int contadorVecinos=0;
+
+	//Contar cuantos vecinos de más bajo nivel existen:
+  	for( ; r; r = r->rt_link.le_next) {
+		if (r->rt_level < nivel){
+			contadorVecinos+=1;
+		}
+ 	}
+
+ 	//printf("HAY %i vecinos menosres en el nodo %i \n", contadorVecinos, index);
+ 	// Si hay mas de dos vecinos con menor nivel se utiliza Round Robin
+ 	if (contadorVecinos ==0)
+ 	{
+ 		//printf("\n \n \n \n ERROR TERRIBLE... NO HAY VECINOS CON MENOR NIVEL en el nodo %i \n \n \n \n", index);
+ 	}
+
+ 	if (contadorVecinos ==1){
+	 	RouteCache *ra = rthead.lh_first;
+	  	for( ; ra; ra = ra->rt_link.le_next) {
+			if (ra->rt_level < nivel){
+				//printf("SE ENCONTRO UN VECINO A ENVIAR\n");
+				return ra;
+			}
+	 	}	
+ 	}
+
+ 	if (contadorVecinos > 1){
+ 	
+	 	int contadorAnalizado=1;
+	 	if (turnoVecino>contadorVecinos)
+	 						turnoVecino=1; 	
+
+	 	RouteCache *rb = rthead.lh_first;
+		  	for( ; rb; rb = rb->rt_link.le_next) {
+				if (rb->rt_level < nivel)
+				{
+					if (contadorAnalizado==turnoVecino)
+					{
+						turnoVecino+=1;
+						//printf("SE ENCONTRO UN VECINO A ENVIAR TURNO %i\n", turnoVecino-1);
+						return rb;
+					} else{
+						contadorAnalizado+=1;
+					}				
+				}
+		 	}	
+
+ 	}
+
+
+	return NULL;
+
+
+
+}
+
 
 RouteCache*	
 DAIPAS::rt_lookup(nsaddr_t dst) {
@@ -742,8 +800,7 @@ DAIPAS::rt_lookup(nsaddr_t dst) {
   	for( ; r; r = r->rt_link.le_next) {
 		if (r->rt_vecino == dst)
 			return r;
- 	}
-	
+ 	}	
 	return NULL;
 }
 

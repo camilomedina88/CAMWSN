@@ -1253,41 +1253,50 @@ CMUTrace::format_daipas(Packet *p, int offset)
 
         	if(pt_->tagged()){
         		sprintf(pt_->buffer()+offset,
-        			"daipas:t %x -daipas:h %d -daipas:d %d -daipas:s %d"
-        			"daipas:px %d -daipas:py %d -daipas:ts %f"
+        			"daipas:t %x -daipas:l %i -daipas:f %d -daipas:s %d"
+        			"daipas:b %f daipas:e %f -daipas:ts %f"
         			"-daipas:c BEACON",
         			wb->pkt_type,
-        			wb->beacon_hops,
-        			wb->beacon_id,
+        			wb->level,
+        			wb->flag,
         			wb->beacon_src,
-        			wb->beacon_posx,
-        			wb->beacon_posy,
+        			wb->bufferOccupancy,
+        			wb->remainingPower,
         			wb->timestamp);
+
+    //u_int8_t	pkt_type;  // type of packet : Beacon or Error
+	//double		timestamp; // emission time
+	//nsaddr_t	beacon_src;
+	//float 		bufferOccupancy; 
+	//float 		remainingPower;
+	//int 		level;
+	//bool 		flag;
+
 
 
         	}
         	else if (newtrace_)
         	{
         		sprintf(pt_->buffer()+offset,
-        			"-P daipas-pt 0x%x -Ph %d -Pb %d -Ps %d -Ppx %d -Ppy %d -Pts %f -Pc BEACON",
+        			"-P daipas-pt 0x%x -Pl %i -Pf %d -Ps %d -Pb %f -Pe %f -Pts %f -Pc BEACON",
         			wb->pkt_type,
-        			wb->beacon_hops,
-        			wb->beacon_id,
+        			wb->level,
+        			wb->flag,
         			wb->beacon_src,
-        			wb->beacon_posx,
-        			wb->beacon_posy,
+        			wb->bufferOccupancy,
+        			wb->remainingPower,
         			wb->timestamp);
         	} else {
  
                 sprintf(pt_->buffer() + offset,
-                          "[0x%x %d %d [%d %d] [%d %f]] (BEACON)",
-                          wb->pkt_type,
-                          wb->beacon_hops,
-                          wb->beacon_id,
-                          wb->beacon_src,
-                          wb->beacon_posx,
-                          wb->beacon_posy,
-                          wb->timestamp);
+                          "[0x%x %i %d [%d %f] [%f %f]] (BEACON)",
+		        			wb->pkt_type,
+		        			wb->level,
+		        			wb->flag,
+		        			wb->beacon_src,
+		        			wb->bufferOccupancy,
+		        			wb->remainingPower,
+		        			wb->timestamp);
             }
             
             break;

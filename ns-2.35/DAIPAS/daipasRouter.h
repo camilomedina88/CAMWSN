@@ -113,6 +113,7 @@ class DAIPAS : public Agent {
 	nsaddr_t	index;     // node address (identifier)
 	nsaddr_t	seqno;     // beacon sequence number (used only when agent is sink)
 	int nivel;
+	int turnoVecino;
 
 	// Node Location
 	//uint32_t	posx;       // position x;
@@ -123,6 +124,8 @@ class DAIPAS : public Agent {
 	void		rt_remove(RouteCache *rt);
 	void		rt_purge();
 	RouteCache*	rt_lookup(nsaddr_t dst);
+	RouteCache* rt_buscarVecino();
+
 	bool primeraVez;
 
 	double iEnergy;
