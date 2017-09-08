@@ -636,7 +636,7 @@ struct hdr_cmn {
 	int	iface_;		// receiving interface (label)
 	dir_t	direction_;	// direction: 0=none, 1=up, -1=down
 	// source routing 
-        char src_rt_valid;
+    char src_rt_valid;
 	double ts_arr_; // Required by Marker of JOBS 
 
 	//Monarch extn begins
@@ -681,6 +681,7 @@ struct hdr_cmn {
 	inline packet_t& ptype() { return (ptype_); }
 	inline int& size() { return (size_); }
 	inline int& uid() { return (uid_); }
+	nsaddr_t& prev_hop() { return (prev_hop_);}
 	inline int& error() { return error_; }
 	inline int& errbitcnt() {return errbitcnt_; }
 	inline int& fecsize() {return fecsize_; }

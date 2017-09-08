@@ -154,6 +154,14 @@ struct hdr_daipas_ack {
 	
 	u_int8_t	pkt_type;  // type of packet : Beacon or Error
 	double		timestamp; // emission time 
+	int nodeId;
+	bool nextPacket;
+	float 		bufferOccupancy; 
+	float 		remainingPower;
+	int 		level;
+	bool 		flag;
+
+
 
 	inline int size() {
 		int sz = 0;

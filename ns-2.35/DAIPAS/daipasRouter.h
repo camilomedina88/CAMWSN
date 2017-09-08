@@ -78,19 +78,19 @@ class RouteCache {
  protected:
 	LIST_ENTRY(RouteCache) rt_link;
 	
-	//nsaddr_t        rt_dst;		// route destination
-    
+	//nsaddr_t        rt_dst;		// route destination    
 	//u_int32_t		rt_xpos;	// x position of destination;
 	//u_int32_t		rt_ypos;	// y position of destination;
 	//u_int8_t		rt_state;	// state of the route: FRESH, EXPIRED, FAILED (BROKEN)
 	//u_int8_t		rt_hopcount;    // number of hops up to the destination (sink)
     //double          rt_expire; 	// when route expires : Now + DEFAULT_ROUTE_EXPIRE
-    u_int32_t       rt_seqno;	// route sequence number
+    //u_int32_t       rt_seqno;	// route sequence number
     nsaddr_t		rt_vecino;	// next hop node towards the destionation
     double 		rt_bufferOccupancy; 
 	double		rt_remainingPower;
 	int 		rt_level;
 	bool 		rt_flag;
+	int 		rt_prioridad;
 
 };
 LIST_HEAD(daipas_rtcache, RouteCache);
@@ -114,6 +114,7 @@ class DAIPAS : public Agent {
 	nsaddr_t	seqno;     // beacon sequence number (used only when agent is sink)
 	int nivel;
 	int turnoVecino;
+	bool softStage;
 
 	// Node Location
 	//uint32_t	posx;       // position x;
@@ -124,7 +125,9 @@ class DAIPAS : public Agent {
 	void		rt_remove(RouteCache *rt);
 	void		rt_purge();
 	RouteCache*	rt_lookup(nsaddr_t dst);
-	RouteCache* rt_buscarVecino();
+	RouteCache* rt_buscarVecino(Packet *p);
+
+	int estadisticasVecinos [15][2];
 
 	bool primeraVez;
 

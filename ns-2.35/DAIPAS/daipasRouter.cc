@@ -30,6 +30,9 @@
 #include <cmu-trace.h>
 #include <energy-model.h>
 #include <unistd.h>
+#include <cmath> 
+#include <iostream>
+#include <algorithm>
 
 #define max(a,b)        ( (a) > (b) ? (a) : (b) )
 #define CURRENT_TIME    Scheduler::instance().clock()
@@ -144,6 +147,20 @@ DAIPAS::DAIPAS(nsaddr_t id) : Agent(PT_DAIPAS), bcnTimer(this), rtcTimer(this) {
 	ifqueue = 0;
 	primeraVez=true;
 	turnoVecino=1;
+	softStage=false;
+
+
+	//Lenar la matriz de Estadisticas de vecinos.
+	for (int i = 0; i < 15; i++){
+		for (int j = 0; j < 2; j++){
+			if (j==1){
+				estadisticasVecinos [i][j]=0;
+			}else{
+				estadisticasVecinos [i][j]=200;
+			}
+		}	
+	}
+
 }
 
 // ======================================================================
@@ -248,6 +265,7 @@ DAIPAS::forward(Packet *p, nsaddr_t nexthop, double delay) {
 		ch->prev_hop_ = index;
 		ch->addr_type() = NS_AF_INET;
 		ch->direction() = hdr_cmn::DOWN;
+
 	}
 	else {
 		assert(ih->daddr() == (nsaddr_t) IP_BROADCAST);
@@ -311,22 +329,12 @@ struct hdr_ip *ih = HDR_IP(p);
 void 
 DAIPAS::recv_data(Packet *p) {
 	struct hdr_ip *ih = HDR_IP(p);
+	struct hdr_cmn *ch = HDR_CMN(p);
 	RouteCache *rt;
 	
-	// if route fails at link layer, (link layer could not find next hop node) it will cal rt_failed_callback function
-	//ch->xmit_failure_ = rt_failed_callback;
-	//ch->xmit_failure_data_ = (void*) this;
-
-
 	//printf("R (%.6f): recv data by %d  \n", CURRENT_TIME, index);
 
-
-	//Revisar el nivel del nodo.
-	// Buscar el vecino con nivel más bajo.
-	// enviarle el paquete al nodo vecino con nivel más bajo.
-
-
-	rt=rt_buscarVecino();
+	rt=rt_buscarVecino(p);
 	//rt = rt_lookup(ih->daddr());
 
 	// There is no route for the destination
@@ -336,18 +344,42 @@ DAIPAS::recv_data(Packet *p) {
 	}
 
 	// if the route is not failed forward it;
-
-	// ***************************************************************************************************
-	// ***************************************************************************************************
-	// OJO ACA CAMILO.. ACTUALIZAR LA FUNCION FORWARD:
-	// ***************************************************************************************************
-	// ***************************************************************************************************
 	
 	else if (rt->rt_flag) {
-
 		//printf("En el nodo %i se realizo forward a %i\n",index, rt->rt_vecino);
 		forward(p, rt->rt_vecino, 0.0);
+
 	}
+
+
+	
+
+	// Llenar la tabla con las estadisticas de los vecinos.
+
+	// si hay un solo flujo, no hacer nada.
+	// Si hay mas de un flujo:
+			// Soft stage = true
+			// Revisar esa tabla y ver de cuales vecinos se han recibido menos paquetes.
+			// Invocar el metodo SendACK llenando los campos necesarios a los vecinos necesarios.
+			// SendAck(direccion vecino, y ver si esta en soft stage)
+
+	// recibir ACK debe tener.
+
+		//Extraer la informacion de las cabeceras.
+		//Revisar la tabla de vecinos y verificar si es posible cambiar la ruta.
+		//Evaluar si es necesario agregar un nuevo campo en la tabla de enrutamiento sobre la prioridad de la ruta.
+
+
+	
+
+
+
+
+
+
+
+
+
 	
 	// if the route has failed, wait to be updated;
 	else {
@@ -439,9 +471,13 @@ DAIPAS::recv_beacon(Packet *p) {
 }
 
 void
-DAIPAS::send_ACK(nsaddr_t sink){
+DAIPAS::send_ACK(nsaddr_t vecino){
 
-	/*
+	iNode=(MobileNode *)(Node::get_node_by_address(index));
+	iEnergy=iNode->energy_model()->energy();
+	double ocupacion=ifqueue->length();
+
+	//Crear paquete
 	Packet *p = Packet::alloc();
 	struct hdr_cmn *ch = HDR_CMN(p);
 	struct hdr_ip *ih = HDR_IP(p);
@@ -453,24 +489,28 @@ DAIPAS::send_ACK(nsaddr_t sink){
 	ch->prev_hop_ = index;
 	// Write IP Header
 	ih->saddr() = index;
-	ih->daddr() = sink;
+	ih->daddr() = vecino;
 	ih->sport() = RT_PORT;
 	ih->dport() = RT_PORT;
 	ih->ttl_ = NETWORK_DIAMETER;
-	// Write Beacon Header
-	ack->pkt_type = DAIPAS_ACK;
-	ack->timestamp = CURRENT_TIME;
-	// increase sequence number for next beacon
-	seqno += 1;
+	// Write ACK Header
+	ack->pkt_type=DAIPAS_ACK;
+	ack->timestamp=CURRENT_TIME;
+	ack->nodeId=index;
+	ack->nextPacket=false;
+	ack->bufferOccupancy=ocupacion*100/20;
+	ack->remainingPower=iEnergy*100/3.9;
+	ack->level=nivel;
+	ack->flag=true;
 	double delay = 0.1 + Random::uniform();
 	Scheduler::instance().schedule(target_, p, delay);
-	printf("El nodo: %i envia un ACK \n", index);*/
+	printf("El nodo: %i envia un ACK al nodo %i \n", index,vecino);
+
 }
 
 void        
 DAIPAS::recv_ack(Packet *p){
-	/*
-printf("********* UJUUUUU SE RECIBIO ACK *******\n");
+	
 struct hdr_ip *ih = HDR_IP(p);
 struct hdr_daipas_ack *ack = HDR_DAIPAS_ACK(p);
 
@@ -481,13 +521,23 @@ struct hdr_daipas_ack *ack = HDR_DAIPAS_ACK(p);
 	}
 
 	if(ih->daddr()== index ){
-		printf("ESTOY EN EL NODO %i RECIBIENDO ACK de %i \n",index,ih->saddr() );
-		send_connect(ih->saddr());
+		//Actualizar la tabla de vecinos con la nueva información del nodo.
+		RouteCache *r = rthead.lh_first;
+	  	for( ; r; r = r->rt_link.le_next) {
+	  		if (r->rt_vecino==ih->saddr()){
+	  			r->rt_bufferOccupancy=ack->bufferOccupancy; 
+				r->rt_remainingPower=ack->remainingPower;
+				r->rt_level=ack->level;
+				r->rt_flag=ack->flag;
+				//Disminuir la prioridad de esta ruta.
+				rt->rt_prioridad=rt->rt_prioridad-1;
+			}
+	 	}
 	}else{
 		Packet::free(p);
 		return;
 	}
-	//ACA TENGO QUE PONER la condicion para enviar el connect o de rechazar el paquete*/
+
 }
 
 void
@@ -724,6 +774,7 @@ DAIPAS::rt_insert(nsaddr_t vecino, float buffer, float energia, int nivel, bool 
 	rt->rt_remainingPower=energia;
 	rt->rt_level=nivel;
 	rt->rt_flag=bandera;
+	rt->rt_prioridad=500;
 
 	LIST_INSERT_HEAD(&rthead, rt, rt_link);
 
@@ -732,17 +783,110 @@ DAIPAS::rt_insert(nsaddr_t vecino, float buffer, float energia, int nivel, bool 
 
 
 RouteCache* 
-DAIPAS::rt_buscarVecino(){
+DAIPAS::rt_buscarVecino(Packet *p){
+	struct hdr_ip *ih = HDR_IP(p);
+	struct hdr_cmn *ch = HDR_CMN(p);
 
+
+	//Revisar que el vecino este agregado. si no esta. se agrega
+	RouteCache	*rt = rt_lookup(ch->prev_hop());
+	if (rt == NULL)  {
+		rt_insert(ch->prev_hop(), 0.0, 0.0, 40, true);
+	}
+
+
+	//Contar cuantos vecinos de más bajo nivel existen para enviar el paquete por esos vecinos:
 	RouteCache *r = rthead.lh_first;
-	int contadorVecinos=0;
-
-	//Contar cuantos vecinos de más bajo nivel existen:
+	int contadorVecinos=0;	
   	for( ; r; r = r->rt_link.le_next) {
 		if (r->rt_level < nivel){
 			contadorVecinos+=1;
 		}
  	}
+	
+	// Llenar las estadisticas de flujos para soft stage
+	int i=0;
+	RouteCache *rz = rthead.lh_first;
+	for(  ; rz; rz = rz->rt_link.le_next) {
+		estadisticasVecinos[i][0]= rz->rt_vecino;	
+		i++;
+ 	}
+ 	for(int i=0;i<15;i++){
+		//printf("En el nodo %i, se recibio un paquete Salto previo %i\n",index, ch->prev_hop() );
+			if(estadisticasVecinos[i][0]==ch->prev_hop()){					
+				estadisticasVecinos[i][1]+=1;
+			}			
+	}
+
+
+	// Solo para imprimir
+	/*
+	printf(" Vecinos del Nodo:%i\n", index );
+	for (int row=0; row<15; row++){
+   		for(int columns=0; columns<2; columns++){
+       		printf("%d     ", estadisticasVecinos[row][columns]);
+       	}
+   	printf("\n");
+	}
+	*/
+
+	//Contar cuantos flujos activos hay
+	i=0;
+	int cantidadFlujos=0;
+	RouteCache *rq = rthead.lh_first;
+	for(  ; rq; rq = rq->rt_link.le_next) {
+		if (estadisticasVecinos[i][0]!=0){
+			if(estadisticasVecinos[i][1] > 10){
+				cantidadFlujos+=1;
+			} 	
+		}		
+		i++;
+ 	}
+
+ 	if (cantidadFlujos>1)	softStage=true;
+ 	
+
+ 	if (softStage)
+ 	{
+ 		//Se ordena la matriz estadisticasVecinos de mayor a menor
+		for (int i = 1; i < 15; ++i){
+			for (int j = i; j > 0 &&  (estadisticasVecinos[j][1] > estadisticasVecinos[j-1][1])  ; --j){
+				std::swap(estadisticasVecinos[j][0], estadisticasVecinos[j-1][0]);
+				std::swap(estadisticasVecinos[j][1], estadisticasVecinos[j-1][1]);
+			}
+		}
+		// Recorrer la matriz de estadisticas, y generar el ACK para todos menos para el primero o el sink.
+		for (int i = 1; i < 15; ++i){
+			if (estadisticasVecinos[i][0]!=0 && estadisticasVecinos[i][1]>10)
+			{
+				send_ACK(estadisticasVecinos[i][0]);
+				estadisticasVecinos[i][1]=0;
+				softStage=false;
+
+			}
+		}
+ 	}
+ 	
+ 	
+	// recibir ACK debe tener.
+
+		//Extraer la informacion de las cabeceras. (Check)
+		//Revisar la tabla de vecinos y verificar si es posible cambiar la ruta.
+		//Evaluar si es necesario agregar un nuevo campo en la tabla de enrutamiento sobre la prioridad de la ruta.
+
+/*
+ 	printf(" ######## Nodo:%i\n", index );
+ 	for (int row=0; row<15; row++)
+{
+    for(int columns=0; columns<2; columns++)
+        {
+         printf("%d     ", estadisticasVecinos[row][columns]);
+        }
+    printf("\n");
+ }
+
+*/
+
 
  	//printf("HAY %i vecinos menosres en el nodo %i \n", contadorVecinos, index);
  	// Si hay mas de dos vecinos con menor nivel se utiliza Round Robin
@@ -774,7 +918,6 @@ DAIPAS::rt_buscarVecino(){
 					if (contadorAnalizado==turnoVecino)
 					{
 						turnoVecino+=1;
-						//printf("SE ENCONTRO UN VECINO A ENVIAR TURNO %i\n", turnoVecino-1);
 						return rb;
 					} else{
 						contadorAnalizado+=1;
