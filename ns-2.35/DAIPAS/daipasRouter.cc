@@ -1,28 +1,11 @@
-/* 
- * Copyright (c) 2010, Elmurod A. Talipov, Yonsei University
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * 1. Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the following disclaimer.
- * 2. Redistributions in binary form must reproduce the above copyright notice,
- * this list of conditions and the following disclaimer in the documentation
- * and/or other materials provided with the distribution.
- * 3. The name of the author may not be used to endorse or promote products
- * derived from this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
- * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
- * IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
- * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
- * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
- * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
- * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
- * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- *
- */
+/*
+###################################################
+#         Congestion Control WSN               	  #
+#     Camilo ALejandro Medina Mondragón           #
+#   medina.camilo@javeriana.edu.co            	  #
+###################################################
+
+*/
 
 #include <DAIPAS/daipasRouter.h>
 #include <DAIPAS/daipas_packet.h>
@@ -148,6 +131,7 @@ DAIPAS::DAIPAS(nsaddr_t id) : Agent(PT_DAIPAS), bcnTimer(this), rtcTimer(this) {
 	primeraVez=true;
 	turnoVecino=1;
 	softStage=false;
+	hardStage=false;
 
 
 	//Lenar la matriz de Estadisticas de vecinos.
@@ -352,35 +336,7 @@ DAIPAS::recv_data(Packet *p) {
 	}
 
 
-	
-
-	// Llenar la tabla con las estadisticas de los vecinos.
-
-	// si hay un solo flujo, no hacer nada.
-	// Si hay mas de un flujo:
-			// Soft stage = true
-			// Revisar esa tabla y ver de cuales vecinos se han recibido menos paquetes.
-			// Invocar el metodo SendACK llenando los campos necesarios a los vecinos necesarios.
-			// SendAck(direccion vecino, y ver si esta en soft stage)
-
-	// recibir ACK debe tener.
-
-		//Extraer la informacion de las cabeceras.
-		//Revisar la tabla de vecinos y verificar si es posible cambiar la ruta.
-		//Evaluar si es necesario agregar un nuevo campo en la tabla de enrutamiento sobre la prioridad de la ruta.
-
-
-	
-
-
-
-
-
-
-
-
-
-	
+		
 	// if the route has failed, wait to be updated;
 	else {
 		//TODO: queue the packet and wait for the route construction;
@@ -501,10 +457,10 @@ DAIPAS::send_ACK(nsaddr_t vecino){
 	ack->bufferOccupancy=ocupacion*100/20;
 	ack->remainingPower=iEnergy*100/3.9;
 	ack->level=nivel;
-	ack->flag=true;
+	ack->flag=(!hardStage);
 	double delay = 0.1 + Random::uniform();
 	Scheduler::instance().schedule(target_, p, delay);
-	printf("El nodo: %i envia un ACK al nodo %i \n", index,vecino);
+	//printf("El nodo: %i envia un ACK al nodo %i \n", index,vecino);
 
 }
 
@@ -530,7 +486,7 @@ struct hdr_daipas_ack *ack = HDR_DAIPAS_ACK(p);
 				r->rt_level=ack->level;
 				r->rt_flag=ack->flag;
 				//Disminuir la prioridad de esta ruta.
-				rt->rt_prioridad=rt->rt_prioridad-1;
+				r->rt_prioridad=r->rt_prioridad-1;
 			}
 	 	}
 	}else{
@@ -786,14 +742,11 @@ RouteCache*
 DAIPAS::rt_buscarVecino(Packet *p){
 	struct hdr_ip *ih = HDR_IP(p);
 	struct hdr_cmn *ch = HDR_CMN(p);
-
-
 	//Revisar que el vecino este agregado. si no esta. se agrega
 	RouteCache	*rt = rt_lookup(ch->prev_hop());
 	if (rt == NULL)  {
 		rt_insert(ch->prev_hop(), 0.0, 0.0, 40, true);
 	}
-
 
 	//Contar cuantos vecinos de más bajo nivel existen para enviar el paquete por esos vecinos:
 	RouteCache *r = rthead.lh_first;
@@ -830,7 +783,7 @@ DAIPAS::rt_buscarVecino(Packet *p){
 	}
 	*/
 
-	//Contar cuantos flujos activos hay
+	// ######################### SOFT STAGE ###################################
 	i=0;
 	int cantidadFlujos=0;
 	RouteCache *rq = rthead.lh_first;
@@ -866,14 +819,68 @@ DAIPAS::rt_buscarVecino(Packet *p){
 			}
 		}
  	}
- 	
- 	
-	// recibir ACK debe tener.
 
-		//Extraer la informacion de las cabeceras. (Check)
-		//Revisar la tabla de vecinos y verificar si es posible cambiar la ruta.
-		//Evaluar si es necesario agregar un nuevo campo en la tabla de enrutamiento sobre la prioridad de la ruta.
+ 	// ########################################################################
+ 	// ######################### HARD STAGE ###################################
+ 	// ########################################################################
 
+
+ 	bool previo=hardStage;
+ 	//printf("Nodo %i Previo esta %i\n",index, previo);
+
+ 	// Revisar el buffer. Si supera un umbral, HardStage=true
+	double ocupacion=ifqueue->length();
+	if (ocupacion>14){
+		//printf("Nodo %i Supero el buffer\n", index);
+		hardStage=true;
+	}	
+			
+
+ 	// Revisar la energia. Si esta baja, HardStage=true
+ 	iNode=(MobileNode *)(Node::get_node_by_address(index));
+	iEnergy=iNode->energy_model()->energy();
+	if (iEnergy*(100/3.9) < 25 ){
+		//printf("Nivel Energia\n");
+		hardStage=true;
+	}
+	
+
+ 	// Revisar los vecinos, si todos estan en HardStage, entonces HardStage=true
+	RouteCache *rp = rthead.lh_first;
+	int vecinosNoDisponibles=0;
+	for(  ; rp; rp = rp->rt_link.le_next) {
+		if (rp->rt_level < nivel){
+			if (rp->rt_flag==false){
+				vecinosNoDisponibles+=1;
+			}
+		}
+ 	}
+
+ 	if(vecinosNoDisponibles>=contadorVecinos){
+ 		hardStage=true;
+ 		//printf("Nodo %i no tiene Vecinos disponibles\n",index);
+ 	}
+
+ 	if (ocupacion<=14 && iEnergy*(100/3.9) >=25 && vecinosNoDisponibles<contadorVecinos)
+ 	{
+ 		//printf("El nodo %i esta OK\n", index);
+ 		hardStage=false;
+ 	}
+
+ 	if (index==0)
+ 		hardStage=false;
+
+ 			
+ 	//printf("Nodo %i Actual esta %i\n", index,hardStage);
+ 	// Si HardStage=true. Enviar ACK a todos los vecinos.
+ 	if (hardStage !=previo){
+ 		//printf("\n \n # \n ## \n ### \n ############# Nodo %i cambio de estado a %i \n", index,hardStage); 		
+ 		RouteCache *rl = rthead.lh_first;
+ 		for(  ; rl; rl = rl->rt_link.le_next) {
+				send_ACK(rl->rt_vecino);		
+ 		}
+ 	}
+ 		
 /*
  	printf(" ######## Nodo:%i\n", index );
  	for (int row=0; row<15; row++)
@@ -888,42 +895,78 @@ DAIPAS::rt_buscarVecino(Packet *p){
 */
 
 
- 	//printf("HAY %i vecinos menosres en el nodo %i \n", contadorVecinos, index);
- 	// Si hay mas de dos vecinos con menor nivel se utiliza Round Robin
- 	if (contadorVecinos ==0)
- 	{
- 		//printf("\n \n \n \n ERROR TERRIBLE... NO HAY VECINOS CON MENOR NIVEL en el nodo %i \n \n \n \n", index);
- 	}
-
+	// Si hay mas de dos vecinos con menor nivel se utiliza Round Robin
  	if (contadorVecinos ==1){
 	 	RouteCache *ra = rthead.lh_first;
 	  	for( ; ra; ra = ra->rt_link.le_next) {
 			if (ra->rt_level < nivel){
-				//printf("SE ENCONTRO UN VECINO A ENVIAR\n");
 				return ra;
 			}
 	 	}	
  	}
 
- 	if (contadorVecinos > 1){
- 	
-	 	int contadorAnalizado=1;
-	 	if (turnoVecino>contadorVecinos)
-	 						turnoVecino=1; 	
+ 	if (contadorVecinos > 1){	 	
+ 		// Revisar las prioridades de las rutas, si todas son iguales entonces pasar a round robin.
+ 		int tablaPrioridades[contadorVecinos][2];
+ 		RouteCache *ry = rthead.lh_first;
+ 		int entradaAnalizada=0;
+ 		int maximaPrioridad=0;
+ 		for( ; ry; ry = ry->rt_link.le_next) {
+ 			if (ry->rt_level < nivel){
+ 				tablaPrioridades[entradaAnalizada][0]=ry->rt_vecino;
+ 				tablaPrioridades[entradaAnalizada][1]=ry->rt_prioridad;
+ 				if (maximaPrioridad<ry->rt_prioridad) 
+ 						maximaPrioridad=ry->rt_prioridad; 				
+ 				entradaAnalizada+=1;
+ 			}
+ 		}
 
-	 	RouteCache *rb = rthead.lh_first;
-		  	for( ; rb; rb = rb->rt_link.le_next) {
-				if (rb->rt_level < nivel)
-				{
-					if (contadorAnalizado==turnoVecino)
-					{
-						turnoVecino+=1;
-						return rb;
-					} else{
-						contadorAnalizado+=1;
-					}				
-				}
-		 	}	
+		// Solo para imprimir
+
+		//printf("===== NODO %i n", index);
+		/*
+		
+		printf("Prioridades de nodos menores\n" );
+		for (int row=0; row<contadorVecinos; row++){
+	   		for(int columns=0; columns<2; columns++){
+	       		printf("%d     ", tablaPrioridades[row][columns]);
+	       	}
+	   	printf("\n");
+		}*/
+	
+
+ 		int nextRoute[entradaAnalizada];
+ 		int cantidadRutas=0;
+
+ 		for (int i = 0; i < entradaAnalizada; i++){
+ 			if (tablaPrioridades[i][1]==maximaPrioridad){
+ 				nextRoute[cantidadRutas]=tablaPrioridades[i][0];
+ 				cantidadRutas+=1;
+ 			}
+ 		}
+
+/*
+ 		printf("Con los que se hara Round Robin\n");
+		for (int row=0; row<entradaAnalizada; row++){
+	   			printf("%d     ", nextRoute[row]);
+	       		printf("\n");
+		}*/
+	
+		//printf("Cantidad de rutas en round robin %i\n",cantidadRutas );
+
+	 	int contadorAnalizado=1;
+	 	if (turnoVecino>cantidadRutas)
+	 						turnoVecino=1;
+
+
+	 	for (int i = 0; i < entradaAnalizada; i++){
+	 		if (turnoVecino==i+1){
+	 			//printf("Se envia el paquete al %i vecino \n", turnoVecino);
+	 			turnoVecino+=1;
+	 			return rt_lookup(nextRoute[i]);
+	 		}
+	 	}
+
 
  	}
 
