@@ -1,28 +1,30 @@
 ###################################################
-#        	Congestion Control WSN                #
+#        	Congestion Control WSN                  #
 #     Camilo ALejandro Medina Mondragón           #
-#		medina.camilo@javeriana.edu.co            #
+#		medina.camilo@javeriana.edu.co                #
 ###################################################
 
 #=====================================================================
 #     Simulation parameters setup
 #=====================================================================
 
+#set congestion  NONE
+#set congestion  ECODA
+set congestion  DAIPAS
+#set congestion  FUSION
+#set congestion  CAM
+#set topologiaRed MALLA
+#set topologiaRed ESTRELLA
+set topologiaRed ARBOL
+
 set val(chan)           Channel/WirelessChannel    ;# Channel Type
 set val(prop)           Propagation/TwoRayGround   ;# radio-propagation model
 set val(netif)          Phy/WirelessPhy/802_15_4
 set val(mac)            Mac/802_15_4
-#set val(ifq)            Queue/DropTail/PriQueue
-set val(ifq)            Queue/DropTail
-#set val(ifq)            Queue/Ecoda                ;# interface queue type
 set val(ll)             LL                         ;# link layer type
 set val(ant)            Antenna/OmniAntenna        ;# antenna model
 set val(ifqlen)         20                         ;# max packet in ifq
 set val(nn)             101                         ;# number of mobilenodes
-#set val(rp)             AODV                      ;# routing protocol
-#set val(rp)             ECODA                      ;# routing protocol
-set val(rp)             DAIPAS                      ;# routing protocol
-
 set val(x)				      150                         ;#Casi 4 canchas de futbol
 set val(y)				      150
 set val(energy) 		    "EnergyModel" 
@@ -30,11 +32,32 @@ set val(initialEnergy)	3.9                        ;#Calculado para pila AA
 set val(rxPower)		    0.020
 set vak(txPower)		    0.010
 set val(sensePower)		  0.035
-#set val(nam)			output//output/congestion.nam
-set val(nam)			/output/congestion.nam
-set val(traffic)		poisson                        ;# cbr/poisson/ftp
+set val(nam)			      /output/congestion.nam
+set val(traffic)		    poisson                        ;# cbr/poisson/ftp
 
+if {$congestion == "NONE"} {
+  set val(rp)             AODV                      ;# routing protocol
+  set val(ifq)            Queue/DropTail/PriQueue   ;# interface queue type
+}
 
+if {$congestion == "ECODA"} {
+  set val(ifq)            Queue/Ecoda                ;# interface queue type
+  set val(rp)             ECODA                      ;# routing protocol  
+}
+
+if {$congestion == "DAIPAS"} {
+  set val(rp)             DAIPAS                      ;# routing protocol
+  set val(ifq)            Queue/DropTail              ;# interface queue type  
+}
+
+if {$congestion == "FUSION"} {
+  set val(rp)             DSDV                      ;# routing protocol
+  set val(ifq)            Queue/DropTail              ;# interface queue type
+  
+}
+
+if {$congestion == "CAM"} {  
+}
 
 #===================================================================================================
 #        Initialization        
@@ -93,7 +116,9 @@ set dist(40m) 1.20174e-07
 set dist(50m) 3.98107e-10
 
 #Potencia de transmisión 1 dBm segun Sky Mote
+
 Phy/WirelessPhy set Pt_ 0.001 
+
 #Carrier sense threshold (W) SkyMote: Receiver sensitivity -64 dBm
 Phy/WirelessPhy set CSThresh_ $dist(50m)
 #receive power threshold (W) SkyMote: Receiver sensitivity -64 dBm
@@ -108,7 +133,6 @@ $topo load_flatgrid $val(x) $val(y)
 set god_ [create-god $val(nn)]
 
 set chan_1_ [new $val(chan)]
-
 
 
 #===================================================================================================
@@ -151,8 +175,22 @@ for {set i 0} {$i < $val(nn) } {incr i} {
 ## LOADING SCENARIO
 
 
-source ./Scenario/malla4.scn
-source ./Scenario/NodesInit
+source ./Scenario/malla.scn
+if {$topologiaRed == "MALLA"} {
+source ./Scenario/NodesInitMalla
+}
+
+
+if {$topologiaRed == "ESTRELLA"} {
+source ./Scenario/NodesInitEstrella
+}
+
+
+if {$topologiaRed == "ARBOL"} {
+source ./Scenario/NodesInitArbol
+}
+
+
 
 #if {
 #    $vbl == 1
