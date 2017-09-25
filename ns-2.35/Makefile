@@ -339,6 +339,7 @@ OBJ_CC = \
 	ECODA/ecodaQueue.o\
 	ECODA/ecodaRouter.o\
 	DAIPAS/daipasRouter.o\
+	FUSION/fusion.o\
 	$(OBJ_STL)
 
 

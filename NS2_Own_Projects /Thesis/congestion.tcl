@@ -13,9 +13,9 @@
 set congestion  DAIPAS
 #set congestion  FUSION
 #set congestion  CAM
-#set topologiaRed MALLA
+set topologiaRed MALLA
 #set topologiaRed ESTRELLA
-set topologiaRed ARBOL
+#set topologiaRed ARBOL
 
 set val(chan)           Channel/WirelessChannel    ;# Channel Type
 set val(prop)           Propagation/TwoRayGround   ;# radio-propagation model
@@ -51,8 +51,9 @@ if {$congestion == "DAIPAS"} {
 }
 
 if {$congestion == "FUSION"} {
-  set val(rp)             DSDV                      ;# routing protocol
+  set val(rp)             WFRP                        ;# routing protocol
   set val(ifq)            Queue/DropTail              ;# interface queue type
+  #set val(ll)             Fusion                      ;# Indica que se va a usar Fusion
   
 }
 
@@ -213,6 +214,10 @@ if {$val(rp) == "WFRP"} {
   $ns_ at 1.0 "[$node_(0) set ragent_] sink"
 }
 
+if {$val(rp) == "FUSION"} {
+  $ns_ at 1.0 "[$node_(0) set ragent_] sink"
+}
+
 
 Mac/802_15_4 wpanNam PlaybackRate 3ms
 
@@ -254,9 +259,12 @@ proc poissontraffic { src dst interval starttime } {
    set null($dst) [new Agent/Null]
    eval $ns_ attach-agent \$node_($dst) \$null($dst)
    set expl($src) [new Application/Traffic/Exponential]
-   eval \$expl($src) set packetSize_ 70
-   eval \$expl($src) set burst_time_ 0
-   eval \$expl($src) set idle_time_ [expr $interval*1000.0-70.0*8/250]ms	;# idle_time + pkt_tx_time = interval
+   eval \$expl($src) set packetSize_ 70 ; #bytes
+   eval \$expl($src) set burst_time_ 10ms
+   eval \$expl($src) set idle_time_ 990ms
+
+   #eval \$expl($src) set burst_time_ 0
+   #eval \$expl($src) set idle_time_ [expr $interval*1000.0-70.0*8/250]ms	;# idle_time + pkt_tx_time = interval
    eval \$expl($src) set rate_ 250k
    eval \$expl($src) attach-agent \$udp($src)
    eval $ns_ connect \$udp($src) \$null($dst)
@@ -297,13 +305,6 @@ if { ("$val(traffic)" == "cbr") || ("$val(traffic)" == "poisson") } {
    $val(traffic)traffic 84 0 0.2 375
    $val(traffic)traffic 61 0 0.2 390
 
-
- 
-   
-
-
-
-
    $ns_ at $appTime1 "$node_(0) add-mark m1 blue circle"
    #$ns_ at $appTime1 "$node_(6) add-mark m2 blue circle"
    #$ns_ at $appTime1 "$ns_ trace-annotate \"(at $appTime1) $val(traffic) traffic from node 1 to node 6\""
@@ -318,9 +319,6 @@ if { ("$val(traffic)" == "cbr") || ("$val(traffic)" == "poisson") } {
    } else {
    	set pktType exp
    }
- 
- 
-
 }
 
 proc ftptraffic { src dst starttime } {
@@ -383,9 +381,6 @@ if { "$val(traffic)" == "ftp" } {
    Mac/802_15_4 wpanNam FlowClr -p MAC -c navy
  
 }
-
-
-
 
 
 #===================================================================================================

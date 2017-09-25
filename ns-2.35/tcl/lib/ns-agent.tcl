@@ -222,3 +222,11 @@ Agent/DAIPAS instproc init args {
  
 Agent/DAIPAS set sport_   0
 Agent/DAIPAS set dport_   0
+
+
+Agent/FUSION instproc init args {
+  $self next $args
+}
+ 
+Agent/FUSION set sport_   0
+Agent/FUSION set dport_   0

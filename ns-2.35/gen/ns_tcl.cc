@@ -1168,6 +1168,11 @@ if {$daipasonly != -1 } {\n\
 $agent if-queue [$self set ifq_(0)]   ;# ifq between LL and MAC\n\
 }\n\
 \n\
+set fusiononly [string first \"FUSION\" [$agent info class]]\n\
+if {$fusiononly != -1 } {\n\
+$agent if-queue [$self set ifq_(0)]   ;# ifq between LL and MAC\n\
+}\n\
+\n\
 \n\
 \n\
 if { $port == [Node set rtagent_port_] } {			\n\
@@ -1297,19 +1302,31 @@ set netif_($t)	[new $iftype]		;# interface\n\
 set mac_($t)	[new $mactype]		;# mac layer\n\
 \n\
 \n\
-if {$qtype == \"Queue/Ecoda\"} {\n\
 \n\
+\n\
+if {$qtype == \"Queue/Ecoda\"} {\n\
 set ifq_($t) [new $qtype [$self id]]\n\
 \n\
 } else {\n\
 set ifq_($t)	[new $qtype]		;# interface queue\n\
 }\n\
 \n\
-\n\
-\n\
-\n\
-\n\
+if {$lltype == \"Fusion\"} {\n\
+set lltypeB Fusion\n\
+puts \"SE FUSION EN TCL\"\n\
+set congestion_($t) [new Fusion]\n\
+set lltype LL\n\
 set ll_($t)	[new $lltype]		;# link layer\n\
+} else {\n\
+set lltype LL\n\
+set ll_($t)	[new $lltype]		;# link layer\n\
+set lltypeB LL\n\
+}\n\
+\n\
+\n\
+\n\
+\n\
+\n\
 set ant_($t)    [new $anttype]\n\
 \n\
 $ns mac-type $mactype\n\
@@ -1361,7 +1378,18 @@ $drpT namattach $namfp\n\
 }\n\
 $ll arptable $arptable_\n\
 $ll mac $mac\n\
+\n\
+\n\
+\n\
+if {$lltypeB == \"Fusion\"} {\n\
+$ll down-target $lltypeB\n\
+$lltypeB down-target $ifq\n\
+\n\
+} else {\n\
 $ll down-target $ifq\n\
+}\n\
+\n\
+\n\
 \n\
 if {$imepflag == \"ON\" } {\n\
 $imep recvtarget [$self entry]\n\
@@ -3473,6 +3501,7 @@ Mac 	# network wireless stack\n\
 WFRP 	# WFRP patch\n\
 ECODA 	# ECODA patch\n\
 DAIPAS 	# DAIPAS patch\n\
+FUSION 	# FUSION patch\n\
 \n\
 AODV 	# routing protocol for ad-hoc networks\n\
 Diffusion 	# diffusion/diffusion.cc\n\
@@ -3484,6 +3513,8 @@ MDART 	# routing protocol for ad-hoc networks\n\
 AOMDV\n\
 ECODA 	#ECODA\n\
 DAIPAS 	#DAIPAS\n\
+FUSION 	#FUSIN\n\
+\n\
 Encap 	# common/encap.cc\n\
 IPinIP 	# IP encapsulation \n\
 HDLC 	# High Level Data Link Control\n\
@@ -4353,6 +4384,14 @@ $self next $args\n\
 \n\
 Agent/DAIPAS set sport_   0\n\
 Agent/DAIPAS set dport_   0\n\
+\n\
+\n\
+Agent/FUSION instproc init args {\n\
+$self next $args\n\
+}\n\
+\n\
+Agent/FUSION set sport_   0\n\
+Agent/FUSION set dport_   0\n\
 \n\
 RouteLogic instproc register {proto args} {\n\
 $self instvar rtprotos_ node_rtprotos_ default_node_rtprotos_\n\
@@ -21234,6 +21273,10 @@ DAIPAS {\n\
 set ragent [$self create-daipas-agent $node]\n\
 }\n\
 \n\
+FUSION {\n\
+set ragent [$self create-fusion-agent $node]\n\
+}\n\
+\n\
 AOMDV {\n\
 set ragent [$self create-aomdv-agent $node]\n\
 }\n\
@@ -21456,6 +21499,13 @@ return $ragent\n\
 \n\
 Simulator instproc create-daipas-agent { node } {\n\
 set ragent [new Agent/DAIPAS [$node node-addr]]\n\
+$self at 0.0 \"$ragent start\"\n\
+$node set ragent_ $ragent\n\
+return $ragent\n\
+}\n\
+\n\
+Simulator instproc create-fusion-agent { node } {\n\
+set ragent [new Agent/FUSION [$node node-addr]]\n\
 $self at 0.0 \"$ragent start\"\n\
 $node set ragent_ $ragent\n\
 return $ragent\n\

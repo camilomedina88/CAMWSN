@@ -157,11 +157,12 @@ private:
 	void    format_sctp(Packet *p, int offset);
 	void	format_rtp(Packet *p, int offset);
 	void	format_tora(Packet *p, int offset);
-        void    format_imep(Packet *p, int offset);
-        void    format_aodv(Packet *p, int offset);
-        void    format_wfrp(Packet *p, int offset);
-        void    format_ecoda(Packet *p, int offset);
-        void    format_daipas(Packet *p, int offset);
+    void    format_imep(Packet *p, int offset);
+    void    format_aodv(Packet *p, int offset);
+    void    format_wfrp(Packet *p, int offset);
+    void    format_ecoda(Packet *p, int offset);
+    void    format_daipas(Packet *p, int offset);
+    void    format_fusion(Packet *p, int offset);
 	void    format_aomdv(Packet *p, int offset);
 	void    format_mdart(Packet *p, int offset);
 	

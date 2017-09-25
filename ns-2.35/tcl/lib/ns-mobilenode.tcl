@@ -218,6 +218,12 @@ Node/MobileNode instproc add-target { agent port } {
   	$agent if-queue [$self set ifq_(0)]   ;# ifq between LL and MAC
 	}
 
+	# Special processing for FUSION
+	set fusiononly [string first "FUSION" [$agent info class]]
+	if {$fusiononly != -1 } {
+  	$agent if-queue [$self set ifq_(0)]   ;# ifq between LL and MAC
+	}
+
 	
 	#<zheng: add>
 	# Special processing for ZBR
@@ -395,9 +401,10 @@ Node/MobileNode instproc add-interface { channel pmodel lltype mactype qtype qle
 	set netif_($t)	[new $iftype]		;# interface
 	set mac_($t)	[new $mactype]		;# mac layer
 
+
+
 	
 	if {$qtype == "Queue/Ecoda"} {
-
 		#puts "SE CREO LA COLA ECODA"
 		set ifq_($t) [new $qtype [$self id]]
 
@@ -405,12 +412,23 @@ Node/MobileNode instproc add-interface { channel pmodel lltype mactype qtype qle
 		set ifq_($t)	[new $qtype]		;# interface queue
 	}
 
-	
-	
+	if {$lltype == "Fusion"} {
+		set lltypeB Fusion
+		puts "SE FUSION EN TCL"
+		set congestion_($t) [new Fusion]
+		set lltype LL
+		set ll_($t)	[new $lltype]		;# link layer
+	} else {
+		set lltype LL
+		set ll_($t)	[new $lltype]		;# link layer
+		set lltypeB LL
+	}
 
 
-	set ll_($t)	[new $lltype]		;# link layer
-        set ant_($t)    [new $anttype]
+
+
+	
+    set ant_($t)    [new $anttype]
 
 	$ns mac-type $mactype
 	set inerr_($t) ""
@@ -472,8 +490,19 @@ Node/MobileNode instproc add-interface { channel pmodel lltype mactype qtype qle
 	#
 	$ll arptable $arptable_
 	$ll mac $mac
-	$ll down-target $ifq
 
+
+
+	if {$lltypeB == "Fusion"} {
+		$ll down-target $lltypeB
+		$lltypeB down-target $ifq
+
+	} else {
+		$ll down-target $ifq
+	}
+
+
+	
 	if {$imepflag == "ON" } {
 		$imep recvtarget [$self entry]
 		$imep sendtarget $ll

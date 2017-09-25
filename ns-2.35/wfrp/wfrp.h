@@ -89,7 +89,7 @@ LIST_HEAD(wfrp_rtcache, RouteCache);
 
 
 // ======================================================================
-//  WFRP Routing Agent : the routing protocol
+//  wfrp Routing Agent : the routing protocol
 // ======================================================================
 
 class WFRP : public Agent {

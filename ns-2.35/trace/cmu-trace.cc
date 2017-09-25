@@ -51,7 +51,8 @@
 #include <tora/tora_packet.h> //TORA
 #include <wfrp/wfrp_packet.h>  // WFRP 
 #include <ECODA/ecoda_packet.h>  // ECODA 
-#include <DAIPAS/daipas_packet.h>  // DAIPAS 
+#include <DAIPAS/daipas_packet.h>  // DAIPAS
+#include <FUSION/fusion_packet.h>  // FUSION 
 #include <imep/imep_spec.h>         // IMEP
 #include <aodv/aodv_packet.h> //AODV
 #include <aomdv/aomdv_packet.h>
@@ -1322,6 +1323,102 @@ CMUTrace::format_daipas(Packet *p, int offset)
 
     
 }
+
+
+
+// FUSION patch
+
+void
+CMUTrace::format_fusion(Packet *p, int offset)
+{
+    struct hdr_fusion *wh = HDR_FUSION(p);
+    struct hdr_fusion_beacon *wb = HDR_FUSION_BEACON(p);
+    struct hdr_fusion_error  *we = HDR_FUSION_ERROR(p);
+
+    //u_int8_t packeteAnalizado= wh->pkt_type;
+ 
+    switch(wh->pkt_type) {
+   
+        case FUSION_BEACON:
+
+        	if(pt_->tagged()){
+        		sprintf(pt_->buffer()+offset,
+        			"fusion:t %x -fusion:h %d -fusion:d %d -fusion:s %d"
+        			"fusion:px %d -fusion:py %d -fusion:ts %f"
+        			"-fusion:c BEACON",
+        			wb->pkt_type,
+        			wb->beacon_hops,
+        			wb->beacon_id,
+        			wb->beacon_src,
+        			wb->beacon_posx,
+        			wb->beacon_posy,
+        			wb->timestamp);
+
+
+        	}
+        	else if (newtrace_)
+        	{
+        		sprintf(pt_->buffer()+offset,
+        			"-P fusion -pt 0x%x -Ph %d -Pb %d -Ps %d -Ppx %d -Ppy %d -Pts %f -Pc BEACON",
+        			wb->pkt_type,
+        			wb->beacon_hops,
+        			wb->beacon_id,
+        			wb->beacon_src,
+        			wb->beacon_posx,
+        			wb->beacon_posy,
+        			wb->timestamp);
+        	} else {
+ 
+                sprintf(pt_->buffer() + offset,
+                          "[0x%x %d %d [%d %d] [%d %f]] (BEACON)",
+                          wb->pkt_type,
+                          wb->beacon_hops,
+                          wb->beacon_id,
+                          wb->beacon_src,
+                          wb->beacon_posx,
+                          wb->beacon_posy,
+                          wb->timestamp);
+            }
+            
+            break;
+ 
+        case FUSION_ERROR:
+            // TODO: need to add code
+            break;
+ 
+        default:
+
+
+
+#ifdef WIN32
+            fprintf(stderr,
+                      "CMUTrace::format_fusion: invalid FUSION packet typen");
+#else
+            fprintf(stderr,
+                      "%s: invalid FUSION packet typen", __FUNCTION__);
+#endif
+            abort();
+            
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

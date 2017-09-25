@@ -644,6 +644,10 @@ Simulator instproc create-wireless-node args {
   				set ragent [$self create-daipas-agent $node]
 			}
 
+			FUSION {
+  				set ragent [$self create-fusion-agent $node]
+			}
+
 		    AOMDV {
 			    set ragent [$self create-aomdv-agent $node]
 		    }
@@ -897,6 +901,14 @@ Simulator instproc create-ecoda-agent { node } {
 Simulator instproc create-daipas-agent { node } {
    #set ragent [new Agent/DAIPAS [$node ifq_]]
    set ragent [new Agent/DAIPAS [$node node-addr]]
+   $self at 0.0 "$ragent start"
+   $node set ragent_ $ragent
+   return $ragent
+}
+
+ #  Create FUSION routing agent
+Simulator instproc create-fusion-agent { node } {
+   set ragent [new Agent/FUSION [$node node-addr]]
    $self at 0.0 "$ragent start"
    $node set ragent_ $ragent
    return $ragent

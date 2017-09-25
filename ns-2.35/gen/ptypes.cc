@@ -154,8 +154,10 @@ set ptype(ecoda) 74\n\
 set pvals(74) ECODA\n\
 set ptype(daipas) 75\n\
 set pvals(75) DAIPAS\n\
-set ptype(myheader) 76\n\
-set pvals(76) MyHeader\n\
+set ptype(fusion) 76\n\
+set pvals(76) FUSION\n\
+set ptype(myheader) 77\n\
+set pvals(77) MyHeader\n\
 proc ptype2val {str} {\n\
 global ptype\n\
 set str [string tolower $str]\n\
