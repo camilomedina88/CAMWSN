@@ -222,6 +222,7 @@ Node/MobileNode instproc add-target { agent port } {
 	set fusiononly [string first "FUSION" [$agent info class]]
 	if {$fusiononly != -1 } {
   	$agent if-queue [$self set ifq_(0)]   ;# ifq between LL and MAC
+  	$agent mac [$self set mac_(0)]
 	}
 
 	

@@ -29,6 +29,7 @@
 
 #include <cmu-trace.h>
 #include <priqueue.h>
+#include "mac.h"
 #include <classifier/classifier-port.h>
 
 #define NETWORK_DIAMETER        64
@@ -144,6 +145,9 @@ class FUSION : public Agent {
 
     // Port classifier for passing packets up to agents
     PortClassifier  *dmux_;
+
+    Mac *macLayer;
+    MacState estadoMac;
 
 };
 

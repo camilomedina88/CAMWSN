@@ -428,7 +428,7 @@ DSDV_Agent::makeUpdate(int& periodic)
 	
 {
 	//DEBUG
-	//printf("(%d)-->Making update pkt\n",myaddr_);
+	printf("(%d)-->Making update pkt\n",myaddr_);
 	
   Packet *p = allocpkt ();
   hdr_ip *iph = hdr_ip::access(p);
@@ -441,7 +441,7 @@ DSDV_Agent::makeUpdate(int& periodic)
   int rtbl_sz;			// counts total entries in rt table
   int unadvertiseable;		// number of routes we can't advertise yet
 
-  //printf("Update packet from %d [per=%d]\n", myaddr_, periodic);
+  printf("Update packet from %d [per=%d]\n", myaddr_, periodic);
 
   // The packet we send wants to be broadcast
   hdrc->next_hop_ = IP_BROADCAST;
@@ -462,7 +462,7 @@ DSDV_Agent::makeUpdate(int& periodic)
 
       if (prte->advertise_ok_at > now) unadvertiseable++;
     }
-  //printf("change_count = %d\n",change_count);
+  printf("change_count = %d\n",change_count);
   if (change_count * 3 > rtbl_sz && change_count > 3)
     { // much of the table has changed, just do a periodic update now
       periodic = 1;
@@ -511,8 +511,9 @@ DSDV_Agent::makeUpdate(int& periodic)
      with less than 100+ nodes, an update for all nodes is less than the
      MTU, so don't bother worrying about splitting the update over
      multiple packets -dam 4/26/98 */
-  //assert(rtbl_sz <= (1500 / 12)); ---how about 100++ node topologies
+  assert(rtbl_sz <= (1500 / 12)); //---how about 100++ node topologies
 
+  printf("Alloc DATA %i\n",(change_count * 9) + 1 );
   p->allocdata((change_count * 9) + 1);
   walk = p->accessdata ();
   *(walk++) = change_count;

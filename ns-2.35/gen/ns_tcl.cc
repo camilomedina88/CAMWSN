@@ -1171,6 +1171,7 @@ $agent if-queue [$self set ifq_(0)]   ;# ifq between LL and MAC\n\
 set fusiononly [string first \"FUSION\" [$agent info class]]\n\
 if {$fusiononly != -1 } {\n\
 $agent if-queue [$self set ifq_(0)]   ;# ifq between LL and MAC\n\
+$agent mac [$self set mac_(0)]\n\
 }\n\
 \n\
 \n\

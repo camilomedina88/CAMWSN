@@ -215,6 +215,20 @@ public:
 		return dh->hdr_type();
 	}
 
+
+	int getAddress(){
+		//printf("Estado %s\n", state_);
+		return index_;
+	}
+
+	int getEstado(){
+		return state_;
+	}
+
+
+
+
+
 private:
         void mac_log(Packet *p) {
                 logtarget_->recv(p, (Handler*) 0);

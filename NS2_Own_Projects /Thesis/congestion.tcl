@@ -10,14 +10,14 @@
 
 #set congestion  NONE
 #set congestion  ECODA
-#set congestion  DAIPAS
-set congestion  FUSION
+set congestion  DAIPAS
+#set congestion  FUSION
 #set congestion  CAM
 
 
-#set topologiaRed MALLA
+set topologiaRed MALLA
 #set topologiaRed ESTRELLA
-set topologiaRed ARBOL
+#set topologiaRed ARBOL
 
 set val(chan)           Channel/WirelessChannel    ;# Channel Type
 set val(prop)           Propagation/TwoRayGround   ;# radio-propagation model
@@ -176,7 +176,25 @@ for {set i 0} {$i < $val(nn) } {incr i} {
 ## LOADING SCENARIO
 
 
-source ./Scenario/malla.scn
+#source ./Scenario/malla.scn
+
+for {set i 1} {$i < $val(nn) } { incr i } {
+  $node_($i) set X_ [ expr {$val(x) * rand()} ]
+  $node_($i) set Y_ [ expr {$val(y) * rand()} ]
+  $node_($i) set Z_ 0
+}
+
+ 
+
+# Position of Sink
+$node_(0) set X_ [ expr {$val(x)/2} ]
+$node_(0) set Y_ [ expr {$val(y)/2} ]
+$node_(0) set Z_ 0.0
+$node_(0) label "Sink"
+
+
+
+
 if {$topologiaRed == "MALLA"} {
 source ./Scenario/NodesInitMalla
 }
@@ -358,7 +376,7 @@ if { "$val(traffic)" == "ftp" } {
    $ns_ at $stopTime "$node_(0) delete-mark m1"
    Mac/802_15_4 wpanNam FlowClr -p AODV -c tomato
    Mac/802_15_4 wpanNam FlowClr -p ARP -c green
-   Mac/802_15_4 wpanNam FlowClr -p MAC -c navy
+   #Mac/802_15_4 wpanNam FlowClr -p MAC -c navy
  
 }
 

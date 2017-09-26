@@ -10,11 +10,11 @@ set val(ifq)           Queue/Ecoda      ;# interface queue type
 set val(ll)            LL                           ;# link layer type
 set val(ant)           Antenna/OmniAntenna          ;# antenna model
 set val(ifqlen)        100	         	    ;# max packet in ifq
-set val(nn)            100			    ;# number of mobilenodes
-set val(rp)            WFRP		    ;# protocol tye
+set val(nn)            25			    ;# number of mobilenodes
+set val(rp)            DSDV		    ;# protocol tye
 set val(x)             120			    ;# X dimension of topography
 set val(y)             120			    ;# Y dimension of topography
-set val(stop)          250			    ;# simulation period 
+set val(stop)          1000			    ;# simulation period 
 set val(energymodel)   EnergyModel		    ;# Energy Model
 set val(initialenergy) 100			    ;# value
 
@@ -108,7 +108,11 @@ $mnode_(0) label "Sink"
 #start sending beacon message
 
 # Este es el mensaje que daña AODV
+if {$val(rp) == "WFRP"} {
 $ns at 1.0 "[$mnode_(0) set ragent_] sink"
+
+}
+
 
 
 
@@ -122,7 +126,7 @@ for {set i 0} {$i < $val(nn)} { incr i } {
 
 #Setup a UDP connection
 set udp [new Agent/UDP]
-$ns attach-agent $mnode_(10) $udp
+$ns attach-agent $mnode_(5) $udp
 
 set sink [new Agent/Null]
 $ns attach-agent $mnode_(0) $sink
@@ -164,11 +168,7 @@ $ns at [expr $val(stop) + 0.01] "puts \"end simulation\"; $ns halt"
 
 proc stop {} {
 
-    puts "AQUI VAMOS 66666"
     global ns tracefd namtrace
-
-
-
     $ns flush-trace
     
     close $tracefd

@@ -110,6 +110,18 @@ FUSION::command(int argc, const char*const* argv) {
             return TCL_OK;
         }
 
+
+        else if(strcmp(argv[1], "mac") == 0) {
+            macLayer = (Mac*) TclObject::lookup(argv[2]);
+      
+            if(ifqueue == 0)
+                return TCL_ERROR;
+            return TCL_OK;
+        }
+
+
+
+
         else if (strcmp(argv[1], "port-dmux") == 0) {
             dmux_ = (PortClassifier *)TclObject::lookup(argv[2]);
             if (dmux_ == 0) {
@@ -140,7 +152,8 @@ FUSION::FUSION(nsaddr_t id) : Agent(PT_FUSION), bcnTimer(this), rtcTimer(this) {
     logtarget = 0;
     ifqueue = 0;
 
-    printf("\n HOLA DESDE FUSION CAMI... Nodo: %i\n",index );
+    //printf("\n HOLA DESDE FUSION CAMI... Nodo: %i\n",index );
+     
 
 }
 
@@ -167,7 +180,7 @@ fusionBeaconTimer::handle(Event*) {
 void
 FUSION::send_beacon() {
 
-
+    printf("\n \n MAC: %i\n",  macLayer->getAddress());  
     Packet *p = Packet::alloc();
     struct hdr_cmn *ch = HDR_CMN(p);
     struct hdr_ip *ih = HDR_IP(p);
@@ -226,6 +239,21 @@ FUSION::send_error(nsaddr_t unreachable_destination) {
 
 void 
 FUSION::forward(Packet *p, nsaddr_t nexthop, double delay) {
+
+    estadoMac=macLayer->state();
+
+    if (estadoMac==MAC_SEND)
+    {
+    //     printf("\n Estado IDLE\n");    
+    } else {
+      //  printf("\n NO ESTA------- Estado IDLE\n");
+    }
+
+
+
+
+    //printf("\n \n Nico mira la MAC: %s\n", macLayer->state());
+
     struct hdr_cmn *ch = HDR_CMN(p);
     struct hdr_ip *ih = HDR_IP(p);
 
