@@ -10,9 +10,11 @@
 
 #set congestion  NONE
 #set congestion  ECODA
-set congestion  DAIPAS
-#set congestion  FUSION
+#set congestion  DAIPAS
+set congestion  FUSION
 #set congestion  CAM
+
+
 set topologiaRed MALLA
 #set topologiaRed ESTRELLA
 #set topologiaRed ARBOL
@@ -51,10 +53,8 @@ if {$congestion == "DAIPAS"} {
 }
 
 if {$congestion == "FUSION"} {
-  set val(rp)             WFRP                        ;# routing protocol
+  set val(rp)             FUSION                        ;# routing protocol
   set val(ifq)            Queue/DropTail              ;# interface queue type
-  #set val(ll)             Fusion                      ;# Indica que se va a usar Fusion
-  
 }
 
 if {$congestion == "CAM"} {  
@@ -192,16 +192,6 @@ source ./Scenario/NodesInitArbol
 }
 
 
-
-#if {
-#    $vbl == 1
-#    || $vbl == 2
-#    || $vbl == 3
-#} then {
-#    puts "vbl is one, two or three"
-#}
-
-
 if {$val(rp) == "ECODA"} {
   $ns_ at 1.0 "[$node_(0) set ragent_] sink"
 }
@@ -260,8 +250,8 @@ proc poissontraffic { src dst interval starttime } {
    eval $ns_ attach-agent \$node_($dst) \$null($dst)
    set expl($src) [new Application/Traffic/Exponential]
    eval \$expl($src) set packetSize_ 70 ; #bytes
-   eval \$expl($src) set burst_time_ 10ms
-   eval \$expl($src) set idle_time_ 990ms
+   eval \$expl($src) set burst_time_ 8ms
+   eval \$expl($src) set idle_time_ 992ms
 
    #eval \$expl($src) set burst_time_ 0
    #eval \$expl($src) set idle_time_ [expr $interval*1000.0-70.0*8/250]ms	;# idle_time + pkt_tx_time = interval
@@ -306,11 +296,6 @@ if { ("$val(traffic)" == "cbr") || ("$val(traffic)" == "poisson") } {
    $val(traffic)traffic 61 0 0.2 390
 
    $ns_ at $appTime1 "$node_(0) add-mark m1 blue circle"
-   #$ns_ at $appTime1 "$node_(6) add-mark m2 blue circle"
-   #$ns_ at $appTime1 "$ns_ trace-annotate \"(at $appTime1) $val(traffic) traffic from node 1 to node 6\""
-   #$ns_ at $appTime2 "$node_(4) add-mark m3 green4 circle"
-   #$ns_ at $appTime2 "$node_(10) add-mark m4 green4 circle"
-   #$ns_ at $appTime2 "$ns_ trace-annotate \"(at $appTime2) $val(traffic) traffic from node 4 to node 10\""
    Mac/802_15_4 wpanNam FlowClr -p AODV -c tomato
    Mac/802_15_4 wpanNam FlowClr -p ARP -c green
    Mac/802_15_4 wpanNam FlowClr -p MAC -c navy
@@ -371,11 +356,6 @@ if { "$val(traffic)" == "ftp" } {
 
    $ns_ at $appTime1 "$node_(0) add-mark m1 blue circle"
    $ns_ at $stopTime "$node_(0) delete-mark m1"
-   #$ns_ at $appTime1 "$node_(6) add-mark m2 blue circle"
-   #$ns_ at $appTime1 "$ns_ trace-annotate \"(at $appTime1) ftp traffic from node 1 to node 6\""
-   #$ns_ at $appTime2 "$node_(4) add-mark m3 green4 circle"
-   #$ns_ at $appTime2 "$node_(10) add-mark m4 green4 circle"
-   #$ns_ at $appTime2 "$ns_ trace-annotate \"(at $appTime2) ftp traffic from node 4 to node 10\""
    Mac/802_15_4 wpanNam FlowClr -p AODV -c tomato
    Mac/802_15_4 wpanNam FlowClr -p ARP -c green
    Mac/802_15_4 wpanNam FlowClr -p MAC -c navy

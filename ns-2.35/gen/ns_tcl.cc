@@ -1311,17 +1311,9 @@ set ifq_($t) [new $qtype [$self id]]\n\
 set ifq_($t)	[new $qtype]		;# interface queue\n\
 }\n\
 \n\
-if {$lltype == \"Fusion\"} {\n\
-set lltypeB Fusion\n\
-puts \"SE FUSION EN TCL\"\n\
-set congestion_($t) [new Fusion]\n\
-set lltype LL\n\
+\n\
 set ll_($t)	[new $lltype]		;# link layer\n\
-} else {\n\
-set lltype LL\n\
-set ll_($t)	[new $lltype]		;# link layer\n\
-set lltypeB LL\n\
-}\n\
+\n\
 \n\
 \n\
 \n\
@@ -1377,17 +1369,9 @@ $drpT namattach $namfp\n\
 }\n\
 }\n\
 $ll arptable $arptable_\n\
-$ll mac $mac\n\
-\n\
-\n\
-\n\
-if {$lltypeB == \"Fusion\"} {\n\
-$ll down-target $lltypeB\n\
-$lltypeB down-target $ifq\n\
-\n\
-} else {\n\
+$ll mac $mac	\n\
 $ll down-target $ifq\n\
-}\n\
+\n\
 \n\
 \n\
 \n\

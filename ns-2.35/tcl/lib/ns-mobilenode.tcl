@@ -412,17 +412,9 @@ Node/MobileNode instproc add-interface { channel pmodel lltype mactype qtype qle
 		set ifq_($t)	[new $qtype]		;# interface queue
 	}
 
-	if {$lltype == "Fusion"} {
-		set lltypeB Fusion
-		puts "SE FUSION EN TCL"
-		set congestion_($t) [new Fusion]
-		set lltype LL
-		set ll_($t)	[new $lltype]		;# link layer
-	} else {
-		set lltype LL
-		set ll_($t)	[new $lltype]		;# link layer
-		set lltypeB LL
-	}
+
+	set ll_($t)	[new $lltype]		;# link layer
+
 
 
 
@@ -489,17 +481,9 @@ Node/MobileNode instproc add-interface { channel pmodel lltype mactype qtype qle
 	# Link Layer
 	#
 	$ll arptable $arptable_
-	$ll mac $mac
-
-
-
-	if {$lltypeB == "Fusion"} {
-		$ll down-target $lltypeB
-		$lltypeB down-target $ifq
-
-	} else {
-		$ll down-target $ifq
-	}
+	$ll mac $mac	
+	$ll down-target $ifq
+	
 
 
 	
