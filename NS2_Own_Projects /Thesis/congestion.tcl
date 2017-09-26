@@ -15,9 +15,9 @@ set congestion  FUSION
 #set congestion  CAM
 
 
-set topologiaRed MALLA
+#set topologiaRed MALLA
 #set topologiaRed ESTRELLA
-#set topologiaRed ARBOL
+set topologiaRed ARBOL
 
 set val(chan)           Channel/WirelessChannel    ;# Channel Type
 set val(prop)           Propagation/TwoRayGround   ;# radio-propagation model
