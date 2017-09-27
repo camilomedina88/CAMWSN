@@ -51,8 +51,8 @@ array set n {
 }
 
 set DIMENSION 15 
-set lft 30.0
-set top -500.0
+set lft 0.0
+set top 150.0
 for {set j 0} {$j < $DIMENSION} {incr j} {
 for {set i 0} {$i < $DIMENSION} {incr i} {
 	eval set n_idx \$n(${j}_$i)
@@ -67,3 +67,5 @@ for {set i 0} {$i < $DIMENSION} {incr i} {
 	}
 }
 }
+
+

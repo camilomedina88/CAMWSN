@@ -62,6 +62,7 @@ struct hdr_ip {
 	int		ttl_;
 	int  staticPriority; //Agregado para ECODA
 	float dynamicPriority; //Agregado para ECODA
+	int congestion; // Agregado para Fusion
 	/* Monarch extn */
 // 	u_int16_t	sport_;
 // 	u_int16_t	dport_;

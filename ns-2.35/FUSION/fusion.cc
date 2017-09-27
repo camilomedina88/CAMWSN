@@ -1,27 +1,10 @@
 /* 
- * Copyright (c) 2010, Elmurod A. Talipov, Yonsei University
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * 1. Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the following disclaimer.
- * 2. Redistributions in binary form must reproduce the above copyright notice,
- * this list of conditions and the following disclaimer in the documentation
- * and/or other materials provided with the distribution.
- * 3. The name of the author may not be used to endorse or promote products
- * derived from this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
- * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
- * IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
- * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
- * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
- * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
- * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
- * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- *
+###################################################
+#           Congestion Control WSN                #
+#     Camilo ALejandro Medina Mondragón           #
+#       medina.camilo@javeriana.edu.co            #
+###################################################
+
  */
 
 #include <FUSION/fusion.h>
@@ -75,9 +58,6 @@ FUSION::command(int argc, const char*const* argv) {
         // Start Beacon Timer (which sends beacon message)
         if(strncasecmp(argv[1], "sink", 4) == 0) {
             bcnTimer.handle((Event*) 0);
-#ifdef DEBUG
-        printf("N (%.6f): sink node is set to %d, start beaconing  \n", CURRENT_TIME, index);
-#endif 
             return TCL_OK;
         }
     }
@@ -120,8 +100,6 @@ FUSION::command(int argc, const char*const* argv) {
         }
 
 
-
-
         else if (strcmp(argv[1], "port-dmux") == 0) {
             dmux_ = (PortClassifier *)TclObject::lookup(argv[2]);
             if (dmux_ == 0) {
@@ -143,17 +121,11 @@ FUSION::command(int argc, const char*const* argv) {
 FUSION::FUSION(nsaddr_t id) : Agent(PT_FUSION), bcnTimer(this), rtcTimer(this) {
                
     index = id;
-    seqno = 1;
-
+    seqno = 2;
     LIST_INIT(&rthead);
-    posx = 0;
-    posy = 0;
-
     logtarget = 0;
     ifqueue = 0;
-
-    //printf("\n HOLA DESDE FUSION CAMI... Nodo: %i\n",index );
-     
+    congestionado=false;   
 
 }
 
@@ -180,7 +152,7 @@ fusionBeaconTimer::handle(Event*) {
 void
 FUSION::send_beacon() {
 
-    printf("\n \n MAC: %i\n",  macLayer->getAddress());  
+    //printf("\n \n MAC: %i\n",  macLayer->getAddress());  
     Packet *p = Packet::alloc();
     struct hdr_cmn *ch = HDR_CMN(p);
     struct hdr_ip *ih = HDR_IP(p);
@@ -204,33 +176,14 @@ FUSION::send_beacon() {
     bcn->beacon_hops = 1;
     bcn->beacon_id = seqno;
     bcn->beacon_src = index;
-    
-    // update the node position before putting it in the packet
-    update_position();
-
-    bcn->beacon_posx = posx;
-    bcn->beacon_posy = posy;
-
     bcn->timestamp = CURRENT_TIME;
 
     // increase sequence number for next beacon
-    seqno += 1;
+    seqno += 2;
 
-#ifdef DEBUG
-    printf("S (%.6f): send beacon by %d  \n", CURRENT_TIME, index);
-#endif 
     Scheduler::instance().schedule(target_, p, 0.0);
 
 }
-
-// ======================================================================
-//  Send Error Routine
-// ======================================================================
-void 
-FUSION::send_error(nsaddr_t unreachable_destination) {
-    // TODO : code should be update;
-}
-
 
 
 // ======================================================================
@@ -248,11 +201,6 @@ FUSION::forward(Packet *p, nsaddr_t nexthop, double delay) {
     } else {
       //  printf("\n NO ESTA------- Estado IDLE\n");
     }
-
-
-
-
-    //printf("\n \n Nico mira la MAC: %s\n", macLayer->state());
 
     struct hdr_cmn *ch = HDR_CMN(p);
     struct hdr_ip *ih = HDR_IP(p);
@@ -275,7 +223,6 @@ FUSION::forward(Packet *p, nsaddr_t nexthop, double delay) {
     }
     
     Scheduler::instance().schedule(target_, p, delay);
-    //printf("FORWARD EN fusion\n");
 
 }
 
@@ -289,6 +236,20 @@ FUSION::recv(Packet *p, Handler*) {
 struct hdr_cmn *ch = HDR_CMN(p);
 struct hdr_ip *ih = HDR_IP(p);
 
+//printf("En nodo %i...Paquete de %i, siguiente salto %i . Destino: %i \n", index, ih->saddr(), ch->next_hop_,ih->daddr());
+
+    // Analizar si el paquete recibido esta congestionado. Si lo esta, hacer Hop by hop.
+
+
+    double ocupacion=ifqueue->length();
+    if (ocupacion > (0.75 * ifqueue->limit())){
+        congestionado=true;
+        //printf("Nodo: %i congestionado\n", index);
+    }
+    // Hacerlo en rcv_fusion y en forward
+
+    // Analizar la congestion, y agregar el bit de congestión en el paquete IP.
+
     // if the packet is routing protocol control packet, give the packet to agent
     if(ch->ptype() == PT_FUSION) {
         ih->ttl_ -= 1;
@@ -297,15 +258,12 @@ struct hdr_ip *ih = HDR_IP(p);
     }
 
     //  Must be a packet I'm originating
-    if((ih->saddr() == index) && (ch->num_forwards() == 0)) {
-    
+    if((ih->saddr() == index) && (ch->num_forwards() == 0)) {    
         // Add the IP Header. TCP adds the IP header too, so to avoid setting it twice, 
         // we check if  this packet is not a TCP or ACK segment.
-
         if (ch->ptype() != PT_TCP && ch->ptype() != PT_ACK) {
             ch->size() += IP_HDR_LEN;
         }
-
     }
 
     // I received a packet that I sent.  Probably routing loop.
@@ -340,18 +298,12 @@ FUSION::recv_data(Packet *p) {
     //ch->xmit_failure_ = rt_failed_callback;
     //ch->xmit_failure_data_ = (void*) this;
 
-#ifdef DEBUG
-    printf("R (%.6f): recv data by %d  \n", CURRENT_TIME, index);
-#endif 
-
     rt = rt_lookup(ih->daddr());
-
     // There is no route for the destination
     if (rt == NULL) {
     // TODO: queue the packet and wait for the route construction
         return ;
     }
-
     // if the route is not failed forward it;
     else if (rt->rt_state != ROUTE_FAILED) {
         forward(p, rt->rt_nexthop, 0.0);
@@ -400,73 +352,72 @@ void
 FUSION::recv_beacon(Packet *p) {
     struct hdr_ip *ih = HDR_IP(p);
     struct hdr_fusion_beacon *bcn = HDR_FUSION_BEACON(p);
-    
+    double now = CURRENT_TIME;    
     // I have originated the packet, just drop it
     if (bcn->beacon_src == index)  {
         Packet::free(p);
         return;
     }
-
-#ifdef DEBUG
-    printf("R (%.6f): recv beacon by %d, src:%d, seqno:%d, hop: %d \n", 
-        CURRENT_TIME, index, bcn->beacon_src, bcn->beacon_id, bcn->beacon_hops);
-#endif 
-    
     // search for a route 
-    RouteCache  *rt = rt_lookup(bcn->beacon_src);
-    
+    RouteCache  *rt = rt_lookup(bcn->beacon_src);    
     // if there is no route toward this destination, insert the route and forward
     if (rt == NULL)  {
-        rt_insert(bcn->beacon_src,bcn->beacon_id, ih->saddr(), bcn->beacon_posx, bcn->beacon_posy, bcn->beacon_hops);
-
+        rt_insert(bcn->beacon_src,bcn->beacon_id, ih->saddr(), bcn->beacon_hops);
         ih->saddr() = index;        
         bcn->beacon_hops +=1; // increase hop count
-
         double delay = 0.1 + Random::uniform();
-
-#ifdef DEBUG
-    printf("F (%.6f): NEW ROUTE, forward beacon by %d \n", CURRENT_TIME, index);
-#endif 
-
         forward(p, IP_BROADCAST, delay);
     }
     // if the route is newer than I have (i.e. new beacon is received): update the route and forward
     else if (bcn->beacon_id > rt->rt_seqno) {
-    
+        //printf("Expiración: %0.2f , Actual: %0.2f\n", rt->rt_expire,now);
+        //  the routing information is not necessarily advertised immediately,
+        // if only the sequence numbers have been change
+        bool cambioSignificativo=false;        
+        if(rt->rt_nexthop != ih->saddr() || rt->rt_hopcount != bcn->beacon_hops){
+            cambioSignificativo=true;
+        }
         rt->rt_seqno = bcn->beacon_id;
         rt->rt_nexthop = ih->saddr();
-        rt->rt_xpos = bcn->beacon_posx;
-        rt->rt_ypos = bcn->beacon_posy;
         rt->rt_state = ROUTE_FRESH;
         rt->rt_hopcount = bcn->beacon_hops;
-        rt->rt_expire = CURRENT_TIME + DEFAULT_ROUTE_EXPIRE;
-        
+        rt->rt_expire = CURRENT_TIME + DEFAULT_ROUTE_EXPIRE;        
         ih->saddr() = index;
         bcn->beacon_hops +=1; // increase hop count
-
         double delay = 0.1 + Random::uniform();
-
-#ifdef DEBUG
-        printf("F (%.6f): UPDATE ROUTE, forward beacon by %d \n", CURRENT_TIME, index);
-#endif 
-        forward(p, IP_BROADCAST, delay);
+        if (cambioSignificativo){
+            //printf("\n \n \n Cambio significativo\n");
+            double delay = 0.1 + Random::uniform();
+            forward(p, IP_BROADCAST, delay);
+        } 
     }
     // if the route is shorter than I have, update it
     else if ((bcn->beacon_id == rt->rt_seqno) && (bcn->beacon_hops < rt->rt_hopcount )) {
-
+        //printf("Expiración: %0.2f , Actual: %0.2f\n", rt->rt_expire,now);
         rt->rt_seqno = bcn->beacon_id;
         rt->rt_nexthop = ih->saddr();
-        rt->rt_xpos = bcn->beacon_posx;
-        rt->rt_ypos = bcn->beacon_posy;
         rt->rt_state = ROUTE_FRESH;
         rt->rt_hopcount = bcn->beacon_hops;
         rt->rt_expire = CURRENT_TIME + DEFAULT_ROUTE_EXPIRE;
     }
+    // Si ya paso el tiempo de expiracion del nodo
+/*
+    else if (rt->rt_expire <= now){
+        printf("Expiración: %0.2f , Actual: %0.2f\n", rt->rt_expire,now);
+        printf("\n Entro AQUIIIIIIIIII\n");
+        rt->rt_seqno = bcn->beacon_id;
+        rt->rt_nexthop = ih->saddr();
+        rt->rt_state = ROUTE_FRESH;
+        rt->rt_hopcount = bcn->beacon_hops;
+        rt->rt_expire = CURRENT_TIME + DEFAULT_ROUTE_EXPIRE;        
+        ih->saddr() = index;
+        bcn->beacon_hops +=1; // increase hop count
+        double delay = 0.1 + Random::uniform();
+        forward(p, IP_BROADCAST, delay);
 
+    }*/
     // TODO : initiate dequeue() routine to send queued packets;
-
 }
-
 
 // ======================================================================
 //  Recv Error Packet
@@ -482,22 +433,14 @@ FUSION::recv_error(Packet *p) {
 //  Routing Management
 // ======================================================================
 
-/* static void
-FUSION::rt_failed_callback(Packet *p, void *arg) {
-
-}*/
 
 void
-FUSION::rt_insert(nsaddr_t src, u_int32_t id, nsaddr_t nexthop, u_int32_t xpos, u_int32_t ypos, u_int8_t hopcount) {
+FUSION::rt_insert(nsaddr_t src, u_int32_t id, nsaddr_t nexthop, u_int8_t hopcount) {
     RouteCache  *rt = new RouteCache(src, id);
-
     rt->rt_nexthop = nexthop;
-    rt->rt_xpos = xpos;
-    rt->rt_ypos = ypos;
     rt->rt_state = ROUTE_FRESH;
     rt->rt_hopcount = hopcount;
     rt->rt_expire = CURRENT_TIME + DEFAULT_ROUTE_EXPIRE;
-
     LIST_INSERT_HEAD(&rthead, rt, rt_link);
 }
 
@@ -506,12 +449,10 @@ FUSION::rt_insert(nsaddr_t src, u_int32_t id, nsaddr_t nexthop, u_int32_t xpos, 
 RouteCache* 
 FUSION::rt_lookup(nsaddr_t dst) {
     RouteCache *r = rthead.lh_first;
-
     for( ; r; r = r->rt_link.le_next) {
         if (r->rt_dst == dst)
             return r;
-    }
-    
+    }    
     return NULL;
 }
 
@@ -529,11 +470,5 @@ FUSION::rt_purge() {
 void
 FUSION::rt_remove(RouteCache *rt) {
     LIST_REMOVE(rt,rt_link);
-}
-
-
-void 
-FUSION::update_position() {
-    //TODO: we have to update node position
 }
 

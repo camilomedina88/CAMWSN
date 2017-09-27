@@ -1326,6 +1326,11 @@ CMUTrace::format_daipas(Packet *p, int offset)
 
 
 
+
+
+
+
+
 // FUSION patch
 
 void
@@ -1344,14 +1349,13 @@ CMUTrace::format_fusion(Packet *p, int offset)
         	if(pt_->tagged()){
         		sprintf(pt_->buffer()+offset,
         			"fusion:t %x -fusion:h %d -fusion:d %d -fusion:s %d"
-        			"fusion:px %d -fusion:py %d -fusion:ts %f"
-        			"-fusion:c BEACON",
+        			"-fusion:ts %f -fusion:c BEACON",
         			wb->pkt_type,
         			wb->beacon_hops,
         			wb->beacon_id,
         			wb->beacon_src,
-        			wb->beacon_posx,
-        			wb->beacon_posy,
+        			//wb->beacon_posx,
+        			//wb->beacon_posy,
         			wb->timestamp);
 
 
@@ -1359,24 +1363,24 @@ CMUTrace::format_fusion(Packet *p, int offset)
         	else if (newtrace_)
         	{
         		sprintf(pt_->buffer()+offset,
-        			"-P fusion -pt 0x%x -Ph %d -Pb %d -Ps %d -Ppx %d -Ppy %d -Pts %f -Pc BEACON",
+        			"-P fusion -pt 0x%x -Ph %d -Pb %d -Ps %d -Pts %f -Pc BEACON",
         			wb->pkt_type,
         			wb->beacon_hops,
         			wb->beacon_id,
         			wb->beacon_src,
-        			wb->beacon_posx,
-        			wb->beacon_posy,
+        			//wb->beacon_posx,
+        			//wb->beacon_posy,
         			wb->timestamp);
         	} else {
  
                 sprintf(pt_->buffer() + offset,
-                          "[0x%x %d %d [%d %d] [%d %f]] (BEACON)",
+                          "[0x%x %d %d [%d] [%f]] (BEACON)",
                           wb->pkt_type,
                           wb->beacon_hops,
                           wb->beacon_id,
                           wb->beacon_src,
-                          wb->beacon_posx,
-                          wb->beacon_posy,
+                          //wb->beacon_posx,
+                          //wb->beacon_posy,
                           wb->timestamp);
             }
             
@@ -1403,15 +1407,6 @@ CMUTrace::format_fusion(Packet *p, int offset)
 
     
 }
-
-
-
-
-
-
-
-
-
 
 
 
