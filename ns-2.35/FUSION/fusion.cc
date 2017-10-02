@@ -12,6 +12,7 @@
 #include <random.h>
 #include <cmu-trace.h>
 #include <energy-model.h>
+#include <stdlib.h>  
 
 #define max(a,b)        ( (a) > (b) ? (a) : (b) )
 #define CURRENT_TIME    Scheduler::instance().clock()
@@ -21,6 +22,8 @@
 // ======================================================================
 //  TCL Hooking Classes
 // ======================================================================
+
+bool cambioEstado;
 
 int hdr_fusion::offset_;
 static class FUSIONHeaderClass : public PacketHeaderClass {
@@ -93,8 +96,9 @@ FUSION::command(int argc, const char*const* argv) {
 
         else if(strcmp(argv[1], "mac") == 0) {
             macLayer = (Mac*) TclObject::lookup(argv[2]);
+            sensadoTimer.handle((Event*) 0);
       
-            if(ifqueue == 0)
+            if(macLayer == 0)
                 return TCL_ERROR;
             return TCL_OK;
         }
@@ -118,14 +122,18 @@ FUSION::command(int argc, const char*const* argv) {
 //  Agent Constructor
 // ======================================================================
 
-FUSION::FUSION(nsaddr_t id) : Agent(PT_FUSION), bcnTimer(this), rtcTimer(this) {
+FUSION::FUSION(nsaddr_t id) : Agent(PT_FUSION), bcnTimer(this), rtcTimer(this), sensadoTimer(this) {
                
     index = id;
     seqno = 2;
     LIST_INIT(&rthead);
     logtarget = 0;
     ifqueue = 0;
-    congestionado=false;   
+    congestionado=false;
+    vecesSensado=0;
+    channelBusy=0;
+    cambioEstado=false; 
+    //primeraVezSensado=true;  
 
 }
 
@@ -145,6 +153,12 @@ fusionBeaconTimer::handle(Event*) {
     Scheduler::instance().schedule(this, &intr, DEFAULT_BEACON_INTERVAL);
 }
 
+void
+fusionSensadoMACTimer::handle(Event*) {
+    agent->sensadoMAC();
+    Scheduler::instance().schedule(this, &intr, DEFAULT_SENSADO_INTERVAL);
+}
+
 
 // ======================================================================
 //  Send Beacon Routine
@@ -152,6 +166,8 @@ fusionBeaconTimer::handle(Event*) {
 void
 FUSION::send_beacon() {
 
+
+    //printf("\n ESTOY ENVIANDO UN BEACON\n");
     //printf("\n \n MAC: %i\n",  macLayer->getAddress());  
     Packet *p = Packet::alloc();
     struct hdr_cmn *ch = HDR_CMN(p);
@@ -193,13 +209,9 @@ FUSION::send_beacon() {
 void 
 FUSION::forward(Packet *p, nsaddr_t nexthop, double delay) {
 
-    estadoMac=macLayer->state();
-
-    if (estadoMac==MAC_SEND)
-    {
-    //     printf("\n Estado IDLE\n");    
-    } else {
-      //  printf("\n NO ESTA------- Estado IDLE\n");
+    if (cambioEstado)
+    {        // Crear el paquete tipo FUSION algo, broadcast...
+        send_congestionBit();
     }
 
     struct hdr_cmn *ch = HDR_CMN(p);
@@ -226,6 +238,49 @@ FUSION::forward(Packet *p, nsaddr_t nexthop, double delay) {
 
 }
 
+void 
+FUSION::send_congestionBit(){
+
+    Packet *p = Packet::alloc();
+    struct hdr_cmn *ch = HDR_CMN(p);
+    struct hdr_ip *ih = HDR_IP(p);
+    struct hdr_fusion_congestion_bit *bcn = HDR_CONGESTION_BIT(p);
+
+    // Write Channel Header
+    ch->ptype() = PT_FUSION;
+    ch->size() = IP_HDR_LEN + bcn->size();
+    ch->addr_type() = NS_AF_NONE;
+    ch->prev_hop_ = index;
+
+    // Write IP Header
+    ih->saddr() = index;
+    ih->daddr() = IP_BROADCAST;
+    ih->sport() = RT_PORT;
+    ih->dport() = RT_PORT;
+    ih->ttl_ = NETWORK_DIAMETER;
+
+    // Write Beacon Header
+    bcn->pkt_type = FUSION_CONGESTION_BIT;
+
+    if (congestionado==true){
+        bcn->congestion=1;  
+    } else bcn->congestion=0;  
+
+
+/*
+    if (bcn->congestion==1)
+     {
+        printf("Nodo: %i Enviando Bit  1 de congestion\n",index); 
+     } else  printf("Nodo: %i Enviando Bit 0 de NO congestion\n",index); 
+*/
+
+
+    Scheduler::instance().schedule(target_, p, 0.0);
+
+}
+
+
+
 
 // ======================================================================
 //  Recv Packet
@@ -239,16 +294,26 @@ struct hdr_ip *ih = HDR_IP(p);
 //printf("En nodo %i...Paquete de %i, siguiente salto %i . Destino: %i \n", index, ih->saddr(), ch->next_hop_,ih->daddr());
 
     // Analizar si el paquete recibido esta congestionado. Si lo esta, hacer Hop by hop.
-
-
     double ocupacion=ifqueue->length();
-    if (ocupacion > (0.75 * ifqueue->limit())){
-        congestionado=true;
-        //printf("Nodo: %i congestionado\n", index);
-    }
-    // Hacerlo en rcv_fusion y en forward
+    int porcentajeCanal=sensadoMAC();
+    if ((ocupacion > (0.75 * ifqueue->limit())) || porcentajeCanal>70){
+        if (congestionado==false)
+        {
+            cambioEstado=true;
+            printf("Nodo: %i congestionado\n", index);
+        } else cambioEstado=false;
 
-    // Analizar la congestion, y agregar el bit de congestión en el paquete IP.
+       congestionado=true;
+        
+    } else{
+        if (congestionado==true)
+        {
+            cambioEstado=true;
+            printf("Nodo: %i Salio de congestionado\n", index);
+        } else cambioEstado=false;
+        congestionado=false;
+
+    }
 
     // if the packet is routing protocol control packet, give the packet to agent
     if(ch->ptype() == PT_FUSION) {
@@ -338,11 +403,45 @@ FUSION::recv_fusion(Packet *p) {
             recv_error(p);
             break;
 
+        case FUSION_CONGESTION_BIT:
+
+            //printf("nodo_ %i SE RECUBIO FUSION\n", index );
+            recv_congestion(p);
+            break;
+
         default:
             fprintf(stderr, "Invalid packet type (%x)\n", wh->pkt_type);
             exit(1);
     }
 }
+
+
+void
+FUSION::recv_congestion(Packet *p) {
+    printf("Nodo %i recibio paquete de congestion\n", index);
+
+    struct hdr_ip *ih = HDR_IP(p);
+    struct hdr_fusion_congestion_bit *bcn = HDR_CONGESTION_BIT(p);
+    int estadoNodo=bcn->congestion;
+    nsaddr_t origen = ih->saddr();
+
+    RouteCache *r = rthead.lh_first;
+    for( ; r; r = r->rt_link.le_next) {
+        if (r->rt_nexthop == origen){
+                if (estadoNodo==1)
+                {
+                    r->rt_state=ROUTE_FAILED;
+                } else {
+                    r->rt_state=ROUTE_FRESH;
+                }
+
+            
+        }
+    }    
+
+
+}
+
 
 
 // ======================================================================
@@ -472,3 +571,39 @@ FUSION::rt_remove(RouteCache *rt) {
     LIST_REMOVE(rt,rt_link);
 }
 
+
+
+int     
+FUSION::sensadoMAC(){
+
+    //printf("\n Hola desde SENSADO MAC\n");
+
+    vecesSensado+=1;
+    int utilizacionAnterior=channelBusy*100/vecesSensado;     
+    estadoMac=macLayer->state();    
+    if (estadoMac!= MAC_IDLE)
+    {
+        channelBusy+=1;
+        //printf("\n CANAL OCUPADOOOOOOO\n");    
+    } 
+
+    int numero=rand()%100;
+    if (numero>70){
+        channelBusy+=1;
+        //printf("\n CANAL OCUPADOOOOOOO\n"); 
+    }
+    //printf("Chanel  %i\n", channelBusy);
+    //printf("Veces Sensado %i\n", vecesSensado);
+    int utilizacionActual=channelBusy*100/vecesSensado;
+
+    // Se requiere con EWMA
+    //alpha*actual+ (1-alpha)*Anterior
+    
+
+    int utilizacionPonderada=0.85*utilizacionActual + (1-0.85)*utilizacionAnterior;
+    //printf("Nodo %i Utulizacion:_ %i\n",index, utilizacionPonderada);
+    return utilizacionPonderada;
+
+
+
+}

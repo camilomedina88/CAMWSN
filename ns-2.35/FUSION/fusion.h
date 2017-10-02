@@ -15,10 +15,11 @@
 #include "mac.h"
 #include <classifier/classifier-port.h>
 
-#define NETWORK_DIAMETER        64
+#define NETWORK_DIAMETER            64
 #define DEFAULT_BEACON_INTERVAL     10 // seconds;
 #define DEFAULT_ROUTE_EXPIRE        2*DEFAULT_BEACON_INTERVAL // seconds;
 #define ROUTE_PURGE_FREQUENCY       2 // seconds
+#define DEFAULT_SENSADO_INTERVAL    1 // seconds;
 
 
 
@@ -38,7 +39,7 @@ public:
         void    handle(Event*);
 private:
         FUSION    *agent;
-    Event   intr;
+        Event   intr;
 };
 
 class fusionRouteCacheTimer : public Handler {
@@ -47,8 +48,22 @@ public:
         void    handle(Event*);
 private:
         FUSION    *agent;
-    Event   intr;
+        Event   intr;
 };
+
+
+class fusionSensadoMACTimer : public Handler {
+public:
+        fusionSensadoMACTimer(FUSION* a) : agent(a) {}
+        void    handle(Event*);
+private:
+        FUSION    *agent;
+        Event   intr;
+};
+
+
+
+
 
 // ======================================================================
 //  Route Cache Table
@@ -99,15 +114,18 @@ class FUSION : public Agent {
     void        rt_remove(RouteCache *rt);
     void        rt_purge();
     RouteCache* rt_lookup(nsaddr_t dst);
+    int     sensadoMAC();
 
     // Timers
     fusionBeaconTimer       bcnTimer;
     fusionRouteCacheTimer   rtcTimer;
+    fusionSensadoMACTimer   sensadoTimer;
     
     // Caching Head
     fusion_rtcache  rthead; 
     // Send Routines
     void        send_beacon();
+    void        send_congestionBit();
     //void        send_error(nsaddr_t unreachable_destination);
     void        forward(Packet *p, nsaddr_t nexthop, double delay);
     
@@ -116,6 +134,7 @@ class FUSION : public Agent {
     void        recv_fusion(Packet *p);
     void        recv_beacon(Packet *p);
     void        recv_error(Packet *p);
+    void        recv_congestion(Packet *p);
     
     //  A mechanism for logging the contents of the routing table.
     Trace       *logtarget;
@@ -128,6 +147,10 @@ class FUSION : public Agent {
 
     Mac *macLayer;
     MacState estadoMac;
+
+    int vecesSensado; // Contador para saber las veces que se ha sensado el medio
+    int channelBusy; // Contador indicando cuantas veces el canal estaba ocupado.
+    //bool primeraVezSensado; //Para el calculo de MAC utilization
 
 };
 
