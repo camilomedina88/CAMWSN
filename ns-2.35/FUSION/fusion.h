@@ -13,6 +13,7 @@
 #include <cmu-trace.h>
 #include <priqueue.h>
 #include "mac.h"
+//#include <wpan/p802_15_4mac.h>
 #include <classifier/classifier-port.h>
 
 #define NETWORK_DIAMETER            64
@@ -103,11 +104,8 @@ class FUSION : public Agent {
     // Agent Attributes
     nsaddr_t    index;     // node address (identifier)
     nsaddr_t    seqno;     // beacon sequence number (used only when agent is sink)
-    bool congestionado;
-
-    // Node Location
-    //uint32_t    posx;       // position x;
-    //uint32_t    posy;       // position y;
+    bool congestionado;     // Esta variable sirve para Hop-by Hop Control
+    bool congestionadoOrigen; // Esta variable indica a la APP que esta congestionado el nodo
         
     // Routing Table Management
     void        rt_insert(nsaddr_t src, u_int32_t id, nsaddr_t nexthop, u_int8_t hopcount);
@@ -120,6 +118,13 @@ class FUSION : public Agent {
     fusionBeaconTimer       bcnTimer;
     fusionRouteCacheTimer   rtcTimer;
     fusionSensadoMACTimer   sensadoTimer;
+
+    nsaddr_t nodoPadre;
+    bool cambioEstado;
+    int medidas[4]; // para almacenar las cuadro medidas del canal
+
+    int token;
+    double backoff;
     
     // Caching Head
     fusion_rtcache  rthead; 
@@ -146,6 +151,7 @@ class FUSION : public Agent {
     PortClassifier  *dmux_;
 
     Mac *macLayer;
+    //Mac802_15_4 *macLayer;
     MacState estadoMac;
 
     int vecesSensado; // Contador para saber las veces que se ha sensado el medio

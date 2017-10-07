@@ -494,6 +494,7 @@ class Mac802_15_4 : public Mac
 	friend class CsmaCA802_15_4;
 	friend class SSCS802_15_4;
 	friend class Nam802_15_4;
+	//friend class FUSION;
 public:
 	Mac802_15_4(MAC_PIB *mp);
 	~Mac802_15_4();

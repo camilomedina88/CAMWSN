@@ -189,7 +189,12 @@ public:
 			     (HDR_CMN(p))->size()) / bandwidth_;
 	}
 	inline double bandwidth() const { return bandwidth_; }
+	inline double delay() const { return delay_; }
 	
+	inline void setDelay(double backoff) { delay_=backoff; }
+
+
+
 	inline int addr() { return index_; }
 	inline MacState state() { return state_; }
 	inline MacState state(int m) { return state_ = (MacState) m; }
@@ -246,7 +251,7 @@ protected:
 	int abstract_;         //   MAC support for abstract LAN 
         
 	Phy *netif_;            // network interface
-        Tap *tap_;              // tap agent
+    Tap *tap_;              // tap agent
 	LL *ll_;             	// LL this MAC is connected to
 	Channel *channel_;	// channel this MAC is connected to
 

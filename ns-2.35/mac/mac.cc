@@ -92,6 +92,7 @@ Mac::Mac() :
 	bind_bw("bandwidth_", &bandwidth_);
 	bind_time("delay_", &delay_);
 	bind_bool("abstract_", &abstract_);
+	//backOffFussion = delay_;
 }
 
 int Mac::command(int argc, const char*const* argv)
