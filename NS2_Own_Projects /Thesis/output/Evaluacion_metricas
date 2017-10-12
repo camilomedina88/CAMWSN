@@ -1,6 +1,6 @@
-awk -f metrics/Fairness.awk congestionResults.tr
-awk -f metrics/Perdidas.awk congestionResults.tr
-awk -f metrics/Retardo.awk congestionResults.tr
-awk -f metrics/Throughput.awk congestionResults.tr
-awk -f metrics/Energy.awk congestionResults.tr
-
+echo '#############################'
+awk -f output/metrics/Fairness.awk output/congestionResults.tr
+awk -f output/metrics/Perdidas.awk output/congestionResults.tr
+awk -f output/metrics/Retardo.awk output/congestionResults.tr
+awk -f output/metrics/Throughput.awk output/congestionResults.tr
+awk -f output/metrics/Energy.awk output/congestionResults.tr

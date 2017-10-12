@@ -422,7 +422,7 @@ void SSCS802_15_4::startPANCoord(bool isClusterTree,bool txBeacon,UINT_8 BO,UINT
 			t_mpib.macShortAddress = mac->index_;
 			mac->MLME_SET_request(macShortAddress,&t_mpib);
 			//scan the channels
-			fprintf(stdout,"[%f](node %d) performing active channel scan\n",CURRENT_TIME,mac->index_);
+			//fprintf(stdout,"[%f](node %d) performing active channel scan\n",CURRENT_TIME,mac->index_);
 			mac->MLME_SCAN_request(0x01,SSCS802_15_4::ScanChannels,BO);
 			break;
 		case 1:
@@ -502,7 +502,7 @@ void SSCS802_15_4::startDevice(bool isClusterTree,bool isFFD,bool assoPermit,boo
 	switch(step)
 	{
 		case 0:
-			fprintf(stdout,"--- startDevice [%d] ---\n",mac->index_);
+			//fprintf(stdout,"--- startDevice [%d] ---\n",mac->index_);
 			sscsTaskP.taskStatus(sscsTP_startDevice) = true;
 			sscsTaskP.taskStep(sscsTP_startDevice)++;
 			mac->capability.setFFD(isFFD);
@@ -516,7 +516,7 @@ void SSCS802_15_4::startDevice(bool isClusterTree,bool isFFD,bool assoPermit,boo
 			//set FFD
 			mac->capability.setFFD(isFFD);
 			//scan the channels
-			fprintf(stdout,"[%f](node %d) performing active channel scan ...\n",CURRENT_TIME,mac->index_);
+			//fprintf(stdout,"[%f](node %d) performing active channel scan ...\n",CURRENT_TIME,mac->index_);
 			mac->MLME_SCAN_request(0x01,SSCS802_15_4::ScanChannels,scan_BO);
 			break;
 		case 1:
@@ -570,7 +570,7 @@ void SSCS802_15_4::startDevice(bool isClusterTree,bool isFFD,bool assoPermit,boo
 			if (ch == 0xff)		//cannot find any coordinator for association
 			{
 				sscsTaskP.taskStatus(sscsTP_startDevice) = false;
-				fprintf(stdout,"<!>[%f](node %d) no coordinator found for association.\n",CURRENT_TIME,mac->index_);
+				//fprintf(stdout,"<!>[%f](node %d) no coordinator found for association.\n",CURRENT_TIME,mac->index_);
 				assoH.start(assoRetryInterval);
 				return;
 			}
@@ -619,7 +619,7 @@ void SSCS802_15_4::startDevice(bool isClusterTree,bool isFFD,bool assoPermit,boo
 				//reset association permission
 				t_mpib.macAssociationPermit = false;
 				mac->MLME_SET_request(macAssociationPermit,&t_mpib);
-				fprintf(stdout,"<!>[%f](node %d) association failed -> %s (%s) [channel:%d] [PAN_ID:%d] [CoordAddr:%d]\n",CURRENT_TIME,mac->index_,statusName(status),tmpstr,sscsTaskP.startDevice_panDes.LogicalChannel,sscsTaskP.startDevice_panDes.CoordPANId,sscsTaskP.startDevice_panDes.CoordAddress_64);
+				//fprintf(stdout,"<!>[%f](node %d) association failed -> %s (%s) [channel:%d] [PAN_ID:%d] [CoordAddr:%d]\n",CURRENT_TIME,mac->index_,statusName(status),tmpstr,sscsTaskP.startDevice_panDes.LogicalChannel,sscsTaskP.startDevice_panDes.CoordPANId,sscsTaskP.startDevice_panDes.CoordAddress_64);
 				assoH.start(assoRetryInterval);
 				sscsTaskP.taskStatus(sscsTP_startDevice) = false;
 #ifdef ZigBeeIF

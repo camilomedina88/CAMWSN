@@ -261,7 +261,7 @@ WirelessPhy::sendDown(Packet *p)
 		   double finish_adjust_time = MIN(channel_idle_time_, NOW+txtime);
 		   double gap_adjust_time = finish_adjust_time - begin_adjust_time;
 		   if (gap_adjust_time < 0.0) {
-			   fprintf(stderr,"What the heck ! negative gap time.\n");
+			   //fprintf(stderr,"What the heck ! negative gap time.\n");
 		   }
 
 		   if ((gap_adjust_time > 0.0) && (status_ == RECV)) {

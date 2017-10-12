@@ -71,7 +71,7 @@ BEGIN {
       #printf "Total Recividos %0.2f \n", totalRecv
 
       Throghput=totalRecv/(stopTime - startTime)*(8/1000);
-      printf "Average Throughput[kbps]: %0.2f \n", Throghput;
+      printf "Tro: %0.2f \n", Throghput;
 
        #printf("Throughput promedio [kbps] = %.2f\t\t StartTime=%.2f\tStopTime=%.2f\n",(recvdSize/(stopTime-startTime))*(8/1000),startTime,stopTime)
   }

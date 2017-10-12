@@ -91,7 +91,7 @@ END{
 		#printf "Acumulado: %0.4f \n", acumulado;
 
 		retardo= acumulado/analizado;
-		printf "Retardo Promedio [ms]: 	   %0.2f \n" , retardo*1000;
+		printf "Ret: %0.2f \n" , retardo*1000;
 
 }
 

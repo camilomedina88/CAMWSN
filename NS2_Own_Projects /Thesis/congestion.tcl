@@ -419,7 +419,7 @@ proc stop {} {
         }
     }
     if { ("$val(nam)" == "/output/congestion.nam") && ("$hasDISPLAY" == "1") } {
-    	exec nam output/congestion.nam &
+    	#exec nam output/congestion.nam &
     }
 }
 

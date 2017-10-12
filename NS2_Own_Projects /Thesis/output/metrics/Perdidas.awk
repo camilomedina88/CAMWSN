@@ -57,7 +57,7 @@ END{
 	#printf "Enviados: %i \n", enviado;
 	#printf "Recibidos: %i \n", recibidos;
 	#printf "Drop: %i \n", drop;
-	printf  "Paquetes Perdidos: 	  %0.2f%% \n", porcentajePerdidos;
+	printf  "PPP: %0.2f%% \n", porcentajePerdidos;
 
 
 

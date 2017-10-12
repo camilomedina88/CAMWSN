@@ -1,0 +1,150 @@
+echo '1 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas > FusionMalla.txt
+echo '2 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '3 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '4 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '5 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '6 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '7 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '8 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '9 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '10 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '11 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '12 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '13 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '14 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '15 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '16 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '17 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '18 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '19 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '20 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '21 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '22 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '23 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '24 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '25 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '26 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '27 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '28 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '29 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '30 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '31 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '32 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '33 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '34 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '35 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '36 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '37 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '38 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '39 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '40 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '41 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '42 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '43 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '44 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '45 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '46 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '47 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '48 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '49 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
+echo '50 ################'
+ns congestion.tcl
+./output/Evaluacion_metricas >> FusionMalla.txt
