@@ -247,7 +247,7 @@ protected:
 	}
 	int index_;		// MAC address
 	double bandwidth_;      // channel bitrate
-	double delay_;		// MAC overhead
+	double delay_;		// MAC overhead for backoff
 	int abstract_;         //   MAC support for abstract LAN 
         
 	Phy *netif_;            // network interface

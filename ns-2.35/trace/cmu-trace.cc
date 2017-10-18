@@ -1341,7 +1341,7 @@ CMUTrace::format_camm(Packet *p, int offset)
 {
     struct hdr_camm *wh = HDR_CAMM(p);
     struct hdr_camm_beacon *wb = HDR_CAMM_BEACON(p);
-    struct hdr_camm_error  *we = HDR_CAMM_ERROR(p);
+    //struct hdr_camm_error  *we = HDR_CAMM_ERROR(p);
 
     //u_int8_t packeteAnalizado= wh->pkt_type;
  
@@ -1397,12 +1397,7 @@ CMUTrace::format_camm(Packet *p, int offset)
 		        			wb->timestamp);
             }
             
-            break;
- 
-        case CAMM_ERROR:
-            // TODO: need to add code
-            break;
- 
+            break; 
         default:
 
 

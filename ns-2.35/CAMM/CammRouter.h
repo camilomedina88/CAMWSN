@@ -130,7 +130,7 @@ class CAMM : public Agent {
 	// Send Routines
 	void		send_beacon();
 	void		send_ACK(nsaddr_t sink);
-	void		send_error(nsaddr_t unreachable_destination);
+	//void		send_error(nsaddr_t unreachable_destination);
 	void		forward(Packet *p, nsaddr_t nexthop, double delay);
 	//void 		send_hello();
 	
@@ -157,6 +157,7 @@ class CAMM : public Agent {
 
 	Mac *macLayer;
 	double backoff;
+	bool congestionadoOrigen; 
 
 };
 

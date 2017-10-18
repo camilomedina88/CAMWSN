@@ -144,6 +144,7 @@ CAMM::CAMM(nsaddr_t id) : Agent(PT_CAMM), bcnTimer(this), rtcTimer(this) {
 	//softStage=false;
 	hardStage=false;
 	backoff=0.0004;
+	congestionadoOrigen=false;
 
 
 	//Lenar la matriz de Estadisticas de vecinos.
@@ -228,16 +229,6 @@ CAMM::send_beacon() { //SEND HELLO
 }
 
 // ======================================================================
-//  Send Error Routine
-// ======================================================================
-void 
-CAMM::send_error(nsaddr_t unreachable_destination) {
-	// TODO : code should be update;
-}
-
-
-
-// ======================================================================
 //  Forward Routine
 // ======================================================================
 
@@ -262,14 +253,9 @@ CAMM::forward(Packet *p, nsaddr_t nexthop, double delay) {
 		ch->prev_hop_ = index;
 		ch->addr_type() = NS_AF_NONE;
 		ch->direction() = hdr_cmn::DOWN; 
-	}
-	
+	}	
 	Scheduler::instance().schedule(target_, p, delay);
-
-
 }
-
-
 // ======================================================================
 //  Recv Packet
 // ======================================================================
@@ -292,7 +278,12 @@ struct hdr_ip *ih = HDR_IP(p);
 		if (ch->ptype() != PT_TCP && ch->ptype() != PT_ACK) {
 			ch->size() += IP_HDR_LEN;
 		}
-
+		// Se le informa a la aplicación si el nodo está congestionado
+		if (hardStage){
+		congestionadoOrigen=true;
+		}else{
+		congestionadoOrigen=false;
+		}
 	}
 	// I received a packet that I sent.  Probably routing loop.
 	else if(ih->saddr() == index) {
@@ -306,7 +297,6 @@ struct hdr_ip *ih = HDR_IP(p);
 			return;
    		}
 	}
-
 	// This is data packet, find route and forward packet
 	recv_data(p);
 }
@@ -326,23 +316,17 @@ CAMM::recv_data(Packet *p) {
 
 	rt=rt_buscarVecino(p);
 	//rt = rt_lookup(ih->daddr());
-
 	// There is no route for the destination
 	if (rt == NULL) {
 	// TODO: queue the packet and wait for the route construction
 		return ;
 	}
-
-	// if the route is not failed forward it;
-	
+	// if the route is not failed forward it;	
 	else if (rt->rt_flag) {
 		//printf("En el nodo %i se realizo forward a %i\n",index, rt->rt_vecino);
 		forward(p, rt->rt_vecino, 0.0);
 
-	}
-
-
-		
+	}		
 	// if the route has failed, wait to be updated;
 	else {
 		//TODO: queue the packet and wait for the route construction;
@@ -369,12 +353,9 @@ CAMM::recv_camm(Packet *p) {
 			recv_beacon(p);
 			break;
 
-
 		case CAMM_ACK:
-			recv_ack(p);
-			
+			recv_ack(p);			
 			break;
-
 
 		default:
 			fprintf(stderr, "Invalid packet type (%x)\n", wh->pkt_type);
@@ -488,8 +469,6 @@ struct hdr_camm_ack *ack = HDR_CAMM_ACK(p);
 	}
 
 }
-
-
 // ======================================================================
 //  Routing Management
 // ======================================================================
@@ -549,8 +528,6 @@ CAMM::rt_buscarVecino(Packet *p){
 
 
  	bool previo=hardStage;
- 	//printf("Nodo %i Previo esta %i\n",index, previo);
-
  	// Revisar el buffer. Si supera un umbral, HardStage=true
 	double ocupacion=ifqueue->length();
 	if (ocupacion>16){
@@ -600,6 +577,17 @@ CAMM::rt_buscarVecino(Packet *p){
 				send_ACK(rl->rt_vecino);		
  		}
  	}
+
+
+ 	// Si esta en HardStage, tener acceso prioritario al canal....
+ 	if (hardStage){
+ 	backoff=0.0001; 	
+ 	macLayer->setDelay(backoff);
+ 	} else {
+ 		backoff=0.0004;
+        macLayer->setDelay(backoff);
+ 	}
+
  		
 	// Si hay mas de dos vecinos con menor nivel se utiliza Round Robin
  	if (contadorVecinos ==1){

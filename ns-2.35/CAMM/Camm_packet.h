@@ -71,9 +71,7 @@ struct hdr_camm_beacon {
 		sz = sizeof(struct hdr_camm_beacon);
 		assert(sz>=0);
 		return sz;
-	}
-
-	
+	}	
 };
 
 
@@ -97,15 +95,6 @@ struct hdr_camm_hello {
 	}
 };
 
-
-
-
-
-
-
-
-
-
 struct hdr_camm_ack {
 	
 	u_int8_t	pkt_type;  // type of packet : Beacon or Error
@@ -116,8 +105,6 @@ struct hdr_camm_ack {
 	float 		remainingPower;
 	int 		level;
 	bool 		flag;
-
-
 
 	inline int size() {
 		int sz = 0;
@@ -137,8 +124,6 @@ struct hdr_camm_connect {
 	float 		remainingPower;
 	int 		level;
 	bool 		flag;
-
-
 
 	inline int size() {
 		int sz = 0;
