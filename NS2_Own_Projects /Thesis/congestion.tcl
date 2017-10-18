@@ -12,8 +12,8 @@
 #set congestion  NONE
 #set congestion  ECODA
 #set congestion  DAIPAS
-set congestion  FUSION
-#set congestion  CAM
+#set congestion  FUSION
+set congestion  CAM
 
 ## TOPOLOGIA DE RED ##
 set topologiaRed MALLA
@@ -63,6 +63,9 @@ if {$congestion == "FUSION"} {
 }
 
 if {$congestion == "CAM"} {  
+  set val(rp)             CAMM                      ;# routing protocol
+  set val(ifq)            Queue/Camm                   ;# interface queue type
+
 }
 
 #===================================================================================================
@@ -237,6 +240,9 @@ if {$val(rp) == "FUSION"} {
   $ns_ at 1.0 "[$node_(0) set ragent_] sink"
 }
 
+if {$val(rp) == "CAM"} {
+  $ns_ at 1.0 "[$node_(0) set ragent_] sink"
+}
 
 Mac/802_15_4 wpanNam PlaybackRate 3ms
 

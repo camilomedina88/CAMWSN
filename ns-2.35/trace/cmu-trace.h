@@ -162,6 +162,7 @@ private:
     void    format_wfrp(Packet *p, int offset);
     void    format_ecoda(Packet *p, int offset);
     void    format_daipas(Packet *p, int offset);
+    void    format_camm(Packet *p, int offset);
     void    format_fusion(Packet *p, int offset);
 	void    format_aomdv(Packet *p, int offset);
 	void    format_mdart(Packet *p, int offset);

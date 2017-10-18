@@ -206,10 +206,11 @@ static const packet_t PT_WFRP = 73;
 static const packet_t PT_ECODA = 74;
 static const packet_t PT_DAIPAS = 75;
 static const packet_t PT_FUSION = 76;
+static const packet_t PT_CAMM = 77;
 
-static const packet_t PT_MYHEADER = 77;
+static const packet_t PT_MYHEADER = 78;
 
-static packet_t       PT_NTYPE = 78; // This MUST be the LAST one
+static packet_t       PT_NTYPE = 79; // This MUST be the LAST one
 
 enum packetClass
 {
@@ -279,6 +280,7 @@ public:
 		    type == PT_WFRP ||
 		    type == PT_ECODA ||
 		    type == PT_DAIPAS ||
+		    type == PT_CAMM ||
 		    type == PT_FUSION ||
 		    type == PT_MDART)
 			return ROUTING;		
@@ -421,6 +423,9 @@ public:
 
 		// DAIPAS patch
 		name_[PT_DAIPAS] = "DAIPAS";
+
+		// CAMM patch
+		name_[PT_CAMM] = "CAMM";
 
 		//FUSION patch
 		name_[PT_FUSION] = "FUSION";

@@ -52,6 +52,7 @@
 #include <wfrp/wfrp_packet.h>  // WFRP 
 #include <ECODA/ecoda_packet.h>  // ECODA 
 #include <DAIPAS/daipas_packet.h>  // DAIPAS
+#include <CAMM/Camm_packet.h>  // CAMM
 #include <FUSION/fusion_packet.h>  // FUSION 
 #include <imep/imep_spec.h>         // IMEP
 #include <aodv/aodv_packet.h> //AODV
@@ -1323,6 +1324,132 @@ CMUTrace::format_daipas(Packet *p, int offset)
 
     
 }
+
+
+
+
+
+//////////////////////////////////////////////
+
+
+
+
+// CAMM patch
+
+void
+CMUTrace::format_camm(Packet *p, int offset)
+{
+    struct hdr_camm *wh = HDR_CAMM(p);
+    struct hdr_camm_beacon *wb = HDR_CAMM_BEACON(p);
+    struct hdr_camm_error  *we = HDR_CAMM_ERROR(p);
+
+    //u_int8_t packeteAnalizado= wh->pkt_type;
+ 
+    switch(wh->pkt_type) {
+   
+        case CAMM_BEACON:
+
+        	if(pt_->tagged()){
+        		sprintf(pt_->buffer()+offset,
+        			"camm:t %x -camm:l %i -camm:f %d -camm:s %d"
+        			"camm:b %f camm:e %f -camm:ts %f"
+        			"-camm:c BEACON",
+        			wb->pkt_type,
+        			wb->level,
+        			wb->flag,
+        			wb->beacon_src,
+        			wb->bufferOccupancy,
+        			wb->remainingPower,
+        			wb->timestamp);
+
+    //u_int8_t	pkt_type;  // type of packet : Beacon or Error
+	//double		timestamp; // emission time
+	//nsaddr_t	beacon_src;
+	//float 		bufferOccupancy; 
+	//float 		remainingPower;
+	//int 		level;
+	//bool 		flag;
+
+
+
+        	}
+        	else if (newtrace_)
+        	{
+        		sprintf(pt_->buffer()+offset,
+        			"-P camm-pt 0x%x -Pl %i -Pf %d -Ps %d -Pb %f -Pe %f -Pts %f -Pc BEACON",
+        			wb->pkt_type,
+        			wb->level,
+        			wb->flag,
+        			wb->beacon_src,
+        			wb->bufferOccupancy,
+        			wb->remainingPower,
+        			wb->timestamp);
+        	} else {
+ 
+                sprintf(pt_->buffer() + offset,
+                          "[0x%x %i %d [%d %f] [%f %f]] (BEACON)",
+		        			wb->pkt_type,
+		        			wb->level,
+		        			wb->flag,
+		        			wb->beacon_src,
+		        			wb->bufferOccupancy,
+		        			wb->remainingPower,
+		        			wb->timestamp);
+            }
+            
+            break;
+ 
+        case CAMM_ERROR:
+            // TODO: need to add code
+            break;
+ 
+        default:
+
+
+
+#ifdef WIN32
+            fprintf(stderr,
+                      "CMUTrace::format_camm: invalid CAMM packet typen");
+#else
+            fprintf(stderr,
+                      "%s: invalid CAMM packet typen", __FUNCTION__);
+#endif
+            abort();
+            
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -218,6 +218,13 @@ Node/MobileNode instproc add-target { agent port } {
   	$agent if-queue [$self set ifq_(0)]   ;# ifq between LL and MAC
 	}
 
+	# Special processing for CAMM
+	set cammonly [string first "CAMM" [$agent info class]]
+	if {$cammonly != -1 } {
+  	$agent if-queue [$self set ifq_(0)]   ;# ifq between LL and MAC
+  	$agent mac [$self set mac_(0)]
+	}
+
 	# Special processing for FUSION
 	set fusiononly [string first "FUSION" [$agent info class]]
 	if {$fusiononly != -1 } {
@@ -409,9 +416,17 @@ Node/MobileNode instproc add-interface { channel pmodel lltype mactype qtype qle
 		#puts "SE CREO LA COLA ECODA"
 		set ifq_($t) [new $qtype [$self id]]
 
+	} 
+
+	if {$qtype == "Queue/Camm"} {
+		#puts "SE CREO LA COLA Cam"
+		set ifq_($t) [new $qtype [$self id]]
+
 	} else {
 		set ifq_($t)	[new $qtype]		;# interface queue
 	}
+
+
 
 
 	set ll_($t)	[new $lltype]		;# link layer

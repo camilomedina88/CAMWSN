@@ -1168,6 +1168,12 @@ if {$daipasonly != -1 } {\n\
 $agent if-queue [$self set ifq_(0)]   ;# ifq between LL and MAC\n\
 }\n\
 \n\
+set cammonly [string first \"CAMM\" [$agent info class]]\n\
+if {$cammonly != -1 } {\n\
+$agent if-queue [$self set ifq_(0)]   ;# ifq between LL and MAC\n\
+$agent mac [$self set mac_(0)]\n\
+}\n\
+\n\
 set fusiononly [string first \"FUSION\" [$agent info class]]\n\
 if {$fusiononly != -1 } {\n\
 $agent if-queue [$self set ifq_(0)]   ;# ifq between LL and MAC\n\
@@ -1308,9 +1314,16 @@ set mac_($t)	[new $mactype]		;# mac layer\n\
 if {$qtype == \"Queue/Ecoda\"} {\n\
 set ifq_($t) [new $qtype [$self id]]\n\
 \n\
+} \n\
+\n\
+if {$qtype == \"Queue/Camm\"} {\n\
+set ifq_($t) [new $qtype [$self id]]\n\
+\n\
 } else {\n\
 set ifq_($t)	[new $qtype]		;# interface queue\n\
 }\n\
+\n\
+\n\
 \n\
 \n\
 set ll_($t)	[new $lltype]		;# link layer\n\
@@ -3486,6 +3499,7 @@ Mac 	# network wireless stack\n\
 WFRP 	# WFRP patch\n\
 ECODA 	# ECODA patch\n\
 DAIPAS 	# DAIPAS patch\n\
+CAMM 	# CAMM patch\n\
 FUSION 	# FUSION patch\n\
 \n\
 AODV 	# routing protocol for ad-hoc networks\n\
@@ -3498,6 +3512,7 @@ MDART 	# routing protocol for ad-hoc networks\n\
 AOMDV\n\
 ECODA 	#ECODA\n\
 DAIPAS 	#DAIPAS\n\
+CAMM 	#CAMM\n\
 FUSION 	#FUSIN\n\
 \n\
 Encap 	# common/encap.cc\n\
@@ -4369,6 +4384,14 @@ $self next $args\n\
 \n\
 Agent/DAIPAS set sport_   0\n\
 Agent/DAIPAS set dport_   0\n\
+\n\
+\n\
+Agent/CAMM instproc init args {\n\
+$self next $args\n\
+}\n\
+\n\
+Agent/CAMM set sport_   0\n\
+Agent/CAMM set dport_   0\n\
 \n\
 \n\
 Agent/FUSION instproc init args {\n\
@@ -21258,6 +21281,10 @@ DAIPAS {\n\
 set ragent [$self create-daipas-agent $node]\n\
 }\n\
 \n\
+CAMM {\n\
+set ragent [$self create-camm-agent $node]\n\
+}\n\
+\n\
 FUSION {\n\
 set ragent [$self create-fusion-agent $node]\n\
 }\n\
@@ -21488,6 +21515,15 @@ $self at 0.0 \"$ragent start\"\n\
 $node set ragent_ $ragent\n\
 return $ragent\n\
 }\n\
+\n\
+Simulator instproc create-camm-agent { node } {\n\
+set ragent [new Agent/CAMM [$node node-addr]]\n\
+$self at 0.0 \"$ragent start\"\n\
+$node set ragent_ $ragent\n\
+return $ragent\n\
+}\n\
+\n\
+\n\
 \n\
 Simulator instproc create-fusion-agent { node } {\n\
 set ragent [new Agent/FUSION [$node node-addr]]\n\

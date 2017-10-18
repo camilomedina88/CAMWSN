@@ -224,6 +224,14 @@ Agent/DAIPAS set sport_   0
 Agent/DAIPAS set dport_   0
 
 
+Agent/CAMM instproc init args {
+  $self next $args
+}
+ 
+Agent/CAMM set sport_   0
+Agent/CAMM set dport_   0
+
+
 Agent/FUSION instproc init args {
   $self next $args
 }

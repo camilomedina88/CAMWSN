@@ -156,8 +156,10 @@ set ptype(daipas) 75\n\
 set pvals(75) DAIPAS\n\
 set ptype(fusion) 76\n\
 set pvals(76) FUSION\n\
-set ptype(myheader) 77\n\
-set pvals(77) MyHeader\n\
+set ptype(camm) 77\n\
+set pvals(77) CAMM\n\
+set ptype(myheader) 78\n\
+set pvals(78) MyHeader\n\
 proc ptype2val {str} {\n\
 global ptype\n\
 set str [string tolower $str]\n\

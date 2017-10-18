@@ -644,6 +644,10 @@ Simulator instproc create-wireless-node args {
   				set ragent [$self create-daipas-agent $node]
 			}
 
+			CAMM {
+  				set ragent [$self create-camm-agent $node]
+			}
+
 			FUSION {
   				set ragent [$self create-fusion-agent $node]
 			}
@@ -905,6 +909,17 @@ Simulator instproc create-daipas-agent { node } {
    $node set ragent_ $ragent
    return $ragent
 }
+
+ #  Create CAMM routing agent
+Simulator instproc create-camm-agent { node } {
+   #set ragent [new Agent/CAMM [$node ifq_]]
+   set ragent [new Agent/CAMM [$node node-addr]]
+   $self at 0.0 "$ragent start"
+   $node set ragent_ $ragent
+   return $ragent
+}
+
+
 
  #  Create FUSION routing agent
 Simulator instproc create-fusion-agent { node } {

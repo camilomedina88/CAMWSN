@@ -175,6 +175,7 @@ set protolist {
 	WFRP 	# WFRP patch
 	ECODA 	# ECODA patch
 	DAIPAS 	# DAIPAS patch
+	CAMM 	# CAMM patch
 	FUSION 	# FUSION patch
 
 # Mobility, Ad-Hoc Networks, Sensor Nets:
@@ -189,6 +190,7 @@ set protolist {
 	AOMDV
 	ECODA 	#ECODA
 	DAIPAS 	#DAIPAS
+	CAMM 	#CAMM
 	FUSION 	#FUSIN
 
 # Other:
