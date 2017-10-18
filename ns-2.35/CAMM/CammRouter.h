@@ -97,7 +97,7 @@ class CAMM : public Agent {
 	nsaddr_t	seqno;     // beacon sequence number (used only when agent is sink)
 	int nivel;
 	int turnoVecino;
-	bool softStage;
+	//bool softStage;
 	bool hardStage;
 
 	// Node Location
@@ -138,13 +138,12 @@ class CAMM : public Agent {
 	void		recv_data(Packet *p);
 	void		recv_camm(Packet *p);
 	void 		recv_beacon(Packet *p);
-	//void 		recv_hello(Packet *p);
-	void		recv_error(Packet *p);
+	//void		recv_error(Packet *p);
 	void        recv_ack(Packet *p);
-	//void        recv_connect(Packet *p);
+
 	
 	// Position Management
-	void		update_position();
+
 
 
     //  A mechanism for logging the contents of the routing table.

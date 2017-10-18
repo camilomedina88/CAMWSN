@@ -141,7 +141,7 @@ CAMM::CAMM(nsaddr_t id) : Agent(PT_CAMM), bcnTimer(this), rtcTimer(this) {
 	ifqueue = 0;
 	primeraVez=true;
 	turnoVecino=1;
-	softStage=false;
+	//softStage=false;
 	hardStage=false;
 	backoff=0.0004;
 
@@ -376,10 +376,6 @@ CAMM::recv_camm(Packet *p) {
 			break;
 
 
-		case CAMM_ERROR:
-			recv_error(p);
-			break;
-
 		default:
 			fprintf(stderr, "Invalid packet type (%x)\n", wh->pkt_type);
 			exit(1);
@@ -494,97 +490,6 @@ struct hdr_camm_ack *ack = HDR_CAMM_ACK(p);
 }
 
 
-
-
-
-
-
-
-/*
-void 
-camm::recv_beacon(Packet *p) {
-	struct hdr_ip *ih = HDR_IP(p);
-	struct hdr_camm_beacon *bcn = HDR_camm_BEACON(p);
-
-
-	
-	// I have originated the packet, just drop it
-	if (bcn->beacon_src == index)  {
-		Packet::free(p);
-		return;
-	}
-
-#ifdef DEBUG
-	printf("R (%.6f): recv beacon by %d, src:%d, seqno:%d, hop: %d \n", 
-		CURRENT_TIME, index, bcn->beacon_src, bcn->beacon_id, bcn->beacon_hops);
-#endif 
-	
-	// search for a route 
-	RouteCache	*rt = rt_lookup(bcn->beacon_src);
-	
-	// if there is no route toward this destination, insert the route and forward
- 	if (rt == NULL)  {
-		rt_insert(bcn->beacon_src,bcn->beacon_id, ih->saddr(), bcn->beacon_posx, bcn->beacon_posy, bcn->beacon_hops);
-
-		ih->saddr() = index;		
-		bcn->beacon_hops +=1; // increase hop count
-
-		double delay = 0.1 + Random::uniform();
-
-#ifdef DEBUG
-	printf("F (%.6f): NEW ROUTE, forward beacon by %d \n", CURRENT_TIME, index);
-#endif 
-
-		forward(p, IP_BROADCAST, delay);
-	}
-	// if the route is newer than I have (i.e. new beacon is received): update the route and forward
-	else if (bcn->beacon_id > rt->rt_seqno) {
-	
-		rt->rt_seqno = bcn->beacon_id;
-		rt->rt_nexthop = ih->saddr();
-		rt->rt_xpos = bcn->beacon_posx;
-		rt->rt_ypos = bcn->beacon_posy;
-		rt->rt_state = ROUTE_FRESH;
-		rt->rt_hopcount = bcn->beacon_hops;
-		rt->rt_expire = CURRENT_TIME + DEFAULT_ROUTE_EXPIRE;
-		
-		ih->saddr() = index;
-		bcn->beacon_hops +=1; // increase hop count
-
-		double delay = 0.1 + Random::uniform();
-
-#ifdef DEBUG
-		printf("F (%.6f): UPDATE ROUTE, forward beacon by %d \n", CURRENT_TIME, index);
-#endif 
-		forward(p, IP_BROADCAST, delay);
-	}
-	// if the route is shorter than I have, update it
-	else if ((bcn->beacon_id == rt->rt_seqno) && (bcn->beacon_hops < rt->rt_hopcount )) {
-
-		rt->rt_seqno = bcn->beacon_id;
-		rt->rt_nexthop = ih->saddr();
-		rt->rt_xpos = bcn->beacon_posx;
-		rt->rt_ypos = bcn->beacon_posy;
-		rt->rt_state = ROUTE_FRESH;
-		rt->rt_hopcount = bcn->beacon_hops;
-		rt->rt_expire = CURRENT_TIME + DEFAULT_ROUTE_EXPIRE;
-	}
-
-	// TODO : initiate dequeue() routine to send queued packets;
-
-}
-*/
-
-// ======================================================================
-//  Recv Error Packet
-// ======================================================================
-
-void
-CAMM::recv_error(Packet *p) {
-	// TODO: code should be update;
-}
-
-
 // ======================================================================
 //  Routing Management
 // ======================================================================
@@ -630,68 +535,13 @@ CAMM::rt_buscarVecino(Packet *p){
 		}
  	}
 	
-	// Llenar las estadisticas de flujos para soft stage
-	int i=0;
-	RouteCache *rz = rthead.lh_first;
-	for(  ; rz; rz = rz->rt_link.le_next) {
-		estadisticasVecinos[i][0]= rz->rt_vecino;	
-		i++;
- 	}
+	
  	for(int i=0;i<15;i++){
 		//printf("En el nodo %i, se recibio un paquete Salto previo %i\n",index, ch->prev_hop() );
 			if(estadisticasVecinos[i][0]==ch->prev_hop()){					
 				estadisticasVecinos[i][1]+=1;
 			}			
 	}
-
-
-	// Solo para imprimir
-	/*
-	printf(" Vecinos del Nodo:%i\n", index );
-	for (int row=0; row<15; row++){
-   		for(int columns=0; columns<2; columns++){
-       		printf("%d     ", estadisticasVecinos[row][columns]);
-       	}
-   	printf("\n");
-	}
-	*/
-
-	// ######################### SOFT STAGE ###################################
-	i=0;
-	int cantidadFlujos=0;
-	RouteCache *rq = rthead.lh_first;
-	for(  ; rq; rq = rq->rt_link.le_next) {
-		if (estadisticasVecinos[i][0]!=0){
-			if(estadisticasVecinos[i][1] > 10){
-				cantidadFlujos+=1;
-			} 	
-		}		
-		i++;
- 	}
-
- 	if (cantidadFlujos>1)	softStage=true;
- 	
-
- 	if (softStage)
- 	{
- 		//Se ordena la matriz estadisticasVecinos de mayor a menor
-		for (int i = 1; i < 15; ++i){
-			for (int j = i; j > 0 &&  (estadisticasVecinos[j][1] > estadisticasVecinos[j-1][1])  ; --j){
-				std::swap(estadisticasVecinos[j][0], estadisticasVecinos[j-1][0]);
-				std::swap(estadisticasVecinos[j][1], estadisticasVecinos[j-1][1]);
-			}
-		}
-		// Recorrer la matriz de estadisticas, y generar el ACK para todos menos para el primero o el sink.
-		for (int i = 1; i < 15; ++i){
-			if (estadisticasVecinos[i][0]!=0 && estadisticasVecinos[i][1]>10)
-			{
-				send_ACK(estadisticasVecinos[i][0]);
-				estadisticasVecinos[i][1]=0;
-				softStage=false;
-
-			}
-		}
- 	}
 
  	// ########################################################################
  	// ######################### HARD STAGE ###################################
@@ -734,8 +584,8 @@ CAMM::rt_buscarVecino(Packet *p){
  		//printf("Nodo %i no tiene Vecinos disponibles\n",index);
  	}
 
- 	if (ocupacion<=14 && iEnergy*(100/3.9) >=25 && vecinosNoDisponibles<contadorVecinos)
- 	{
+ 	// Para salir de Hard Stage
+ 	if (ocupacion<=15 && iEnergy*(100/3.9) >=25 && vecinosNoDisponibles<contadorVecinos){
  		//printf("El nodo %i esta OK\n", index);
  		hardStage=false;
  	}
@@ -743,9 +593,6 @@ CAMM::rt_buscarVecino(Packet *p){
  	if (index==0)
  		hardStage=false;
 
- 			
- 	//printf("Nodo %i Actual esta %i\n", index,hardStage);
- 	// Si HardStage=true. Enviar ACK a todos los vecinos.
  	if (hardStage !=previo){
  		//printf("\n \n # \n ## \n ### \n ############# Nodo %i cambio de estado a %i \n", index,hardStage); 		
  		RouteCache *rl = rthead.lh_first;
@@ -754,20 +601,6 @@ CAMM::rt_buscarVecino(Packet *p){
  		}
  	}
  		
-/*
- 	printf(" ######## Nodo:%i\n", index );
- 	for (int row=0; row<15; row++)
-{
-    for(int columns=0; columns<2; columns++)
-        {
-         printf("%d     ", estadisticasVecinos[row][columns]);
-        }
-    printf("\n");
- }
-
-*/
-
-
 	// Si hay mas de dos vecinos con menor nivel se utiliza Round Robin
  	if (contadorVecinos ==1){
 	 	RouteCache *ra = rthead.lh_first;
@@ -793,20 +626,6 @@ CAMM::rt_buscarVecino(Packet *p){
  				entradaAnalizada+=1;
  			}
  		}
-
-		// Solo para imprimir
-
-		//printf("===== NODO %i n", index);
-		/*
-		
-		printf("Prioridades de nodos menores\n" );
-		for (int row=0; row<contadorVecinos; row++){
-	   		for(int columns=0; columns<2; columns++){
-	       		printf("%d     ", tablaPrioridades[row][columns]);
-	       	}
-	   	printf("\n");
-		}*/
-	
 
  		int nextRoute[entradaAnalizada];
  		int cantidadRutas=0;
@@ -839,15 +658,8 @@ CAMM::rt_buscarVecino(Packet *p){
 	 			return rt_lookup(nextRoute[i]);
 	 		}
 	 	}
-
-
  	}
-
-
 	return NULL;
-
-
-
 }
 
 
@@ -877,11 +689,5 @@ CAMM::rt_purge() {
 void
 CAMM::rt_remove(RouteCache *rt) {
 	LIST_REMOVE(rt,rt_link);
-}
-
-
-void 
-CAMM::update_position() {
-	//TODO: we have to update node position
 }
 
