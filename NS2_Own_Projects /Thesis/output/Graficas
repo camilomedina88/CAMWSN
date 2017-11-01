@@ -1,0 +1,2 @@
+echo '#############################'
+awk -f output/metrics/FairTro.awk output/congestionResults.tr

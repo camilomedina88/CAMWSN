@@ -16,9 +16,9 @@
 set congestion  CAM
 
 ## TOPOLOGIA DE RED ##
+#set topologiaRed ARBOL
 set topologiaRed MALLA
 #set topologiaRed ESTRELLA
-#set topologiaRed ARBOL
 
 ## DISTRIBUCION DE NODOS ##
 #set tipoTopologia HOMOGENEA
@@ -63,7 +63,7 @@ if {$congestion == "FUSION"} {
 }
 
 if {$congestion == "CAM"} {  
-  set val(rp)             CAMM                      ;# routing protocol
+  set val(rp)             DAIPAS                     ;# routing protocol
   set val(ifq)            Queue/Camm                   ;# interface queue type
 
 }
@@ -187,7 +187,14 @@ for {set i 0} {$i < $val(nn) } {incr i} {
 
 
 if {$tipoTopologia == "HOMOGENEA"} {
-  source ./Scenario/malla.scn
+
+  #source ./Scenario/AleatoriasDefinidas/Distancias1.scn
+  #source ./Scenario/AleatoriasDefinidas/Distancias2.scn
+  source ./Scenario/AleatoriasDefinidas/Distancias3.scn
+  
+
+  #source ./Scenario/malla.scn
+  
 }
 
 
@@ -203,6 +210,14 @@ if {$tipoTopologia == "ALEATORIA"} {
   $node_(0) set Y_ [ expr {$val(y)/2} ]
   $node_(0) set Z_ 0.0
   $node_(0) label "Sink"
+}
+
+
+for {set i 1} {$i < $val(nn) } { incr i } {
+
+ puts "nodo:  $i [$node_($i) set X_] [$node_($i) set Y_] "
+
+
 }
 
 
@@ -304,6 +319,7 @@ if { ("$val(traffic)" == "cbr") || ("$val(traffic)" == "poisson") } {
    $ns_ at [expr $appTime1 + 0.5] "Mac/802_15_4 wpanNam PlaybackRate 1.5ms"
    
 
+
    #$val(traffic)traffic 79 0 0.2 30
    #$val(traffic)traffic 55 0 0.2 45
    $val(traffic)traffic 9 0 0.2 60
@@ -329,6 +345,7 @@ if { ("$val(traffic)" == "cbr") || ("$val(traffic)" == "poisson") } {
    $val(traffic)traffic 73 0 0.2 360
    $val(traffic)traffic 84 0 0.2 375
    $val(traffic)traffic 61 0 0.2 390
+
 
    $ns_ at $appTime1 "$node_(0) add-mark m1 blue circle"
    Mac/802_15_4 wpanNam FlowClr -p AODV -c tomato

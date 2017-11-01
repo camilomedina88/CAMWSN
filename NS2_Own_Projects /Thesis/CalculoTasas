@@ -1,0 +1,8 @@
+echo '################'
+echo ' SIMULANDO '
+echo '################'
+ns congestion.tcl > resultados/Distancias.txt
+echo '################'
+echo ' CALCULANDO '
+echo '################'
+./output/Evaluacion_metricas > resultados/EcFusionEstrella.txt

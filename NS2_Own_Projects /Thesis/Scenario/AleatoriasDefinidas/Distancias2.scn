@@ -1,0 +1,302 @@
+$node_(0)  set X_ 75      
+$node_(0)  set Y_ 75
+
+$node_(1)  set X_ 44.6074      
+$node_(1)  set Y_ 17.92936
+
+$node_(2)  set X_ 139.4203     
+$node_(2)  set Y_ 87.27557
+
+$node_(3)  set X_ 139.5281     
+$node_(3)  set Y_ 100.4507
+
+$node_(4)  set X_ 26.32695     
+$node_(4)  set Y_ 26.8111
+
+$node_(5)  set X_ 114.4378     
+$node_(5)  set Y_ 56.45369
+
+$node_(6)  set X_ 6.77424      
+$node_(6)  set Y_ 124.9718
+
+$node_(7)  set X_ 101.8844     
+$node_(7)  set Y_ 121.6885
+
+$node_(8)  set X_ 118.7554     
+$node_(8)  set Y_ 23.01621
+
+$node_(9)  set X_ 134.6667     
+$node_(9)  set Y_ 144.2216
+
+$node_(10)  set X_ 83.55901     
+$node_(10)  set Y_ 76.53988
+
+$node_(11)  set X_ 5.304964     
+$node_(11)  set Y_ 60.76837
+
+$node_(12)  set X_ 133.7501     
+$node_(12)  set Y_ 39.16939
+
+$node_(13)  set X_ 119.1536     
+$node_(13)  set Y_ 114.9247
+
+$node_(14)  set X_ 140.3056     
+$node_(14)  set Y_ 117.0051
+
+$node_(15)  set X_ 4.787182     
+$node_(15)  set Y_ 58.28876
+
+$node_(16)  set X_ 8.373795     
+$node_(16)  set Y_ 38.14976
+
+$node_(17)  set X_ 82.05223     
+$node_(17)  set Y_ 101.5480
+
+$node_(18)  set X_ 18.19872     
+$node_(18)  set Y_ 16.49987
+
+$node_(19)  set X_ 113.3725     
+$node_(19)  set Y_ 3.174914
+
+$node_(20)  set X_ 111.7054     
+$node_(20)  set Y_ 34.19853
+
+$node_(21)  set X_ 125.2793     
+$node_(21)  set Y_ 19.30963
+
+$node_(22)  set X_ 88.07366     
+$node_(22)  set Y_ 54.25894
+
+$node_(23)  set X_ 79.41485     
+$node_(23)  set Y_ 25.13629
+
+$node_(24)  set X_ 64.3560      
+$node_(24)  set Y_ 131.8849
+
+$node_(25)  set X_ 40.42933     
+$node_(25)  set Y_ 145.4187
+
+$node_(26)  set X_ 103.2643     
+$node_(26)  set Y_ 63.48004
+
+$node_(27)  set X_ 109.9830     
+$node_(27)  set Y_ 35.93664
+
+$node_(28)  set X_ 87.84906     
+$node_(28)  set Y_ 28.57535
+
+$node_(29)  set X_ 116.1662     
+$node_(29)  set Y_ 6.164005
+
+$node_(30)  set X_ 99.62959     
+$node_(30)  set Y_ 24.13465
+
+$node_(31)  set X_ 30.2619      
+$node_(31)  set Y_ 111.8215
+
+$node_(32)  set X_ 35.0975      
+$node_(32)  set Y_ 85.15117
+
+$node_(33)  set X_ 134.7668     
+$node_(33)  set Y_ 26.01603
+
+$node_(34)  set X_ 2.085054     
+$node_(34)  set Y_ 94.13672
+
+$node_(35)  set X_ 106.5837     
+$node_(35)  set Y_ 53.43488
+
+$node_(36)  set X_ 29.1736      
+$node_(36)  set Y_ 122.0673
+
+$node_(37)  set X_ 36.20494     
+$node_(37)  set Y_ 96.84142
+
+$node_(38)  set X_ 114.2671     
+$node_(38)  set Y_ 38.13319
+
+$node_(39)  set X_ 104.0314     
+$node_(39)  set Y_ 55.77713
+
+$node_(40)  set X_ 96.97523     
+$node_(40)  set Y_ 112.6734
+
+$node_(41)  set X_ 103.1376     
+$node_(41)  set Y_ 34.62356
+
+$node_(42)  set X_ 67.57695     
+$node_(42)  set Y_ 115.5424
+
+$node_(43)  set X_ 21.47692     
+$node_(43)  set Y_ 62.75149
+
+$node_(44)  set X_ 13.6737      
+$node_(44)  set Y_ 14.82414
+
+$node_(45)  set X_ 148.8456     
+$node_(45)  set Y_ 99.31067
+
+$node_(46)  set X_ 64.61734     
+$node_(46)  set Y_ 24.09694
+
+$node_(47)  set X_ 148.1691     
+$node_(47)  set Y_ 128.1310
+
+$node_(48)  set X_ 99.05315     
+$node_(48)  set Y_ 86.5713 
+
+$node_(49)  set X_ 5.220868     
+$node_(49)  set Y_ 146.8118
+
+$node_(50)  set X_ 117.1788     
+$node_(50)  set Y_ 74.71128
+
+$node_(51)  set X_ 22.0145      
+$node_(51)  set Y_ 99.04065
+
+$node_(52)  set X_ 25.63621     
+$node_(52)  set Y_ 68.48548
+
+$node_(53)  set X_ 85.50888     
+$node_(53)  set Y_ 147.6207
+
+$node_(54)  set X_ 62.04369     
+$node_(54)  set Y_ 116.8685
+
+$node_(55)  set X_ 109.6010     
+$node_(55)  set Y_ 65.61697
+
+$node_(56)  set X_ 23.64982     
+$node_(56)  set Y_ 132.7814
+
+$node_(57)  set X_ 107.1535     
+$node_(57)  set Y_ 29.89603
+
+$node_(58)  set X_ 113.5049     
+$node_(58)  set Y_ 127.2639
+
+$node_(59)  set X_ 75.64846     
+$node_(59)  set Y_ 23.49409
+
+$node_(60)  set X_ 65.25418     
+$node_(60)  set Y_ 76.79355
+
+$node_(61)  set X_ 68.78926     
+$node_(61)  set Y_ 91.54563
+
+$node_(62)  set X_ 57.90324     
+$node_(62)  set Y_ 130.5208
+
+$node_(63)  set X_ 63.3623      
+$node_(63)  set Y_ 80.41375
+
+$node_(64)  set X_ 13.6855      
+$node_(64)  set Y_ 63.41513
+
+$node_(65)  set X_ 67.60465     
+$node_(65)  set Y_ 132.1192
+
+$node_(66)  set X_ 78.2548      
+$node_(66)  set Y_ 29.63943
+
+$node_(67)  set X_ 149.9385     
+$node_(67)  set Y_ 16.44966
+
+$node_(68)  set X_ 19.69786     
+$node_(68)  set Y_ 11.15095
+
+$node_(69)  set X_ 63.57818     
+$node_(69)  set Y_ 108.6273
+
+$node_(70)  set X_ 49.85354     
+$node_(70)  set Y_ 137.9827
+
+$node_(71)  set X_ 75.4903      
+$node_(71)  set Y_ 66.64526
+
+$node_(72)  set X_ 56.16205     
+$node_(72)  set Y_ 115.6466
+
+$node_(73)  set X_ 123.9047     
+$node_(73)  set Y_ 16.39242
+
+$node_(74)  set X_ 107.0837     
+$node_(74)  set Y_ 56.47607
+
+$node_(75)  set X_ 142.4681     
+$node_(75)  set Y_ 12.33876
+
+$node_(76)  set X_ 77.52897     
+$node_(76)  set Y_ 129.1613
+
+$node_(77)  set X_ 14.11324     
+$node_(77)  set Y_ 52.21313
+
+$node_(78)  set X_ 45.60565     
+$node_(78)  set Y_ 144.5443
+
+$node_(79)  set X_ 106.5062     
+$node_(79)  set Y_ 100.4394
+
+$node_(80)  set X_ 135.6319     
+$node_(80)  set Y_ 16.52658
+
+$node_(81)  set X_ 111.8388     
+$node_(81)  set Y_ 24.93426
+
+$node_(82)  set X_ 120.0976     
+$node_(82)  set Y_ 81.1255
+
+$node_(83)  set X_ 126.8791     
+$node_(83)  set Y_ 57.65674
+
+$node_(84)  set X_ 36.31971     
+$node_(84)  set Y_ 76.32162
+
+$node_(85)  set X_ 88.0972      
+$node_(85)  set Y_ 0.724797
+ 
+$node_(86)  set X_ 31.22525     
+$node_(86)  set Y_ 102.8663
+
+$node_(87)  set X_ 125.1439     
+$node_(87)  set Y_ 144.7676
+
+$node_(88)  set X_ 109.2025     
+$node_(88)  set Y_ 117.4735
+
+$node_(89)  set X_ 78.43205     
+$node_(89)  set Y_ 7.01804 
+
+$node_(90)  set X_ 52.29787     
+$node_(90)  set Y_ 119.1275
+
+$node_(91)  set X_ 126.6003     
+$node_(91)  set Y_ 21.78915
+
+$node_(92)  set X_ 59.76975     
+$node_(92)  set Y_ 149.6336
+
+$node_(93)  set X_ 143.1134     
+$node_(93)  set Y_ 58.28835
+
+$node_(94)  set X_ 2.669521     
+$node_(94)  set Y_ 16.83285
+
+$node_(95)  set X_ 9.113193     
+$node_(95)  set Y_ 14.39943
+
+$node_(96)  set X_ 60.79774     
+$node_(96)  set Y_ 28.09691
+
+$node_(97)  set X_ 24.90401     
+$node_(97)  set Y_ 62.62602
+
+$node_(98)  set X_ 6.520013     
+$node_(98)  set Y_ 83.2813 
+
+$node_(99)  set X_ 59.79015     
+$node_(99)  set Y_ 42.68692
+
+$node_(100) set X_ 138.9811 
+$node_(100)  set Y_ 6.37611

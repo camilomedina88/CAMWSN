@@ -1,0 +1,951 @@
+nodo:  1 30.126691181271656 89.298683632769936 
+nodo:  2 92.975815964385774 94.538913431828348 
+nodo:  3 115.51804873883634 61.845153622257129 
+nodo:  4 81.496929275569002 68.890334488307289 
+nodo:  5 139.85174498048227 138.27788696544147 
+nodo:  6 86.446228174700508 1.7569321914375444 
+nodo:  7 128.75934149080857 8.2524360195977771 
+nodo:  8 98.692181379856621 19.492451250316787 
+nodo:  9 9.6281640742105274 120.55359525631815 
+nodo:  10 94.275472939142702 37.873688171558868 
+nodo:  11 93.077099389898166 146.80944601856612 
+nodo:  12 76.359234040770318 119.64652322681924 
+nodo:  13 149.11587315104708 140.4800496485457 
+nodo:  14 48.194443107673173 4.0053106630245736 
+nodo:  15 117.25631345401347 26.860221604285865 
+nodo:  16 89.744503232531486 85.865829156649227 
+nodo:  17 146.99063580343065 121.61594825872031 
+nodo:  18 99.242384312321605 116.75313718931429 
+nodo:  19 119.97674080542137 149.08271671695761 
+nodo:  20 33.219861906589877 26.219064056044012 
+nodo:  21 113.8095899316527 147.77798128676508 
+nodo:  22 4.5314866604895734 110.69630284826098 
+nodo:  23 22.76197072247135 60.441932575982968 
+nodo:  24 47.560804545674848 4.4419991571651769 
+nodo:  25 106.67983447512603 17.978023443360826 
+nodo:  26 56.640012565366931 48.691186121986796 
+nodo:  27 102.76515223214643 73.913565685001004 
+nodo:  28 115.29846781180169 121.34851295098127 
+nodo:  29 104.45716714228371 11.608160362396465 
+nodo:  30 98.351210797369106 138.799871382676 
+nodo:  31 9.4383286356173119 79.989378820168497 
+nodo:  32 81.489830571920535 99.582422268382459 
+nodo:  33 131.77106470417746 76.284483110664638 
+nodo:  34 63.307640940559864 61.52128798957974 
+nodo:  35 38.287240866705424 143.65724671802354 
+nodo:  36 47.34558982185348 137.32813589150464 
+nodo:  37 23.979928518636122 130.65861271724972 
+nodo:  38 129.3039388159774 11.29968013209276 
+nodo:  39 13.723980083001768 108.93325501071907 
+nodo:  40 91.216965155311371 83.533365318334361 
+nodo:  41 95.270905245687317 118.10446426649786 
+nodo:  42 31.730927029499284 51.690584794474105 
+nodo:  43 113.65864072631049 10.774687100562588 
+nodo:  44 40.16609915539906 71.628504792055352 
+nodo:  45 110.28004007427023 76.633528259877835 
+nodo:  46 79.709463766640738 26.957525930813294 
+nodo:  47 75.138319179014459 149.73044169588502 
+nodo:  48 119.5335827393148 50.925099663867194 
+nodo:  49 148.1500506159617 107.90070246807332 
+nodo:  50 137.10638090833388 46.94392636741695 
+nodo:  51 136.57045717657101 39.673766628687162 
+nodo:  52 46.995728345120199 107.20629643518771 
+nodo:  53 16.22418619982162 129.89746040194177 
+nodo:  54 86.616975435343093 21.506141811379297 
+nodo:  55 103.7254238518539 13.198678108490387 
+nodo:  56 130.18296939795044 85.166671353004261 
+nodo:  57 96.245429942498646 146.9410435748012 
+nodo:  58 38.119361683781889 22.11181932227305 
+nodo:  59 83.347349443169009 118.90209134151324 
+nodo:  60 87.449176813219282 58.314699776617203 
+nodo:  61 145.15914560535884 89.760189265832395 
+nodo:  62 49.500990845030636 63.153132429883414 
+nodo:  63 14.696749050494631 108.26129166328408 
+nodo:  64 47.528984815594264 69.647795692853535 
+nodo:  65 120.50220978935351 130.63992966461922 
+nodo:  66 115.29787325546977 111.35580468054665 
+nodo:  67 7.0092659476256296 54.732781743971998 
+nodo:  68 93.862770937319269 1.591143525015164 
+nodo:  69 42.349224929860426 13.423396164282876 
+nodo:  70 7.0193331022836887 73.931450081957252 
+nodo:  71 115.88152745546843 20.831944058105325 
+nodo:  72 22.48378457617191 34.967371721271128 
+nodo:  73 146.61651940393099 133.8416218682386 
+nodo:  74 76.138739486289552 13.794546068550343 
+nodo:  75 94.935774125594548 35.55572886744315 
+nodo:  76 135.13507511705862 65.207492404248327 
+nodo:  77 42.324838201666644 53.555655411237687 
+nodo:  78 109.90049667186128 147.64756397234629 
+nodo:  79 62.607683223955185 147.33194501480645 
+nodo:  80 7.9998638518153982 53.711757461406179 
+nodo:  81 33.507653853626763 63.13831790496517 
+nodo:  82 65.709028749591212 71.64619437961197 
+nodo:  83 107.5889381382563 147.28328967340443 
+nodo:  84 90.249540908378336 24.034047114678682 
+nodo:  85 140.2298564045829 43.196591824850344 
+nodo:  86 5.1188002597162496 81.675965051015837 
+nodo:  87 77.944612422932224 65.100992221897926 
+nodo:  88 52.376273438509685 88.027681032208577 
+nodo:  89 31.235108329558329 118.46569488684912 
+nodo:  90 102.93396327315548 61.120731924251061 
+nodo:  91 56.141450887611811 69.365068091715258 
+nodo:  92 18.699417458241534 31.109220665464743 
+nodo:  93 102.67172446598843 3.6730998678473288 
+nodo:  94 83.789478910057568 49.772041337458433 
+nodo:  95 118.69875866393501 120.03686475569236 
+nodo:  96 109.58594892154724 111.04352444458917 
+nodo:  97 8.5153402101785609 17.322912471053616 
+nodo:  98 146.18990099811455 13.666075311445665 
+nodo:  99 35.727759467311088 26.453367097514388 
+nodo:  100 1.7408079242989458 7.7587836923817095 
+
+Traffic: poisson
+Acknowledgement for data: on
+
+Starting Simulation...
+num_nodes is set 101
+--- startPANCoord [0] ---
+channel.cc:sendUp - Calc highestAntennaZ_ and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 59.7
+[0.422720](node 0) begin to transmit beacons
+[0.423488](node 0) successfully started a new PAN (beacon enabled) [channel:11] [PAN_ID:0]
+[0.988800](node 2) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:0] ... 
+[1.189760](node 4) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:0] ... 
+[1.486528](node 2) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:0]
+[1.486528](node 2) begin to synchronize with the coordinator
+[1.486528](node 2) begin to transmit beacons
+[1.487296](node 2) beacon transmission successful [channel:11] [PAN_ID:0]
+[2.390080](node 16) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:2] ... 
+[2.588480](node 18) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:2] ... 
+[2.880800](node 3) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:2] ... 
+[2.889856](node 16) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:2]
+[2.889856](node 16) begin to synchronize with the coordinator
+[2.889856](node 16) begin to transmit beacons
+[2.890624](node 16) beacon transmission successful [channel:11] [PAN_ID:0]
+[3.388352](node 26) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:0] ... 
+[3.491040](node 27) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:2] ... 
+[3.591040](node 28) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:2] ... 
+[3.779200](node 12) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:16] ... 
+[3.885248](node 26) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:0]
+[3.885248](node 26) begin to synchronize with the coordinator
+[3.966624](node 4) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:2] ... 
+[3.990016](node 27) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:2]
+[3.990016](node 27) begin to synchronize with the coordinator
+[3.990720](node 32) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:2] ... 
+[4.192000](node 34) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:0] ... 
+[4.278144](node 12) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:16]
+[4.278144](node 12) begin to synchronize with the coordinator
+[4.488576](node 32) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:2]
+[4.488576](node 32) begin to synchronize with the coordinator
+[4.488576](node 32) begin to transmit beacons
+[4.489344](node 32) beacon transmission successful [channel:11] [PAN_ID:0]
+[4.690368](node 34) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:0]
+[4.690368](node 34) begin to synchronize with the coordinator
+[4.790080](node 40) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:2] ... 
+[4.890720](node 41) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:16] ... 
+[5.189760](node 44) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:0] ... 
+[5.288256](node 40) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:2]
+[5.288256](node 40) begin to synchronize with the coordinator
+[5.291680](node 45) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:2] ... 
+[5.367392](node 18) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:16] ... 
+[5.389824](node 41) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:16]
+[5.389824](node 41) begin to synchronize with the coordinator
+[5.389824](node 41) begin to transmit beacons
+[5.390592](node 41) beacon transmission successful [channel:11] [PAN_ID:0]
+[5.664992](node 3) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:2] ... 
+[5.686848](node 44) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:0]
+[5.686848](node 44) begin to synchronize with the coordinator
+[5.686848](node 44) begin to transmit beacons
+[5.687616](node 44) beacon transmission successful [channel:11] [PAN_ID:0]
+[5.792576](node 45) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:2]
+[5.792576](node 45) begin to synchronize with the coordinator
+[5.988800](node 52) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:32] ... 
+[6.260960](node 1) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:44] ... 
+[6.271520](node 19) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:41] ... 
+[6.368032](node 28) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:32] ... 
+[6.388160](node 56) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:2] ... 
+[6.467360](node 21) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:41] ... 
+[6.487744](node 52) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:32]
+[6.487744](node 52) begin to synchronize with the coordinator
+[6.490080](node 57) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:41] ... 
+[6.668000](node 23) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:44] ... 
+[6.690720](node 59) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:2] ... 
+[6.743072](node 4) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:16] ... 
+[6.760256](node 1) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:44]
+[6.760256](node 1) begin to synchronize with the coordinator
+[6.760256](node 1) begin to transmit beacons
+[6.761024](node 1) beacon transmission successful [channel:11] [PAN_ID:0]
+[6.770112](node 19) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:41]
+[6.770112](node 19) begin to synchronize with the coordinator
+[6.770112](node 19) begin to transmit beacons
+[6.770880](node 19) beacon transmission successful [channel:11] [PAN_ID:0]
+[6.779520](node 42) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:44] ... 
+[6.790400](node 60) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:2] ... 
+[6.885376](node 56) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:2]
+[6.885376](node 56) begin to synchronize with the coordinator
+[6.990720](node 62) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:44] ... 
+[7.188160](node 64) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:44] ... 
+[7.242304](node 4) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:16]
+[7.242304](node 4) begin to synchronize with the coordinator
+[7.242304](node 4) begin to transmit beacons
+[7.243072](node 4) beacon transmission successful [channel:11] [PAN_ID:0]
+[7.261600](node 11) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:41] ... 
+[7.277376](node 42) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:44]
+[7.277376](node 42) begin to synchronize with the coordinator
+[7.277376](node 42) begin to transmit beacons
+[7.278144](node 42) beacon transmission successful [channel:11] [PAN_ID:0]
+[7.287840](node 65) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:41] ... 
+[7.288096](node 47) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:41] ... 
+[7.368320](node 30) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:41] ... 
+[7.388800](node 66) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:41] ... 
+[7.458080](node 13) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:19] ... 
+[7.469280](node 31) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:1] ... 
+[7.491040](node 67) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:44] ... 
+[7.760192](node 11) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:41]
+[7.760192](node 11) begin to synchronize with the coordinator
+[7.789760](node 70) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:1] ... 
+[7.859040](node 17) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:19] ... 
+[7.955840](node 13) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:19]
+[7.955840](node 13) begin to synchronize with the coordinator
+[7.968064](node 31) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:1]
+[7.968064](node 31) begin to synchronize with the coordinator
+[7.988096](node 67) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:44]
+[7.988096](node 67) begin to synchronize with the coordinator
+[7.991360](node 72) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:42] ... 
+[8.089440](node 73) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:19] ... 
+[8.144160](node 18) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:41] ... 
+[8.157120](node 20) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:42] ... 
+[8.269248](node 39) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:1] ... 
+[8.288160](node 75) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:4] ... 
+[8.355840](node 22) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:1] ... 
+[8.376960](node 58) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:42] ... 
+[8.442592](node 3) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:16] ... 
+[8.445600](node 5) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:19] ... 
+[8.488704](node 72) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:42]
+[8.488704](node 72) begin to synchronize with the coordinator
+[8.488704](node 72) begin to transmit beacons
+[8.489440](node 77) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:1] ... 
+[8.489472](node 72) beacon transmission successful [channel:11] [PAN_ID:0]
+[8.588800](node 78) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:41] ... 
+[8.588800](node 73) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:19]
+[8.588800](node 73) begin to synchronize with the coordinator
+[8.643072](node 18) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:41]
+[8.643072](node 18) begin to synchronize with the coordinator
+[8.643072](node 18) begin to transmit beacons
+[8.643840](node 18) beacon transmission successful [channel:11] [PAN_ID:0]
+[8.767424](node 39) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:1]
+[8.767424](node 39) begin to synchronize with the coordinator
+[8.767424](node 39) begin to transmit beacons
+[8.768192](node 39) beacon transmission successful [channel:11] [PAN_ID:0]
+[8.785792](node 75) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:4]
+[8.785792](node 75) begin to synchronize with the coordinator
+[8.788800](node 80) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:42] ... 
+[8.852960](node 9) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:1] ... 
+[8.878560](node 63) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:1] ... 
+[8.888800](node 81) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:1] ... 
+[8.940544](node 3) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:16]
+[8.940544](node 3) begin to synchronize with the coordinator
+[8.940544](node 3) begin to transmit beacons
+[8.941312](node 3) beacon transmission successful [channel:11] [PAN_ID:0]
+[8.944640](node 10) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:4] ... 
+[8.990080](node 82) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:4] ... 
+[9.087520](node 83) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:41] ... 
+[9.148000](node 28) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:32] ... 
+[9.242848](node 21) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:41] ... 
+[9.265248](node 57) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:19] ... 
+[9.286784](node 80) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:42]
+[9.286784](node 80) begin to synchronize with the coordinator
+[9.286784](node 80) begin to transmit beacons
+[9.287552](node 80) beacon transmission successful [channel:11] [PAN_ID:0]
+[9.344960](node 14) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:72] ... 
+[9.357824](node 9) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:1]
+[9.357824](node 9) begin to synchronize with the coordinator
+[9.390400](node 86) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:1] ... 
+[9.443392](node 10) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:4]
+[9.443392](node 10) begin to synchronize with the coordinator
+[9.447712](node 23) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:1] ... 
+[9.465632](node 59) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:41] ... 
+[9.476960](node 69) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:72] ... 
+[9.487200](node 87) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:4] ... 
+[9.567072](node 60) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:16] ... 
+[9.584832](node 83) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:41]
+[9.584832](node 83) begin to synchronize with the coordinator
+[9.590400](node 88) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:4] ... 
+[9.646464](node 28) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:32]
+[9.646464](node 28) begin to synchronize with the coordinator
+[9.673440](node 53) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:39] ... 
+[9.679520](node 71) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:3] ... 
+[9.691680](node 89) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:39] ... 
+[9.764160](node 57) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:19]
+[9.764160](node 57) begin to synchronize with the coordinator
+[9.764160](node 57) begin to transmit beacons
+[9.764928](node 57) beacon transmission successful [channel:11] [PAN_ID:0]
+[9.768352](node 62) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:72] ... 
+[9.846592](node 14) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:72]
+[9.846592](node 14) begin to synchronize with the coordinator
+[9.846592](node 14) begin to transmit beacons
+[9.847360](node 14) beacon transmission successful [channel:11] [PAN_ID:0]
+[9.858400](node 37) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:39] ... 
+[9.966432](node 64) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:4] ... 
+[9.986112](node 87) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:4]
+[9.986112](node 87) begin to synchronize with the coordinator
+[10.065664](node 60) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:16]
+[10.065664](node 60) begin to synchronize with the coordinator
+[10.068768](node 47) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:41] ... 
+[10.071008](node 65) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:41] ... 
+[10.146528](node 30) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:18] ... 
+[10.164768](node 66) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:18] ... 
+[10.172672](node 53) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:39]
+[10.172672](node 53) begin to synchronize with the coordinator
+[10.178752](node 71) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:3]
+[10.178752](node 71) begin to synchronize with the coordinator
+[10.182080](node 76) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:3] ... 
+[10.348416](node 24) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:72] ... 
+[10.467360](node 61) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:3] ... 
+[10.480160](node 79) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:57] ... 
+[10.568160](node 70) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:1] ... 
+[10.569472](node 47) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:41]
+[10.569472](node 47) begin to synchronize with the coordinator
+[10.569472](node 47) begin to transmit beacons
+[10.570240](node 47) beacon transmission successful [channel:11] [PAN_ID:0]
+[10.637536](node 17) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:19] ... 
+[10.643520](node 30) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:18]
+[10.643520](node 30) begin to synchronize with the coordinator
+[10.643520](node 30) begin to transmit beacons
+[10.644288](node 30) beacon transmission successful [channel:11] [PAN_ID:0]
+[10.681152](node 76) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:3]
+[10.681152](node 76) begin to synchronize with the coordinator
+[10.756480](node 46) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:14] ... 
+[10.789760](node 90) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:0] ... 
+[10.848192](node 24) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:72]
+[10.848192](node 24) begin to synchronize with the coordinator
+[10.848192](node 24) begin to transmit beacons
+[10.848960](node 24) beacon transmission successful [channel:11] [PAN_ID:0]
+[10.891680](node 91) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:42] ... 
+[10.933920](node 20) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:80] ... 
+[10.962240](node 48) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:3] ... 
+[10.978049](node 79) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:57]
+[10.978049](node 79) begin to synchronize with the coordinator
+[10.989120](node 92) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:72] ... 
+[11.075680](node 85) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:3] ... 
+[11.134720](node 17) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:19]
+[11.134720](node 17) begin to synchronize with the coordinator
+[11.134720](node 17) begin to transmit beacons
+[11.135488](node 17) beacon transmission successful [channel:11] [PAN_ID:0]
+[11.146208](node 22) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:39] ... 
+[11.151520](node 58) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:72] ... 
+[11.159360](node 50) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:3] ... 
+[11.178528](node 81) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:80] ... 
+[11.190080](node 94) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:3] ... 
+[11.190400](node 86) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:1] ... 
+[11.222496](node 5) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:19] ... 
+[11.238560](node 15) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:3] ... 
+[11.249952](node 23) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:42] ... 
+[11.253408](node 33) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:3] ... 
+[11.254401](node 46) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:14]
+[11.254401](node 46) begin to synchronize with the coordinator
+[11.255520](node 51) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:3] ... 
+[11.267360](node 77) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:44] ... 
+[11.286848](node 90) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:0]
+[11.286848](node 90) begin to synchronize with the coordinator
+[11.294368](node 95) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:41] ... 
+[11.365088](node 78) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:19] ... 
+[11.390400](node 96) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:18] ... 
+[11.390784](node 91) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:42]
+[11.390784](node 91) begin to synchronize with the coordinator
+[11.432192](node 20) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:80]
+[11.432192](node 20) begin to synchronize with the coordinator
+[11.432192](node 20) begin to transmit beacons
+[11.432960](node 20) beacon transmission successful [channel:11] [PAN_ID:0]
+[11.452320](node 35) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:47] ... 
+[11.460992](node 48) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:3]
+[11.460992](node 48) begin to synchronize with the coordinator
+[11.487840](node 97) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:80] ... 
+[11.488192](node 92) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:72]
+[11.488192](node 92) begin to synchronize with the coordinator
+[11.488192](node 92) begin to transmit beacons
+[11.488960](node 92) beacon transmission successful [channel:11] [PAN_ID:0]
+[11.548160](node 36) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:47] ... 
+[11.644032](node 22) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:39]
+[11.644032](node 22) begin to synchronize with the coordinator
+[11.644032](node 22) begin to transmit beacons
+[11.644800](node 22) beacon transmission successful [channel:11] [PAN_ID:0]
+[11.652000](node 63) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:1] ... 
+[11.690080](node 99) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:72] ... 
+[11.721280](node 5) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:19]
+[11.721280](node 5) begin to synchronize with the coordinator
+[11.721280](node 5) begin to transmit beacons
+[11.722048](node 5) beacon transmission successful [channel:11] [PAN_ID:0]
+[11.765696](node 77) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:44]
+[11.765696](node 77) begin to synchronize with the coordinator
+[11.767648](node 82) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:0] ... 
+[11.770240](node 74) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:14] ... 
+[11.791040](node 100) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:72] ... 
+[11.793152](node 95) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:41]
+[11.793152](node 95) begin to synchronize with the coordinator
+[11.888320](node 96) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:18]
+[11.888320](node 96) begin to synchronize with the coordinator
+[11.950720](node 35) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:47]
+[11.950720](node 35) begin to synchronize with the coordinator
+[11.987072](node 97) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:80]
+[11.987072](node 97) begin to synchronize with the coordinator
+[12.020128](node 21) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:57] ... 
+[12.128320](node 6) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:14] ... 
+[12.187712](node 99) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:72]
+[12.187712](node 99) begin to synchronize with the coordinator
+[12.241568](node 59) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:18] ... 
+[12.254368](node 69) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:92] ... 
+[12.267008](node 82) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:0]
+[12.267008](node 82) begin to synchronize with the coordinator
+[12.269120](node 74) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:14]
+[12.269120](node 74) begin to synchronize with the coordinator
+[12.366048](node 88) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:44] ... 
+[12.372640](node 70) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:39] ... 
+[12.470368](node 89) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:39] ... 
+[12.517248](node 21) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:57]
+[12.517248](node 21) begin to synchronize with the coordinator
+[12.517248](node 21) begin to transmit beacons
+[12.518016](node 21) beacon transmission successful [channel:11] [PAN_ID:0]
+[12.547808](node 62) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:4] ... 
+[12.633888](node 37) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:22] ... 
+[12.740800](node 59) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:18]
+[12.740800](node 59) begin to synchronize with the coordinator
+[12.743008](node 64) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:0] ... 
+[12.753280](node 69) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:92]
+[12.753280](node 69) begin to synchronize with the coordinator
+[12.753280](node 69) begin to transmit beacons
+[12.754048](node 69) beacon transmission successful [channel:11] [PAN_ID:0]
+[12.843040](node 49) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:5] ... 
+[12.852128](node 65) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:18] ... 
+[12.863936](node 88) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:44]
+[12.863936](node 88) begin to synchronize with the coordinator
+[12.871232](node 70) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:39]
+[12.871232](node 70) begin to synchronize with the coordinator
+[12.943776](node 66) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:18] ... 
+[12.991680](node 86) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:39] ... 
+[13.044672](node 62) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:4]
+[13.044672](node 62) begin to synchronize with the coordinator
+[13.130880](node 37) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:22]
+[13.130880](node 37) begin to synchronize with the coordinator
+[13.131264](node 95) synchronization loss
+[13.131264](node 11) synchronization loss
+[13.131264](node 83) synchronization loss
+[13.131264](node 47) synchronization loss
+[13.131264](node 19) synchronization loss
+[13.141760](node 95) coordinator relocation successful, begin to re-synchronize with the coordinator
+[13.149760](node 47) coordinator relocation successful, begin to re-synchronize with the coordinator
+[13.241728](node 64) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:0]
+[13.241728](node 64) begin to synchronize with the coordinator
+[13.249568](node 61) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:17] ... 
+[13.342209](node 49) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:5]
+[13.342209](node 49) begin to synchronize with the coordinator
+[13.353600](node 65) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:18]
+[13.353600](node 65) begin to synchronize with the coordinator
+[13.453280](node 63) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:39] ... 
+[13.492672](node 86) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:39]
+[13.492672](node 86) begin to synchronize with the coordinator
+[13.492672](node 86) begin to transmit beacons
+[13.493440](node 86) beacon transmission successful [channel:11] [PAN_ID:0]
+[13.748289](node 61) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:17]
+[13.748289](node 61) begin to synchronize with the coordinator
+[13.774272](node 5) synchronization loss
+[13.774272](node 57) synchronization loss
+[13.774272](node 13) synchronization loss
+[13.774272](node 73) synchronization loss
+[13.774272](node 17) synchronization loss
+[13.832960](node 95) synchronization loss
+[13.840960](node 47) synchronization loss
+[13.843840](node 95) coordinator relocation successful, begin to re-synchronize with the coordinator
+[13.849600](node 47) coordinator relocation successful, begin to re-synchronize with the coordinator
+[13.851168](node 85) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:3] ... 
+[13.926368](node 58) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:20] ... 
+[13.936608](node 50) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:3] ... 
+[13.954208](node 81) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:42] ... 
+[13.968928](node 94) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:0] ... 
+[14.018208](node 15) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:3] ... 
+[14.027488](node 33) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:3] ... 
+[14.028960](node 23) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:1] ... 
+[14.032608](node 51) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:3] ... 
+[14.142496](node 78) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:21] ... 
+[14.325536](node 36) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:47] ... 
+[14.353152](node 85) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:3]
+[14.353152](node 85) begin to synchronize with the coordinator
+[14.424641](node 49) synchronization loss
+[14.425280](node 58) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:20]
+[14.425280](node 58) begin to synchronize with the coordinator
+[14.425280](node 58) begin to transmit beacons
+[14.426048](node 58) beacon transmission successful [channel:11] [PAN_ID:0]
+[14.433600](node 21) synchronization loss
+[14.433601](node 79) synchronization loss
+[14.456384](node 81) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:42]
+[14.456384](node 81) begin to synchronize with the coordinator
+[14.467648](node 94) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:0]
+[14.467648](node 94) begin to synchronize with the coordinator
+[14.568608](node 100) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:92] ... 
+[14.612288](node 11) coordinator relocation failed --> try to reassociate ...
+[14.622784](node 19) coordinator relocation failed.
+[14.625152](node 83) coordinator relocation failed --> try to reassociate ...
+[14.774848](node 17) coordinator relocation successful, begin to re-synchronize with the coordinator
+[14.823040](node 36) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:47]
+[14.823040](node 36) begin to synchronize with the coordinator
+[14.905057](node 6) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:14] ... 
+[15.070080](node 100) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:92]
+[15.070080](node 100) begin to synchronize with the coordinator
+[15.070080](node 100) begin to transmit beacons
+[15.070848](node 100) beacon transmission successful [channel:11] [PAN_ID:0]
+[15.248928](node 89) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:22] ... 
+[15.255936](node 57) coordinator relocation failed.
+[15.256576](node 5) coordinator relocation failed.
+[15.256576](node 13) coordinator relocation failed --> try to reassociate ...
+[15.266560](node 73) coordinator relocation failed --> try to reassociate ...
+[15.401088](node 11) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:47] ... 
+[15.402241](node 6) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:14]
+[15.402241](node 6) begin to synchronize with the coordinator
+[15.402241](node 6) begin to transmit beacons
+[15.403009](node 6) beacon transmission successful [channel:11] [PAN_ID:0]
+[15.413952](node 83) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:18] ... 
+[15.420097](node 49) coordinator relocation successful, begin to re-synchronize with the coordinator
+[15.720096](node 66) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:16] ... 
+[15.745920](node 89) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:22]
+[15.745920](node 89) begin to synchronize with the coordinator
+[15.830560](node 23) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:92] ... 
+[15.900480](node 11) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:47]
+[15.900480](node 11) begin to synchronize with the coordinator
+[15.913280](node 83) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:18]
+[15.913280](node 83) begin to synchronize with the coordinator
+[15.914624](node 21) coordinator relocation failed.
+[15.914625](node 79) coordinator relocation failed --> try to reassociate ...
+[16.045696](node 13) sending association request to [channel:13] [PAN_ID:0] [CoordAddr:17] ... 
+[16.057920](node 73) sending association request to [channel:13] [PAN_ID:0] [CoordAddr:17] ... 
+[16.218624](node 66) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:16]
+[16.218624](node 66) begin to synchronize with the coordinator
+[16.222240](node 29) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[16.228128](node 63) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:22] ... 
+[16.329600](node 23) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:92]
+[16.329600](node 23) begin to synchronize with the coordinator
+[16.329600](node 23) begin to transmit beacons
+[16.330368](node 23) beacon transmission successful [channel:11] [PAN_ID:0]
+[16.345600](node 84) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[16.434401](node 78) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:18] ... 
+[16.459680](node 93) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[16.537280](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[16.705025](node 79) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:30] ... 
+[16.714848](node 50) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:3] ... 
+[16.719169](node 29) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:6]
+[16.719169](node 29) begin to synchronize with the coordinator
+[16.719169](node 29) begin to transmit beacons
+[16.719937](node 29) beacon transmission successful [channel:11] [PAN_ID:0]
+[16.726080](node 63) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:22]
+[16.726080](node 63) begin to synchronize with the coordinator
+[16.797728](node 15) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[16.803808](node 33) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:3] ... 
+[16.806688](node 51) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:3] ... 
+[16.929920](node 54) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[16.933120](node 78) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:18]
+[16.933120](node 78) begin to synchronize with the coordinator
+[16.933120](node 78) begin to transmit beacons
+[16.933888](node 78) beacon transmission successful [channel:11] [PAN_ID:0]
+[17.030880](node 55) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[17.204288](node 79) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:30]
+[17.204288](node 79) begin to synchronize with the coordinator
+[17.213312](node 50) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:3]
+[17.213312](node 50) begin to synchronize with the coordinator
+[17.294849](node 15) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:6]
+[17.294849](node 15) begin to synchronize with the coordinator
+[17.294849](node 15) begin to transmit beacons
+[17.295617](node 15) beacon transmission successful [channel:11] [PAN_ID:0]
+[17.604320](node 7) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:29] ... 
+[17.608800](node 25) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:29] ... 
+[17.616160](node 43) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:29] ... 
+[17.697600](node 8) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:29] ... 
+[18.101697](node 7) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:29]
+[18.101697](node 7) begin to synchronize with the coordinator
+[18.101697](node 7) begin to transmit beacons
+[18.102465](node 7) beacon transmission successful [channel:11] [PAN_ID:0]
+[18.746880](node 98) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:15] ... 
+[18.906880](node 38) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:15] ... 
+[19.120865](node 84) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[19.237345](node 93) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:7] ... 
+[19.246017](node 98) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:15]
+[19.246017](node 98) begin to synchronize with the coordinator
+[19.317025](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:29] ... 
+[19.584608](node 33) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:3] ... 
+[19.584608](node 51) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:7] ... 
+[19.619009](node 84) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:6]
+[19.619009](node 84) begin to synchronize with the coordinator
+[19.707105](node 54) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:29] ... 
+[19.735745](node 93) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:7]
+[19.735745](node 93) begin to synchronize with the coordinator
+[19.815617](node 68) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:29]
+[19.815617](node 68) begin to synchronize with the coordinator
+[19.815617](node 68) begin to transmit beacons
+[19.816385](node 68) beacon transmission successful [channel:11] [PAN_ID:0]
+[19.817185](node 55) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:29] ... 
+[20.085312](node 33) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:3]
+[20.085312](node 33) begin to synchronize with the coordinator
+[20.315137](node 55) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:29]
+[20.315137](node 55) begin to synchronize with the coordinator
+[20.385633](node 25) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:15] ... 
+[20.392353](node 43) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:15] ... 
+[20.472993](node 8) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:7] ... 
+[20.883137](node 25) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:15]
+[20.883137](node 25) begin to synchronize with the coordinator
+[20.883137](node 25) begin to transmit beacons
+[20.883905](node 25) beacon transmission successful [channel:11] [PAN_ID:0]
+[20.971265](node 8) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:7]
+[20.971265](node 8) begin to synchronize with the coordinator
+[20.971265](node 8) begin to transmit beacons
+[20.972033](node 8) beacon transmission successful [channel:11] [PAN_ID:0]
+[21.682273](node 38) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:29] ... 
+[22.179777](node 38) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:29]
+[22.179777](node 38) begin to synchronize with the coordinator
+[22.179777](node 38) begin to transmit beacons
+[22.180545](node 38) beacon transmission successful [channel:11] [PAN_ID:0]
+[22.361441](node 51) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:15] ... 
+[22.482273](node 54) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:8] ... 
+[22.859457](node 51) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:15]
+[22.859457](node 51) begin to synchronize with the coordinator
+[22.980033](node 54) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:8]
+[22.980033](node 54) begin to synchronize with the coordinator
+[23.169953](node 43) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:68] ... 
+[23.667905](node 43) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:68]
+[23.667905](node 43) begin to synchronize with the coordinator
+[23.667905](node 43) begin to transmit beacons
+[23.668673](node 43) beacon transmission successful [channel:11] [PAN_ID:0]
+[138.636096](node 81) synchronization loss
+[138.646912](node 81) coordinator relocation successful, begin to re-synchronize with the coordinator
+[144.787008](node 1) synchronization loss
+[145.491776](node 31) synchronization loss
+[145.491776](node 39) synchronization loss
+[145.491776](node 9) synchronization loss
+[146.147264](node 22) synchronization loss
+[146.147264](node 53) synchronization loss
+[146.147264](node 86) synchronization loss
+[146.147264](node 70) synchronization loss
+[146.286592](node 1) coordinator relocation failed.
+[146.812032](node 63) synchronization loss
+[146.812032](node 89) synchronization loss
+[146.812032](node 37) synchronization loss
+[146.971840](node 39) coordinator relocation failed.
+[146.976512](node 9) coordinator relocation failed --> try to reassociate ...
+[146.980416](node 31) coordinator relocation failed --> try to reassociate ...
+[147.144000](node 86) coordinator relocation successful, begin to re-synchronize with the coordinator
+[147.151040](node 70) coordinator relocation successful, begin to re-synchronize with the coordinator
+[147.630848](node 53) coordinator relocation failed --> try to reassociate ...
+[147.632576](node 22) coordinator relocation failed.
+[147.767232](node 9) sending association request to [channel:13] [PAN_ID:0] [CoordAddr:86] ... 
+[147.769408](node 31) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:42] ... 
+[147.813568](node 89) coordinator relocation successful, begin to re-synchronize with the coordinator
+[147.832448](node 37) coordinator relocation successful, begin to re-synchronize with the coordinator
+[148.269504](node 31) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:42]
+[148.269504](node 31) begin to synchronize with the coordinator
+[148.301440](node 63) coordinator relocation failed --> try to reassociate ...
+[148.419648](node 53) sending association request to [channel:13] [PAN_ID:0] [CoordAddr:22] ... 
+[148.925120](node 53) association successful (beacon enabled) [channel:13] [PAN_ID:0] [CoordAddr:22]
+[148.925120](node 53) begin to synchronize with the coordinator
+[149.090560](node 63) sending association request to [channel:13] [PAN_ID:0] [CoordAddr:39] ... 
+[149.593152](node 63) association successful (beacon enabled) [channel:13] [PAN_ID:0] [CoordAddr:39]
+[149.593152](node 63) begin to synchronize with the coordinator
+[177.589056](node 91) synchronization loss
+[177.595968](node 88) synchronization loss
+[177.599872](node 91) coordinator relocation successful, begin to re-synchronize with the coordinator
+[179.077632](node 88) coordinator relocation failed --> try to reassociate ...
+[179.865472](node 88) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:2] ... 
+[180.365056](node 88) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:2]
+[180.365056](node 88) begin to synchronize with the coordinator
+[194.300736](node 91) synchronization loss
+[194.311552](node 91) coordinator relocation successful, begin to re-synchronize with the coordinator
+[223.327040](node 2) synchronization loss
+[223.369536](node 2) coordinator relocation successful, begin to re-synchronize with the coordinator
+[223.423296](node 81) synchronization loss
+[223.429632](node 81) coordinator relocation successful, begin to re-synchronize with the coordinator
+[230.945600](node 2) synchronization loss
+[230.952896](node 2) coordinator relocation successful, begin to re-synchronize with the coordinator
+[235.492160](node 44) synchronization loss
+[235.503616](node 44) coordinator relocation successful, begin to re-synchronize with the coordinator
+[261.849664](node 62) synchronization loss
+[261.920896](node 12) synchronization loss
+[262.115008](node 88) synchronization loss
+[262.157120](node 2) synchronization loss
+[262.164416](node 2) coordinator relocation successful, begin to re-synchronize with the coordinator
+[262.290816](node 28) synchronization loss
+[262.296832](node 28) coordinator relocation successful, begin to re-synchronize with the coordinator
+[262.636032](node 59) synchronization loss
+[262.655808](node 59) coordinator relocation successful, begin to re-synchronize with the coordinator
+[263.087872](node 11) synchronization loss
+[263.087872](node 36) synchronization loss
+[263.094848](node 11) coordinator relocation successful, begin to re-synchronize with the coordinator
+[263.107648](node 36) coordinator relocation successful, begin to re-synchronize with the coordinator
+[263.331968](node 62) coordinator relocation failed --> try to reassociate ...
+[263.407680](node 79) synchronization loss
+[263.413056](node 12) coordinator relocation failed --> try to reassociate ...
+[263.427136](node 79) coordinator relocation successful, begin to re-synchronize with the coordinator
+[263.594432](node 88) coordinator relocation failed --> try to reassociate ...
+[264.133952](node 62) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:42] ... 
+[264.202176](node 12) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:41] ... 
+[264.385920](node 88) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:16] ... 
+[264.632064](node 62) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:42]
+[264.632064](node 62) begin to synchronize with the coordinator
+[264.705792](node 12) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:41]
+[264.705792](node 12) begin to synchronize with the coordinator
+[264.883904](node 88) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:16]
+[264.883904](node 88) begin to synchronize with the coordinator
+[270.214912](node 11) synchronization loss
+[270.254592](node 59) synchronization loss
+[270.635840](node 64) synchronization loss
+[270.635840](node 44) synchronization loss
+[270.643776](node 44) coordinator relocation successful, begin to re-synchronize with the coordinator
+[271.695296](node 11) coordinator relocation failed --> try to reassociate ...
+[271.734976](node 59) coordinator relocation failed --> try to reassociate ...
+[272.119872](node 64) coordinator relocation failed --> try to reassociate ...
+[272.486976](node 11) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:18] ... 
+[272.526784](node 59) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:16] ... 
+[272.918528](node 64) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:23] ... 
+[272.943936](node 62) synchronization loss
+[272.943936](node 91) synchronization loss
+[272.970752](node 62) coordinator relocation successful, begin to re-synchronize with the coordinator
+[272.986240](node 11) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:18]
+[272.986240](node 11) begin to synchronize with the coordinator
+[273.028224](node 59) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:16]
+[273.028224](node 59) begin to synchronize with the coordinator
+[273.420288](node 64) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:23]
+[273.420288](node 64) begin to synchronize with the coordinator
+[273.594496](node 41) synchronization loss
+[273.636864](node 12) synchronization loss
+[273.786624](node 99) synchronization loss
+[273.793920](node 99) coordinator relocation successful, begin to re-synchronize with the coordinator
+[273.840256](node 88) synchronization loss
+[274.251264](node 18) synchronization loss
+[274.251264](node 95) synchronization loss
+[274.251264](node 47) synchronization loss
+[274.432768](node 91) coordinator relocation failed --> try to reassociate ...
+[274.801152](node 96) synchronization loss
+[274.884352](node 36) synchronization loss
+[274.884352](node 35) synchronization loss
+[274.924032](node 30) synchronization loss
+[274.924032](node 65) synchronization loss
+[274.924032](node 11) synchronization loss
+[274.924032](node 83) synchronization loss
+[274.924032](node 78) synchronization loss
+[275.086656](node 41) coordinator relocation failed.
+[275.120128](node 12) coordinator relocation failed --> try to reassociate ...
+[275.220288](node 91) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:0] ... 
+[275.244480](node 18) coordinator relocation successful, begin to re-synchronize with the coordinator
+[275.256960](node 95) coordinator relocation successful, begin to re-synchronize with the coordinator
+[275.320640](node 88) coordinator relocation failed --> try to reassociate ...
+[275.572800](node 79) synchronization loss
+[275.742592](node 47) coordinator relocation failed.
+[275.795328](node 96) coordinator relocation successful, begin to re-synchronize with the coordinator
+[275.909888](node 12) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:2] ... 
+[275.948160](node 95) synchronization loss
+[276.035648](node 30) coordinator relocation successful, begin to re-synchronize with the coordinator
+[276.108480](node 88) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:23] ... 
+[276.365952](node 35) coordinator relocation failed --> try to reassociate ...
+[276.366016](node 36) coordinator relocation failed --> try to reassociate ...
+[276.407616](node 83) coordinator relocation failed --> try to reassociate ...
+[276.408256](node 12) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:2]
+[276.408256](node 12) begin to synchronize with the coordinator
+[276.409344](node 65) coordinator relocation failed --> try to reassociate ...
+[276.411264](node 11) coordinator relocation failed --> try to reassociate ...
+[276.418560](node 78) coordinator relocation failed --> try to reassociate ...
+[276.567936](node 79) coordinator relocation successful, begin to re-synchronize with the coordinator
+[276.605889](node 88) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:23]
+[276.605889](node 88) begin to synchronize with the coordinator
+[276.940160](node 95) coordinator relocation successful, begin to re-synchronize with the coordinator
+[277.156096](node 36) sending association request to [channel:13] [PAN_ID:0] [CoordAddr:47] ... 
+[277.164288](node 35) sending association request to [channel:13] [PAN_ID:0] [CoordAddr:47] ... 
+[277.194176](node 83) sending association request to [channel:13] [PAN_ID:0] [CoordAddr:21] ... 
+[277.198144](node 65) sending association request to [channel:13] [PAN_ID:0] [CoordAddr:19] ... 
+[277.201024](node 11) sending association request to [channel:13] [PAN_ID:0] [CoordAddr:47] ... 
+[277.209920](node 78) sending association request to [channel:13] [PAN_ID:0] [CoordAddr:21] ... 
+[277.631360](node 95) synchronization loss
+[277.653120](node 36) association successful (beacon enabled) [channel:13] [PAN_ID:0] [CoordAddr:47]
+[277.653120](node 36) begin to synchronize with the coordinator
+[277.702657](node 83) association successful (beacon enabled) [channel:13] [PAN_ID:0] [CoordAddr:21]
+[277.702657](node 83) begin to synchronize with the coordinator
+[277.708480](node 65) association successful (beacon enabled) [channel:13] [PAN_ID:0] [CoordAddr:19]
+[277.708480](node 65) begin to synchronize with the coordinator
+[278.630720](node 95) coordinator relocation successful, begin to re-synchronize with the coordinator
+[279.321920](node 95) synchronization loss
+[280.046624](node 78) association successful (beacon enabled) [channel:13] [PAN_ID:0] [CoordAddr:21]
+[280.046624](node 78) begin to synchronize with the coordinator
+[280.046624](node 78) begin to transmit beacons
+[280.046624](node 78) beacon transmission successful [channel:13] [PAN_ID:0]
+[280.315520](node 95) coordinator relocation successful, begin to re-synchronize with the coordinator
+[281.006720](node 95) synchronization loss
+[282.001600](node 95) coordinator relocation successful, begin to re-synchronize with the coordinator
+[282.692800](node 95) synchronization loss
+[283.046720](node 2) synchronization loss
+[283.054336](node 2) coordinator relocation successful, begin to re-synchronize with the coordinator
+[283.690880](node 95) coordinator relocation successful, begin to re-synchronize with the coordinator
+[284.382080](node 95) synchronization loss
+[284.631552](node 30) synchronization loss
+[284.646720](node 21) synchronization loss
+[285.280320](node 79) synchronization loss
+[285.310849](node 78) synchronization loss
+[285.310849](node 83) synchronization loss
+[285.639616](node 21) coordinator relocation successful, begin to re-synchronize with the coordinator
+[285.874560](node 95) coordinator relocation failed --> try to reassociate ...
+[286.114816](node 30) coordinator relocation failed.
+[286.272256](node 79) coordinator relocation successful, begin to re-synchronize with the coordinator
+[286.306625](node 83) coordinator relocation successful, begin to re-synchronize with the coordinator
+[286.312385](node 78) coordinator relocation successful, begin to re-synchronize with the coordinator
+[286.663680](node 95) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:2] ... 
+[287.161216](node 95) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:2]
+[287.161216](node 95) begin to synchronize with the coordinator
+[289.979904](node 47) synchronization loss
+[290.612992](node 36) synchronization loss
+[290.975360](node 47) coordinator relocation successful, begin to re-synchronize with the coordinator
+[291.608448](node 36) coordinator relocation successful, begin to re-synchronize with the coordinator
+[291.666560](node 47) synchronization loss
+[292.299648](node 36) synchronization loss
+[293.000000](node 2) synchronization loss
+[293.010816](node 52) synchronization loss
+[293.010816](node 28) synchronization loss
+[293.019072](node 52) coordinator relocation successful, begin to re-synchronize with the coordinator
+[293.022656](node 2) coordinator relocation successful, begin to re-synchronize with the coordinator
+[293.155840](node 47) coordinator relocation failed.
+[293.782848](node 36) coordinator relocation failed --> try to reassociate ...
+[294.506240](node 28) coordinator relocation failed --> try to reassociate ...
+[294.573248](node 36) sending association request to [channel:13] [PAN_ID:0] [CoordAddr:47] ... 
+[295.296000](node 28) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:2] ... 
+[295.794816](node 28) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:2]
+[295.794816](node 28) begin to synchronize with the coordinator
+[298.775360](node 2) synchronization loss
+[298.783616](node 2) coordinator relocation successful, begin to re-synchronize with the coordinator
+[298.786176](node 52) synchronization loss
+[298.792832](node 52) coordinator relocation successful, begin to re-synchronize with the coordinator
+[362.957824](node 50) synchronization loss
+[362.963840](node 50) coordinator relocation successful, begin to re-synchronize with the coordinator
+[368.610304](node 48) synchronization loss
+[368.694080](node 94) synchronization loss
+[368.694080](node 90) synchronization loss
+[368.701056](node 94) coordinator relocation successful, begin to re-synchronize with the coordinator
+[370.097856](node 48) coordinator relocation failed --> try to reassociate ...
+[370.176704](node 90) coordinator relocation failed --> try to reassociate ...
+[370.886336](node 48) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:25] ... 
+[370.963904](node 90) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:16] ... 
+[371.387265](node 48) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:25]
+[371.387265](node 48) begin to synchronize with the coordinator
+[371.471424](node 90) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:16]
+[371.471424](node 90) begin to synchronize with the coordinator
+[381.107520](node 21) synchronization loss
+[381.771649](node 78) synchronization loss
+[381.771649](node 83) synchronization loss
+[382.108096](node 21) coordinator relocation successful, begin to re-synchronize with the coordinator
+[382.754304](node 19) synchronization loss
+[382.766145](node 78) coordinator relocation successful, begin to re-synchronize with the coordinator
+[383.254913](node 83) coordinator relocation failed --> try to reassociate ...
+[383.397312](node 65) synchronization loss
+[383.397312](node 5) synchronization loss
+[383.397312](node 57) synchronization loss
+[383.397312](node 17) synchronization loss
+[383.750720](node 19) coordinator relocation successful, begin to re-synchronize with the coordinator
+[384.044993](node 83) sending association request to [channel:13] [PAN_ID:0] [CoordAddr:18] ... 
+[384.047681](node 49) synchronization loss
+[384.056640](node 21) synchronization loss
+[384.401088](node 5) coordinator relocation successful, begin to re-synchronize with the coordinator
+[384.406528](node 65) coordinator relocation successful, begin to re-synchronize with the coordinator
+[384.544320](node 83) association successful (beacon enabled) [channel:13] [PAN_ID:0] [CoordAddr:18]
+[384.544320](node 83) begin to synchronize with the coordinator
+[384.720769](node 78) synchronization loss
+[384.879616](node 57) coordinator relocation failed.
+[384.889408](node 17) coordinator relocation failed.
+[385.042817](node 49) coordinator relocation successful, begin to re-synchronize with the coordinator
+[385.051136](node 21) coordinator relocation successful, begin to re-synchronize with the coordinator
+[385.703424](node 19) synchronization loss
+[385.715905](node 78) coordinator relocation successful, begin to re-synchronize with the coordinator
+[386.346432](node 65) synchronization loss
+[386.346432](node 5) synchronization loss
+[386.699840](node 19) coordinator relocation successful, begin to re-synchronize with the coordinator
+[386.996801](node 49) synchronization loss
+[387.343488](node 5) coordinator relocation successful, begin to re-synchronize with the coordinator
+[387.371648](node 65) coordinator relocation successful, begin to re-synchronize with the coordinator
+[387.391040](node 19) synchronization loss
+[387.943872](node 57) synchronization loss
+[387.988737](node 49) coordinator relocation successful, begin to re-synchronize with the coordinator
+[388.034688](node 5) synchronization loss
+[388.062848](node 65) synchronization loss
+[388.385920](node 19) coordinator relocation successful, begin to re-synchronize with the coordinator
+[388.603200](node 21) synchronization loss
+[388.679937](node 49) synchronization loss
+[388.937728](node 57) coordinator relocation successful, begin to re-synchronize with the coordinator
+[389.026688](node 5) coordinator relocation successful, begin to re-synchronize with the coordinator
+[389.056768](node 65) coordinator relocation successful, begin to re-synchronize with the coordinator
+[389.267329](node 78) synchronization loss
+[389.599936](node 21) coordinator relocation successful, begin to re-synchronize with the coordinator
+[389.674817](node 49) coordinator relocation successful, begin to re-synchronize with the coordinator
+[390.249984](node 19) synchronization loss
+[390.261825](node 78) coordinator relocation successful, begin to re-synchronize with the coordinator
+[390.892992](node 65) synchronization loss
+[390.892992](node 5) synchronization loss
+[390.892992](node 57) synchronization loss
+[391.243840](node 19) coordinator relocation successful, begin to re-synchronize with the coordinator
+[391.543361](node 49) synchronization loss
+[391.552320](node 21) synchronization loss
+[391.887808](node 57) coordinator relocation successful, begin to re-synchronize with the coordinator
+[391.895488](node 65) coordinator relocation successful, begin to re-synchronize with the coordinator
+[392.216449](node 78) synchronization loss
+[392.375296](node 5) coordinator relocation failed.
+[392.538177](node 49) coordinator relocation successful, begin to re-synchronize with the coordinator
+[392.548736](node 21) coordinator relocation successful, begin to re-synchronize with the coordinator
+[393.199104](node 19) synchronization loss
+[393.214145](node 78) coordinator relocation successful, begin to re-synchronize with the coordinator
+[393.842112](node 65) synchronization loss
+[393.842112](node 57) synchronization loss
+[394.193280](node 19) coordinator relocation successful, begin to re-synchronize with the coordinator
+[394.501440](node 21) synchronization loss
+[394.806977](node 48) synchronization loss
+[394.836353](node 48) coordinator relocation successful, begin to re-synchronize with the coordinator
+[394.838848](node 57) coordinator relocation successful, begin to re-synchronize with the coordinator
+[395.165569](node 78) synchronization loss
+[395.327424](node 65) coordinator relocation failed --> try to reassociate ...
+[395.496576](node 21) coordinator relocation successful, begin to re-synchronize with the coordinator
+[395.902464](node 19) synchronization loss
+[396.116864](node 65) sending association request to [channel:13] [PAN_ID:0] [CoordAddr:18] ... 
+[396.163265](node 78) coordinator relocation successful, begin to re-synchronize with the coordinator
+[396.545472](node 57) synchronization loss
+[396.617920](node 65) association successful (beacon enabled) [channel:13] [PAN_ID:0] [CoordAddr:18]
+[396.617920](node 65) begin to synchronize with the coordinator
+[396.896960](node 19) coordinator relocation successful, begin to re-synchronize with the coordinator
+[397.204800](node 21) synchronization loss
+[397.566208](node 57) coordinator relocation successful, begin to re-synchronize with the coordinator
+[397.868929](node 78) synchronization loss
+[398.203136](node 21) coordinator relocation successful, begin to re-synchronize with the coordinator
+[398.851584](node 19) synchronization loss
+[398.864705](node 78) coordinator relocation successful, begin to re-synchronize with the coordinator
+[399.494592](node 57) synchronization loss
+[399.846400](node 19) coordinator relocation successful, begin to re-synchronize with the coordinator
+[400.153920](node 21) synchronization loss
+[400.488128](node 57) coordinator relocation successful, begin to re-synchronize with the coordinator
+[400.818049](node 78) synchronization loss
+[401.148416](node 21) coordinator relocation successful, begin to re-synchronize with the coordinator
+[401.483328](node 77) synchronization loss
+[401.490624](node 77) coordinator relocation successful, begin to re-synchronize with the coordinator
+[401.800704](node 19) synchronization loss
+[401.811265](node 78) coordinator relocation successful, begin to re-synchronize with the coordinator
+[402.443712](node 57) synchronization loss
+[402.795200](node 19) coordinator relocation successful, begin to re-synchronize with the coordinator
+[403.103040](node 21) synchronization loss
+[403.440768](node 57) coordinator relocation successful, begin to re-synchronize with the coordinator
+[403.767169](node 78) synchronization loss
+[404.100736](node 21) coordinator relocation successful, begin to re-synchronize with the coordinator
+[404.749824](node 19) synchronization loss
+[404.762305](node 78) coordinator relocation successful, begin to re-synchronize with the coordinator
+[405.392832](node 57) synchronization loss
+[405.748480](node 19) coordinator relocation successful, begin to re-synchronize with the coordinator
+[406.052160](node 21) synchronization loss
+[406.386368](node 57) coordinator relocation successful, begin to re-synchronize with the coordinator
+[406.716289](node 78) synchronization loss
+[407.046656](node 21) coordinator relocation successful, begin to re-synchronize with the coordinator
+[407.698944](node 19) synchronization loss
+[407.711425](node 78) coordinator relocation successful, begin to re-synchronize with the coordinator
+[408.219072](node 57) synchronization loss
+[408.696320](node 19) coordinator relocation successful, begin to re-synchronize with the coordinator
+[408.878400](node 21) synchronization loss
+[409.213568](node 57) coordinator relocation successful, begin to re-synchronize with the coordinator
+[409.542529](node 78) synchronization loss
+[409.872576](node 21) coordinator relocation successful, begin to re-synchron
+NS EXITING...
+
+ize with the coordinator

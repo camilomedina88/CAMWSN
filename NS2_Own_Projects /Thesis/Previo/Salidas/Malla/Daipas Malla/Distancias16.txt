@@ -1,0 +1,3527 @@
+nodo:  1 131.4499199769692 78.805052921550839 
+nodo:  2 126.52445250494613 96.473250629600727 
+nodo:  3 75.923331699298373 143.43587010793198 
+nodo:  4 76.668904012380594 74.269736080556058 
+nodo:  5 101.45430590559464 92.519355328995445 
+nodo:  6 72.805014426263526 83.877462211007938 
+nodo:  7 28.507380410333809 23.542556480291559 
+nodo:  8 129.74676426022629 103.86692162317547 
+nodo:  9 141.35172070998314 148.36997268645558 
+nodo:  10 54.130941258804384 28.729736725208227 
+nodo:  11 10.685140574669996 35.157638478631917 
+nodo:  12 44.429910366623623 33.503531843192661 
+nodo:  13 143.85968853899263 149.78527484917328 
+nodo:  14 141.11439005523658 59.553658361338854 
+nodo:  15 118.3360790220723 24.480123969018518 
+nodo:  16 137.44354729421602 13.699373888643168 
+nodo:  17 145.37694642570659 0.33857685063899351 
+nodo:  18 140.46112868956342 30.189885492525011 
+nodo:  19 101.40547286784532 21.782489876161556 
+nodo:  20 98.307348647297999 1.608715137284582 
+nodo:  21 37.675312341971001 58.974531506642016 
+nodo:  22 134.95103213235319 121.99704845994574 
+nodo:  23 54.393466307964857 90.98823796538089 
+nodo:  24 139.31548415651335 125.34221851981347 
+nodo:  25 26.666662505206961 136.59672501338494 
+nodo:  26 31.157299960571017 10.740437317053059 
+nodo:  27 64.529987710774861 55.503454993247729 
+nodo:  28 146.56807151463258 69.577946429875652 
+nodo:  29 146.54564692012298 142.6877865068092 
+nodo:  30 103.62781994213715 22.769767498955954 
+nodo:  31 41.482354952712704 143.93969024249338 
+nodo:  32 144.37390558625287 92.231188152093068 
+nodo:  33 29.579272228097206 38.828337629711413 
+nodo:  34 87.870542559712433 90.208801087089256 
+nodo:  35 89.319870709124899 149.06700826206571 
+nodo:  36 69.207860538367115 76.512068336136664 
+nodo:  37 138.33252544902848 104.75522182171942 
+nodo:  38 71.013157638261632 118.14042626327856 
+nodo:  39 36.144206922568479 125.6857476083961 
+nodo:  40 100.36005431337286 1.4328448574211659 
+nodo:  41 81.823518677532448 7.8784132878661213 
+nodo:  42 112.49212916590838 55.214891422174361 
+nodo:  43 96.680132484380209 102.98666497831543 
+nodo:  44 46.878290547466975 83.4292312774012 
+nodo:  45 145.09007928198673 128.96249235093711 
+nodo:  46 122.60894219978198 138.49155173566729 
+nodo:  47 77.510021360362884 110.9290036190902 
+nodo:  48 33.763826048822992 18.624402568035016 
+nodo:  49 120.33396096449995 2.8819303507366825 
+nodo:  50 136.60340483142221 143.42500171317951 
+nodo:  51 44.003793408164654 71.755811023412193 
+nodo:  52 149.91587048858213 86.035301599668003 
+nodo:  53 145.31398562030589 142.15632048070259 
+nodo:  54 21.27831916849982 24.710264976467126 
+nodo:  55 105.42345948304211 52.083531488703343 
+nodo:  56 117.9137306371302 126.07081824730655 
+nodo:  57 122.24228248104559 126.04165893329385 
+nodo:  58 82.161691869684347 141.55525378489645 
+nodo:  59 119.15036275477632 60.146819525466682 
+nodo:  60 37.595764518527211 72.014262886724552 
+nodo:  61 143.716337179633 140.47897809207393 
+nodo:  62 30.184793486345928 15.824125016026258 
+nodo:  63 6.0691443533027281 4.1091459589587274 
+nodo:  64 62.41613221932954 77.934210271543918 
+nodo:  65 40.272033838681892 52.072726726565847 
+nodo:  66 86.318093392214777 98.195642953829676 
+nodo:  67 74.171125015323568 94.098132543311507 
+nodo:  68 57.313655436650691 120.60692378813724 
+nodo:  69 90.56810722247144 128.17808807742693 
+nodo:  70 139.12631731439677 96.015103066347123 
+nodo:  71 25.83723609607538 146.42706673891612 
+nodo:  72 99.710680963336813 37.41495080171849 
+nodo:  73 33.07812448268669 44.038180515187882 
+nodo:  74 49.699918762640991 106.53464370711458 
+nodo:  75 127.75678547460437 108.29347167550283 
+nodo:  76 138.37845017592352 126.61210674634766 
+nodo:  77 69.67808586530299 29.589138147229857 
+nodo:  78 54.644840492235886 115.83415300857004 
+nodo:  79 124.60961503657028 13.799919636826925 
+nodo:  80 35.249336150125295 85.592675155770351 
+nodo:  81 56.091343032238697 127.20234283581485 
+nodo:  82 89.776041540212944 15.930166359026995 
+nodo:  83 138.30599616668465 108.87757346913106 
+nodo:  84 55.377295685642075 126.20858858628598 
+nodo:  85 37.748369708540089 86.849691433296385 
+nodo:  86 32.763919412514156 13.193566125442072 
+nodo:  87 44.265870304902023 126.48221448831363 
+nodo:  88 136.57890508723395 31.657801140871737 
+nodo:  89 22.663774631295247 60.060228179236979 
+nodo:  90 82.255008435926868 59.926782622899296 
+nodo:  91 89.435543068421794 143.17235096505487 
+nodo:  92 147.70266967718615 88.769264467418793 
+nodo:  93 45.027903907479676 33.980973010873875 
+nodo:  94 68.213393757219137 12.508877582153715 
+nodo:  95 86.705523257472322 9.729388337456335 
+nodo:  96 21.829787628645906 143.24067465180562 
+nodo:  97 96.018872897149464 89.196782391144325 
+nodo:  98 30.321647962705068 65.937309184082466 
+nodo:  99 8.3554568739400512 30.163680310437307 
+nodo:  100 110.97497751981717 56.447175567246589 
+
+Traffic: poisson
+Acknowledgement for data: on
+
+Starting Simulation...
+num_nodes is set 101
+--- startPANCoord [0] ---
+channel.cc:sendUp - Calc highestAntennaZ_ and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 59.7
+[0.422720](node 0) begin to transmit beacons
+[0.423488](node 0) successfully started a new PAN (beacon enabled) [channel:11] [PAN_ID:0]
+[1.189760](node 4) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:0] ... 
+[1.288480](node 5) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:0] ... 
+[1.389120](node 6) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:0] ... 
+[1.688128](node 4) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:0]
+[1.688128](node 4) begin to synchronize with the coordinator
+[1.688128](node 4) begin to transmit beacons
+[1.688896](node 4) beacon transmission successful [channel:11] [PAN_ID:0]
+[2.889760](node 21) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:0] ... 
+[3.089760](node 23) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:4] ... 
+[3.390208](node 21) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:0]
+[3.390208](node 21) begin to synchronize with the coordinator
+[3.390208](node 21) begin to transmit beacons
+[3.390976](node 21) beacon transmission successful [channel:11] [PAN_ID:0]
+[3.491040](node 27) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:0] ... 
+[3.588096](node 23) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:4]
+[3.588096](node 23) begin to synchronize with the coordinator
+[3.588096](node 23) begin to transmit beacons
+[3.588864](node 23) beacon transmission successful [channel:11] [PAN_ID:0]
+[3.991488](node 27) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:0]
+[3.991488](node 27) begin to synchronize with the coordinator
+[3.991488](node 27) begin to transmit beacons
+[3.992256](node 27) beacon transmission successful [channel:11] [PAN_ID:0]
+[4.063264](node 5) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:4] ... 
+[4.088800](node 33) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:21] ... 
+[4.166944](node 6) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:4] ... 
+[4.189120](node 34) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:4] ... 
+[4.389440](node 36) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:0] ... 
+[4.562176](node 5) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:4]
+[4.562176](node 5) begin to synchronize with the coordinator
+[4.562176](node 5) begin to transmit beacons
+[4.562944](node 5) beacon transmission successful [channel:11] [PAN_ID:0]
+[4.586496](node 33) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:21]
+[4.586496](node 33) begin to synchronize with the coordinator
+[4.586496](node 33) begin to transmit beacons
+[4.587264](node 33) beacon transmission successful [channel:11] [PAN_ID:0]
+[4.590400](node 38) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:23] ... 
+[4.692640](node 39) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:23] ... 
+[4.891008](node 36) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:0]
+[4.891008](node 36) begin to synchronize with the coordinator
+[4.891008](node 36) begin to transmit beacons
+[4.891776](node 36) beacon transmission successful [channel:11] [PAN_ID:0]
+[4.991360](node 42) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:4] ... 
+[5.070880](node 7) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:21] ... 
+[5.087424](node 38) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:23]
+[5.087424](node 38) begin to synchronize with the coordinator
+[5.087424](node 38) begin to transmit beacons
+[5.088192](node 38) beacon transmission successful [channel:11] [PAN_ID:0]
+[5.089440](node 43) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:0] ... 
+[5.167360](node 8) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:5] ... 
+[5.178880](node 26) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:33] ... 
+[5.190400](node 44) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:23] ... 
+[5.369600](node 10) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:33] ... 
+[5.470880](node 11) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:33] ... 
+[5.490176](node 42) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:4]
+[5.490176](node 42) begin to synchronize with the coordinator
+[5.490176](node 42) begin to transmit beacons
+[5.490400](node 47) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:0] ... 
+[5.490944](node 42) beacon transmission successful [channel:11] [PAN_ID:0]
+[5.568576](node 7) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:21]
+[5.568576](node 7) begin to synchronize with the coordinator
+[5.568576](node 7) begin to transmit beacons
+[5.568640](node 12) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:33] ... 
+[5.569344](node 7) beacon transmission successful [channel:11] [PAN_ID:0]
+[5.589248](node 43) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:0]
+[5.589248](node 43) begin to synchronize with the coordinator
+[5.589248](node 43) begin to transmit beacons
+[5.590016](node 43) beacon transmission successful [channel:11] [PAN_ID:0]
+[5.590720](node 48) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:33] ... 
+[5.664384](node 8) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:5]
+[5.664384](node 8) begin to synchronize with the coordinator
+[5.664384](node 8) begin to transmit beacons
+[5.665152](node 8) beacon transmission successful [channel:11] [PAN_ID:0]
+[5.675904](node 26) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:33]
+[5.675904](node 26) begin to synchronize with the coordinator
+[5.675904](node 26) begin to transmit beacons
+[5.676672](node 26) beacon transmission successful [channel:11] [PAN_ID:0]
+[5.677920](node 31) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:38] ... 
+[5.690624](node 44) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:23]
+[5.690624](node 44) begin to synchronize with the coordinator
+[5.690624](node 44) begin to transmit beacons
+[5.691392](node 44) beacon transmission successful [channel:11] [PAN_ID:0]
+[5.890080](node 51) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:21] ... 
+[6.082720](node 35) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:38] ... 
+[6.165760](node 18) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:42] ... 
+[6.176512](node 31) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:38]
+[6.176512](node 31) begin to synchronize with the coordinator
+[6.176512](node 31) begin to transmit beacons
+[6.177280](node 31) beacon transmission successful [channel:11] [PAN_ID:0]
+[6.191360](node 54) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:33] ... 
+[6.260320](node 1) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:42] ... 
+[6.267360](node 19) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:42] ... 
+[6.278560](node 37) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:5] ... 
+[6.291040](node 55) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:5] ... 
+[6.359360](node 2) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:43] ... 
+[6.389376](node 51) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:21]
+[6.389376](node 51) begin to synchronize with the coordinator
+[6.389376](node 51) begin to transmit beacons
+[6.390144](node 51) beacon transmission successful [channel:11] [PAN_ID:0]
+[6.390720](node 56) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:8] ... 
+[6.458720](node 3) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:38] ... 
+[6.489120](node 57) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:43] ... 
+[6.570560](node 22) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:8] ... 
+[6.587840](node 58) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:38] ... 
+[6.664384](node 18) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:42]
+[6.664384](node 18) begin to synchronize with the coordinator
+[6.664384](node 18) begin to transmit beacons
+[6.665152](node 18) beacon transmission successful [channel:11] [PAN_ID:0]
+[6.688704](node 54) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:33]
+[6.688704](node 54) begin to synchronize with the coordinator
+[6.688704](node 54) begin to transmit beacons
+[6.689472](node 54) beacon transmission successful [channel:11] [PAN_ID:0]
+[6.690080](node 59) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:5] ... 
+[6.769920](node 24) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:8] ... 
+[6.789120](node 60) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:23] ... 
+[6.796864](node 37) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:5]
+[6.796864](node 37) begin to synchronize with the coordinator
+[6.796864](node 37) begin to transmit beacons
+[6.797632](node 37) beacon transmission successful [channel:11] [PAN_ID:0]
+[6.856256](node 2) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:43]
+[6.856256](node 2) begin to synchronize with the coordinator
+[6.856256](node 2) begin to transmit beacons
+[6.857024](node 2) beacon transmission successful [channel:11] [PAN_ID:0]
+[6.868960](node 25) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:31] ... 
+[6.887872](node 56) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:8]
+[6.887872](node 56) begin to synchronize with the coordinator
+[6.887872](node 56) begin to transmit beacons
+[6.888640](node 56) beacon transmission successful [channel:11] [PAN_ID:0]
+[6.891040](node 61) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:8] ... 
+[6.943392](node 6) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:5] ... 
+[6.955712](node 3) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:38]
+[6.955712](node 3) begin to synchronize with the coordinator
+[6.955712](node 3) begin to transmit beacons
+[6.956480](node 3) beacon transmission successful [channel:11] [PAN_ID:0]
+[6.964192](node 34) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:38] ... 
+[6.987520](node 62) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:26] ... 
+[7.075680](node 45) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:8] ... 
+[7.088800](node 63) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:7] ... 
+[7.163520](node 28) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:8] ... 
+[7.176320](node 46) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:8] ... 
+[7.190400](node 64) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:23] ... 
+[7.286464](node 60) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:23]
+[7.286464](node 60) begin to synchronize with the coordinator
+[7.286464](node 60) begin to transmit beacons
+[7.287232](node 60) beacon transmission successful [channel:11] [PAN_ID:0]
+[7.290720](node 65) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:51] ... 
+[7.364160](node 30) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:42] ... 
+[7.367680](node 25) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:31]
+[7.367680](node 25) begin to synchronize with the coordinator
+[7.367680](node 25) begin to transmit beacons
+[7.368448](node 25) beacon transmission successful [channel:11] [PAN_ID:0]
+[7.389440](node 66) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:4] ... 
+[7.397632](node 61) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:8]
+[7.397632](node 61) begin to synchronize with the coordinator
+[7.397632](node 61) begin to transmit beacons
+[7.398400](node 61) beacon transmission successful [channel:11] [PAN_ID:0]
+[7.440384](node 6) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:5]
+[7.440384](node 6) begin to synchronize with the coordinator
+[7.440384](node 6) begin to transmit beacons
+[7.441152](node 6) beacon transmission successful [channel:11] [PAN_ID:0]
+[7.461952](node 34) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:38]
+[7.461952](node 34) begin to synchronize with the coordinator
+[7.461952](node 34) begin to transmit beacons
+[7.462720](node 34) beacon transmission successful [channel:11] [PAN_ID:0]
+[7.464160](node 13) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:56] ... 
+[7.473120](node 39) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:38] ... 
+[7.477600](node 49) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:18] ... 
+[7.486592](node 62) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:26]
+[7.486592](node 62) begin to synchronize with the coordinator
+[7.486592](node 62) begin to transmit beacons
+[7.487360](node 62) beacon transmission successful [channel:11] [PAN_ID:0]
+[7.489760](node 67) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:4] ... 
+[7.558720](node 14) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:18] ... 
+[7.569920](node 32) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:37] ... 
+[7.579520](node 50) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:37] ... 
+[7.586944](node 63) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:7]
+[7.586944](node 63) begin to synchronize with the coordinator
+[7.586944](node 63) begin to transmit beacons
+[7.587712](node 63) beacon transmission successful [channel:11] [PAN_ID:0]
+[7.587840](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:38] ... 
+[7.662560](node 15) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:18] ... 
+[7.691040](node 69) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:38] ... 
+[7.765760](node 16) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:18] ... 
+[7.779200](node 52) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:8] ... 
+[7.788544](node 65) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:51]
+[7.788544](node 65) begin to synchronize with the coordinator
+[7.788544](node 65) begin to transmit beacons
+[7.789312](node 65) beacon transmission successful [channel:11] [PAN_ID:0]
+[7.789440](node 70) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:56] ... 
+[7.859680](node 17) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:18] ... 
+[7.861504](node 30) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:42]
+[7.861504](node 30) begin to synchronize with the coordinator
+[7.861504](node 30) begin to transmit beacons
+[7.862272](node 30) beacon transmission successful [channel:11] [PAN_ID:0]
+[7.881440](node 53) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:56] ... 
+[7.887936](node 66) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:4]
+[7.887936](node 66) begin to synchronize with the coordinator
+[7.887936](node 66) begin to transmit beacons
+[7.888704](node 66) beacon transmission successful [channel:11] [PAN_ID:0]
+[7.891680](node 71) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:31] ... 
+[7.961280](node 13) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:56]
+[7.961280](node 13) begin to synchronize with the coordinator
+[7.961280](node 13) begin to transmit beacons
+[7.962048](node 13) beacon transmission successful [channel:11] [PAN_ID:0]
+[7.970112](node 39) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:38]
+[7.970112](node 39) begin to synchronize with the coordinator
+[7.970112](node 39) begin to transmit beacons
+[7.970880](node 39) beacon transmission successful [channel:11] [PAN_ID:0]
+[7.974592](node 49) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:18]
+[7.974592](node 49) begin to synchronize with the coordinator
+[7.974592](node 49) begin to transmit beacons
+[7.975360](node 49) beacon transmission successful [channel:11] [PAN_ID:0]
+[7.990400](node 72) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:42] ... 
+[8.068992](node 32) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:37]
+[8.068992](node 32) begin to synchronize with the coordinator
+[8.068992](node 32) begin to transmit beacons
+[8.069760](node 32) beacon transmission successful [channel:11] [PAN_ID:0]
+[8.090720](node 73) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:54] ... 
+[8.148320](node 10) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:26] ... 
+[8.189440](node 74) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:31] ... 
+[8.248480](node 11) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:62] ... 
+[8.265184](node 47) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:5] ... 
+[8.281792](node 52) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:8]
+[8.281792](node 52) begin to synchronize with the coordinator
+[8.281792](node 52) begin to transmit beacons
+[8.282560](node 52) beacon transmission successful [channel:11] [PAN_ID:0]
+[8.287840](node 75) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:56] ... 
+[8.350560](node 12) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:21] ... 
+[8.367520](node 48) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:63] ... 
+[8.389120](node 76) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:56] ... 
+[8.392320](node 71) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:31]
+[8.392320](node 71) begin to synchronize with the coordinator
+[8.392320](node 71) begin to transmit beacons
+[8.393088](node 71) beacon transmission successful [channel:11] [PAN_ID:0]
+[8.470240](node 41) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:30] ... 
+[8.488704](node 72) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:42]
+[8.488704](node 72) begin to synchronize with the coordinator
+[8.488704](node 72) begin to transmit beacons
+[8.489472](node 72) beacon transmission successful [channel:11] [PAN_ID:0]
+[8.489760](node 77) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:33] ... 
+[8.588352](node 73) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:54]
+[8.588352](node 73) begin to synchronize with the coordinator
+[8.588352](node 73) begin to transmit beacons
+[8.588480](node 78) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[8.589120](node 73) beacon transmission successful [channel:11] [PAN_ID:0]
+[8.654912](node 10) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:26]
+[8.654912](node 10) begin to synchronize with the coordinator
+[8.654912](node 10) begin to transmit beacons
+[8.655680](node 10) beacon transmission successful [channel:11] [PAN_ID:0]
+[8.689440](node 79) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:49] ... 
+[8.746560](node 11) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:62]
+[8.746560](node 11) begin to synchronize with the coordinator
+[8.746560](node 11) begin to transmit beacons
+[8.747328](node 11) beacon transmission successful [channel:11] [PAN_ID:0]
+[8.762624](node 47) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:5]
+[8.762624](node 47) begin to synchronize with the coordinator
+[8.762624](node 47) begin to transmit beacons
+[8.763392](node 47) beacon transmission successful [channel:11] [PAN_ID:0]
+[8.786560](node 80) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:23] ... 
+[8.847936](node 12) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:21]
+[8.847936](node 12) begin to synchronize with the coordinator
+[8.847936](node 12) begin to transmit beacons
+[8.848704](node 12) beacon transmission successful [channel:11] [PAN_ID:0]
+[8.852640](node 9) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:13] ... 
+[8.856288](node 35) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:56] ... 
+[8.865792](node 48) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:63]
+[8.865792](node 48) begin to synchronize with the coordinator
+[8.865792](node 48) begin to transmit beacons
+[8.866560](node 48) beacon transmission successful [channel:11] [PAN_ID:0]
+[8.889120](node 81) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:25] ... 
+[8.972672](node 41) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:30]
+[8.972672](node 41) begin to synchronize with the coordinator
+[8.972672](node 41) begin to transmit beacons
+[8.973440](node 41) beacon transmission successful [channel:11] [PAN_ID:0]
+[8.987904](node 77) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:33]
+[8.987904](node 77) begin to synchronize with the coordinator
+[8.987904](node 77) begin to transmit beacons
+[8.988672](node 77) beacon transmission successful [channel:11] [PAN_ID:0]
+[8.988800](node 82) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:49] ... 
+[9.036000](node 1) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:37] ... 
+[9.044320](node 19) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:18] ... 
+[9.058080](node 29) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:37] ... 
+[9.079840](node 55) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:42] ... 
+[9.087872](node 78) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:6]
+[9.087872](node 78) begin to synchronize with the coordinator
+[9.087872](node 78) begin to transmit beacons
+[9.088640](node 78) beacon transmission successful [channel:11] [PAN_ID:0]
+[9.088800](node 83) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:32] ... 
+[9.187200](node 79) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:49]
+[9.187200](node 79) begin to synchronize with the coordinator
+[9.187200](node 79) begin to transmit beacons
+[9.187968](node 79) beacon transmission successful [channel:11] [PAN_ID:0]
+[9.189760](node 84) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:38] ... 
+[9.268192](node 57) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:56] ... 
+[9.289440](node 85) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:23] ... 
+[9.289664](node 80) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:23]
+[9.289664](node 80) begin to synchronize with the coordinator
+[9.289664](node 80) begin to transmit beacons
+[9.290432](node 80) beacon transmission successful [channel:11] [PAN_ID:0]
+[9.346528](node 22) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:32] ... 
+[9.350848](node 9) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:13]
+[9.350848](node 9) begin to synchronize with the coordinator
+[9.350848](node 9) begin to transmit beacons
+[9.351616](node 9) beacon transmission successful [channel:11] [PAN_ID:0]
+[9.357440](node 35) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:56]
+[9.357440](node 35) begin to synchronize with the coordinator
+[9.357440](node 35) begin to transmit beacons
+[9.358208](node 35) beacon transmission successful [channel:11] [PAN_ID:0]
+[9.365408](node 58) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:56] ... 
+[9.386048](node 81) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:25]
+[9.386048](node 81) begin to synchronize with the coordinator
+[9.386048](node 81) begin to transmit beacons
+[9.386816](node 81) beacon transmission successful [channel:11] [PAN_ID:0]
+[9.390400](node 86) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:26] ... 
+[9.468960](node 59) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:32] ... 
+[9.489760](node 87) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:39] ... 
+[9.533312](node 1) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:37]
+[9.533312](node 1) begin to synchronize with the coordinator
+[9.533312](node 1) begin to transmit beacons
+[9.534080](node 1) beacon transmission successful [channel:11] [PAN_ID:0]
+[9.541632](node 19) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:18]
+[9.541632](node 19) begin to synchronize with the coordinator
+[9.541632](node 19) begin to transmit beacons
+[9.542400](node 19) beacon transmission successful [channel:11] [PAN_ID:0]
+[9.551328](node 24) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:52] ... 
+[9.577024](node 55) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:42]
+[9.577024](node 55) begin to synchronize with the coordinator
+[9.577024](node 55) begin to transmit beacons
+[9.577792](node 55) beacon transmission successful [channel:11] [PAN_ID:0]
+[9.586240](node 83) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:32]
+[9.586240](node 83) begin to synchronize with the coordinator
+[9.586240](node 83) begin to transmit beacons
+[9.587008](node 83) beacon transmission successful [channel:11] [PAN_ID:0]
+[9.590400](node 88) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:42] ... 
+[9.688192](node 84) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:38]
+[9.688192](node 84) begin to synchronize with the coordinator
+[9.688192](node 84) begin to transmit beacons
+[9.688960](node 84) beacon transmission successful [channel:11] [PAN_ID:0]
+[9.690720](node 89) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:21] ... 
+[9.796224](node 85) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:23]
+[9.796224](node 85) begin to synchronize with the coordinator
+[9.796224](node 85) begin to transmit beacons
+[9.796992](node 85) beacon transmission successful [channel:11] [PAN_ID:0]
+[9.852768](node 45) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:13] ... 
+[9.864000](node 58) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:56]
+[9.864000](node 58) begin to synchronize with the coordinator
+[9.864000](node 58) begin to transmit beacons
+[9.864768](node 58) beacon transmission successful [channel:11] [PAN_ID:0]
+[9.889152](node 86) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:26]
+[9.889152](node 86) begin to synchronize with the coordinator
+[9.889152](node 86) begin to transmit beacons
+[9.889920](node 86) beacon transmission successful [channel:11] [PAN_ID:0]
+[9.947488](node 28) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:32] ... 
+[9.950080](node 20) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:79] ... 
+[9.952928](node 46) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:13] ... 
+[9.965184](node 56) synchronization loss
+[9.965184](node 61) synchronization loss
+[9.967200](node 64) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:34] ... 
+[9.991040](node 87) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:39]
+[9.991040](node 87) begin to synchronize with the coordinator
+[9.991040](node 87) begin to transmit beacons
+[9.991808](node 87) beacon transmission successful [channel:11] [PAN_ID:0]
+[10.049600](node 24) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:52]
+[10.049600](node 24) begin to synchronize with the coordinator
+[10.049600](node 24) begin to transmit beacons
+[10.050368](node 24) beacon transmission successful [channel:11] [PAN_ID:0]
+[10.092544](node 88) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:42]
+[10.092544](node 88) begin to synchronize with the coordinator
+[10.092544](node 88) begin to transmit beacons
+[10.093312](node 88) beacon transmission successful [channel:11] [PAN_ID:0]
+[10.095680](node 56) coordinator relocation successful, begin to re-synchronize with the coordinator
+[10.160320](node 40) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:79] ... 
+[10.190656](node 89) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:21]
+[10.190656](node 89) begin to synchronize with the coordinator
+[10.190656](node 89) begin to transmit beacons
+[10.191424](node 89) beacon transmission successful [channel:11] [PAN_ID:0]
+[10.268192](node 67) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[10.336288](node 14) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:2] ... 
+[10.354688](node 45) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:13]
+[10.354688](node 45) begin to synchronize with the coordinator
+[10.354688](node 45) begin to transmit beacons
+[10.355456](node 45) beacon transmission successful [channel:11] [PAN_ID:0]
+[10.357088](node 50) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:83] ... 
+[10.365408](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:78] ... 
+[10.440928](node 15) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:19] ... 
+[10.445120](node 28) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:32]
+[10.445120](node 28) begin to synchronize with the coordinator
+[10.445120](node 28) begin to transmit beacons
+[10.445888](node 28) beacon transmission successful [channel:11] [PAN_ID:0]
+[10.451009](node 20) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:79]
+[10.451009](node 20) begin to synchronize with the coordinator
+[10.451009](node 20) begin to transmit beacons
+[10.451777](node 20) beacon transmission successful [channel:11] [PAN_ID:0]
+[10.466560](node 64) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:34]
+[10.466560](node 64) begin to synchronize with the coordinator
+[10.466560](node 64) begin to transmit beacons
+[10.467328](node 64) beacon transmission successful [channel:11] [PAN_ID:0]
+[10.471328](node 69) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:84] ... 
+[10.543648](node 16) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:19] ... 
+[10.567456](node 70) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:1] ... 
+[10.581024](node 75) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:2] ... 
+[10.637088](node 17) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:18] ... 
+[10.658464](node 53) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:13] ... 
+[10.786880](node 56) synchronization loss
+[10.791680](node 90) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:0] ... 
+[10.839424](node 14) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:2]
+[10.839424](node 14) begin to synchronize with the coordinator
+[10.839424](node 14) begin to transmit beacons
+[10.840192](node 14) beacon transmission successful [channel:11] [PAN_ID:0]
+[10.857088](node 50) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:83]
+[10.857088](node 50) begin to synchronize with the coordinator
+[10.857088](node 50) begin to transmit beacons
+[10.857856](node 50) beacon transmission successful [channel:11] [PAN_ID:0]
+[10.890080](node 91) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:58] ... 
+[10.968640](node 69) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:84]
+[10.968640](node 69) begin to synchronize with the coordinator
+[10.968640](node 69) begin to transmit beacons
+[10.968736](node 74) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:84] ... 
+[10.969408](node 69) beacon transmission successful [channel:11] [PAN_ID:0]
+[10.995008](node 92) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:8] ... 
+[11.067200](node 70) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:1]
+[11.067200](node 70) begin to synchronize with the coordinator
+[11.067200](node 70) begin to transmit beacons
+[11.067968](node 70) beacon transmission successful [channel:11] [PAN_ID:0]
+[11.089440](node 93) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:73] ... 
+[11.134592](node 17) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:18]
+[11.134592](node 17) begin to synchronize with the coordinator
+[11.134592](node 17) begin to transmit beacons
+[11.135360](node 17) beacon transmission successful [channel:11] [PAN_ID:0]
+[11.166496](node 76) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:32] ... 
+[11.188800](node 94) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:19] ... 
+[11.288480](node 95) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:19] ... 
+[11.289408](node 90) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:0]
+[11.289408](node 90) begin to synchronize with the coordinator
+[11.289408](node 90) begin to transmit beacons
+[11.290176](node 90) beacon transmission successful [channel:11] [PAN_ID:0]
+[11.387648](node 91) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:58]
+[11.387648](node 91) begin to synchronize with the coordinator
+[11.387648](node 91) begin to transmit beacons
+[11.388416](node 91) beacon transmission successful [channel:11] [PAN_ID:0]
+[11.390720](node 96) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:71] ... 
+[11.434432](node 13) synchronization loss
+[11.434432](node 35) synchronization loss
+[11.434432](node 58) synchronization loss
+[11.448384](node 61) coordinator relocation failed --> try to reassociate ...
+[11.491040](node 97) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:5] ... 
+[11.494272](node 92) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:8]
+[11.494272](node 92) begin to synchronize with the coordinator
+[11.494272](node 92) begin to transmit beacons
+[11.495040](node 92) beacon transmission successful [channel:11] [PAN_ID:0]
+[11.586880](node 93) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:73]
+[11.586880](node 93) begin to synchronize with the coordinator
+[11.586880](node 93) begin to transmit beacons
+[11.587648](node 93) beacon transmission successful [channel:11] [PAN_ID:0]
+[11.589440](node 98) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:89] ... 
+[11.663360](node 76) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:32]
+[11.663360](node 76) begin to synchronize with the coordinator
+[11.663360](node 76) begin to transmit beacons
+[11.664128](node 76) beacon transmission successful [channel:11] [PAN_ID:0]
+[11.689281](node 94) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:19]
+[11.689281](node 94) begin to synchronize with the coordinator
+[11.689281](node 94) begin to transmit beacons
+[11.689760](node 99) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:63] ... 
+[11.690049](node 94) beacon transmission successful [channel:11] [PAN_ID:0]
+[11.762976](node 82) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:10] ... 
+[11.791040](node 100) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:1] ... 
+[11.840288](node 29) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:83] ... 
+[11.889088](node 96) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:71]
+[11.889088](node 96) begin to synchronize with the coordinator
+[11.889088](node 96) begin to transmit beacons
+[11.889856](node 96) beacon transmission successful [channel:11] [PAN_ID:0]
+[11.994944](node 97) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:5]
+[11.994944](node 97) begin to synchronize with the coordinator
+[11.994944](node 97) begin to transmit beacons
+[11.995712](node 97) beacon transmission successful [channel:11] [PAN_ID:0]
+S (12.000000): send beacon by 0  
+
+Tabla de Vecinos del nodo 4: 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 4 Nivel: 1 
+S (12.005113): send beacon by 4  
+
+Tabla de Vecinos del nodo 36: 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 36 Nivel: 1 
+S (12.005113): send beacon by 36  
+
+Tabla de Vecinos del nodo 6: 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 6 Nivel: 1 
+S (12.005113): send beacon by 6  
+
+Tabla de Vecinos del nodo 64: 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 64 Nivel: 1 
+S (12.005113): send beacon by 64  
+
+Tabla de Vecinos del nodo 34: 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 34 Nivel: 1 
+S (12.005113): send beacon by 34  
+
+Tabla de Vecinos del nodo 27: 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 27 Nivel: 1 
+S (12.005113): send beacon by 27  
+
+Tabla de Vecinos del nodo 66: 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 66 Nivel: 1 
+S (12.005113): send beacon by 66  
+
+Tabla de Vecinos del nodo 23: 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 23 Nivel: 1 
+S (12.005113): send beacon by 23  
+
+Tabla de Vecinos del nodo 44: 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 44 Nivel: 1 
+S (12.005113): send beacon by 44  
+
+Tabla de Vecinos del nodo 51: 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 51 Nivel: 1 
+S (12.005113): send beacon by 51  
+
+Tabla de Vecinos del nodo 60: 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 60 Nivel: 1 
+S (12.005113): send beacon by 60  
+
+Tabla de Vecinos del nodo 85: 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 85 Nivel: 1 
+S (12.005113): send beacon by 85  
+
+Tabla de Vecinos del nodo 74: 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 74 Nivel: 1 
+S (12.005113): send beacon by 74  
+
+Tabla de Vecinos del nodo 21: 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 21 Nivel: 1 
+S (12.005113): send beacon by 21  
+
+Tabla de Vecinos del nodo 80: 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 80 Nivel: 1 
+S (12.005113): send beacon by 80  
+
+Tabla de Vecinos del nodo 69: 
+Vecino: 34 Nivel: 1 Buffer: 0.00 Power: 99.71 
+NODO 69 Nivel: 2 
+S (12.008825): send beacon by 69  
+
+Tabla de Vecinos del nodo 2: 
+Vecino: 34 Nivel: 1 Buffer: 0.00 Power: 99.71 
+NODO 2 Nivel: 2 
+S (12.008825): send beacon by 2  
+
+Tabla de Vecinos del nodo 80: 
+Vecino: 85 Nivel: 1 Buffer: 0.00 Power: 99.68 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 80 Nivel: 1 
+
+Tabla de Vecinos del nodo 39: 
+Vecino: 85 Nivel: 1 Buffer: 0.00 Power: 99.68 
+NODO 39 Nivel: 2 
+S (12.012537): send beacon by 39  
+
+Tabla de Vecinos del nodo 87: 
+Vecino: 85 Nivel: 1 Buffer: 0.00 Power: 99.68 
+NODO 87 Nivel: 2 
+S (12.012537): send beacon by 87  
+
+Tabla de Vecinos del nodo 73: 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 73 Nivel: 2 
+S (12.012729): send beacon by 73  
+
+Tabla de Vecinos del nodo 33: 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 33 Nivel: 2 
+S (12.012729): send beacon by 33  
+
+Tabla de Vecinos del nodo 93: 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 93 Nivel: 2 
+S (12.012729): send beacon by 93  
+
+Tabla de Vecinos del nodo 12: 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 12 Nivel: 2 
+S (12.012729): send beacon by 12  
+
+Tabla de Vecinos del nodo 91: 
+Vecino: 69 Nivel: 2 Buffer: 0.00 Power: 99.77 
+NODO 91 Nivel: 3 
+S (12.014393): send beacon by 91  
+
+Tabla de Vecinos del nodo 8: 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 8 Nivel: 3 
+S (12.014649): send beacon by 8  
+
+Tabla de Vecinos del nodo 75: 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 75 Nivel: 3 
+S (12.014649): send beacon by 75  
+
+Tabla de Vecinos del nodo 70: 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 70 Nivel: 3 
+S (12.014649): send beacon by 70  
+
+Tabla de Vecinos del nodo 37: 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 37 Nivel: 3 
+S (12.014649): send beacon by 37  
+
+Tabla de Vecinos del nodo 83: 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 83 Nivel: 3 
+S (12.014649): send beacon by 83  
+
+Tabla de Vecinos del nodo 1: 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 1 Nivel: 3 
+S (12.014649): send beacon by 1  
+
+Tabla de Vecinos del nodo 32: 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 32 Nivel: 3 
+S (12.014649): send beacon by 32  
+
+Tabla de Vecinos del nodo 92: 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 92 Nivel: 3 
+S (12.014649): send beacon by 92  
+
+Tabla de Vecinos del nodo 52: 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 52 Nivel: 3 
+S (12.014649): send beacon by 52  
+
+Tabla de Vecinos del nodo 24: 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 24 Nivel: 3 
+S (12.014649): send beacon by 24  
+
+Tabla de Vecinos del nodo 76: 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 76 Nivel: 3 
+S (12.014649): send beacon by 76  
+
+Tabla de Vecinos del nodo 28: 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 28 Nivel: 3 
+S (12.014649): send beacon by 28  
+
+Tabla de Vecinos del nodo 45: 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 45 Nivel: 3 
+S (12.014649): send beacon by 45  
+
+Tabla de Vecinos del nodo 14: 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 14 Nivel: 3 
+S (12.014649): send beacon by 14  
+
+Tabla de Vecinos del nodo 65: 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+NODO 65 Nivel: 2 
+S (12.015801): send beacon by 65  
+
+Tabla de Vecinos del nodo 51: 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 51 Nivel: 1 
+
+Tabla de Vecinos del nodo 77: 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+NODO 77 Nivel: 2 
+S (12.015801): send beacon by 77  
+
+Tabla de Vecinos del nodo 21: 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 21 Nivel: 1 
+
+Tabla de Vecinos del nodo 10: 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+NODO 10 Nivel: 2 
+S (12.015801): send beacon by 10  
+
+Tabla de Vecinos del nodo 93: 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 93 Nivel: 2 
+
+Tabla de Vecinos del nodo 12: 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 12 Nivel: 2 
+
+Tabla de Vecinos del nodo 60: 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 60 Nivel: 1 
+
+Tabla de Vecinos del nodo 44: 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 44 Nivel: 1 
+
+Tabla de Vecinos del nodo 73: 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 73 Nivel: 2 
+
+Tabla de Vecinos del nodo 33: 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 33 Nivel: 2 
+
+Tabla de Vecinos del nodo 55: 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+NODO 55 Nivel: 2 
+S (12.015801): send beacon by 55  
+
+Tabla de Vecinos del nodo 80: 
+Vecino: 39 Nivel: 2 Buffer: 0.00 Power: 99.83 
+Vecino: 85 Nivel: 1 Buffer: 0.00 Power: 99.68 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 80 Nivel: 1 
+
+Tabla de Vecinos del nodo 34: 
+Vecino: 66 Nivel: 1 Buffer: 0.00 Power: 99.69 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 34 Nivel: 1 
+
+Tabla de Vecinos del nodo 43: 
+Vecino: 66 Nivel: 1 Buffer: 0.00 Power: 99.69 
+NODO 43 Nivel: 2 
+S (12.017209): send beacon by 43  
+
+Tabla de Vecinos del nodo 97: 
+Vecino: 66 Nivel: 1 Buffer: 0.00 Power: 99.69 
+NODO 97 Nivel: 2 
+S (12.017209): send beacon by 97  
+
+Tabla de Vecinos del nodo 5: 
+Vecino: 66 Nivel: 1 Buffer: 0.00 Power: 99.69 
+NODO 5 Nivel: 2 
+S (12.017209): send beacon by 5  
+
+Tabla de Vecinos del nodo 52: 
+Vecino: 92 Nivel: 3 Buffer: 0.00 Power: 99.82 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 52 Nivel: 3 
+
+Tabla de Vecinos del nodo 42: 
+Vecino: 28 Nivel: 3 Buffer: 0.00 Power: 99.80 
+NODO 42 Nivel: 4 
+S (12.018553): send beacon by 42  
+
+Tabla de Vecinos del nodo 88: 
+Vecino: 28 Nivel: 3 Buffer: 0.00 Power: 99.80 
+NODO 88 Nivel: 4 
+S (12.018553): send beacon by 88  
+
+Tabla de Vecinos del nodo 18: 
+Vecino: 28 Nivel: 3 Buffer: 0.00 Power: 99.80 
+NODO 18 Nivel: 4 
+S (12.018553): send beacon by 18  
+
+Tabla de Vecinos del nodo 73: 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 73 Nivel: 2 
+
+Tabla de Vecinos del nodo 7: 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 7 Nivel: 3 
+S (12.019769): send beacon by 7  
+
+Tabla de Vecinos del nodo 54: 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 54 Nivel: 3 
+S (12.019769): send beacon by 54  
+
+Tabla de Vecinos del nodo 11: 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 11 Nivel: 3 
+S (12.019769): send beacon by 11  
+
+Tabla de Vecinos del nodo 62: 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 62 Nivel: 3 
+S (12.019769): send beacon by 62  
+
+Tabla de Vecinos del nodo 26: 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 26 Nivel: 3 
+S (12.019769): send beacon by 26  
+
+Tabla de Vecinos del nodo 51: 
+Vecino: 60 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 51 Nivel: 1 
+
+Tabla de Vecinos del nodo 94: 
+Vecino: 77 Nivel: 2 Buffer: 0.00 Power: 99.81 
+NODO 94 Nivel: 3 
+S (12.019897): send beacon by 94  
+
+Tabla de Vecinos del nodo 41: 
+Vecino: 77 Nivel: 2 Buffer: 0.00 Power: 99.81 
+NODO 41 Nivel: 3 
+S (12.019897): send beacon by 41  
+
+Tabla de Vecinos del nodo 95: 
+Vecino: 77 Nivel: 2 Buffer: 0.00 Power: 99.81 
+NODO 95 Nivel: 3 
+S (12.019897): send beacon by 95  
+
+Tabla de Vecinos del nodo 20: 
+Vecino: 77 Nivel: 2 Buffer: 0.00 Power: 99.81 
+NODO 20 Nivel: 3 
+S (12.019897): send beacon by 20  
+
+Tabla de Vecinos del nodo 8: 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 8 Nivel: 3 
+
+Tabla de Vecinos del nodo 83: 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 83 Nivel: 3 
+
+Tabla de Vecinos del nodo 37: 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 37 Nivel: 3 
+
+Tabla de Vecinos del nodo 2: 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 34 Nivel: 1 Buffer: 0.00 Power: 99.71 
+NODO 2 Nivel: 2 
+
+Tabla de Vecinos del nodo 70: 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 70 Nivel: 3 
+
+Tabla de Vecinos del nodo 24: 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 24 Nivel: 3 
+
+Tabla de Vecinos del nodo 76: 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 76 Nivel: 3 
+
+Tabla de Vecinos del nodo 32: 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 32 Nivel: 3 
+
+Tabla de Vecinos del nodo 45: 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 45 Nivel: 3 
+
+Tabla de Vecinos del nodo 92: 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 92 Nivel: 3 
+
+Tabla de Vecinos del nodo 52: 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 92 Nivel: 3 Buffer: 0.00 Power: 99.82 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 52 Nivel: 3 
+
+Tabla de Vecinos del nodo 50: 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+NODO 50 Nivel: 4 
+S (12.021323): send beacon by 50  
+
+Tabla de Vecinos del nodo 42: 
+Vecino: 55 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 28 Nivel: 3 Buffer: 0.00 Power: 99.80 
+NODO 42 Nivel: 3 
+
+Tabla de Vecinos del nodo 14: 
+Vecino: 55 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 14 Nivel: 3 
+
+Tabla de Vecinos del nodo 88: 
+Vecino: 55 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 28 Nivel: 3 Buffer: 0.00 Power: 99.80 
+NODO 88 Nivel: 3 
+
+Tabla de Vecinos del nodo 18: 
+Vecino: 55 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 28 Nivel: 3 Buffer: 0.00 Power: 99.80 
+NODO 18 Nivel: 3 
+
+Tabla de Vecinos del nodo 12: 
+Vecino: 93 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 12 Nivel: 2 
+
+Tabla de Vecinos del nodo 11: 
+Vecino: 93 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 11 Nivel: 3 
+
+Tabla de Vecinos del nodo 85: 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 85 Nivel: 1 
+
+Tabla de Vecinos del nodo 23: 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 23 Nivel: 1 
+
+Tabla de Vecinos del nodo 80: 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 39 Nivel: 2 Buffer: 0.00 Power: 99.83 
+Vecino: 85 Nivel: 1 Buffer: 0.00 Power: 99.68 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 80 Nivel: 1 
+
+Tabla de Vecinos del nodo 64: 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 64 Nivel: 1 
+
+Tabla de Vecinos del nodo 74: 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 74 Nivel: 1 
+
+Tabla de Vecinos del nodo 36: 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 36 Nivel: 1 
+
+Tabla de Vecinos del nodo 6: 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 6 Nivel: 1 
+
+Tabla de Vecinos del nodo 78: 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+NODO 78 Nivel: 2 
+S (12.023417): send beacon by 78  
+
+Tabla de Vecinos del nodo 68: 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+NODO 68 Nivel: 2 
+S (12.023417): send beacon by 68  
+
+Tabla de Vecinos del nodo 47: 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+NODO 47 Nivel: 2 
+S (12.023417): send beacon by 47  
+
+Tabla de Vecinos del nodo 75: 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 75 Nivel: 3 
+
+Tabla de Vecinos del nodo 2: 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 34 Nivel: 1 Buffer: 0.00 Power: 99.71 
+NODO 2 Nivel: 2 
+
+Tabla de Vecinos del nodo 37: 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 37 Nivel: 3 
+
+Tabla de Vecinos del nodo 83: 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 83 Nivel: 3 
+
+Tabla de Vecinos del nodo 70: 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 70 Nivel: 3 
+
+Tabla de Vecinos del nodo 32: 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 32 Nivel: 3 
+
+Tabla de Vecinos del nodo 92: 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 92 Nivel: 3 
+
+Tabla de Vecinos del nodo 24: 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 24 Nivel: 3 
+
+Tabla de Vecinos del nodo 76: 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 76 Nivel: 3 
+
+Tabla de Vecinos del nodo 52: 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 92 Nivel: 3 Buffer: 0.00 Power: 99.82 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 52 Nivel: 3 
+
+Tabla de Vecinos del nodo 45: 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 45 Nivel: 3 
+
+Tabla de Vecinos del nodo 43: 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 66 Nivel: 1 Buffer: 0.00 Power: 99.69 
+NODO 43 Nivel: 2 
+
+Tabla de Vecinos del nodo 50: 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+NODO 50 Nivel: 4 
+
+Tabla de Vecinos del nodo 40: 
+Vecino: 20 Nivel: 3 Buffer: 0.00 Power: 99.89 
+NODO 40 Nivel: 4 
+S (12.025082): send beacon by 40  
+
+Tabla de Vecinos del nodo 49: 
+Vecino: 20 Nivel: 3 Buffer: 0.00 Power: 99.89 
+NODO 49 Nivel: 4 
+S (12.025082): send beacon by 49  
+
+Tabla de Vecinos del nodo 79: 
+Vecino: 20 Nivel: 3 Buffer: 0.00 Power: 99.89 
+NODO 79 Nivel: 4 
+S (12.025082): send beacon by 79  
+
+Tabla de Vecinos del nodo 16: 
+Vecino: 20 Nivel: 3 Buffer: 0.00 Power: 99.89 
+NODO 16 Nivel: 4 
+S (12.025082): send beacon by 16  
+
+Tabla de Vecinos del nodo 55: 
+Vecino: 42 Nivel: 4 Buffer: 0.00 Power: 99.80 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+NODO 55 Nivel: 2 
+
+Tabla de Vecinos del nodo 14: 
+Vecino: 42 Nivel: 4 Buffer: 0.00 Power: 99.80 
+Vecino: 55 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 14 Nivel: 3 
+
+Tabla de Vecinos del nodo 90: 
+Vecino: 42 Nivel: 4 Buffer: 0.00 Power: 99.80 
+NODO 90 Nivel: 5 
+S (12.026489): send beacon by 90  
+
+Tabla de Vecinos del nodo 88: 
+Vecino: 42 Nivel: 4 Buffer: 0.00 Power: 99.80 
+Vecino: 55 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 28 Nivel: 3 Buffer: 0.00 Power: 99.80 
+NODO 88 Nivel: 3 
+
+Tabla de Vecinos del nodo 18: 
+Vecino: 42 Nivel: 4 Buffer: 0.00 Power: 99.80 
+Vecino: 55 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 28 Nivel: 3 Buffer: 0.00 Power: 99.80 
+NODO 18 Nivel: 3 
+
+Tabla de Vecinos del nodo 65: 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+NODO 65 Nivel: 2 
+
+Tabla de Vecinos del nodo 60: 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 60 Nivel: 1 
+
+Tabla de Vecinos del nodo 51: 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 60 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 51 Nivel: 1 
+
+Tabla de Vecinos del nodo 89: 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+NODO 89 Nivel: 2 
+S (12.026681): send beacon by 89  
+
+Tabla de Vecinos del nodo 27: 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 27 Nivel: 1 
+
+Tabla de Vecinos del nodo 9: 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+NODO 9 Nivel: 5 
+S (12.027321): send beacon by 9  
+
+Tabla de Vecinos del nodo 45: 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 45 Nivel: 3 
+
+Tabla de Vecinos del nodo 76: 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 76 Nivel: 3 
+
+Tabla de Vecinos del nodo 24: 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 24 Nivel: 3 
+
+Tabla de Vecinos del nodo 83: 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 83 Nivel: 3 
+
+Tabla de Vecinos del nodo 75: 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 75 Nivel: 3 
+
+Tabla de Vecinos del nodo 37: 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 37 Nivel: 3 
+
+Tabla de Vecinos del nodo 8: 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 8 Nivel: 3 
+
+Tabla de Vecinos del nodo 43: 
+Vecino: 47 Nivel: 2 Buffer: 0.00 Power: 99.63 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 66 Nivel: 1 Buffer: 0.00 Power: 99.69 
+NODO 43 Nivel: 2 
+
+Tabla de Vecinos del nodo 95: 
+Vecino: 41 Nivel: 3 Buffer: 0.00 Power: 99.89 
+Vecino: 77 Nivel: 2 Buffer: 0.00 Power: 99.81 
+NODO 95 Nivel: 3 
+
+Tabla de Vecinos del nodo 18: 
+Vecino: 88 Nivel: 4 Buffer: 0.00 Power: 99.83 
+Vecino: 42 Nivel: 4 Buffer: 0.00 Power: 99.80 
+Vecino: 55 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 28 Nivel: 3 Buffer: 0.00 Power: 99.80 
+NODO 18 Nivel: 3 
+
+Tabla de Vecinos del nodo 68: 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+NODO 68 Nivel: 2 
+
+Tabla de Vecinos del nodo 84: 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 84 Nivel: 3 
+S (12.031545): send beacon by 84  
+
+Tabla de Vecinos del nodo 74: 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 74 Nivel: 1 
+
+Tabla de Vecinos del nodo 81: 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 81 Nivel: 3 
+S (12.031545): send beacon by 81  
+
+Tabla de Vecinos del nodo 87: 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 85 Nivel: 1 Buffer: 0.00 Power: 99.68 
+NODO 87 Nivel: 2 
+
+Tabla de Vecinos del nodo 39: 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 85 Nivel: 1 Buffer: 0.00 Power: 99.68 
+NODO 39 Nivel: 2 
+
+Tabla de Vecinos del nodo 23: 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 23 Nivel: 1 
+
+Tabla de Vecinos del nodo 31: 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 31 Nivel: 3 
+S (12.031545): send beacon by 31  
+
+Tabla de Vecinos del nodo 44: 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 44 Nivel: 1 
+
+Tabla de Vecinos del nodo 85: 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 85 Nivel: 1 
+
+Tabla de Vecinos del nodo 25: 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 25 Nivel: 3 
+S (12.031545): send beacon by 25  
+
+Tabla de Vecinos del nodo 3: 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 3 Nivel: 3 
+S (12.031545): send beacon by 3  
+
+Tabla de Vecinos del nodo 80: 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 39 Nivel: 2 Buffer: 0.00 Power: 99.83 
+Vecino: 85 Nivel: 1 Buffer: 0.00 Power: 99.68 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 80 Nivel: 1 
+
+Tabla de Vecinos del nodo 50: 
+Vecino: 9 Nivel: 5 Buffer: 0.00 Power: 99.88 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+NODO 50 Nivel: 4 
+
+Tabla de Vecinos del nodo 45: 
+Vecino: 9 Nivel: 5 Buffer: 0.00 Power: 99.88 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 45 Nivel: 3 
+
+Tabla de Vecinos del nodo 76: 
+Vecino: 9 Nivel: 5 Buffer: 0.00 Power: 99.88 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 76 Nivel: 3 
+
+Tabla de Vecinos del nodo 24: 
+Vecino: 9 Nivel: 5 Buffer: 0.00 Power: 99.88 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 24 Nivel: 3 
+
+Tabla de Vecinos del nodo 32: 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 32 Nivel: 3 
+
+Tabla de Vecinos del nodo 70: 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 70 Nivel: 3 
+
+Tabla de Vecinos del nodo 92: 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 92 Nivel: 3 
+
+Tabla de Vecinos del nodo 52: 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 92 Nivel: 3 Buffer: 0.00 Power: 99.82 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 52 Nivel: 3 
+
+Tabla de Vecinos del nodo 37: 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 37 Nivel: 3 
+
+Tabla de Vecinos del nodo 48: 
+Vecino: 7 Nivel: 3 Buffer: 0.00 Power: 99.78 
+NODO 48 Nivel: 4 
+S (12.031929): send beacon by 48  
+
+Tabla de Vecinos del nodo 62: 
+Vecino: 7 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 62 Nivel: 3 
+
+Tabla de Vecinos del nodo 63: 
+Vecino: 7 Nivel: 3 Buffer: 0.00 Power: 99.78 
+NODO 63 Nivel: 4 
+S (12.031929): send beacon by 63  
+
+Tabla de Vecinos del nodo 41: 
+Vecino: 95 Nivel: 3 Buffer: 0.00 Power: 99.88 
+Vecino: 77 Nivel: 2 Buffer: 0.00 Power: 99.81 
+NODO 41 Nivel: 3 
+
+Tabla de Vecinos del nodo 91: 
+Vecino: 43 Nivel: 2 Buffer: 0.00 Power: 99.68 
+Vecino: 69 Nivel: 2 Buffer: 0.00 Power: 99.77 
+NODO 91 Nivel: 3 
+
+Tabla de Vecinos del nodo 92: 
+Vecino: 52 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 92 Nivel: 3 
+
+Tabla de Vecinos del nodo 32: 
+Vecino: 52 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 32 Nivel: 3 
+
+Tabla de Vecinos del nodo 28: 
+Vecino: 52 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 28 Nivel: 3 
+
+Tabla de Vecinos del nodo 1: 
+Vecino: 52 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 1 Nivel: 3 
+
+Tabla de Vecinos del nodo 14: 
+Vecino: 52 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 42 Nivel: 4 Buffer: 0.00 Power: 99.80 
+Vecino: 55 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 14 Nivel: 3 
+
+Tabla de Vecinos del nodo 49: 
+Vecino: 79 Nivel: 4 Buffer: 0.00 Power: 99.88 
+Vecino: 20 Nivel: 3 Buffer: 0.00 Power: 99.89 
+NODO 49 Nivel: 4 
+
+Tabla de Vecinos del nodo 16: 
+Vecino: 79 Nivel: 4 Buffer: 0.00 Power: 99.88 
+Vecino: 20 Nivel: 3 Buffer: 0.00 Power: 99.89 
+NODO 16 Nivel: 4 
+
+Tabla de Vecinos del nodo 17: 
+Vecino: 79 Nivel: 4 Buffer: 0.00 Power: 99.88 
+NODO 17 Nivel: 5 
+S (12.035514): send beacon by 17  
+
+Tabla de Vecinos del nodo 40: 
+Vecino: 79 Nivel: 4 Buffer: 0.00 Power: 99.88 
+Vecino: 20 Nivel: 3 Buffer: 0.00 Power: 99.89 
+NODO 40 Nivel: 4 
+
+Tabla de Vecinos del nodo 20: 
+Vecino: 79 Nivel: 4 Buffer: 0.00 Power: 99.88 
+Vecino: 77 Nivel: 2 Buffer: 0.00 Power: 99.81 
+NODO 20 Nivel: 3 
+
+Tabla de Vecinos del nodo 95: 
+Vecino: 79 Nivel: 4 Buffer: 0.00 Power: 99.88 
+Vecino: 41 Nivel: 3 Buffer: 0.00 Power: 99.89 
+Vecino: 77 Nivel: 2 Buffer: 0.00 Power: 99.81 
+NODO 95 Nivel: 3 
+
+Tabla de Vecinos del nodo 77: 
+Vecino: 48 Nivel: 4 Buffer: 0.00 Power: 99.77 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+NODO 77 Nivel: 2 
+
+Tabla de Vecinos del nodo 91: 
+Vecino: 3 Nivel: 3 Buffer: 0.00 Power: 99.86 
+Vecino: 43 Nivel: 2 Buffer: 0.00 Power: 99.68 
+Vecino: 69 Nivel: 2 Buffer: 0.00 Power: 99.77 
+NODO 91 Nivel: 3 
+
+Tabla de Vecinos del nodo 69: 
+Vecino: 3 Nivel: 3 Buffer: 0.00 Power: 99.86 
+Vecino: 34 Nivel: 1 Buffer: 0.00 Power: 99.71 
+NODO 69 Nivel: 2 
+
+Tabla de Vecinos del nodo 0: 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+NODO 0 Nivel: 2 
+
+Tabla de Vecinos del nodo 64: 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 64 Nivel: 1 
+
+Tabla de Vecinos del nodo 4: 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 4 Nivel: 1 
+
+Tabla de Vecinos del nodo 6: 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 6 Nivel: 1 
+
+Tabla de Vecinos del nodo 23: 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 23 Nivel: 1 
+
+Tabla de Vecinos del nodo 34: 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 66 Nivel: 1 Buffer: 0.00 Power: 99.69 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 34 Nivel: 1 
+
+Tabla de Vecinos del nodo 66: 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 66 Nivel: 1 
+
+Tabla de Vecinos del nodo 43: 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 47 Nivel: 2 Buffer: 0.00 Power: 99.63 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 66 Nivel: 1 Buffer: 0.00 Power: 99.69 
+NODO 43 Nivel: 2 
+
+Tabla de Vecinos del nodo 24: 
+Vecino: 76 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 9 Nivel: 5 Buffer: 0.00 Power: 99.88 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 24 Nivel: 3 
+
+Tabla de Vecinos del nodo 45: 
+Vecino: 76 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 9 Nivel: 5 Buffer: 0.00 Power: 99.88 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 45 Nivel: 3 
+
+Tabla de Vecinos del nodo 9: 
+Vecino: 76 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+NODO 9 Nivel: 4 
+
+Tabla de Vecinos del nodo 83: 
+Vecino: 37 Nivel: 3 Buffer: 0.00 Power: 99.76 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 83 Nivel: 3 
+
+Tabla de Vecinos del nodo 70: 
+Vecino: 37 Nivel: 3 Buffer: 0.00 Power: 99.76 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 70 Nivel: 3 
+
+Tabla de Vecinos del nodo 52: 
+Vecino: 37 Nivel: 3 Buffer: 0.00 Power: 99.76 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 92 Nivel: 3 Buffer: 0.00 Power: 99.82 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 52 Nivel: 3 
+
+Tabla de Vecinos del nodo 28: 
+Vecino: 37 Nivel: 3 Buffer: 0.00 Power: 99.76 
+Vecino: 52 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 28 Nivel: 3 
+
+Tabla de Vecinos del nodo 16: 
+Vecino: 17 Nivel: 5 Buffer: 0.00 Power: 99.93 
+Vecino: 79 Nivel: 4 Buffer: 0.00 Power: 99.88 
+Vecino: 20 Nivel: 3 Buffer: 0.00 Power: 99.89 
+NODO 16 Nivel: 4 
+
+Tabla de Vecinos del nodo 79: 
+Vecino: 17 Nivel: 5 Buffer: 0.00 Power: 99.93 
+Vecino: 20 Nivel: 3 Buffer: 0.00 Power: 99.89 
+NODO 79 Nivel: 4 
+
+Tabla de Vecinos del nodo 49: 
+Vecino: 17 Nivel: 5 Buffer: 0.00 Power: 99.93 
+Vecino: 79 Nivel: 4 Buffer: 0.00 Power: 99.88 
+Vecino: 20 Nivel: 3 Buffer: 0.00 Power: 99.89 
+NODO 49 Nivel: 4 
+
+Tabla de Vecinos del nodo 18: 
+Vecino: 17 Nivel: 5 Buffer: 0.00 Power: 99.93 
+Vecino: 88 Nivel: 4 Buffer: 0.00 Power: 99.83 
+Vecino: 42 Nivel: 4 Buffer: 0.00 Power: 99.80 
+Vecino: 55 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 28 Nivel: 3 Buffer: 0.00 Power: 99.80 
+NODO 18 Nivel: 3 
+
+Tabla de Vecinos del nodo 88: 
+Vecino: 17 Nivel: 5 Buffer: 0.00 Power: 99.93 
+Vecino: 42 Nivel: 4 Buffer: 0.00 Power: 99.80 
+Vecino: 55 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 28 Nivel: 3 Buffer: 0.00 Power: 99.80 
+NODO 88 Nivel: 3 
+
+Tabla de Vecinos del nodo 93: 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 93 Nivel: 2 
+
+Tabla de Vecinos del nodo 73: 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 73 Nivel: 2 
+
+Tabla de Vecinos del nodo 33: 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 33 Nivel: 2 
+
+Tabla de Vecinos del nodo 65: 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+NODO 65 Nivel: 2 
+
+Tabla de Vecinos del nodo 54: 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 54 Nivel: 3 
+
+Tabla de Vecinos del nodo 21: 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 21 Nivel: 1 
+
+Tabla de Vecinos del nodo 27: 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 27 Nivel: 1 
+
+Tabla de Vecinos del nodo 11: 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 93 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 11 Nivel: 3 
+
+Tabla de Vecinos del nodo 89: 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+NODO 89 Nivel: 2 
+
+Tabla de Vecinos del nodo 51: 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 60 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 51 Nivel: 1 
+
+Tabla de Vecinos del nodo 60: 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 60 Nivel: 1 
+
+Tabla de Vecinos del nodo 5: 
+Vecino: 97 Nivel: 2 Buffer: 0.00 Power: 99.65 
+Vecino: 66 Nivel: 1 Buffer: 0.00 Power: 99.69 
+NODO 5 Nivel: 2 
+
+Tabla de Vecinos del nodo 34: 
+Vecino: 97 Nivel: 2 Buffer: 0.00 Power: 99.65 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 66 Nivel: 1 Buffer: 0.00 Power: 99.69 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 34 Nivel: 1 
+
+Tabla de Vecinos del nodo 66: 
+Vecino: 97 Nivel: 2 Buffer: 0.00 Power: 99.65 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 66 Nivel: 1 
+
+Tabla de Vecinos del nodo 43: 
+Vecino: 97 Nivel: 2 Buffer: 0.00 Power: 99.65 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 47 Nivel: 2 Buffer: 0.00 Power: 99.63 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 66 Nivel: 1 Buffer: 0.00 Power: 99.69 
+NODO 43 Nivel: 2 
+
+Tabla de Vecinos del nodo 6: 
+Vecino: 97 Nivel: 2 Buffer: 0.00 Power: 99.65 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 6 Nivel: 1 
+
+Tabla de Vecinos del nodo 4: 
+Vecino: 97 Nivel: 2 Buffer: 0.00 Power: 99.65 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 4 Nivel: 1 
+
+Tabla de Vecinos del nodo 0: 
+Vecino: 97 Nivel: 2 Buffer: 0.00 Power: 99.65 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+NODO 0 Nivel: 2 
+
+Tabla de Vecinos del nodo 36: 
+Vecino: 97 Nivel: 2 Buffer: 0.00 Power: 99.65 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 36 Nivel: 1 
+
+Tabla de Vecinos del nodo 90: 
+Vecino: 97 Nivel: 2 Buffer: 0.00 Power: 99.65 
+Vecino: 42 Nivel: 4 Buffer: 0.00 Power: 99.80 
+NODO 90 Nivel: 3 
+
+Tabla de Vecinos del nodo 64: 
+Vecino: 97 Nivel: 2 Buffer: 0.00 Power: 99.65 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 64 Nivel: 1 
+
+Tabla de Vecinos del nodo 81: 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 81 Nivel: 3 
+
+Tabla de Vecinos del nodo 68: 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+NODO 68 Nivel: 2 
+
+Tabla de Vecinos del nodo 78: 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+NODO 78 Nivel: 2 
+
+Tabla de Vecinos del nodo 87: 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 85 Nivel: 1 Buffer: 0.00 Power: 99.68 
+NODO 87 Nivel: 2 
+
+Tabla de Vecinos del nodo 39: 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 85 Nivel: 1 Buffer: 0.00 Power: 99.68 
+NODO 39 Nivel: 2 
+
+Tabla de Vecinos del nodo 74: 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 74 Nivel: 1 
+
+Tabla de Vecinos del nodo 31: 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 31 Nivel: 3 
+
+Tabla de Vecinos del nodo 3: 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 3 Nivel: 3 
+
+Tabla de Vecinos del nodo 25: 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 25 Nivel: 3 
+
+Tabla de Vecinos del nodo 23: 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 23 Nivel: 1 
+
+Tabla de Vecinos del nodo 71: 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+NODO 71 Nivel: 4 
+S (12.041785): send beacon by 71  
+
+Tabla de Vecinos del nodo 96: 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+NODO 96 Nivel: 4 
+S (12.041785): send beacon by 96  
+
+Tabla de Vecinos del nodo 91: 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 3 Nivel: 3 Buffer: 0.00 Power: 99.86 
+Vecino: 43 Nivel: 2 Buffer: 0.00 Power: 99.68 
+Vecino: 69 Nivel: 2 Buffer: 0.00 Power: 99.77 
+NODO 91 Nivel: 3 
+
+Tabla de Vecinos del nodo 37: 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 37 Nivel: 3 
+
+Tabla de Vecinos del nodo 8: 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 8 Nivel: 3 
+
+Tabla de Vecinos del nodo 75: 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 75 Nivel: 3 
+
+Tabla de Vecinos del nodo 70: 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 37 Nivel: 3 Buffer: 0.00 Power: 99.76 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 70 Nivel: 3 
+
+Tabla de Vecinos del nodo 24: 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 76 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 9 Nivel: 5 Buffer: 0.00 Power: 99.88 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 24 Nivel: 3 
+
+Tabla de Vecinos del nodo 32: 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 52 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 32 Nivel: 3 
+
+Tabla de Vecinos del nodo 76: 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 9 Nivel: 5 Buffer: 0.00 Power: 99.88 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 76 Nivel: 3 
+
+Tabla de Vecinos del nodo 45: 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 76 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 9 Nivel: 5 Buffer: 0.00 Power: 99.88 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 45 Nivel: 3 
+
+Tabla de Vecinos del nodo 92: 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 52 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 92 Nivel: 3 
+
+Tabla de Vecinos del nodo 52: 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 37 Nivel: 3 Buffer: 0.00 Power: 99.76 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 92 Nivel: 3 Buffer: 0.00 Power: 99.82 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 52 Nivel: 3 
+
+Tabla de Vecinos del nodo 50: 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 9 Nivel: 5 Buffer: 0.00 Power: 99.88 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+NODO 50 Nivel: 4 
+
+Tabla de Vecinos del nodo 9: 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 76 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+NODO 9 Nivel: 4 
+
+Tabla de Vecinos del nodo 28: 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 37 Nivel: 3 Buffer: 0.00 Power: 99.76 
+Vecino: 52 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 28 Nivel: 3 
+[12.044256](node 57) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:32] ... 
+
+Tabla de Vecinos del nodo 84: 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 84 Nivel: 3 
+
+Tabla de Vecinos del nodo 68: 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+NODO 68 Nivel: 2 
+
+Tabla de Vecinos del nodo 78: 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+NODO 78 Nivel: 2 
+
+Tabla de Vecinos del nodo 87: 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 85 Nivel: 1 Buffer: 0.00 Power: 99.68 
+NODO 87 Nivel: 2 
+
+Tabla de Vecinos del nodo 38: 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+NODO 38 Nivel: 4 
+S (12.045242): send beacon by 38  
+
+Tabla de Vecinos del nodo 39: 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 85 Nivel: 1 Buffer: 0.00 Power: 99.68 
+NODO 39 Nivel: 2 
+
+Tabla de Vecinos del nodo 31: 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 31 Nivel: 3 
+
+Tabla de Vecinos del nodo 3: 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 3 Nivel: 3 
+
+Tabla de Vecinos del nodo 47: 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+NODO 47 Nivel: 2 
+
+Tabla de Vecinos del nodo 25: 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 25 Nivel: 3 
+
+Tabla de Vecinos del nodo 69: 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 3 Nivel: 3 Buffer: 0.00 Power: 99.86 
+Vecino: 34 Nivel: 1 Buffer: 0.00 Power: 99.71 
+NODO 69 Nivel: 2 
+
+Tabla de Vecinos del nodo 71: 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+NODO 71 Nivel: 4 
+
+Tabla de Vecinos del nodo 91: 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 3 Nivel: 3 Buffer: 0.00 Power: 99.86 
+Vecino: 43 Nivel: 2 Buffer: 0.00 Power: 99.68 
+Vecino: 69 Nivel: 2 Buffer: 0.00 Power: 99.77 
+NODO 91 Nivel: 3 
+
+Tabla de Vecinos del nodo 96: 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+NODO 96 Nivel: 4 
+
+Tabla de Vecinos del nodo 76: 
+Vecino: 24 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 9 Nivel: 5 Buffer: 0.00 Power: 99.88 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 76 Nivel: 3 
+
+Tabla de Vecinos del nodo 79: 
+Vecino: 49 Nivel: 4 Buffer: 0.00 Power: 99.87 
+Vecino: 17 Nivel: 5 Buffer: 0.00 Power: 99.93 
+Vecino: 20 Nivel: 3 Buffer: 0.00 Power: 99.89 
+NODO 79 Nivel: 4 
+
+Tabla de Vecinos del nodo 16: 
+Vecino: 49 Nivel: 4 Buffer: 0.00 Power: 99.87 
+Vecino: 17 Nivel: 5 Buffer: 0.00 Power: 99.93 
+Vecino: 79 Nivel: 4 Buffer: 0.00 Power: 99.88 
+Vecino: 20 Nivel: 3 Buffer: 0.00 Power: 99.89 
+NODO 16 Nivel: 4 
+
+Tabla de Vecinos del nodo 17: 
+Vecino: 49 Nivel: 4 Buffer: 0.00 Power: 99.87 
+Vecino: 79 Nivel: 4 Buffer: 0.00 Power: 99.88 
+NODO 17 Nivel: 5 
+
+Tabla de Vecinos del nodo 21: 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 21 Nivel: 1 
+
+Tabla de Vecinos del nodo 73: 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 73 Nivel: 2 
+
+Tabla de Vecinos del nodo 60: 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 60 Nivel: 1 
+
+Tabla de Vecinos del nodo 65: 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+NODO 65 Nivel: 2 
+
+Tabla de Vecinos del nodo 33: 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 33 Nivel: 2 
+
+Tabla de Vecinos del nodo 51: 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 60 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 51 Nivel: 1 
+
+Tabla de Vecinos del nodo 80: 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 39 Nivel: 2 Buffer: 0.00 Power: 99.83 
+Vecino: 85 Nivel: 1 Buffer: 0.00 Power: 99.68 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 80 Nivel: 1 
+
+Tabla de Vecinos del nodo 85: 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 85 Nivel: 1 
+
+Tabla de Vecinos del nodo 44: 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 44 Nivel: 1 
+
+Tabla de Vecinos del nodo 12: 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 93 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 12 Nivel: 2 
+
+Tabla de Vecinos del nodo 93: 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 93 Nivel: 2 
+
+Tabla de Vecinos del nodo 96: 
+Vecino: 71 Nivel: 4 Buffer: 0.00 Power: 99.91 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+NODO 96 Nivel: 4 
+
+Tabla de Vecinos del nodo 25: 
+Vecino: 71 Nivel: 4 Buffer: 0.00 Power: 99.91 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 25 Nivel: 3 
+
+Tabla de Vecinos del nodo 47: 
+Vecino: 38 Nivel: 4 Buffer: 0.00 Power: 99.70 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+NODO 47 Nivel: 2 
+
+Tabla de Vecinos del nodo 78: 
+Vecino: 38 Nivel: 4 Buffer: 0.00 Power: 99.70 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+NODO 78 Nivel: 2 
+
+Tabla de Vecinos del nodo 74: 
+Vecino: 38 Nivel: 4 Buffer: 0.00 Power: 99.70 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 74 Nivel: 1 
+
+Tabla de Vecinos del nodo 66: 
+Vecino: 38 Nivel: 4 Buffer: 0.00 Power: 99.70 
+Vecino: 97 Nivel: 2 Buffer: 0.00 Power: 99.65 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 66 Nivel: 1 
+
+Tabla de Vecinos del nodo 3: 
+Vecino: 38 Nivel: 4 Buffer: 0.00 Power: 99.70 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 3 Nivel: 3 
+
+Tabla de Vecinos del nodo 23: 
+Vecino: 38 Nivel: 4 Buffer: 0.00 Power: 99.70 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 23 Nivel: 1 
+
+Tabla de Vecinos del nodo 34: 
+Vecino: 38 Nivel: 4 Buffer: 0.00 Power: 99.70 
+Vecino: 97 Nivel: 2 Buffer: 0.00 Power: 99.65 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 66 Nivel: 1 Buffer: 0.00 Power: 99.69 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 34 Nivel: 1 
+
+Tabla de Vecinos del nodo 6: 
+Vecino: 38 Nivel: 4 Buffer: 0.00 Power: 99.70 
+Vecino: 97 Nivel: 2 Buffer: 0.00 Power: 99.65 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 6 Nivel: 1 
+
+Tabla de Vecinos del nodo 97: 
+Vecino: 38 Nivel: 4 Buffer: 0.00 Power: 99.70 
+Vecino: 66 Nivel: 1 Buffer: 0.00 Power: 99.69 
+NODO 97 Nivel: 2 
+
+Tabla de Vecinos del nodo 21: 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 21 Nivel: 1 
+
+Tabla de Vecinos del nodo 73: 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 73 Nivel: 2 
+
+Tabla de Vecinos del nodo 33: 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 33 Nivel: 2 
+
+Tabla de Vecinos del nodo 93: 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 93 Nivel: 2 
+
+Tabla de Vecinos del nodo 12: 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 93 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 12 Nivel: 2 
+
+Tabla de Vecinos del nodo 89: 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+NODO 89 Nivel: 2 
+
+Tabla de Vecinos del nodo 51: 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 60 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 51 Nivel: 1 
+
+Tabla de Vecinos del nodo 60: 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 60 Nivel: 1 
+
+Tabla de Vecinos del nodo 27: 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 27 Nivel: 1 
+
+Tabla de Vecinos del nodo 10: 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+NODO 10 Nivel: 2 
+
+Tabla de Vecinos del nodo 7: 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 7 Nivel: 3 
+
+Tabla de Vecinos del nodo 44: 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 44 Nivel: 1 
+
+Tabla de Vecinos del nodo 54: 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 54 Nivel: 3 
+
+Tabla de Vecinos del nodo 80: 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 39 Nivel: 2 Buffer: 0.00 Power: 99.83 
+Vecino: 85 Nivel: 1 Buffer: 0.00 Power: 99.68 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 80 Nivel: 1 
+
+Tabla de Vecinos del nodo 48: 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 7 Nivel: 3 Buffer: 0.00 Power: 99.78 
+NODO 48 Nivel: 3 
+
+Tabla de Vecinos del nodo 11: 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 93 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 11 Nivel: 3 
+
+Tabla de Vecinos del nodo 85: 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 85 Nivel: 1 
+
+Tabla de Vecinos del nodo 62: 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 7 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 62 Nivel: 3 
+
+Tabla de Vecinos del nodo 36: 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 97 Nivel: 2 Buffer: 0.00 Power: 99.65 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 36 Nivel: 1 
+
+Tabla de Vecinos del nodo 86: 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+NODO 86 Nivel: 3 
+S (12.050617): send beacon by 86  
+
+Tabla de Vecinos del nodo 71: 
+Vecino: 96 Nivel: 4 Buffer: 0.00 Power: 99.91 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+NODO 71 Nivel: 4 
+
+Tabla de Vecinos del nodo 25: 
+Vecino: 96 Nivel: 4 Buffer: 0.00 Power: 99.91 
+Vecino: 71 Nivel: 4 Buffer: 0.00 Power: 99.91 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 25 Nivel: 3 
+
+Tabla de Vecinos del nodo 31: 
+Vecino: 96 Nivel: 4 Buffer: 0.00 Power: 99.91 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 31 Nivel: 3 
+
+Tabla de Vecinos del nodo 39: 
+Vecino: 96 Nivel: 4 Buffer: 0.00 Power: 99.91 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 85 Nivel: 1 Buffer: 0.00 Power: 99.68 
+NODO 39 Nivel: 2 
+
+Tabla de Vecinos del nodo 87: 
+Vecino: 96 Nivel: 4 Buffer: 0.00 Power: 99.91 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 85 Nivel: 1 Buffer: 0.00 Power: 99.68 
+NODO 87 Nivel: 2 
+
+Tabla de Vecinos del nodo 84: 
+Vecino: 96 Nivel: 4 Buffer: 0.00 Power: 99.91 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 84 Nivel: 3 
+
+Tabla de Vecinos del nodo 81: 
+Vecino: 96 Nivel: 4 Buffer: 0.00 Power: 99.91 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 81 Nivel: 3 
+
+Tabla de Vecinos del nodo 33: 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 33 Nivel: 2 
+
+Tabla de Vecinos del nodo 65: 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+NODO 65 Nivel: 2 
+
+Tabla de Vecinos del nodo 12: 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 93 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 12 Nivel: 2 
+
+Tabla de Vecinos del nodo 93: 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 93 Nivel: 2 
+
+Tabla de Vecinos del nodo 21: 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 21 Nivel: 1 
+
+Tabla de Vecinos del nodo 89: 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+NODO 89 Nivel: 2 
+
+Tabla de Vecinos del nodo 7: 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 7 Nivel: 3 
+
+Tabla de Vecinos del nodo 54: 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 54 Nivel: 3 
+
+Tabla de Vecinos del nodo 11: 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 93 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 11 Nivel: 3 
+
+Tabla de Vecinos del nodo 48: 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 7 Nivel: 3 Buffer: 0.00 Power: 99.78 
+NODO 48 Nivel: 3 
+
+Tabla de Vecinos del nodo 10: 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+NODO 10 Nivel: 2 
+
+Tabla de Vecinos del nodo 60: 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 60 Nivel: 1 
+
+Tabla de Vecinos del nodo 62: 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 7 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 62 Nivel: 3 
+
+Tabla de Vecinos del nodo 51: 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 60 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 51 Nivel: 1 
+
+Tabla de Vecinos del nodo 86: 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+NODO 86 Nivel: 3 
+
+Tabla de Vecinos del nodo 26: 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 26 Nivel: 3 
+
+Tabla de Vecinos del nodo 26: 
+Vecino: 86 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 26 Nivel: 3 
+
+Tabla de Vecinos del nodo 62: 
+Vecino: 86 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 7 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 62 Nivel: 3 
+
+Tabla de Vecinos del nodo 48: 
+Vecino: 86 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 7 Nivel: 3 Buffer: 0.00 Power: 99.78 
+NODO 48 Nivel: 3 
+
+Tabla de Vecinos del nodo 7: 
+Vecino: 86 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 7 Nivel: 3 
+
+Tabla de Vecinos del nodo 54: 
+Vecino: 86 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 54 Nivel: 3 
+
+Tabla de Vecinos del nodo 33: 
+Vecino: 86 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 33 Nivel: 2 
+
+Tabla de Vecinos del nodo 63: 
+Vecino: 86 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 7 Nivel: 3 Buffer: 0.00 Power: 99.78 
+NODO 63 Nivel: 4 
+
+Tabla de Vecinos del nodo 73: 
+Vecino: 86 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 51 Nivel: 1 Buffer: 0.00 Power: 99.66 
+NODO 73 Nivel: 2 
+
+Tabla de Vecinos del nodo 11: 
+Vecino: 86 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 93 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 33 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 11 Nivel: 3 
+
+Tabla de Vecinos del nodo 65: 
+Vecino: 86 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+NODO 65 Nivel: 2 
+
+Tabla de Vecinos del nodo 89: 
+Vecino: 11 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+NODO 89 Nivel: 2 
+
+Tabla de Vecinos del nodo 65: 
+Vecino: 11 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 86 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+NODO 65 Nivel: 2 
+
+Tabla de Vecinos del nodo 44: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 44 Nivel: 1 
+
+Tabla de Vecinos del nodo 64: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 97 Nivel: 2 Buffer: 0.00 Power: 99.65 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 64 Nivel: 1 
+
+Tabla de Vecinos del nodo 74: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 38 Nivel: 4 Buffer: 0.00 Power: 99.70 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 74 Nivel: 1 
+
+Tabla de Vecinos del nodo 85: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 85 Nivel: 1 
+
+Tabla de Vecinos del nodo 6: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 38 Nivel: 4 Buffer: 0.00 Power: 99.70 
+Vecino: 97 Nivel: 2 Buffer: 0.00 Power: 99.65 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 6 Nivel: 1 
+
+Tabla de Vecinos del nodo 80: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 39 Nivel: 2 Buffer: 0.00 Power: 99.83 
+Vecino: 85 Nivel: 1 Buffer: 0.00 Power: 99.68 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 80 Nivel: 1 
+
+Tabla de Vecinos del nodo 36: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 97 Nivel: 2 Buffer: 0.00 Power: 99.65 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 36 Nivel: 1 
+
+Tabla de Vecinos del nodo 51: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 60 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 51 Nivel: 1 
+
+Tabla de Vecinos del nodo 78: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 38 Nivel: 4 Buffer: 0.00 Power: 99.70 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+NODO 78 Nivel: 2 
+
+Tabla de Vecinos del nodo 60: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 60 Nivel: 1 
+
+Tabla de Vecinos del nodo 0: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 97 Nivel: 2 Buffer: 0.00 Power: 99.65 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+NODO 0 Nivel: 2 
+
+Tabla de Vecinos del nodo 4: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 97 Nivel: 2 Buffer: 0.00 Power: 99.65 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 4 Nivel: 1 
+
+Tabla de Vecinos del nodo 68: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+NODO 68 Nivel: 2 
+
+Tabla de Vecinos del nodo 47: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 38 Nivel: 4 Buffer: 0.00 Power: 99.70 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 44 Nivel: 1 Buffer: 0.00 Power: 99.70 
+NODO 47 Nivel: 2 
+
+Tabla de Vecinos del nodo 38: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+NODO 38 Nivel: 2 
+
+Tabla de Vecinos del nodo 66: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 38 Nivel: 4 Buffer: 0.00 Power: 99.70 
+Vecino: 97 Nivel: 2 Buffer: 0.00 Power: 99.65 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 66 Nivel: 1 
+
+Tabla de Vecinos del nodo 34: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 38 Nivel: 4 Buffer: 0.00 Power: 99.70 
+Vecino: 97 Nivel: 2 Buffer: 0.00 Power: 99.65 
+Vecino: 36 Nivel: 1 Buffer: 0.00 Power: 99.65 
+Vecino: 66 Nivel: 1 Buffer: 0.00 Power: 99.69 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 34 Nivel: 1 
+
+Tabla de Vecinos del nodo 84: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 96 Nivel: 4 Buffer: 0.00 Power: 99.91 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 84 Nivel: 2 
+
+Tabla de Vecinos del nodo 21: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 73 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 89 Nivel: 2 Buffer: 0.00 Power: 99.78 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 27 Nivel: 1 Buffer: 0.00 Power: 99.64 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 21 Nivel: 1 
+
+Tabla de Vecinos del nodo 81: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 96 Nivel: 4 Buffer: 0.00 Power: 99.91 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+NODO 81 Nivel: 2 
+
+Tabla de Vecinos del nodo 27: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 65 Nivel: 2 Buffer: 0.00 Power: 99.69 
+Vecino: 12 Nivel: 2 Buffer: 0.00 Power: 99.73 
+Vecino: 21 Nivel: 1 Buffer: 0.00 Power: 99.67 
+Vecino: 0 Nivel: 0 Buffer: 0.00 Power: 99.66 
+NODO 27 Nivel: 1 
+
+Tabla de Vecinos del nodo 87: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 96 Nivel: 4 Buffer: 0.00 Power: 99.91 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 85 Nivel: 1 Buffer: 0.00 Power: 99.68 
+NODO 87 Nivel: 2 
+
+Tabla de Vecinos del nodo 39: 
+Vecino: 23 Nivel: 1 Buffer: 0.00 Power: 99.63 
+Vecino: 96 Nivel: 4 Buffer: 0.00 Power: 99.91 
+Vecino: 81 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 84 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 78 Nivel: 2 Buffer: 0.00 Power: 99.74 
+Vecino: 85 Nivel: 1 Buffer: 0.00 Power: 99.68 
+NODO 39 Nivel: 2 
+
+Tabla de Vecinos del nodo 28: 
+Vecino: 14 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 37 Nivel: 3 Buffer: 0.00 Power: 99.76 
+Vecino: 52 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 28 Nivel: 3 
+
+Tabla de Vecinos del nodo 1: 
+Vecino: 14 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 52 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 1 Nivel: 3 
+
+Tabla de Vecinos del nodo 52: 
+Vecino: 14 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 37 Nivel: 3 Buffer: 0.00 Power: 99.76 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 92 Nivel: 3 Buffer: 0.00 Power: 99.82 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 52 Nivel: 3 
+
+Tabla de Vecinos del nodo 92: 
+Vecino: 14 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 52 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 92 Nivel: 3 
+
+Tabla de Vecinos del nodo 32: 
+Vecino: 14 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 52 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 32 Nivel: 3 
+
+Tabla de Vecinos del nodo 70: 
+Vecino: 14 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 37 Nivel: 3 Buffer: 0.00 Power: 99.76 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 70 Nivel: 3 
+
+Tabla de Vecinos del nodo 2: 
+Vecino: 14 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 34 Nivel: 1 Buffer: 0.00 Power: 99.71 
+NODO 2 Nivel: 2 
+
+Tabla de Vecinos del nodo 24: 
+Vecino: 45 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 76 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 9 Nivel: 5 Buffer: 0.00 Power: 99.88 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 24 Nivel: 3 
+
+Tabla de Vecinos del nodo 76: 
+Vecino: 45 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 24 Nivel: 3 Buffer: 0.00 Power: 99.78 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 9 Nivel: 5 Buffer: 0.00 Power: 99.88 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 76 Nivel: 3 
+
+Tabla de Vecinos del nodo 50: 
+Vecino: 45 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 9 Nivel: 5 Buffer: 0.00 Power: 99.88 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+NODO 50 Nivel: 4 
+
+Tabla de Vecinos del nodo 9: 
+Vecino: 45 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 76 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+NODO 9 Nivel: 4 
+
+Tabla de Vecinos del nodo 83: 
+Vecino: 45 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 37 Nivel: 3 Buffer: 0.00 Power: 99.76 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 83 Nivel: 3 
+
+Tabla de Vecinos del nodo 37: 
+Vecino: 45 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 37 Nivel: 3 
+
+Tabla de Vecinos del nodo 75: 
+Vecino: 45 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 75 Nivel: 3 
+
+Tabla de Vecinos del nodo 8: 
+Vecino: 45 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 50 Nivel: 4 Buffer: 0.00 Power: 99.84 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 8 Nivel: 3 
+
+Tabla de Vecinos del nodo 70: 
+Vecino: 45 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 14 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 37 Nivel: 3 Buffer: 0.00 Power: 99.76 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 70 Nivel: 3 
+
+Tabla de Vecinos del nodo 32: 
+Vecino: 45 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 14 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 52 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 32 Nivel: 3 
+
+Tabla de Vecinos del nodo 2: 
+Vecino: 45 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 14 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 34 Nivel: 1 Buffer: 0.00 Power: 99.71 
+NODO 2 Nivel: 2 
+
+Tabla de Vecinos del nodo 92: 
+Vecino: 45 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 14 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 83 Nivel: 3 Buffer: 0.00 Power: 99.73 
+Vecino: 52 Nivel: 3 Buffer: 0.00 Power: 99.84 
+Vecino: 1 Nivel: 3 Buffer: 0.00 Power: 99.79 
+Vecino: 8 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 75 Nivel: 3 Buffer: 0.00 Power: 99.74 
+Vecino: 2 Nivel: 2 Buffer: 0.00 Power: 99.72 
+NODO 92 Nivel: 3 
+[12.088704](node 98) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:89]
+[12.088704](node 98) begin to synchronize with the coordinator
+[12.088704](node 98) begin to transmit beacons
+[12.089472](node 98) beacon transmission successful [channel:11] [PAN_ID:0]
+[12.134496](node 22) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:50] ... 
+[12.139200](node 9) synchronization loss
+[12.139200](node 45) synchronization loss
+[12.196032](node 99) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:63]
+[12.196032](node 99) begin to synchronize with the coordinator
+[12.196032](node 99) begin to transmit beacons
+[12.196800](node 99) beacon transmission successful [channel:11] [PAN_ID:0]
+[12.237504](node 61) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:45] ... 
+[12.244256](node 59) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:52] ... 
+[12.259841](node 82) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:10]
+[12.259841](node 82) begin to synchronize with the coordinator
+[12.259841](node 82) begin to transmit beacons
+[12.260609](node 82) beacon transmission successful [channel:11] [PAN_ID:0]
+[12.269824](node 56) coordinator relocation failed.
+[12.293760](node 100) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:1]
+[12.293760](node 100) begin to synchronize with the coordinator
+[12.293760](node 100) begin to transmit beacons
+[12.294528](node 100) beacon transmission successful [channel:11] [PAN_ID:0]
+[12.338688](node 29) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:83]
+[12.338688](node 29) begin to synchronize with the coordinator
+[12.338688](node 29) begin to transmit beacons
+[12.339456](node 29) beacon transmission successful [channel:11] [PAN_ID:0]
+[12.431168](node 58) coordinator relocation successful, begin to re-synchronize with the coordinator
+[12.466464](node 53) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:9] ... 
+[12.554880](node 57) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:32]
+[12.554880](node 57) begin to synchronize with the coordinator
+[12.554880](node 57) begin to transmit beacons
+[12.555648](node 57) beacon transmission successful [channel:11] [PAN_ID:0]
+[12.560928](node 67) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:36] ... 
+[12.636097](node 22) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:50]
+[12.636097](node 22) begin to synchronize with the coordinator
+[12.636097](node 22) begin to transmit beacons
+[12.636865](node 22) beacon transmission successful [channel:11] [PAN_ID:0]
+[12.733217](node 15) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:18] ... 
+[12.734944](node 46) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:37] ... 
+[12.748480](node 59) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:52]
+[12.748480](node 59) begin to synchronize with the coordinator
+[12.748480](node 59) begin to transmit beacons
+[12.749248](node 59) beacon transmission successful [channel:11] [PAN_ID:0]
+[12.916096](node 35) coordinator relocation failed --> try to reassociate ...
+[12.917696](node 13) coordinator relocation failed.
+[12.933665](node 40) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:49] ... 
+[13.058496](node 67) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:36]
+[13.058496](node 67) begin to synchronize with the coordinator
+[13.058496](node 67) begin to transmit beacons
+[13.059264](node 67) beacon transmission successful [channel:11] [PAN_ID:0]
+[13.161440](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:85] ... 
+[13.235392](node 15) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:18]
+[13.235392](node 15) begin to synchronize with the coordinator
+[13.235392](node 15) begin to transmit beacons
+[13.235712](node 46) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:37]
+[13.235712](node 46) begin to synchronize with the coordinator
+[13.235712](node 46) begin to transmit beacons
+[13.236160](node 15) beacon transmission successful [channel:11] [PAN_ID:0]
+[13.236480](node 46) beacon transmission successful [channel:11] [PAN_ID:0]
+[13.270624](node 74) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:80] ... 
+[13.321377](node 16) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:20] ... 
+[13.358880](node 75) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:37] ... 
+[13.432000](node 40) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:49]
+[13.432000](node 40) begin to synchronize with the coordinator
+[13.432000](node 40) begin to transmit beacons
+[13.432768](node 40) beacon transmission successful [channel:11] [PAN_ID:0]
+[13.623104](node 45) coordinator relocation failed --> try to reassociate ...
+[13.624512](node 9) coordinator relocation failed --> try to reassociate ...
+[13.706496](node 35) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:57] ... 
+[13.769792](node 74) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:80]
+[13.769792](node 74) begin to synchronize with the coordinator
+[13.769792](node 74) begin to transmit beacons
+[13.770560](node 74) beacon transmission successful [channel:11] [PAN_ID:0]
+[13.819457](node 16) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:20]
+[13.819457](node 16) begin to synchronize with the coordinator
+[13.819457](node 16) begin to transmit beacons
+[13.820225](node 16) beacon transmission successful [channel:11] [PAN_ID:0]
+[13.856832](node 75) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:37]
+[13.856832](node 75) begin to synchronize with the coordinator
+[13.856832](node 75) begin to transmit beacons
+[13.857600](node 75) beacon transmission successful [channel:11] [PAN_ID:0]
+[14.063456](node 95) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:72] ... 
+[14.270624](node 53) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:24] ... 
+[14.411584](node 45) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:76] ... 
+[14.412992](node 9) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:76] ... 
+[14.561792](node 95) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:72]
+[14.561792](node 95) begin to synchronize with the coordinator
+[14.561792](node 95) begin to transmit beacons
+[14.562560](node 95) beacon transmission successful [channel:11] [PAN_ID:0]
+[14.776768](node 53) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:24]
+[14.776768](node 53) begin to synchronize with the coordinator
+[14.776768](node 53) begin to transmit beacons
+[14.777536](node 53) beacon transmission successful [channel:11] [PAN_ID:0]
+[15.940448](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:81] ... 
+[16.545824](node 35) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:57]
+[16.545824](node 35) begin to synchronize with the coordinator
+[16.545824](node 35) begin to transmit beacons
+[16.545824](node 35) beacon transmission successful [channel:11] [PAN_ID:0]
+[18.719073](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:78] ... 
+[21.497376](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[24.274528](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[27.056480](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:84] ... 
+[29.839776](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[32.622688](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[35.401760](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:85] ... 
+[38.178528](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:81] ... 
+[40.956513](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:78] ... 
+[43.736096](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[46.515488](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[49.294560](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:84] ... 
+[52.069856](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:81] ... 
+[54.847393](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:78] ... 
+[57.632096](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:80] ... 
+[60.408928](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[63.188320](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:84] ... 
+[65.966176](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[68.750688](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[71.532128](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:85] ... 
+[74.310048](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:81] ... 
+[77.084193](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:78] ... 
+[79.862816](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[82.636768](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[85.424480](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:84] ... 
+[88.200736](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:81] ... 
+[90.977313](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:74] ... 
+[93.755616](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:80] ... 
+[96.532128](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[99.312800](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:84] ... 
+[102.088096](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:38] ... 
+[104.864928](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:74] ... 
+[107.652192](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:91] ... 
+[110.427873](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:67] ... 
+[113.207520](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:78] ... 
+[115.987296](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[118.763488](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[121.540000](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:85] ... 
+[124.316768](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:71] ... 
+[127.093665](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:78] ... 
+[129.869216](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[132.661728](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:23] ... 
+[135.437280](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:84] ... 
+[138.213216](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:81] ... 
+[140.265728](node 2) synchronization loss
+[140.272704](node 2) coordinator relocation successful, begin to re-synchronize with the coordinator
+[140.999969](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[143.779040](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:91] ... 
+[146.556513](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:67] ... 
+[149.367200](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[152.145760](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:84] ... 
+[154.922656](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:81] ... 
+[157.699873](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:78] ... 
+[160.478176](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:80] ... 
+[163.258528](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[166.038240](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:84] ... 
+[168.813536](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:38] ... 
+[169.131712](node 24) synchronization loss
+[169.217664](node 92) synchronization loss
+[169.225280](node 92) coordinator relocation successful, begin to re-synchronize with the coordinator
+[169.670720](node 53) synchronization loss
+[170.614656](node 24) coordinator relocation failed.
+[170.668416](node 53) coordinator relocation successful, begin to re-synchronize with the coordinator
+[171.600288](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[173.586433](node 94) synchronization loss
+[173.610689](node 94) coordinator relocation successful, begin to re-synchronize with the coordinator
+[173.658304](node 15) synchronization loss
+[173.658304](node 49) synchronization loss
+[173.658304](node 19) synchronization loss
+[173.676480](node 15) coordinator relocation successful, begin to re-synchronize with the coordinator
+[173.682753](node 82) synchronization loss
+[173.702720](node 19) coordinator relocation successful, begin to re-synchronize with the coordinator
+[173.720128](node 23) synchronization loss
+[173.722049](node 82) coordinator relocation successful, begin to re-synchronize with the coordinator
+[173.732864](node 23) coordinator relocation successful, begin to re-synchronize with the coordinator
+[174.354112](node 79) synchronization loss
+[174.354112](node 40) synchronization loss
+[174.379808](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:84] ... 
+[175.075201](node 20) synchronization loss
+[175.143936](node 49) coordinator relocation failed.
+[175.349248](node 79) coordinator relocation successful, begin to re-synchronize with the coordinator
+[175.355328](node 40) coordinator relocation successful, begin to re-synchronize with the coordinator
+[175.724609](node 16) synchronization loss
+[176.071297](node 20) coordinator relocation successful, begin to re-synchronize with the coordinator
+[176.719105](node 16) coordinator relocation successful, begin to re-synchronize with the coordinator
+[177.166240](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:81] ... 
+[179.947169](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:74] ... 
+[182.728224](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:91] ... 
+[185.506593](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:67] ... 
+[186.329729](node 22) synchronization loss
+[186.340545](node 22) coordinator relocation successful, begin to re-synchronize with the coordinator
+[188.285600](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:39] ... 
+[191.067296](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[193.841888](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[196.131360](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:85] ... 
+[198.907808](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:81] ... 
+[199.846529](node 22) synchronization loss
+[199.937664](node 92) synchronization loss
+[199.937664](node 52) synchronization loss
+[200.588992](node 59) synchronization loss
+[201.334401](node 22) coordinator relocation failed --> try to reassociate ...
+[201.421696](node 92) coordinator relocation failed --> try to reassociate ...
+[201.437248](node 52) coordinator relocation failed.
+[201.690529](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:78] ... 
+[202.070208](node 59) coordinator relocation failed --> try to reassociate ...
+[202.122241](node 22) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:32] ... 
+[202.212096](node 92) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:14] ... 
+[202.858368](node 59) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:42] ... 
+[204.474016](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:80] ... 
+[204.961761](node 22) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:32]
+[204.961761](node 22) begin to synchronize with the coordinator
+[204.961761](node 22) begin to transmit beacons
+[204.961761](node 22) beacon transmission successful [channel:11] [PAN_ID:0]
+[205.046496](node 92) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:14]
+[205.046496](node 92) begin to synchronize with the coordinator
+[205.046496](node 92) begin to transmit beacons
+[205.046496](node 92) beacon transmission successful [channel:11] [PAN_ID:0]
+[205.692704](node 59) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:42]
+[205.692704](node 59) begin to synchronize with the coordinator
+[205.692704](node 59) begin to transmit beacons
+[205.692704](node 59) beacon transmission successful [channel:11] [PAN_ID:0]
+[207.252768](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:67] ... 
+[210.025440](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:84] ... 
+[212.801696](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:38] ... 
+[214.233920](node 43) synchronization loss
+[214.608128](node 2) synchronization loss
+[215.260736](node 14) synchronization loss
+[215.577568](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:78] ... 
+[215.716864](node 43) coordinator relocation failed.
+[215.926144](node 92) synchronization loss
+[216.089792](node 2) coordinator relocation failed.
+[216.256192](node 14) coordinator relocation successful, begin to re-synchronize with the coordinator
+[216.922560](node 92) coordinator relocation successful, begin to re-synchronize with the coordinator
+[218.357856](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:80] ... 
+[220.519168](node 51) synchronization loss
+[220.528704](node 51) coordinator relocation successful, begin to re-synchronize with the coordinator
+[221.135008](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:23] ... 
+[223.919840](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:39] ... 
+[226.704096](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[229.484768](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[232.260960](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:84] ... 
+[235.050784](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[237.599488](node 51) synchronization loss
+[237.827488](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:74] ... 
+[237.895296](node 65) synchronization loss
+[239.097984](node 51) coordinator relocation failed.
+[239.387264](node 65) coordinator relocation failed --> try to reassociate ...
+[240.177664](node 65) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:48] ... 
+[240.604896](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:91] ... 
+[243.015968](node 65) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:48]
+[243.015968](node 65) begin to synchronize with the coordinator
+[243.015968](node 65) begin to transmit beacons
+[243.015968](node 65) beacon transmission successful [channel:11] [PAN_ID:0]
+[243.384993](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:67] ... 
+[246.165728](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:78] ... 
+[248.945376](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[251.722208](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[254.504160](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:84] ... 
+[257.280416](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:81] ... 
+[260.058273](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:78] ... 
+[262.842976](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:84] ... 
+[264.765312](node 83) synchronization loss
+[264.765312](node 22) synchronization loss
+[264.765312](node 76) synchronization loss
+[264.765312](node 57) synchronization loss
+[264.790208](node 22) coordinator relocation successful, begin to re-synchronize with the coordinator
+[265.422400](node 50) synchronization loss
+[265.422400](node 29) synchronization loss
+[265.441921](node 35) synchronization loss
+[265.619616](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:67] ... 
+[266.250304](node 83) coordinator relocation failed.
+[266.253632](node 76) coordinator relocation failed.
+[266.261056](node 57) coordinator relocation failed.
+[266.420416](node 50) coordinator relocation successful, begin to re-synchronize with the coordinator
+[266.905664](node 29) coordinator relocation failed --> try to reassociate ...
+[266.923585](node 35) coordinator relocation failed --> try to reassociate ...
+[267.698112](node 29) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:46] ... 
+[267.712257](node 35) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:69] ... 
+[267.969664](node 48) synchronization loss
+[268.073728](node 33) synchronization loss
+[268.073728](node 12) synchronization loss
+[268.073728](node 7) synchronization loss
+[268.085824](node 33) coordinator relocation successful, begin to re-synchronize with the coordinator
+[268.396960](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:84] ... 
+[268.511233](node 65) synchronization loss
+[268.777536](node 63) synchronization loss
+[269.444224](node 99) synchronization loss
+[269.454208](node 48) coordinator relocation failed.
+[269.506049](node 65) coordinator relocation successful, begin to re-synchronize with the coordinator
+[269.556352](node 7) coordinator relocation failed.
+[269.559680](node 12) coordinator relocation failed --> try to reassociate ...
+[270.260800](node 63) coordinator relocation failed.
+[270.349440](node 12) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:73] ... 
+[270.432224](node 35) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:69]
+[270.432224](node 35) begin to synchronize with the coordinator
+[270.432224](node 35) begin to transmit beacons
+[270.432224](node 35) beacon transmission successful [channel:11] [PAN_ID:0]
+[270.437120](node 99) coordinator relocation successful, begin to re-synchronize with the coordinator
+[270.533152](node 29) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:46]
+[270.533152](node 29) begin to synchronize with the coordinator
+[270.533152](node 29) begin to transmit beacons
+[270.533152](node 29) beacon transmission successful [channel:11] [PAN_ID:0]
+[271.174176](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[273.199840](node 12) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:73]
+[273.199840](node 12) begin to synchronize with the coordinator
+[273.199840](node 12) begin to transmit beacons
+[273.199840](node 12) beacon transmission successful [channel:11] [PAN_ID:0]
+[273.955809](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:74] ... 
+[276.730976](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:91] ... 
+[279.507553](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:67] ... 
+[282.285920](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:84] ... 
+[285.070816](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[287.846688](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[289.587072](node 22) synchronization loss
+[289.598528](node 22) coordinator relocation successful, begin to re-synchronize with the coordinator
+[290.625120](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:85] ... 
+[291.771200](node 27) synchronization loss
+[291.771200](node 21) synchronization loss
+[291.787136](node 21) coordinator relocation successful, begin to re-synchronize with the coordinator
+[293.251904](node 27) coordinator relocation failed --> try to reassociate ...
+[293.400608](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:71] ... 
+[294.063616](node 27) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:4] ... 
+[296.179745](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:78] ... 
+[298.962144](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:91] ... 
+[301.742753](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[302.937664](node 46) synchronization loss
+[302.945280](node 46) coordinator relocation successful, begin to re-synchronize with the coordinator
+[303.746112](node 12) synchronization loss
+[303.746112](node 93) synchronization loss
+[303.764288](node 12) coordinator relocation successful, begin to re-synchronize with the coordinator
+[303.897856](node 6) synchronization loss
+[303.916352](node 6) coordinator relocation successful, begin to re-synchronize with the coordinator
+[304.523360](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:84] ... 
+[305.233216](node 93) coordinator relocation failed --> try to reassociate ...
+[306.027584](node 93) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:94] ... 
+[307.300064](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:80] ... 
+[308.868704](node 93) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:94]
+[308.868704](node 93) begin to synchronize with the coordinator
+[308.868704](node 93) begin to transmit beacons
+[308.868704](node 93) beacon transmission successful [channel:11] [PAN_ID:0]
+[310.091552](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[312.867040](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:85] ... 
+[315.158752](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:81] ... 
+[317.935841](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[320.216192](node 11) synchronization loss
+[320.733344](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:85] ... 
+[321.697216](node 11) coordinator relocation failed --> try to reassociate ...
+[321.894272](node 70) synchronization loss
+[321.904128](node 70) coordinator relocation successful, begin to re-synchronize with the coordinator
+[322.489024](node 11) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:26] ... 
+[323.513248](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:81] ... 
+[325.334912](node 70) synchronization loss
+[325.336544](node 11) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:26]
+[325.336544](node 11) begin to synchronize with the coordinator
+[325.336544](node 11) begin to transmit beacons
+[325.336544](node 11) beacon transmission successful [channel:11] [PAN_ID:0]
+[325.342848](node 70) coordinator relocation successful, begin to re-synchronize with the coordinator
+[325.524801](node 93) synchronization loss
+[326.288353](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:78] ... 
+[327.009217](node 93) coordinator relocation failed --> try to reassociate ...
+[327.800257](node 93) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:60] ... 
+[329.063776](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[331.840608](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[334.614880](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:85] ... 
+[334.920448](node 33) synchronization loss
+[334.926784](node 33) coordinator relocation successful, begin to re-synchronize with the coordinator
+[337.416928](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[340.196768](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[342.977120](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:84] ... 
+[345.758112](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:81] ... 
+[348.537121](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:74] ... 
+[349.435392](node 29) synchronization loss
+[350.920064](node 29) coordinator relocation failed --> try to reassociate ...
+[351.206656](node 8) synchronization loss
+[351.206656](node 37) synchronization loss
+[351.219392](node 8) coordinator relocation successful, begin to re-synchronize with the coordinator
+[351.314656](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:80] ... 
+[351.712192](node 29) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:75] ... 
+[351.843904](node 75) synchronization loss
+[351.843904](node 32) synchronization loss
+[351.843904](node 1) synchronization loss
+[351.843904](node 46) synchronization loss
+[352.491392](node 70) synchronization loss
+[352.491392](node 100) synchronization loss
+[352.501632](node 28) synchronization loss
+[352.501632](node 22) synchronization loss
+[352.704832](node 37) coordinator relocation failed.
+[353.325568](node 32) coordinator relocation failed.
+[353.328768](node 46) coordinator relocation failed.
+[353.329024](node 1) coordinator relocation failed.
+[353.330944](node 75) coordinator relocation failed --> try to reassociate ...
+[353.497088](node 28) coordinator relocation successful, begin to re-synchronize with the coordinator
+[353.971456](node 100) coordinator relocation failed --> try to reassociate ...
+[353.971776](node 70) coordinator relocation failed --> try to reassociate ...
+[353.985536](node 22) coordinator relocation failed --> try to reassociate ...
+[354.090528](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[354.120256](node 75) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:97] ... 
+[354.761536](node 100) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:19] ... 
+[354.763136](node 70) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:59] ... 
+[354.779264](node 22) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:65535] ... 
+[356.871200](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:84] ... 
+[356.967136](node 75) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:97]
+[356.967136](node 75) begin to synchronize with the coordinator
+[356.967136](node 75) begin to transmit beacons
+[356.967136](node 75) beacon transmission successful [channel:11] [PAN_ID:0]
+[358.098304](node 92) synchronization loss
+[359.091520](node 92) coordinator relocation successful, begin to re-synchronize with the coordinator
+[359.648736](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[362.433696](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[365.211168](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:85] ... 
+[367.988448](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:71] ... 
+[370.764065](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:78] ... 
+[373.540256](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[376.317536](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:66] ... 
+[378.510336](node 54) synchronization loss
+[378.510336](node 26) synchronization loss
+[378.510336](node 77) synchronization loss
+[378.522112](node 77) coordinator relocation successful, begin to re-synchronize with the coordinator
+[379.093600](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:91] ... 
+[379.231104](node 86) synchronization loss
+[379.231104](node 62) synchronization loss
+[379.231104](node 10) synchronization loss
+[379.231104](node 11) synchronization loss
+[379.875393](node 82) synchronization loss
+[379.995840](node 26) coordinator relocation failed.
+[379.996096](node 54) coordinator relocation failed.
+[380.237120](node 86) coordinator relocation successful, begin to re-synchronize with the coordinator
+[380.713920](node 10) coordinator relocation failed.
+[380.714368](node 11) coordinator relocation failed --> try to reassociate ...
+[380.719296](node 62) coordinator relocation failed.
+[380.869889](node 82) coordinator relocation successful, begin to re-synchronize with the coordinator
+[381.507328](node 11) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:33] ... 
+[381.880609](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:81] ... 
+[384.220064](node 11) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:33]
+[384.220064](node 11) begin to synchronize with the coordinator
+[384.220064](node 11) begin to transmit beacons
+[384.220064](node 11) beacon transmission successful [channel:11] [PAN_ID:0]
+[384.659233](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:78] ... 
+[387.441056](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:80] ... 
+[387.616833](node 82) synchronization loss
+[388.615809](node 82) coordinator relocation successful, begin to re-synchronize with the coordinator
+[390.238112](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:81] ... 
+[393.023521](node 68) sending association request to [c
+NS EXITING...
+
+hannel:11] [PAN_ID:0] [CoordAddr:67] ... 
+[395.800160](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:91] ... 
+[398.576801](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:67] ... 
+[399.196032](node 83) synchronization loss
+[399.399936](node 11) synchronization loss
+[399.399936](node 77) synchronization loss
+[399.411392](node 11) coordinator relocation successful, begin to re-synchronize with the coordinator
+[399.439873](node 94) synchronization loss
+[399.630336](node 60) synchronization loss
+[399.853120](node 50) synchronization loss
+[400.188608](node 83) coordinator relocation successful, begin to re-synchronize with the coordinator
+[400.847936](node 50) coordinator relocation successful, begin to re-synchronize with the coordinator
+[400.884608](node 77) coordinator relocation failed --> try to reassociate ...
+[400.920577](node 94) coordinator relocation failed.
+[401.111360](node 60) coordinator relocation failed.
+[401.134400](node 21) synchronization loss
+[401.140736](node 21) coordinator relocation successful, begin to re-synchronize with the coordinator
+[401.152768](node 89) synchronization loss
+[401.160704](node 89) coordinator relocation successful, begin to re-synchronize with the coordinator
+[401.352160](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:84] ... 
+[401.687744](node 77) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:73] ... 
+[404.133856](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:6] ... 
+[404.399968](node 77) association successful (beacon enabled) [channel:11] [PAN_ID:0] [CoordAddr:73]
+[404.399968](node 77) begin to synchronize with the coordinator
+[404.399968](node 77) begin to transmit beacons
+[404.399968](node 77) beacon transmission successful [channel:11] [PAN_ID:0]
+[406.911328](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:74] ... 
+[409.687136](node 68) sending association request to [channel:11] [PAN_ID:0] [CoordAddr:91] ... 

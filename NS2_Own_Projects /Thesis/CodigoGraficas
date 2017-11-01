@@ -1,0 +1,202 @@
+echo '1 ################'
+ns congestion.tcl > Salidas/Distancias1.txt
+./output/Graficas > Salidas/SinEstrella.txt
+
+echo '2 ################'
+ns congestion.tcl > Salidas/Distancias2.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '3 ################'
+ns congestion.tcl > Salidas/Distancias3.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '4 ################'
+ns congestion.tcl > Salidas/Distancias4.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '5 ################'
+ns congestion.tcl > Salidas/Distancias5.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '6 ################'
+ns congestion.tcl > Salidas/Distancias6.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '7 ################'
+ns congestion.tcl > Salidas/Distancias7.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '8 ################'
+ns congestion.tcl > Salidas/Distancias8.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '9 ################'
+ns congestion.tcl > Salidas/Distancias9.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '10 ################'
+ns congestion.tcl > Salidas/Distancias10.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '11 ################'
+ns congestion.tcl > Salidas/Distancias11.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '12 ################'
+ns congestion.tcl > Salidas/Distancias12.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '13 ################'
+ns congestion.tcl > Salidas/Distancias13.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '14 ################'
+ns congestion.tcl > Salidas/Distancias14.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '15 ################'
+ns congestion.tcl > Salidas/Distancias15.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '16 ################'
+ns congestion.tcl > Salidas/Distancias16.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '17 ################'
+ns congestion.tcl > Salidas/Distancias17.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '18 ################'
+ns congestion.tcl > Salidas/Distancias18.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '19 ################'
+ns congestion.tcl > Salidas/Distancias19.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '20 ################'
+ns congestion.tcl > Salidas/Distancias20.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '21 ################'
+ns congestion.tcl > Salidas/Distancias21.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '22 ################'
+ns congestion.tcl > Salidas/Distancias22.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '23 ################'
+ns congestion.tcl > Salidas/Distancias23.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '24 ################'
+ns congestion.tcl > Salidas/Distancias24.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '25 ################'
+ns congestion.tcl > Salidas/Distancias25.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '26 ################'
+ns congestion.tcl > Salidas/Distancias26.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '27 ################'
+ns congestion.tcl > Salidas/Distancias27.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '28 ################'
+ns congestion.tcl > Salidas/Distancias28.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '29 ################'
+ns congestion.tcl > Salidas/Distancias29.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '30 ################'
+ns congestion.tcl > Salidas/Distancias30.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '31 ################'
+ns congestion.tcl > Salidas/Distancias31.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '32 ################'
+ns congestion.tcl > Salidas/Distancias32.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '33 ################'
+ns congestion.tcl > Salidas/Distancias33.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '34 ################'
+ns congestion.tcl > Salidas/Distancias34.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '35 ################'
+ns congestion.tcl > Salidas/Distancias35.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '36 ################'
+ns congestion.tcl > Salidas/Distancias36.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '37 ################'
+ns congestion.tcl > Salidas/Distancias37.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '38 ################'
+ns congestion.tcl > Salidas/Distancias38.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '39 ################'
+ns congestion.tcl > Salidas/Distancias39.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '40 ################'
+ns congestion.tcl > Salidas/Distancias40.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '41 ################'
+ns congestion.tcl > Salidas/Distancias41.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '42 ################'
+ns congestion.tcl > Salidas/Distancias42.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '43 ################'
+ns congestion.tcl > Salidas/Distancias43.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '44 ################'
+ns congestion.tcl > Salidas/Distancias44.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '45 ################'
+ns congestion.tcl > Salidas/Distancias45.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '46 ################'
+ns congestion.tcl > Salidas/Distancias46.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '47 ################'
+ns congestion.tcl > Salidas/Distancias47.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '48 ################'
+ns congestion.tcl > Salidas/Distancias48.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '49 ################'
+ns congestion.tcl > Salidas/Distancias49.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+echo '50 ################'
+ns congestion.tcl > Salidas/Distancias50.txt
+./output/Graficas >> Salidas/SinEstrella.txt
+
+
+

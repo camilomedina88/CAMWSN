@@ -1,150 +1,307 @@
-echo '1 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas > FusionMalla.txt
-echo '2 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '3 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '4 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '5 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '6 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '7 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '8 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '9 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '10 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '11 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '12 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '13 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '14 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '15 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '16 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '17 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '18 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '19 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '20 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '21 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '22 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '23 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '24 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '25 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '26 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '27 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '28 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '29 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '30 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '31 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '32 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '33 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '34 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '35 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '36 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '37 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '38 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '39 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '40 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '41 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '42 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '43 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '44 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '45 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '46 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '47 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '48 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '49 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
-echo '50 ################'
-ns congestion.tcl
-./output/Evaluacion_metricas >> FusionMalla.txt
+echo '1 Simulacion ########'
+ns congestion.tcl > temporal.txt 
+./output/Evaluacion_metricas > mldc/MLDCmalla.txt
+echo '2 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '3 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '4 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '5 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '6 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '7 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '8 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '9 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '10 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '11 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '12 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '13 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '14 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '15 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '16 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '17 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '18 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '19 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '20 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '21 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '22 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '23 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '24 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '25 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '26 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '27 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '28 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '29 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '30 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '31 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '32 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '33 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '34 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '35 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '36 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '37 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '38 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '39 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '40 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '41 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '42 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '43 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '44 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '45 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '46 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '47 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '48 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '49 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '50 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+
+echo '#Vamos por mitad#'
+echo '#Vamos por mitad#'
+echo '#Vamos por mitad#'
+echo '#Vamos por mitad#'
+
+
+echo '51 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas > mldc/MLDCmalla.txt
+echo '52 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '53 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '54 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '55 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '56 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '57 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '58 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '59 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '60 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '61 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '62 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '63 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '64 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '65 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '66 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '67 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '68 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '69 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '70 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '71 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '72 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '73 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '74 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '75 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '76 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '77 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '78 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '79 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '80 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '81 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '82 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '83 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '84 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '85 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '86 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '87 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '88 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '89 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '90 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '91 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '92 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '93 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '94 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '95 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '96 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '97 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '98 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '99 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
+echo '100 Simulacion ########'
+ns congestion.tcl > temporal.txt
+./output/Evaluacion_metricas >> mldc/MLDCmalla.txt
